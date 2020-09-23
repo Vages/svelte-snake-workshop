@@ -12,7 +12,7 @@
       "npx eslint --fix",
       "npx prettier --write"
     ],
-    "tasks/*.md": "npx markdown-toc -i",
+    "tasks/*.md": "npx markdown-toc -i --maxdepth 3",
     "*.{json,md,html,css}": "npx prettier --write"
   },
   "husky": {
