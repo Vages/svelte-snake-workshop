@@ -65,7 +65,7 @@ En workshop av [Eirik Vågeskar](https://github.com/vages),
 #### Fordelene med Svelte
 
 [Ifølge State of JS 2019](https://2019.stateofjs.com/front-end-frameworks/#front_end_frameworks_experience_ranking)
-er Svelte det rammeverket flest utviklere er interesserte i. bruke …
+er Svelte det rammeverket flest utviklere er interesserte i å bruke …
 
 ![Graf som viser interessen for flere rammeverk over tid.](assets/sojs19_interest.png)
 
