@@ -3,7 +3,75 @@
 En workshop av [Eirik Vågeskar](https://github.com/vages),
 [Knowit Objectnet Oslo](https://knowitlabs.no/bli-kjent-med-de-nyansatte-i-knowit-solutions-oslo-be28140906d0)
 
-## Vi skal lage spillet Snake i Svelte
+<!-- prettier-ignore-start -->
+
+<!-- toc -->
+
+- [Intro: Vi skal lage spillet Snake i Svelte](#intro-vi-skal-lage-spillet-snake-i-svelte)
+  * [Svelte](#svelte)
+    + [Fordelene med Svelte](#fordelene-med-svelte)
+    + [Ulempene med Svelte](#ulempene-med-svelte)
+  * [Du må ha følgende på datamaskinen din](#du-ma-ha-folgende-pa-datamaskinen-din)
+  * [Slik blir workshoppen](#slik-blir-workshoppen)
+- [Del 1: Enkel grafikk](#del-1-enkel-grafikk)
+  * [Opplæring: Slik ser en Svelte-fil ut](#opplaering-slik-ser-en-svelte-fil-ut)
+  * [Oppgave 1.1: Plasser eplet](#oppgave-11-plasser-eplet)
+    + [Hint: Style-attributtet](#hint-style-attributtet)
+    + [Hint: top og left i css](#hint-top-og-left-i-css)
+    + [Hint: For å avsløre nesten alt](#hint-for-a-avslore-nesten-alt)
+  * [Opplæring: Each-blokker](#opplaering-each-blokker)
+  * [Oppgave 1.2: Tegn slangekroppen på skjermen](#oppgave-12-tegn-slangekroppen-pa-skjermen)
+  * [Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon](#oppgave-13-trekk-ut-koordinat-utregningen-i-en-funksjon)
+- [Del 2: Spillkontroller](#del-2-spillkontroller)
+  * [Opplæring: Å endre variabelverdier](#opplaering-a-endre-variabelverdier)
+  * [Opplæring: Å lytte etter input](#opplaering-a-lytte-etter-input)
+  * [Oppgave 2.1: Lytt til trykk på tastaturet](#oppgave-21-lytt-til-trykk-pa-tastaturet)
+    + [Hint: Tastetrykk-hendelsen](#hint-tastetrykk-hendelsen)
+    + [Hint: svelte:body](#hint-sveltebody)
+  * [Oppgave 2.2: Beveg slangen ett steg i den retningen brukeren trykker](#oppgave-22-beveg-slangen-ett-steg-i-den-retningen-brukeren-trykker)
+    + [Hint: Viktige Array-funksjoner](#hint-viktige-array-funksjoner)
+    + [Hint: Hjelpemidler i `utils.js`](#hint-hjelpemidler-i-utilsjs)
+  * [Del 3: Logikk](#del-3-logikk)
+  * [Opplæring: Dollartegnet i Svelte – reaktive utsagn.](#opplaering-dollartegnet-i-svelte-%E2%80%93-reaktive-utsagn)
+    + [Reaktive erkæringer](#reaktive-erkaeringer)
+    + [Reaktive utsagn](#reaktive-utsagn)
+  * [Oppgave 3.1: Gi poeng når slangen spiser eplet](#oppgave-31-gi-poeng-nar-slangen-spiser-eplet)
+    + [Hint: Hjelp i utils.js](#hint-hjelp-i-utilsjs)
+  * [Oppgave 3.2: Få slangen til å vokse når den spiser eplet](#oppgave-32-fa-slangen-til-a-vokse-nar-den-spiser-eplet)
+  * [Opplæring: Svelte-komponenters livssyklus, pluss setInterval](#opplaering-svelte-komponenters-livssyklus-pluss-setinterval)
+  * [Oppgave 3.3: Få spillet til å «tikke»](#oppgave-33-fa-spillet-til-a-%C2%ABtikke%C2%BB)
+  * [Oppgave 3.4 Stopp tikking når slangen dør](#oppgave-34-stopp-tikking-nar-slangen-dor)
+    + [Hint: Hjelpefunksjoner](#hint-hjelpefunksjoner)
+    + [Hint: Reaktivitet](#hint-reaktivitet)
+  * [Oppgave 3.5: Forhindre at slangen spiser seg selv](#oppgave-35-forhindre-at-slangen-spiser-seg-selv)
+- [Del 4: Animasjon](#del-4-animasjon)
+  * [Opplæring: If og else-blokker](#opplaering-if-og-else-blokker)
+  * [Opplæring: Hvordan overganger fungerer](#opplaering-hvordan-overganger-fungerer)
+  * [Oppgave 4.1: Animer eplet](#oppgave-41-animer-eplet)
+    + [Hint om hvordan du skal vise eplene vekselvis](#hint-om-hvordan-du-skal-vise-eplene-vekselvis)
+  * [Oppgave 4.2: Legg på en hodeskalle når slangen dør](#oppgave-42-legg-pa-en-hodeskalle-nar-slangen-dor)
+  * [Oppgave 4.3: Animer slangehodet](#oppgave-43-animer-slangehodet)
+  * [Oppgave 4.4: Animer slangehalen](#oppgave-44-animer-slangehalen)
+- [Del 5: Komponenter og nettverk](#del-5-komponenter-og-nettverk)
+  * [Opplæring: Komponenter](#opplaering-komponenter)
+  * [Oppgave 5.1: Lag en komponent som dukker opp ved spillslutt](#oppgave-51-lag-en-komponent-som-dukker-opp-ved-spillslutt)
+  * [Advarsel: Resten av del 5 er vanskelig](#advarsel-resten-av-del-5-er-vanskelig)
+  * [Opplæring: Await-blokker](#opplaering-await-blokker)
+  * [Oppgave 5.2: Hent high-scores fra API-et](#oppgave-52-hent-high-scores-fra-api-et)
+  * [Opplæring: Binde variabler til input-felter](#opplaering-binde-variabler-til-input-felter)
+  * [Oppgave 5.3: Legg til et felt der folk kan fylle inn navnet sitt](#oppgave-53-legg-til-et-felt-der-folk-kan-fylle-inn-navnet-sitt)
+- [Del 6: Game Over?](#del-6-game-over)
+  * [Oppgave 6.1: Forbedre spillet](#oppgave-61-forbedre-spillet)
+    + [Oppgaver uten en ferdig løsning](#oppgaver-uten-en-ferdig-losning)
+    + [Oppgaver som du finner løsninger på i master-branchen](#oppgaver-som-du-finner-losninger-pa-i-master-branchen)
+  * [Oppgave 6.2: Alternative spill](#oppgave-62-alternative-spill)
+  * [Oppgave 6.3: Etter denne workshoppen](#oppgave-63-etter-denne-workshoppen)
+
+<!-- tocstop -->
+
+<!-- prettier-ignore-end -->
+
+## Intro: Vi skal lage spillet Snake i Svelte
 
 ![En grønn slange på et kvadratisk rutenettformet brett. På brettet er også et eple. Overfor brettet ser man at scoren er 0.](assets/gameplay.png)
 
@@ -140,7 +208,7 @@ Den kommende oppgaven kommer til å kreve en each-blokk.
 Løs denne oppgaven fra Svelte-tutorialen for å lære hvordan
 [en each-blokk fungerer](https://svelte.dev/tutorial/each-blocks).
 
-## Oppgave 1.2: Tegn slangekroppen på skjermen
+### Oppgave 1.2: Tegn slangekroppen på skjermen
 
 Du skal nå tegne slangen på brettet.
 
@@ -149,7 +217,7 @@ elementet er hodet.
 
 Hvert koordinat i kroppen skal tegnes som en `<div class="body-part" />`.
 
-## Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon
+### Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon
 
 Flytte utregningen du inn i en funksjon `calculatePositionAsStyle(coordinate)`.
 Den skal returnere en streng med verdier for top og left.
@@ -542,10 +610,6 @@ Når scoren er sendt inn, skal komponenten hente den oppdaterte topplisten.
 Merk: Fordi mock-serveren kjører i nettleseren, vil all data som man har lagt
 til i databasen forsvinne når du laster siden på nytt. Du trenger altså ikke
 være redd for å «ødelegge» databasen ved å sende inn feilformatert data.
-
-## Gjør det mulig å pause underveis ved å trykke på mellomrom/space
-
-Gjør det mulig å starte spillet på nytt med en knapp
 
 ## Del 6: Game Over?
 

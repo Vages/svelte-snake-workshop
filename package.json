@@ -12,6 +12,7 @@
       "npx eslint --fix",
       "npx prettier --write"
     ],
+    "tasks/*.md": "npx markdown-toc -i",
     "*.{json,md,html,css}": "npx prettier --write"
   },
   "husky": {
@@ -29,6 +30,7 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
     "eslint-plugin-svelte3": "^2.7.3",
+    "markdown-toc": "^1.2.0",
     "miragejs": "^0.1.35",
     "miragejs-caos": "^0.0.4",
     "prettier": "^2.1.1",
