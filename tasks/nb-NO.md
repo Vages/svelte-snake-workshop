@@ -22,7 +22,7 @@ En workshop av [Eirik Vågeskar](https://github.com/vages),
   * [Opplæring: Å lytte etter input](#opplaering-a-lytte-etter-input)
   * [Oppgave 2.1: Lytt til trykk på tastaturet](#oppgave-21-lytt-til-trykk-pa-tastaturet)
   * [Oppgave 2.2: Beveg slangen ett steg i den retningen brukeren trykker](#oppgave-22-beveg-slangen-ett-steg-i-den-retningen-brukeren-trykker)
-  * [Del 3: Logikk](#del-3-logikk)
+- [Del 3: Logikk](#del-3-logikk)
   * [Opplæring: Dollartegnet i Svelte – reaktive utsagn.](#opplaering-dollartegnet-i-svelte-%E2%80%93-reaktive-utsagn)
   * [Oppgave 3.1: Gi poeng når slangen spiser eplet](#oppgave-31-gi-poeng-nar-slangen-spiser-eplet)
   * [Oppgave 3.2: Få slangen til å vokse når den spiser eplet](#oppgave-32-fa-slangen-til-a-vokse-nar-den-spiser-eplet)
@@ -64,6 +64,17 @@ En workshop av [Eirik Vågeskar](https://github.com/vages),
 
 #### Fordelene med Svelte
 
+[Ifølge State of JS 2019](https://2019.stateofjs.com/front-end-frameworks/#front_end_frameworks_experience_ranking)
+er Svelte det rammeverket flest utviklere er interesserte i. bruke …
+
+![Graf som viser interessen for flere rammeverk over tid.](assets/sojs19_interest.png)
+
+… og det som _nest flest_ er interessert i å bruke. Det skal sies at det er tett
+i teten mellom React, Svelte og Vue, med henholdsvis 89, 88 og 87 prosent
+oppslutning.
+
+![Graf som viser fornøydheten med flere rammeverk over tid.](assets/sojs19_satisfaction.png)
+
 Applikasjonene man skriver i Svelte blir som regel
 [mindre og raskere enn en tilsvarende applikasjon hadde blitt i React eller Vue](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/).
 
@@ -99,10 +110,9 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
   - Du kan la være å lese hintene om du trenger en ekstra utfordring.
 - Bytt til `task-X-begin` før du løser hver nye oppgave `X`.
   - `task-X-end` er oppgavens fasit.
-- Du kan be om hjelp de voksne.
-- Taster du på andres tastatur?
-  - Er ikke det litt
-    [inkonsekvent](https://www.youtube.com/watch?v=IJNR2EpS0jw)?
+- Du kan be om hjelp så å si når som helst.
+- Vi kommer ikke til å stoppe deg hvis du trykker på noen andres tastatur, men
+  [er det så lurt, 'a](https://www.youtube.com/watch?v=IJNR2EpS0jw)?
 
 **For å fokusere på kode fremfor utseende, får dere utdelt all styling.**
 
@@ -281,7 +291,7 @@ I utils.js finner du:
 Legg til linjen `import { add, DIRECTION_VECTORS } from './utils'` øverst i
 `<script>` for å bruke dem.
 
-### Del 3: Logikk
+## Del 3: Logikk
 
 Når du er ferdig med denne delen, skal det gå an å få poeng. Spillet skal stoppe
 hvis slangen er på en ulovlig posisjon. Og spillklokka skal tikke — slangen vil
