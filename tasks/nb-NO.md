@@ -666,22 +666,21 @@ implementere disse funksjonene uten å kikke på fasit.
 
 Kanskje du kan implementere et av følgende spill:
 
-- Whack-a-Mole – her er vårt forsøk:
-  [https://mos.knowit.no/](https://mos.knowit.no/)
-- Breakout:
-  [https://en.wikipedia.org/wiki/Breakout\_(video_game)](<https://en.wikipedia.org/wiki/Breakout_(video_game)>)
+- Whack-a-Mole – [vi har allerede gjort et forsøk](https://mos.knowit.no/)
+- [Breakout](<https://en.wikipedia.org/wiki/Breakout_(video_game)>)
 
 ### Oppgave 6.3: Etter denne workshoppen
 
-Om du synes Svelte er gøy og vil lære mer, har vi følgende anbefalinger.
+Om du synes Svelte er gøy og vil lære mer, har vi følgende anbefalinger:
 
 - Gjør [hele Svelte-tutorialen](https://svelte.dev/tutorial/)
   - Sjekk ut [dokumentasjonen](https://svelte.dev/docs) etterpå, og oppdag til
     din glede at du kan _alt_ når du har fullført tutorialen.
 - Prøv ut [Sapper](https://sapper.svelte.dev/), Sveltes motsvar til f.eks.
   Next.js og Nuxt.js.
-  - Kanskje du kan lage en hjemmeside fylt av Svelte-spill og være klar for at
-    kidza endelig spiller spill på Internett igjen?
+  - Ditt første prosjekt kan for eksempel være en hjemmeside fylt av alle
+    spillene dine. Legg den ut i påvente av at «flash-spill» kommer på moten
+    igjen.
 
 Da gjenstår det kun å si at vi håper du har kost deg med workshoppen vår. Game
 over!
