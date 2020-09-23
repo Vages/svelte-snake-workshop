@@ -70,7 +70,7 @@ er Svelte det rammeverket flest utviklere er interesserte i å bruke …
 ![Graf som viser interessen for flere rammeverk over tid.](assets/sojs19_interest.png)
 
 … og det som _nest flest_ er interessert i å bruke. Det skal sies at det er tett
-i teten mellom React, Svelte og Vue, med henholdsvis 89, 88 og 87 prosent
+i teten mellom React, Svelte og Vue, med henholdsvis 89, 88 og 87 prosents
 oppslutning.
 
 ![Graf som viser fornøydheten med flere rammeverk over tid.](assets/sojs19_satisfaction.png)
@@ -666,7 +666,8 @@ implementere disse funksjonene uten å kikke på fasit.
 
 Kanskje du kan implementere et av følgende spill:
 
-- Whack-a-Mole – [vi har allerede gjort et forsøk](https://mos.knowit.no/)
+- [Whac-a-Mole](https://en.wikipedia.org/wiki/Whac-A-Mole) –
+  [vi har allerede gjort et forsøk](https://mos.knowit.no/)
 - [Breakout](<https://en.wikipedia.org/wiki/Breakout_(video_game)>)
 
 ### Oppgave 6.3: Etter denne workshoppen
