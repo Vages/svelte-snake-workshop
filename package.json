@@ -25,11 +25,14 @@
     "@rollup/plugin-node-resolve": "^8.0.0",
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
     "eslint-plugin-svelte3": "^2.7.3",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "markdown-toc": "^1.2.0",
     "miragejs": "^0.1.35",
     "miragejs-caos": "^0.0.4",
@@ -43,9 +46,6 @@
     "svelte-css-vars": "^0.0.1"
   },
   "dependencies": {
-    "eslint-config-prettier": "^6.11.0",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.4.0",
     "sirv-cli": "^0.4.4"
   }
 }
