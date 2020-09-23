@@ -67,8 +67,7 @@ før, kan du bruke mye av det i Svelte.
 I Svelte kan man skrive Javascript, CSS og HTML i én og samme fil. Delene kalles
 for «script», «styling» og «template».
 
-<!-- prettier-ignore-start -->
-```svelte
+```html
 <script>
   let answer = 42;
 </script>
@@ -81,12 +80,11 @@ for «script», «styling» og «template».
 
 <div>Hello world, the answer is {answer}</div>
 ```
-<!-- prettier-ignore-end -->
 
 Som vi akkurat hintet til, bruker man krøllparenteser inni HTML-delen av filen
 for å sette inn variabler, utregninger og funksjonskall.
 
-```svelte
+```html
 <script>
   let answer = 42;
 </script>
@@ -128,9 +126,8 @@ I CSS bruker man `top` og `left` for å forskyve elementer i henholdsvis `y`- og
 
 For å få til det med eplet, må du altså gjøre noe à la følgende:
 
-```svelte
+```html
 <div class="apple" style="left: {regnestykke1}px; top: {regnestykke2}px;" />
-
 ```
 
 Til rådighet har du objektet som er lagret i apple. Du må benytte deg av apple.x
