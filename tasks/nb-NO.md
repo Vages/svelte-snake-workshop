@@ -64,6 +64,14 @@ En workshop av [Eirik Vågeskar](https://github.com/vages),
 
 #### Fordelene med Svelte
 
+Applikasjonene man skriver i Svelte blir som regel
+[mindre og raskere enn en tilsvarende applikasjon hadde blitt i React eller Vue](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/).
+
+![Faksimile fra https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ som sammenligner overføringsstørrelse for Svelte og flere andre rammeverk](assets/transfer_size.png)
+
+![Faksimile fra https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ som sammenligner kildekodelinjer for Svelte og flere andre rammeverk](assets/source_code_size.png)
+
+Og folk liker å jobbe med det:
 [Ifølge State of JS 2019](https://2019.stateofjs.com/front-end-frameworks/#front_end_frameworks_experience_ranking)
 er Svelte det rammeverket flest utviklere er interesserte i å bruke …
 
@@ -74,13 +82,6 @@ i teten mellom React, Svelte og Vue, med henholdsvis 89, 88 og 87 prosents
 oppslutning.
 
 ![Graf som viser fornøydheten med flere rammeverk over tid.](assets/sojs19_satisfaction.png)
-
-Applikasjonene man skriver i Svelte blir som regel
-[mindre og raskere enn en tilsvarende applikasjon hadde blitt i React eller Vue](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/).
-
-![Faksimile fra https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ som sammenligner overføringsstørrelse for Svelte og flere andre rammeverk](assets/transfer_size.png)
-
-![Faksimile fra https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ som sammenligner kildekodelinjer for Svelte og flere andre rammeverk](assets/source_code_size.png)
 
 #### Ulempene med Svelte
 
