@@ -1,6 +1,6 @@
 # Fun and Games with Svelte
 
-En workshop av Eirik Vågeskar, Knowit Objectnet
+En workshop av [Eirik Vågeskar](https://github.com/vages), Knowit Objectnet
 
 ## Vi skal lage spillet Snake i Svelte
 
@@ -21,54 +21,33 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
 
 ### Du må ha følgende på datamaskinen din
 
-#### Yarn og Node
-
-- [https://classic.yarnpkg.com/en/docs/install/](https://classic.yarnpkg.com/en/docs/install/)
-- [https://nodejs.org/en/](https://nodejs.org/en/)
-
-#### En god editor
-
-Du kan bruke hva du vil. Vi anbefaler en editor hvor du kan installere støtte
-for Svelte: https://github.com/sveltejs/integrations#editor-extensions
-
-#### En klone av dette Git-repoet
-
-[https://github.com/Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop)
+- [yarn](https://classic.yarnpkg.com/en/docs/install/)
+- [node](https://nodejs.org/en/)
+- Noe å skrive kode i. Vi anbefaler
+  [en editor hvor du kan installere støtte for Svelte](https://github.com/sveltejs/integrations#editor-extensions).
+- En klone av
+  [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop)
 
 ### Slik blir workshoppen
 
-#### I repoet ligger en PDF med alle oppgaver
+- Dette repoet inneholder _egentlig_ alt du trenger.
+  - Så å si alt vi skal gå gjennom står i denne filen.
+  - Du kan bruke den hvis du vil bestemme tempo selv.
+  - Vi kommer til å gå gjennom svarene i fellesskap med ujevne mellomrom.
+- Workshoppen er delt opp i 6 deler.
+  - Det grunnleggende spillet er ferdig etter del 3.
+  - De siste delene er bonuser.
+- Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint.
+  - Du kan la være å lese hintene om du trenger en ekstra utfordring.
+- For hver oppgave `X`, bytt til `task-X-begin` før du løser oppgaven.
+  - `task-X-end` er oppgavens fasit.
+- Du kan be om hjelp de voksne.
+- Unngår du å ta folk i hånda, men taster på andres tastatur? `#covid-19`
+  - Er ikke det litt
+    [inkonsekvent](https://www.youtube.com/watch?v=IJNR2EpS0jw)?
 
-Så å si alt vi skal gå gjennom står i PDF-en. Du kan bruke den hvis du vil
-bestemme tempo selv.
-
-#### Struktur
-
-Workshoppen er delt opp i 6 deler. Det grunnleggende spillet er ferdig etter
-del 3. De tre siste delene er bonuser.
-
-#### Oppgave og hint
-
-Hver oppgave starter med hovedoverskrift og oppgavetekst. Så kommer det hint. Du
-kan la være å lese hintene om du trenger en ekstra utfordring
-
-#### git-branches med utgangspunkt og fasit
-
-Hver oppgave har en tilhørende git-branch: `task-X-begin` og `task-X-end`. Med
-mindre du er _veldig_ selvstendig, bytt til `task-X-begin` for hver nye oppgave.
-Du kan se på `task-X-end` for å få fasit.
-
-#### Gjennomgang
-
-Vi kommer til å gå gjennom svarene på projektor med jevne mellomrom.
-
-#### Be om hjelp
-
-Du kan be om hjelp fra oss som leder workshoppen.
-
-#### Forhåndsutfylte styles
-
-For å fokusere mer på logikk, har vi skrevet nesten alt av styling på forhånd.
+Og en ting til: For å fokusere på det viktige, har vi skrevet nesten alt av
+styling på forhånd.
 
 ## Del 1: Enkel grafikk
 
@@ -78,7 +57,7 @@ Når denne delen er ferdig, skal vi ha et brett med en slange og et eple.
 
 En Svelte-fil består av tre deler: Script, styling og template.
 
-```html
+```sveltehtml
 <script>
   // Her er det kode
   let a = 42;
@@ -106,7 +85,7 @@ sett kompatibelt med dise.
 Man bruker krøllparenteser inni HTML-delen av filen for å sette inn variabler og
 utregninger fra kodedelen.
 
-```html
+```sveltehtml
 <script>
   let a = 42;
 </script>
@@ -147,7 +126,7 @@ I CSS bruker man `top` og `left` for å forskyve elementer i henholdsvis `y`- og
 
 For å få til det med eplet, må du altså gjøre noe à la følgende:
 
-```html
+```sveltehtml
 <div class="apple" style="left: {regnestykke1}px; top: {regnestykke2}px;" />
 ```
 
