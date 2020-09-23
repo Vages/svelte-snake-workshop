@@ -18,9 +18,9 @@ En workshop av [Eirik Vågeskar](https://github.com/vages),
   * [Oppgave 1.2: Tegn slangekroppen på skjermen](#oppgave-12-tegn-slangekroppen-pa-skjermen)
   * [Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon](#oppgave-13-trekk-ut-koordinat-utregningen-i-en-funksjon)
 - [Del 2: Spillkontroller](#del-2-spillkontroller)
-  * [Opplæring: Å endre variabelverdier](#opplaering-a-endre-variabelverdier)
   * [Opplæring: Å lytte etter input](#opplaering-a-lytte-etter-input)
   * [Oppgave 2.1: Lytt til trykk på tastaturet](#oppgave-21-lytt-til-trykk-pa-tastaturet)
+  * [Opplæring: Å endre variabelverdier](#opplaering-a-endre-variabelverdier)
   * [Oppgave 2.2: Beveg slangen ett steg i den retningen brukeren trykker](#oppgave-22-beveg-slangen-ett-steg-i-den-retningen-brukeren-trykker)
 - [Del 3: Logikk](#del-3-logikk)
   * [Opplæring: Dollartegnet i Svelte – reaktive utsagn.](#opplaering-dollartegnet-i-svelte-%E2%80%93-reaktive-utsagn)
@@ -169,6 +169,10 @@ Vi sier at X-aksen går mot høyre, og Y-aksen peker ned.
 
 ![X-akse som peker mot høyre, Y-akse som peker ned.](assets/axes.png)
 
+Det det skal altså se ut som følger.
+
+![Eplet såvidt oppe litt opp til høyre for midten på brettet](assets/task_1.1_end.png)
+
 #### Hint: Style-attributtet
 
 For å overstyre og legge til stil på elementer i HTML, kan man bruke attributtet
@@ -191,8 +195,8 @@ For å få til det med eplet, må du altså gjøre noe à la følgende:
 <div class="apple" style="left: {regnestykke1}px; top: {regnestykke2}px;" />
 ```
 
-Til rådighet har du objektet som er lagret i apple. Du må benytte deg av apple.x
-og apple.y samt CELL_SIZE for å få til disse regnestykkene.
+Til rådighet har du objektet som er lagret i apple. Du må benytte deg av
+`apple.x` og `apple.y` samt `CELL_SIZE` for å få til disse regnestykkene.
 
 ### Opplæring: Each-blokker
 
@@ -220,13 +224,6 @@ Den skal returnere en streng med verdier for top og left.
 Når du er ferdig med del 2, skal det gå an å styre slangen med piltastene slik
 at den beveger seg over skjermen.
 
-### Opplæring: Å endre variabelverdier
-
-Du kommer til å måtte vite hvordan du endrer variabler i den kommende seksjonen:
-
-- [Oppdatere vanlige variabler](https://svelte.dev/tutorial/reactive-assignments)
-- [Oppdatere arrays og objekter](https://svelte.dev/tutorial/updating-arrays-and-objects)
-
 ### Opplæring: Å lytte etter input
 
 Løs følgende oppgaver fra Svelte-tutorialen før du går videre:
@@ -241,11 +238,13 @@ funksjonen `console.log`. NB: Applikasjonen skal kunne «høre» tastetrykk uans
 hvilken del av nettsiden som har fokus, altså skal ikke brukeren behøve å ha
 fokus på en spesifikk knapp for at tastetrykkene skal bli registrert.
 
+Vi vil helst bare lytte på nettsiden, altså `document.body`, ikke vinduet (som
+er det `svelte:window` representerer).
+
 #### Hint: Tastetrykk-hendelsen
 
 Tastetrykk-hendelsen heter `keydown`. I Svelte lytter man etter den med
-`on:keydown`. Prøv å legge en `on:keydown` på knappen du lagde i forrige
-oppgave.
+`on:keydown`.
 
 #### Hint: svelte:body
 
@@ -253,20 +252,33 @@ For å kunne registrere tastetrykk, må vi lytte på `document.body`. Dette får
 til ved å bruke elementet `<svelte:body />`. Du kan lytte etter hendelser på
 `svelte:body` akkurat slik du ville gjort med et annet HTML-element.
 
+### Opplæring: Å endre variabelverdier
+
+Du kommer til å måtte vite hvordan du endrer variabler i den kommende seksjonen.
+Gjør følgende oppgaver fra Svelte-tutorialen før du fortsetter:
+
+- [Oppdatere vanlige variabler](https://svelte.dev/tutorial/reactive-assignments)
+- [Oppdatere arrays og objekter](https://svelte.dev/tutorial/updating-arrays-and-objects)
+
 ### Oppgave 2.2: Beveg slangen ett steg i den retningen brukeren trykker
 
 Nå skal vi oversette tastetrykkene til bevegelse. Hver gang man trykker på en
 piltast, skal slangen bevege seg ett steg i den retningen som tasten peker.
 
-For å gjøre det litt enklere, har vi laget en funksjon `getVectorFromKey ` i
-`utils.js`, som oversetter fra tastetrykk til en bevegelsesvektor.
+For å gjøre det litt enklere, har vi laget en funksjon
+`getNewDirectionFromEventKey ` i `utils.js`, som oversetter fra tastetrykk til
+en bevegelsesvektor.
 
 Tilleggsopplysninger:
 
-- Vi skal tenke på game over senere. Inntil videre kan du bevege slangen så
-  lenge man har trykket på en av piltastene.
+- Inntil videre kan du bevege slangen, uansett om den går inni seg selv eller
+  utenfor brettet.
+  - Vi skal tenke på game over senere.
+- Unngå at slangen beveger seg ved trykk på _andre_ taster enn piltastene, WASD
+  og lignende.
 - I kodebasen har vi valgt å bruke kompassretningene for å vise til retningene
-  på brettet, og nord er altså oppover.
+  på brettet.
+  - Vest er venstre, nord er opp.
 
 #### Hint: Viktige Array-funksjoner
 
@@ -299,15 +311,20 @@ altså bevege seg på gitte tidspunkter, heller enn når du trykker på piltaste
 
 ### Opplæring: Dollartegnet i Svelte – reaktive utsagn.
 
-#### Reaktive erkæringer
+#### Reaktive utregninger
 
-Du har sikker brukt Microsoft Excel eller Google Sheets. Der kan man skrive
-formler i cellene, for eksempel `=A1*B3`, og da blir cellens verdi lik
-resultatet av regnestykket – og når A1 eller B3 endrer seg, oppdateres
-resultatet automatisk.
+Du lærte _sannsynligvis_ å programmere på barneskolen – ja, jeg snakker til deg,
+gjennomsnittlige student. Det var bare så lett at _ingen_ anerkjente det. For
+nesten alle barn i Norge lærer Microsoft Excel.
 
-**Man kan få variabler til å oppdatere seg automatisk** ved å sette et
-dollartegn foran en formel som beskriver dem.
+I Excel kan man skrive formler i cellene, for eksempel `=A1*B3`. Da blir cellens
+verdi lik resultatet av regnestykket, og resultatet oppdaterer seg automatisk
+etterpå. Slik er det ikke vanligvis i programmering; man kan ikke si
+`a = 2; b = a * 2; a = 8` og regne med at `b` er 16 i stedet for 4, men slik er
+det i Excel – og i Svelte.
+
+I Svelte kan man få variabler til å oppdatere seg automatisk ved å sette et
+dollartegn foran utregningen av den.
 
 ```js
 let b = 3;
@@ -323,17 +340,16 @@ c = 8;
 // … og nå: a === 24
 ```
 
-**Slike utregninger i Svelte heter «reaktive utsagn» (_reactive statements_)**,
-fordi de «reagerer» på at noe annet endrer seg.
+Dette kalles _reaktivitet_, fordi kodesnutten «reagerer» på noe annet.
 
 Løs
-[oppgaven om reaktive erklæringer fra Svelte-tutorialen](https://svelte.dev/tutorial/reactive-declarations)
+[oppgaven om reaktive utsagn fra Svelte-tutorialen](https://svelte.dev/tutorial/reactive-statements)
 før du går videre.
 
 #### Reaktive utsagn
 
-Det kan nesten være hva som helst som står etter dollartegnet; man kan også
-skrive funksjonskall og if-setninger:
+Nesten være hva som helst som står etter dollartegnet. Man kan også skrive
+funksjonskall og if-setninger:
 
 ```js
 let lastUserInput = "";
@@ -353,14 +369,14 @@ $: parrot(lastUserInput); // Gjentar alt brukeren sier, fulgt av papegøyelyd
 ```
 
 Det som står bak dollartegnene blir kjørt når – og _bare når_ – verdien av det
-som den avhenger av endrer seg (det vil si, det som står etter likhetstegnet,
-inni if-setninger og inni funksjonskallet). I det første eksempelet ville `a`
-blitt oppdatert hver gang `b` eller `c` endret seg, og i de to senere eksemplene
-ville if-setningen og funksjonen blitt kjørt hver gang `lastUserInput` endret
-seg.
+som den avhenger av endrer seg. Med litt eksperimentering vil du skjønne hva som
+er en avhengighet og ikke.
 
-Det er ganske digg med dollartegnet når vi skriver spill-logikk, for da kan ofte
-oversette regler nesten direkte til kode: Hvis X, så Y.
+**Noter deg dette**:
+
+- Når du skriver spill-logikk, kan du ofte oversette regler nesten direkte til
+  kode: «Hvis `x === foo`, så gjør a, b og c» blir til
+  `$: if (x === foo) { a(); b(); c(); }`.
 
 Løs
 [oppgaven om reaktive utsagn fra Svelte-tutorialen](https://svelte.dev/tutorial/reactive-statements)
@@ -435,55 +451,55 @@ slikt som:
   game over»
 - «Hvis det er game over, stopper tikkingen»
 
-Klaler d
-
 ### Oppgave 3.5: Forhindre at slangen spiser seg selv
 
 Idet du har fått game over til å funke, kommer du fort til å oppdage et problem:
 Slangen dør ved å «spise seg selv» hvis du prøver å ta en U-sving og trykker
-begge taster innenfor samme «tikk». En litt kjip måte å dø på. Du kan få hjelp
-av en funksjon i utils, `is180Turn(snake, newDirection)`, til å unngå dette
-problemet.
+begge taster innenfor samme «tikk». Dårlig brukeropplevelse &rarr; sinte
+spillere. Gjør det umulig å snu 180 grader rett inn i seg selv.
+
+Du kan få hjelp av en funksjon i utils, `is180Turn(snake, newDirection)`, til å
+unngå dette problemet. Eller løs problemet selv, om du trenger en utfordring.
 
 ## Del 4: Animasjon
 
 Det grunnleggende spillet er ferdig. Neste steg er animasjon.
 
-I Svelte følger pakken `svelte/transition`. Den gjør at man kan animere et
+I Svelte følger pakken `svelte/transition` med. Den gjør at man kan animere et
 element som dukker opp eller forsvinner.
 
-Når denne delen er over skal vi ha en animert hodeskalle, et animert eple og la
-slangen bevege seg.
+Når denne delen er over skal vi ha en animert hodeskalle, eple og slange.
 
 ### Opplæring: If og else-blokker
 
-- [https://svelte.dev/tutorial/if-blocks](https://svelte.dev/tutorial/if-blocks)
-- [https://svelte.dev/tutorial/else-blocks](https://svelte.dev/tutorial/else-blocks)
+- [If-blokker](https://svelte.dev/tutorial/if-blocks)
+- [Else-blokker](https://svelte.dev/tutorial/else-blocks)
 
 ### Opplæring: Hvordan overganger fungerer
 
-- Hvordan transition-attributtet fungerer:
-  [https://svelte.dev/tutorial/transition](https://svelte.dev/tutorial/transition)
-- Hvordan man kan legge parametere på overganger:
-  [https://svelte.dev/tutorial/adding-parameters-to-transitions](https://svelte.dev/tutorial/adding-parameters-to-transitions)
-- Hvordan man kan ha forskjellig animasjon på inn og ut:
-  [https://svelte.dev/tutorial/in-and-out](https://svelte.dev/tutorial/in-and-out)
+- [transition-attributtet](https://svelte.dev/tutorial/transition)
+- [Hvordan man kan legge parametere på overganger](https://svelte.dev/tutorial/adding-parameters-to-transitions)
+- [Forskjellig animasjon på inn og ut](https://svelte.dev/tutorial/in-and-out)
 
 ### Oppgave 4.1: Animer eplet
 
 Nå skal du animere animere når nye epler dukker opp.
 
 Du skal legge på overgangen `scale` ved å importere denne fra
-`svelte/transition`. Denne overgangen skal bare vises når eplet dukker opp.
+`svelte/transition`. Denne overgangen skal _bare_ vises når eplet dukker opp. Du
+kan forresten prøve ut
+[flere overganger](https://svelte.dev/docs#svelte_transition), men `scale` er
+altså fasit.
 
 Fordi overganger bare fungerer når et element forsvinner eller dukker opp, er du
-nødt til å trikse slik at det blir snakk om to eple-elementer som vises
-vekselvis.
+nødt til å trikse slik at et nytt eple tar over for det gamle hver gang. Trikset
+er ikke spesielt vanskelig, men det kan kreve en aha-opplevelse. Spoiler
+nedenfor.
 
-#### Hint om hvordan du skal vise eplene vekselvis
+#### SPOILER ALERT: Hint om hvordan du skal bytte ut eplet
 
-Du kan bruke score sammen med modulo for å veksle mellom to epler i en
-if-else-blokk.
+Du kan bruke score modulo to, altså `score % 2`, i en if-else-blokk (der if og
+else-tilfellene har lik output) for å veksle mellom to epler.
 
 ### Oppgave 4.2: Legg på en hodeskalle når slangen dør
 
@@ -492,39 +508,39 @@ I stylingen finnes det en klasse `skull`.
 Når slangen dør, skal en `<div/>` med klassen `skull` dukke opp, og den skal ha
 samme koordinat som slangehodet.
 
-For å animere skallen, legg på en `transition:scale` med en forsinkelse på 300
-ms.
+For å animere hodeskallen, legg på en `transition:scale` med en forsinkelse på
+300 ms.
 
 ### Oppgave 4.3: Animer slangehodet
 
 I CSS-en finnes det en klasse `head`. Denne sørger for styling og animasjon av
-hodet så lenge man setter den på et element med klassen `body-part` .
+hodet så lenge man setter den på et element med klassen `body-part` . Legg inn
+et animert slangehode ved hjelp av denne klassen.
 
-Legg inn et animert slangehode ved å legge på denne klassen.
-
-Merk: Du kommer ikke til å trenge å bruke noe `transition:…` her; CSS-en tar seg
-av animasjonen så lenge du legger riktig klasse på rett sted.
+Merk: Du kommer ikke til å trenge å bruke noe `transition:…` her – CSS-en tar
+seg av animasjonen så lenge du legger riktig klasse på rett sted.
 
 ### Oppgave 4.4: Animer slangehalen
 
 Nå skal vi animere halen. Det finnes en klasse, `tail`, som man kan legge på et
-element for å få den samme gli-animasjonen som for hodet – uten at kroppsdelen
-blir større.
+element for å få den samme gli-animasjonen som for hodet, men uten forstørrelse
+av kroppsdelen.
 
 Legg til en animert hale på slangen.
 
-Merk: Det er en rendering-bug i Safari og Chrome som blir bedre av en workaround
-(som vi ikke vil si, fordi den avslører løsningen på hovedoppgaven). Du kan
-regne oppgaven som løst når du har en animert, litt blinkete hale, (eller,
-dersom du bruker Firefox, en elegant, ikke-blinkete hale) og heller sjekke
-workaround i fasiten.
+Merk:
+
+- **Det er en rendering-bug i Safari og Chrome** som blir bedre av en workaround
+  for i fasiten (som vi ikke kan fortelle hvordan virker, fordi den avslører
+  løsningen).
+  - Om du bruker Safari eller Chrome, kan du regne oppgaven som løst når du har
+    en animert, litt blinkete hale.
+  - Dersom du bruker Firefox, vil du sannsynligvis ikke merke noe.
 
 ## Del 5: Komponenter og nettverk
 
-I denne delen skal vi lage en game-over skjerm. Den første oppgaven
-
-Denne skal hente high-scores fra en (simulert) server. Du skal også kunne poste
-nye high-scores til denne serveren.
+I denne delen skal vi lage en game-over skjerm. Denne skal hente high-scores fra
+en (simulert) server. Du skal også kunne poste nye high-scores til serveren.
 
 ### Opplæring: Komponenter
 
@@ -564,31 +580,30 @@ før du går videre.
 
 ### Oppgave 5.2: Hent high-scores fra API-et
 
-I prosjektet kjører vi en mock-server i nettleseren (via Mirage JS). Den har en
-database med en high-score-liste som man kan hente ut og poste til.
+I prosjektet kjører vi en mock-server i nettleseren. Den har en database med en
+high-score-liste som man kan hente ut og poste til.
 
-Funksjonen `fetchScores` fra `api.js` henter topplista. Importer denne
-funksjonen og vis topplista i «Game Over» komponenten du har laget.
-
-Serveren bruker tid på å svare, så pass på å gi visuell tilbakemelding til
-brukeren.
-
-40 % av alle kall til serveren vil feile, så pass også på å bruke catch-blokken.
-Lag en knapp som gjør at i brukerne mulighet til å prøve på nytt dersom
-forespørselen feilet.
+- Funksjonen `fetchScores` fra `api.js` henter topplista. - Importer denne
+  funksjonen og vis topplista i «Game Over» komponenten du har laget.
+- Serveren bruker tid på å svare, så pass på å gi visuell tilbakemelding til
+  brukeren på at forespørselen er underveis.
+- Serveren er satt til å feile på 40 % av alle kall, så pass også på å bruke
+  catch-blokken for å vise brukeren at noe gikk feil.
+  - Lag en knapp som prøver på nytt dersom forespørselen feilet.
 
 Dersom du ønsker å bruke samme visuelle tema som for resten av spillet, kan du
 sjekke
-[dokumentasjonen for stilarket Nes.css](https://nostalgic-css.github.io/NES.css/).
+[dokumentasjonen for stilarket Nes.css](https://nostalgic-css.github.io/NES.css/)
+(eller fasiten).
 
 Merk: Akkurat når man jobber med promises, kan funksjoner som er definert med
-nøkkelordet `function` oppføre seg litt corny. For å unngå bugs, bruk
+nøkkelordet `function` oppføre seg litt kårni. For å unngå bugs, bruk
 pilfunksjoner for å lage funksjoner i stedet, altså `const foo = () => {…}`.
 
 ### Opplæring: Binde variabler til input-felter
 
 Løs
-oppgaven[https://svelte.dev/tutorial/text-inputs](https://svelte.dev/tutorial/text-inputs)
+[oppgaven om tekst-input og binding](https://svelte.dev/tutorial/text-inputs)
 før du går videre.
 
 ### Oppgave 5.3: Legg til et felt der folk kan fylle inn navnet sitt
@@ -606,30 +621,34 @@ være redd for å «ødelegge» databasen ved å sende inn feilformatert data.
 
 ## Del 6: Game Over?
 
-Gratulerer! Du er nå ved veis ende. Gratulerer med å ha lest gjennom
-oppgavesettet før du begynte!
+Gratulerer! **Du var veldig flink som leste gjennom oppgavesettet før du
+begynte!**
 
-… eller kanskje du faktisk har gjort alle oppgavene? Del 6 er en sandkasse der
-du kan gjøre omtrent hva du vil.
+– Eller kanskje du faktisk har gjort alle oppgavene? Wooooaaahh!!!!!1
+
+![Et bilde av game over-skjermen i kabal](assets/solitaire_win.png)
+
+Del 6 er en sandkasse der du kan gjøre omtrent hva du vil.
 
 ### Oppgave 6.1: Forbedre spillet
 
 Det finnes fortsatt noen mulige forbedringer av spillet:
 
-#### Oppgaver uten en ferdig løsning
+#### Oppgaver du ikke finner løsningen på i master
 
 Følgende funksjoner har vi ikke selv prøvd å implementere (ennå), men vi tror de
 er både løsbare – og gøyale:
 
 - **«Hull» i kantene**: Hull i kantene på brettet som gjør at man kan komme ut
   på den andre siden, Pacman-style.
-- **Hindringer**: Visse områder midt på brettet er umulige å gå gjennom – kall
-  dem vegger eller øyer eller hva.
+- **Hindringer på brettet**: Visse områder midt på brettet er umulige å gå
+  gjennom – kall dem vegger eller øyer eller hva. De er som kanten av brettet,
+  bare midt i, og slangen kræsjer når den treffer kanten av et slikt område.
 - **Gullepler**: Fra tid til annen kan det dukke opp gullepler som gir 5 ekstra
   poeng hvis man spiser dem innen en viss tid.
 
 Hvis du ikke føler deg helt klar for å jobbe uten fasit ennå, anbefaler vi at du
-prøver deg på «Oppgaver som du finner løsningen på i master-branchen»
+prøver deg på en oppgave du finner løsningen på i master-branchen.
 
 #### Oppgaver som du finner løsninger på i master-branchen
 
@@ -656,10 +675,13 @@ Kanskje du kan implementere et av følgende spill:
 
 Om du synes Svelte er gøy og vil lære mer, har vi følgende anbefalinger.
 
-- Gjør hele Svelte-tutorialen:
-  [https://svelte.dev/tutorial](https://svelte.dev/tutorial/)
-- Prøv ut Sapper, Sveltes motsvar til f.eks. Next.js og Nuxt.js:
-  [https://sapper.svelte.dev/](https://sapper.svelte.dev/)
+- Gjør [hele Svelte-tutorialen](https://svelte.dev/tutorial/)
+  - Sjekk ut [dokumentasjonen](https://svelte.dev/docs) etterpå, og oppdag til
+    din glede at du kan _alt_ når du har fullført tutorialen.
+- Prøv ut [Sapper](https://sapper.svelte.dev/), Sveltes motsvar til f.eks.
+  Next.js og Nuxt.js.
+  - Kanskje du kan lage en hjemmeside fylt av Svelte-spill og være klar for at
+    kidza endelig spiller spill på Internett igjen?
 
 Da gjenstår det kun å si at vi håper du har kost deg med workshoppen vår. Game
 over!
