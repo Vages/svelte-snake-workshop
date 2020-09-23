@@ -77,7 +77,7 @@ er Svelte det rammeverket flest utviklere er interesserte i å bruke …
 
 ![Graf som viser interessen for flere rammeverk over tid.](assets/sojs19_interest.png)
 
-… og det som _nest flest_ er interessert i å bruke. Det skal sies at det er tett
+… og det som _nest flest_ er fornøyde med å bruke. Det skal sies at det er tett
 i teten mellom React, Svelte og Vue, med henholdsvis 89, 88 og 87 prosents
 oppslutning.
 
