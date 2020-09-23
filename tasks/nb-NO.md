@@ -1,6 +1,7 @@
 # Fun and Games with Svelte
 
-En workshop av [Eirik Vågeskar](https://github.com/vages), Knowit Objectnet
+En workshop av [Eirik Vågeskar](https://github.com/vages),
+[Knowit Objectnet Oslo](https://knowitlabs.no/bli-kjent-med-de-nyansatte-i-knowit-solutions-oslo-be28140906d0)
 
 ## Vi skal lage spillet Snake i Svelte
 
@@ -15,6 +16,10 @@ En workshop av [Eirik Vågeskar](https://github.com/vages), Knowit Objectnet
 Applikasjonene man skriver i Svelte blir som regel
 [mindre og raskere enn en tilsvarende applikasjon hadde blitt i React eller Vue](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/).
 
+![Faksimile fra https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ som sammenligner overføringsstørrelse for Svelte og flere andre rammeverk](assets/transfer_size.png)
+
+![Faksimile fra https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ som sammenligner kildekodelinjer for Svelte og flere andre rammeverk](assets/source_code_size.png)
+
 #### Ulempene med Svelte
 
 Ulempen med Svelte er at ikke så mange bruker det (ennå).
@@ -23,31 +28,32 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
 
 - [yarn](https://classic.yarnpkg.com/en/docs/install/)
 - [node](https://nodejs.org/en/)
-- Noe å skrive kode i. Vi anbefaler
-  [en editor hvor du kan installere støtte for Svelte](https://github.com/sveltejs/integrations#editor-extensions).
+- Noe å skrive kode i.
+  - Vi anbefaler
+    [en editor hvor du kan installere støtte for Svelte](https://github.com/sveltejs/integrations#editor-extensions).
 - En klone av
   [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop)
 
 ### Slik blir workshoppen
 
-- Dette repoet inneholder _egentlig_ alt du trenger.
-  - Så å si alt vi skal gå gjennom står i denne filen.
-  - Du kan bruke den hvis du vil bestemme tempo selv.
+- Repoet
+  [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop)
+  inneholder alt du trenger.
+  - Du kan bestemme tempo selv.
   - Vi kommer til å gå gjennom svarene i fellesskap med ujevne mellomrom.
 - Workshoppen er delt opp i 6 deler.
   - Det grunnleggende spillet er ferdig etter del 3.
   - De siste delene er bonuser.
 - Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint.
   - Du kan la være å lese hintene om du trenger en ekstra utfordring.
-- For hver oppgave `X`, bytt til `task-X-begin` før du løser oppgaven.
+- Bytt til `task-X-begin` før du løser hver nye oppgave `X`.
   - `task-X-end` er oppgavens fasit.
 - Du kan be om hjelp de voksne.
-- Unngår du å ta folk i hånda, men taster på andres tastatur? `#covid-19`
+- Taster du på andres tastatur?
   - Er ikke det litt
     [inkonsekvent](https://www.youtube.com/watch?v=IJNR2EpS0jw)?
 
-Og en ting til: For å fokusere på det viktige, har vi skrevet nesten alt av
-styling på forhånd.
+**For å fokusere på kode fremfor utseende, får dere utdelt all styling.**
 
 ## Del 1: Enkel grafikk
 
@@ -55,39 +61,32 @@ Når denne delen er ferdig, skal vi ha et brett med en slange og et eple.
 
 ### Opplæring: Slik ser en Svelte-fil ut
 
-En Svelte-fil består av tre deler: Script, styling og template.
+Svelte er en forbedret versjon av HTML, CSS og Javascript. Om du kan disse fra
+før, kan du bruke mye av det i Svelte.
+
+I Svelte kan man skrive Javascript, CSS og HTML i én og samme fil. Delene kalles
+for «script», «styling» og «template».
 
 ```sveltehtml
 <script>
-  // Her er det kode
-  let a = 42;
+  let answer = 42;
 </script>
 
 <style>
-  /* Her er det CSS-ting */
-  .klassenavn {
-    margin: 0 auto;
+  div {
+    font-weight: bold;
   }
 </style>
 
-<!-- Her skriver man HTML -->
-<div>Hello world!</div>
+<div>Hello world, the answer is {answer}!</div>
 ```
 
-#### Svelte er som en utvidelse av HTML, CSS og Javascript
-
-Du kan bruke omtrent alt du kan fra HTML, CSS eller Javascript i en Svelte-fil.
-Svelte legger til noen forbedringer på toppen av disse språkene, men er stort
-sett kompatibelt med dise.
-
-### Opplæring: Sette inn data fra \<script\> i HTML-delen av en fil
-
-Man bruker krøllparenteser inni HTML-delen av filen for å sette inn variabler og
-utregninger fra kodedelen.
+Som vi akkurat hintet til, bruker man krøllparenteser inni HTML-delen av filen
+for å sette inn variabler, utregninger og funksjonskall.
 
 ```sveltehtml
 <script>
-  let a = 42;
+  let answer = 42;
 </script>
 
 <div>Meningen med livet er {a}.</div>
@@ -95,8 +94,9 @@ utregninger fra kodedelen.
 <div>Meningen med livet har {Math.sign(a)} som fortegn</div>
 ```
 
-Løs denne oppgaven for å forstå det bedre:
-[https://svelte.dev/tutorial/adding-data](https://svelte.dev/tutorial/adding-data)
+Løs
+[oppgaven om å sette inn data fra Svelte-tutorialen](https://svelte.dev/tutorial/adding-data)
+før du går videre.
 
 ### Oppgave 1.1: Plasser eplet
 
@@ -106,7 +106,7 @@ koordinat er lagret i konstanten `CELL_SIZE`.
 
 Vi sier at X-aksen går mot høyre, og Y-aksen peker ned.
 
-![](Screenshot%202020-08-30%20at%2017.12.52.png)
+![X-akse som peker mot høyre, Y-akse som peker ned.](assets/axes.png)
 
 #### Hint: Style-attributtet
 
