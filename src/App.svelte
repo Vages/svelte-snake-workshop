@@ -284,10 +284,8 @@
     <p>
       Made with <a href="https://svelte.dev/">
         <img alt="Svelte logo" src="/svelte.png" /> Svelte
-      </a> by <a href="https://github.com/vages">Eirik Vågeskar</a>
-    </p>
-    <p>
-      Find <a href="https://github.com/Vages/svelte-snake">the code on Github</a>
+      </a> in the <a href="https://github.com/Vages/svelte-snake-workshop">Svelte
+        Snake Workshop</a>
     </p>
   </div>
 </div>
