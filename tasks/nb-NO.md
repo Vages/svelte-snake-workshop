@@ -252,8 +252,7 @@ Tastetrykk-hendelsen heter `keydown`. I Svelte lytter man etter den med
 #### Hint: svelte:body
 
 For å kunne registrere tastetrykk, må vi lytte på `document.body`. Dette får vi
-til ved å bruke elementet `<svelte:body />` (Dette vil fungere tilsvarende likt
-som `<svelte:window />`). Du kan lytte etter hendelser på `svelte:body` akkurat
+til ved å bruke elementet `<svelte:body />`. Du kan lytte etter hendelser på `svelte:body` akkurat
 slik du ville gjort med et annet HTML-element.
 
 ### Opplæring: Å endre variabelverdier
