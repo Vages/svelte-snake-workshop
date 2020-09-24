@@ -109,7 +109,7 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
   - De siste delene er bonuser.
 - Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint.
   - Du kan la være å lese hintene om du trenger en ekstra utfordring.
-- Bytt til `task-X-begin` før du løser hver nye oppgave `X`.
+- Bytt til branch `task-X-begin` før du løser hver nye oppgave `X`.
   - `task-X-end` er oppgavens fasit.
 - Du kan be om hjelp så å si når som helst.
 - Vi kommer ikke til å stoppe deg hvis du trykker på noen andres tastatur, men
