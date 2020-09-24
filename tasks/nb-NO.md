@@ -77,7 +77,7 @@ er Svelte det rammeverket flest utviklere er interesserte i å bruke …
 
 ![Graf som viser interessen for flere rammeverk over tid.](assets/sojs19_interest.png)
 
-… og det som _nest flest_ er fornøyde med å bruke. Det skal sies at det er tett
+… og det som _nest flest_ er interessert i å bruke. Det skal sies at det er tett
 i teten mellom React, Svelte og Vue, med henholdsvis 89, 88 og 87 prosents
 oppslutning.
 
@@ -109,7 +109,7 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
   - De siste delene er bonuser.
 - Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint.
   - Du kan la være å lese hintene om du trenger en ekstra utfordring.
-- Bytt til branch `task-X-begin` før du løser hver nye oppgave `X`.
+- Bytt til `task-X-begin` før du løser hver nye oppgave `X`.
   - `task-X-end` er oppgavens fasit.
 - Du kan be om hjelp så å si når som helst.
 - Vi kommer ikke til å stoppe deg hvis du trykker på noen andres tastatur, men
@@ -156,7 +156,7 @@ for å sette inn variabler, utregninger og funksjonskall.
 <div>Meningen med livet har {Math.sign(a)} som fortegn</div>
 ```
 
-Gå til Sveltes tutorial og løs
+Løs
 [oppgaven om å sette inn data fra Svelte-tutorialen](https://svelte.dev/tutorial/adding-data)
 før du går videre.
 
@@ -164,7 +164,7 @@ før du går videre.
 
 På brettet har vi en `<div class="apple" />`. Plasser dette eplet på det
 koordinatet på brettet som ligger i variabelen `apple`. Størrelsen på hvert
-koordinat i piksler `px` er lagret i konstanten `CELL_SIZE`.
+koordinat er lagret i konstanten `CELL_SIZE`.
 
 Vi sier at X-aksen går mot høyre, og Y-aksen peker ned.
 
@@ -214,6 +214,9 @@ Slangen er en samling koordinater og ligger i variabelen `snake`. Det første
 elementet er hodet.
 
 Hvert koordinat i kroppen skal tegnes som en `<div class="body-part" />`.
+
+Slik skal slangen være plassert på brettet:
+![Eple og slange plassert på brettet](assets/task_1.2_end.png)
 
 ### Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon
 
