@@ -164,7 +164,7 @@ før du går videre.
 
 På brettet har vi en `<div class="apple" />`. Plasser dette eplet på det
 koordinatet på brettet som ligger i variabelen `apple`. Størrelsen på hvert
-koordinat er lagret i konstanten `CELL_SIZE`.
+koordinat i piksler `px` er lagret i konstanten `CELL_SIZE`.
 
 Vi sier at X-aksen går mot høyre, og Y-aksen peker ned.
 
