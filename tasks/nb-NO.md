@@ -156,7 +156,7 @@ for å sette inn variabler, utregninger og funksjonskall.
 <div>Meningen med livet har {Math.sign(a)} som fortegn</div>
 ```
 
-Løs
+Gå til Sveltes tutorial og løs
 [oppgaven om å sette inn data fra Svelte-tutorialen](https://svelte.dev/tutorial/adding-data)
 før du går videre.
 
