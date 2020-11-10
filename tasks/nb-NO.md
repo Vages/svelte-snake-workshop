@@ -217,10 +217,12 @@ Hvert koordinat i kroppen skal tegnes som en `<div class="body-part" />`.
 
 ### Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon
 
-Utregningene for å visualisere noe på brettet er noe repetetive og vil være vanskelige å refaktorere (`x*CELLSIZE`). 
-Flytt disse over
-i en egen funksjon, `calculatePositionAsStyle(coordinate)`. Den skal returnere
-en streng med verdier for top og left.
+Utregningen for å plassere noe på brettet (`x*CELLSIZE`) er gjentatt flere ganger i koden.
+Slike gjentakelser gjør at man må gjøre samme endring flere steder dersom man vil endre logikken.
+
+For å slippe å måtte gjøre samme endring flere steder i fremtiden, 
+flytt den dupliserte utregningen over i en funksjon, `calculatePositionAsStyle(coordinate)`. 
+Den skal returnere en streng med verdier for top og left.
 
 ## Del 2: Spillkontroller
 
