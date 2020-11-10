@@ -220,7 +220,11 @@ Slik skal slangen være plassert på brettet:
 
 ### Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon
 
-Flytte utregningen du inn i en funksjon `calculatePositionAsStyle(coordinate)`.
+Utregningen for å plassere noe på brettet (`x*CELLSIZE`) er gjentatt flere ganger i koden.
+Slike gjentakelser gjør at man må gjøre samme endring flere steder dersom man vil endre logikken.
+
+For å slippe å måtte gjøre samme endring flere steder i fremtiden, 
+flytt den dupliserte utregningen over i en funksjon, `calculatePositionAsStyle(coordinate)`. 
 Den skal returnere en streng med verdier for top og left.
 
 ## Del 2: Spillkontroller
@@ -253,8 +257,8 @@ Tastetrykk-hendelsen heter `keydown`. I Svelte lytter man etter den med
 #### Hint: svelte:body
 
 For å kunne registrere tastetrykk, må vi lytte på `document.body`. Dette får vi
-til ved å bruke elementet `<svelte:body />`. Du kan lytte etter hendelser på
-`svelte:body` akkurat slik du ville gjort med et annet HTML-element.
+til ved å bruke elementet `<svelte:body />`. Du kan lytte etter hendelser på `svelte:body` akkurat
+slik du ville gjort med et annet HTML-element.
 
 ### Opplæring: Å endre variabelverdier
 
@@ -270,8 +274,8 @@ Nå skal vi oversette tastetrykkene til bevegelse. Hver gang man trykker på en
 piltast, skal slangen bevege seg ett steg i den retningen som tasten peker.
 
 For å gjøre det litt enklere, har vi laget en funksjon
-`getNewDirectionFromEventKey ` i `utils.js`, som oversetter fra tastetrykk til
-en bevegelsesvektor.
+`getNewDirectionFromEventKey` i `utils.js`, som oversetter fra tastetrykk til en
+bevegelsesvektor.
 
 Tilleggsopplysninger:
 
