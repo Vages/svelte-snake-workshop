@@ -96,6 +96,7 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
     [en editor hvor du kan installere støtte for Svelte](https://github.com/sveltejs/integrations#editor-extensions).
 - En klone av
   [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop)
+- For mer hjelp med installasjon, se [denne guiden](https://github.com/Vages/svelte-snake-workshop/blob/master/SETUP.md).
 
 ### Slik blir workshoppen
 
@@ -109,8 +110,9 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
   - De siste delene er bonuser.
 - Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint.
   - Du kan la være å lese hintene om du trenger en ekstra utfordring.
-- Bytt til `task-X-begin` før du løser hver nye oppgave `X`.
+- Bytt til `task-X-begin` før du løser hver nye oppgave `X`. Eksempelvis `git checkout task-1.2-begin`.
   - `task-X-end` er oppgavens fasit.
+  - For å fjerne koden du har lagt til og gå videre til ny oppgave kan du skrive `git stash` og deretter `git checkout task-X-begin`.
 - Du kan be om hjelp så å si når som helst.
 - Vi kommer ikke til å stoppe deg hvis du trykker på noen andres tastatur, men
   [er det så lurt, 'a](https://www.youtube.com/watch?v=IJNR2EpS0jw)?
