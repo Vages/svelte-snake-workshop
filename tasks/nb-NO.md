@@ -217,9 +217,9 @@ Hvert koordinat i kroppen skal tegnes som en `<div class="body-part" />`.
 
 ### Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon
 
-Kalkulasjonene som gjøres for å visualisere noe på brettet via styles virker
-repetativt og vil være vanskelig å refaktorere (x\*CELLSIZE), flytt dette over
-til en egen funksjon `calculatePositionAsStyle(coordinate)`. Den skakl returnere
+Utregningene for å visualisere noe på brettet er noe repetetive og vil være vanskelige å refaktorere (x\*CELLSIZE). 
+Flytt disse over
+i en egen funksjon, `calculatePositionAsStyle(coordinate)`. Den skal returnere
 en streng med verdier for top og left.
 
 ## Del 2: Spillkontroller
