@@ -96,7 +96,8 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
     [en editor hvor du kan installere støtte for Svelte](https://github.com/sveltejs/integrations#editor-extensions).
 - En klone av
   [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop)
-- For mer hjelp med installasjon, se [denne guiden](https://github.com/Vages/svelte-snake-workshop/blob/master/SETUP.md).
+- For mer hjelp med installasjon, se
+  [denne guiden](https://github.com/Vages/svelte-snake-workshop/blob/master/SETUP.md).
 
 ### Slik blir workshoppen
 
@@ -110,9 +111,11 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
   - De siste delene er bonuser.
 - Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint.
   - Du kan la være å lese hintene om du trenger en ekstra utfordring.
-- Bytt til `task-X-begin` før du løser hver nye oppgave `X`. Eksempelvis `git checkout task-1.2-begin`.
+- Bytt til `task-X-begin` før du løser hver nye oppgave `X`. Eksempelvis
+  `git checkout task-1.2-begin`.
   - `task-X-end` er oppgavens fasit.
-  - For å fjerne koden du har lagt til og gå videre til ny oppgave kan du skrive `git stash` og deretter `git checkout task-X-begin`.
+  - For å fjerne koden du har lagt til og gå videre til ny oppgave kan du skrive
+    `git stash` og deretter `git checkout task-X-begin`.
 - Du kan be om hjelp så å si når som helst.
 - Vi kommer ikke til å stoppe deg hvis du trykker på noen andres tastatur, men
   [er det så lurt, 'a](https://www.youtube.com/watch?v=IJNR2EpS0jw)?
@@ -163,6 +166,8 @@ Løs
 før du går videre.
 
 ### Oppgave 1.1: Plasser eplet
+
+Åpne filen `src/App.svelte`.
 
 På brettet har vi en `<div class="apple" />`. Plasser dette eplet på det
 koordinatet på brettet som ligger i variabelen `apple`. Størrelsen på hvert
@@ -222,12 +227,14 @@ Slik skal slangen være plassert på brettet:
 
 ### Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon
 
-Utregningen for å plassere noe på brettet (`x*CELLSIZE`) er gjentatt flere ganger i koden.
-Slike gjentakelser gjør at man må gjøre samme endring flere steder dersom man vil endre logikken.
+Utregningen for å plassere noe på brettet (`x*CELLSIZE`) er gjentatt flere
+ganger i koden. Slike gjentakelser gjør at man må gjøre samme endring flere
+steder dersom man vil endre logikken.
 
-For å slippe å måtte gjøre samme endring flere steder i fremtiden, 
-flytt den dupliserte utregningen over i en funksjon, `calculatePositionAsStyle(coordinate)`. 
-Den skal returnere en streng med verdier for top og left.
+For å slippe å måtte gjøre samme endring flere steder i fremtiden, flytt den
+dupliserte utregningen over i en funksjon,
+`calculatePositionAsStyle(coordinate)`. Den skal returnere en streng med verdier
+for top og left.
 
 ## Del 2: Spillkontroller
 
@@ -259,8 +266,8 @@ Tastetrykk-hendelsen heter `keydown`. I Svelte lytter man etter den med
 #### Hint: svelte:body
 
 For å kunne registrere tastetrykk, må vi lytte på `document.body`. Dette får vi
-til ved å bruke elementet `<svelte:body />`. Du kan lytte etter hendelser på `svelte:body` akkurat
-slik du ville gjort med et annet HTML-element.
+til ved å bruke elementet `<svelte:body />`. Du kan lytte etter hendelser på
+`svelte:body` akkurat slik du ville gjort med et annet HTML-element.
 
 ### Opplæring: Å endre variabelverdier
 
