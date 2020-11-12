@@ -1,8 +1,8 @@
-# Installasjonsguide for workshop
-Guide for installasjon av editor, pakkebehandler og git.
+# Installasjonsguide for kurset
+Guide for installasjon av kodeverktøy, pakkebehandler og git.
 
 ## Editor:
-Når det gjelder Editor står dere fritt til å velge selv, men f.eks VS Code er mye brukt blant frontendutviklere og lar deg installere støtte for Svelte.
+Når det gjelder Editor står dere fritt til å velge selv, men for eksempel VS Code er mye brukt blant frontendutviklere og lar deg installere støtte for Svelte.
 
 Følg instruksjonene her for å installere Visual Studio Code: https://code.visualstudio.com/download
 
@@ -10,23 +10,30 @@ Følg instruksjonene her for å installere Visual Studio Code: https://code.visu
 Du må ha en pakkebehandler installert på maskinen for å bygge og kjøre prosjektet lokalt. 
 
 ### Mac
-Vi anbefaler å bruke HomeBrew som er en pakkebehandler for Mac: https://brew.sh/index_nb. Du kan installere denne på din maskin ved å åpne en terminal og kopiere inn følge kommando: 
-
-``` /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" ```
-
-For å installere yarn (https://classic.yarnpkg.com/en/docs/install/#mac-stable) med homebrew kjører du følgende kommando i terminalen din.
-``` brew install yarn ```
+1. Installer Homebrew som beskrevet på https://brew.sh/
+2. Installer pakkene med `brew install git node yarn`
 
 ### Windows
-For å installere Yarn trenger du først å ha Node.js installert. Om du ikke har Node.js på din maskin kan du laste det ned her: https://nodejs.org/en/download/
+På windows er det flere måter å gjøre dette på, og under har vi listet opp to:
 
-Følg denne guiden for å laste ned og installere Yarn: https://classic.yarnpkg.com/en/docs/install/#windows-stable
+#### Med Chocolatey
+1. Installer Chocolatey som beskrevet på https://chocolatey.org/install
+2. Installer pakkene med `choco install yarn nodejs git`
+
+#### Med git bash og exe-filer
+1. Ha Node.js installert. Om du ikke har Node.js på din maskin kan du laste det ned her: https://nodejs.org/en/download/
+2. Følg denne guiden for å laste ned og installere Yarn: https://classic.yarnpkg.com/en/docs/install/#windows-stable
+
+### Linux
+På Linux varierer fremgangsmåten fra distro til distro, og vi har hittil bare opplevd at Linux-brukere vet bedre enn oss hvordan ting skal installeres :D
 
 ## Git
-Git er versjonskontroll for kode, og det du trenger for å hente koden vår. Mac har det installert, men på Windows må du installere det manuelt.
+Git er versjonskontroll for kode, og det du trenger for å hente koden vår. Mac har det installert, men på Windows og Linux må du installere det manuelt.
 
-## Installer Git for Windows
+### Installer Git for Windows
 Last ned Git for Windows her: https://gitforwindows.org/
 
-### Takk til
-Takk til talepre og maynkj for at vi kunne gjenbruke deler av deres guide: https://github.com/knowit/react-dashboard-workshop/blob/master/SETUP.md
+## Klone repo og installere og kjøre appen
+1. Når du har installert disse, kloner du repoet i kommandolinjen/terminalen:
+`git clone https://github.com/Vages/svelte-snake-workshop.git`
+2. Bytt til mappen `svelte-snake-workshop` og skriv `yarn install` for å installere avhengighetene. Hvis du skriver `yarn run dev` skal den starte appen i utviklingsmodus. Hvis dette fungerer, er du klar for workshoppen!
