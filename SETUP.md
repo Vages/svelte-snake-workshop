@@ -1,28 +1,28 @@
 # Installasjonsguide for kurset
 Guide for installasjon av kodeverktøy, pakkebehandler og git.
 
-## Editor:
-Når det gjelder Editor står dere fritt til å velge selv, men for eksempel VS Code er mye brukt blant frontendutviklere og lar deg installere støtte for Svelte.
+## Kodeverktøy
+Når det gjelder kodeverktøy står dere fritt til å velge selv, men for eksempel er Visual Studio Code mye brukt blant frontendutviklere, og du kan installere støtte for Svelte i det.
 
-Følg instruksjonene her for å installere Visual Studio Code: https://code.visualstudio.com/download
+Følg instruksjonene her for å installere Visual Studio Code: <https://code.visualstudio.com/download>
 
-## Pakkebehandler
-Du må ha en pakkebehandler installert på maskinen for å bygge og kjøre prosjektet lokalt. 
+## Git, kjøremiljøet og pakkebehandler
+Du må ha Git for å laste ned prosjektet, kjøremiljøet Node og pakkebehandleren Yarn på maskinen for å bygge og kjøre prosjektet lokalt. 
 
 ### Mac
 1. Installer Homebrew som beskrevet på https://brew.sh/
-2. Installer pakkene med `brew install git node yarn`
+2. Installer alt med `brew install git node yarn`
 
 ### Windows
-På windows er det flere måter å gjøre dette på, og under har vi listet opp to:
+På Windows er det flere måter å gjøre installere yarn på, og under har vi listet opp to:
 
 #### Med Chocolatey
-1. Installer Chocolatey som beskrevet på https://chocolatey.org/install
+1. Installer Chocolatey som beskrevet på <https://chocolatey.org/install>
 2. Installer pakkene med `choco install yarn nodejs git`
 
 #### Med git bash og exe-filer
-1. Ha Node.js installert. Om du ikke har Node.js på din maskin kan du laste det ned her: https://nodejs.org/en/download/
-2. Følg denne guiden for å laste ned og installere Yarn: https://classic.yarnpkg.com/en/docs/install/#windows-stable
+1. Installer Node herfra: <https://nodejs.org/en/download/>
+2. Følg denne guiden for å laste ned og installere Yarn: <https://classic.yarnpkg.com/en/docs/install/#windows-stable>
 
 ### Linux
 På Linux varierer fremgangsmåten fra distro til distro, og vi har hittil bare opplevd at Linux-brukere vet bedre enn oss hvordan ting skal installeres :D
