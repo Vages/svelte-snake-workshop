@@ -13,29 +13,26 @@ Følg instruksjonene her for å installere Visual Studio Code:
 
 ## Git, kjøremiljøet og pakkebehandler
 
-Du må ha Git for å laste ned prosjektet, kjøremiljøet Node og pakkebehandleren
-Yarn på maskinen for å bygge og kjøre prosjektet lokalt.
+Du må ha Git for å laste ned prosjektet og kjøremiljøet Node på maskinen for å
+bygge og kjøre prosjektet lokalt.
 
 ### Mac
 
 1. Installer Homebrew som beskrevet på https://brew.sh/
-2. Installer alt med `brew install git node yarn`
+2. Installer alt med `brew install git node`
 
 ### Windows
 
-På Windows er det flere måter å gjøre installere yarn på, og under har vi listet
-opp to:
+På Windows er det flere måter å gjøre dette på. Under har vi listet opp to:
 
 #### Med Chocolatey
 
 1. Installer Chocolatey som beskrevet på <https://chocolatey.org/install>
-2. Installer pakkene med `choco install yarn nodejs git`
+2. Installer pakkene med `choco install nodejs git`
 
 #### Med git bash og exe-filer
 
-1. Installer Node herfra: <https://nodejs.org/en/download/>
-2. Følg denne guiden for å laste ned og installere Yarn:
-   <https://classic.yarnpkg.com/en/docs/install/#windows-stable>
+Installer Node herfra: <https://nodejs.org/en/download/>
 
 ### Linux
 
@@ -55,6 +52,6 @@ Last ned Git for Windows her: https://gitforwindows.org/
 
 1. Når du har installert disse, kloner du repoet i kommandolinjen/terminalen:
    `git clone https://github.com/Vages/svelte-snake-workshop.git`
-2. Bytt til mappen `svelte-snake-workshop` og skriv `yarn install` for å
-   installere avhengighetene. Hvis du skriver `yarn run dev` skal den starte
+2. Bytt til mappen `svelte-snake-workshop` og skriv `npm install` for å
+   installere avhengighetene. Hvis du skriver `npm run dev` skal den starte
    appen i utviklingsmodus. Hvis dette fungerer, er du klar for workshoppen!
