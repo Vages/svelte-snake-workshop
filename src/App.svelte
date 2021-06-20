@@ -1,7 +1,6 @@
 <script>
   import { onMount } from "svelte";
   import { fly, scale } from "svelte/transition";
-  import cssVars from "svelte-css-vars";
 
   import GameOverModal from "./GameOverModal.svelte";
   import {
@@ -76,16 +75,11 @@
       coordinate.y * CELL_SIZE
     }px`;
   }
-
-  $: styleVars = {
-    "cell-size": `${CELL_SIZE}px`,
-    "tick-time": `${TICK_TIME}ms`,
-  };
 </script>
 
 <svelte:body on:keydown={handleKeydown} />
 
-<div use:cssVars={styleVars} class="main-content min-width">
+<div class="main-content min-width">
   <div class="score">{score}</div>
 
   <div
@@ -145,6 +139,11 @@
 {/if}
 
 <style>
+  :root {
+    --cell-size: 25px;
+    --tick-time: 100ms;
+  }
+
   .modal-container {
     position: absolute;
     left: 50%;
