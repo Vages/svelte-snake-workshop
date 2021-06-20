@@ -22,6 +22,34 @@
   };
 </script>
 
+<div use:cssVars={styleVars} class="main-content min-width">
+  <div class="score">{score}</div>
+
+  <div
+    class="board"
+    style="width: {BOARD_DIMENSIONS.x *
+      CELL_SIZE}px; height: {BOARD_DIMENSIONS.y * CELL_SIZE}px"
+  >
+    <div class="body-part" />
+
+    <div class="apple" />
+  </div>
+
+  <div class="signature">
+    <p>
+      Made with
+      <a href="https://svelte.dev/">
+        <img alt="Svelte logo" src="/svelte.png" />
+        Svelte
+      </a>
+      in the
+      <a href="https://github.com/Vages/svelte-snake-workshop">
+        Svelte Snake Workshop
+      </a>
+    </p>
+  </div>
+</div>
+
 <style>
   .modal-container {
     position: absolute;
@@ -119,31 +147,3 @@
       calc(-1 * var(--cell-size)) 0;
   }
 </style>
-
-<div use:cssVars={styleVars} class="main-content min-width">
-  <div class="score">{score}</div>
-
-  <div
-    class="board"
-    style="width: {BOARD_DIMENSIONS.x *
-      CELL_SIZE}px; height: {BOARD_DIMENSIONS.y * CELL_SIZE}px"
-  >
-    <div class="body-part" />
-
-    <div class="apple" />
-  </div>
-
-  <div class="signature">
-    <p>
-      Made with
-      <a href="https://svelte.dev/">
-        <img alt="Svelte logo" src="/svelte.png" />
-        Svelte
-      </a>
-      in the
-      <a href="https://github.com/Vages/svelte-snake-workshop">
-        Svelte Snake Workshop
-      </a>
-    </p>
-  </div>
-</div>
