@@ -245,8 +245,6 @@
 
 </style>
 
-<svelte:options immutable={true} />
-
 <svelte:body on:keydown={handleKeydown} />
 
 <div use:cssVars={styleVars} class="main-content min-width">
