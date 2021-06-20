@@ -30,7 +30,8 @@
     {:then highScores}
       <div
         class="nes-table-responsive"
-        style="width: max-content; margin-left: auto; margin-right: auto;">
+        style="width: max-content; margin-left: auto; margin-right: auto;"
+      >
         <table class="nes-table is-bordered is-centered">
           <tbody>
             {#each highScores as entry}
