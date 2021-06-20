@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { Server, Model } from "miragejs";
 import { addCaos } from "miragejs-caos";
 
