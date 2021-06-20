@@ -81,7 +81,6 @@
     "cell-size": `${CELL_SIZE}px`,
     "tick-time": `${TICK_TIME}ms`,
   };
-
 </script>
 
 <style>
@@ -180,7 +179,6 @@
       var(--cell-size) calc(-1 * var(--cell-size)),
       calc(-1 * var(--cell-size)) 0;
   }
-
 </style>
 
 <svelte:body on:keydown={handleKeydown} />
@@ -190,18 +188,22 @@
 
   <div
     class="board"
-    style="width: {BOARD_DIMENSIONS.x * CELL_SIZE}px; height: {BOARD_DIMENSIONS.y * CELL_SIZE}px">
+    style="width: {BOARD_DIMENSIONS.x *
+      CELL_SIZE}px; height: {BOARD_DIMENSIONS.y * CELL_SIZE}px"
+  >
     {#each snake.slice(1) as bodyPart}
       <div class="body-part" style={calculatePositionAsStyle(bodyPart)} />
     {/each}
     <div class="body-part head" style={calculatePositionAsStyle(snake[0])} />
     <div
       class="body-part tail"
-      style={calculatePositionAsStyle(snake[snake.length - 1])} />
+      style={calculatePositionAsStyle(snake[snake.length - 1])}
+    />
     <!-- This extra tail is added to compensate for tail flickering in Chrome and Safari -->
     <div
       class="body-part tail"
-      style={calculatePositionAsStyle(snake[snake.length - 2])} />
+      style={calculatePositionAsStyle(snake[snake.length - 2])}
+    />
 
     {#key score}
       <div in:scale style={calculatePositionAsStyle(apple)} class="apple" />
@@ -211,7 +213,8 @@
       <div
         in:scale={{ delay: 300 }}
         style={calculatePositionAsStyle(snake[0])}
-        class="skull" />
+        class="skull"
+      />
     {/if}
   </div>
 
