@@ -24,7 +24,6 @@
     "cell-size": `${CELL_SIZE}px`,
     "tick-time": `${TICK_TIME}ms`,
   };
-
 </script>
 
 <style>
@@ -123,7 +122,6 @@
       var(--cell-size) calc(-1 * var(--cell-size)),
       calc(-1 * var(--cell-size)) 0;
   }
-
 </style>
 
 <div use:cssVars={styleVars} class="main-content min-width">
@@ -131,7 +129,9 @@
 
   <div
     class="board"
-    style="width: {BOARD_DIMENSIONS.x * CELL_SIZE}px; height: {BOARD_DIMENSIONS.y * CELL_SIZE}px">
+    style="width: {BOARD_DIMENSIONS.x *
+      CELL_SIZE}px; height: {BOARD_DIMENSIONS.y * CELL_SIZE}px"
+  >
     {#each snake as bodyPart}
       <div class="body-part" style={calculatePositionAsStyle(bodyPart)} />
     {/each}
