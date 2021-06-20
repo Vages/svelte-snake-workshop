@@ -7,7 +7,6 @@
     { x: 4, y: 3 },
     { x: 4, y: 2 },
   ];
-  // eslint-disable-next-line no-unused-vars
   let apple = { x: 8, y: 8 };
   let score = 0;
 
