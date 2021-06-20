@@ -143,6 +143,7 @@
   };
 
   $: gameOver = gameState === GAME_STATES.GAME_OVER;
+
 </script>
 
 <style>
@@ -241,6 +242,7 @@
       var(--cell-size) calc(-1 * var(--cell-size)),
       calc(-1 * var(--cell-size)) 0;
   }
+
 </style>
 
 <svelte:options immutable={true} />
@@ -265,12 +267,9 @@
       class="body-part tail"
       style={calculatePositionAsStyle(snake[snake.length - 2])} />
 
-    <!--  We use two alternating apples in order to animate re-appearance on the board -->
-    {#if score % 2}
+    {#key score}
       <div in:scale style={calculatePositionAsStyle(apple)} class="apple" />
-    {:else}
-      <div in:scale style={calculatePositionAsStyle(apple)} class="apple" />
-    {/if}
+    {/key}
 
     {#if gameOver}
       <div
@@ -282,10 +281,15 @@
 
   <div class="signature">
     <p>
-      Made with <a href="https://svelte.dev/">
-        <img alt="Svelte logo" src="/svelte.png" /> Svelte
-      </a> in the <a href="https://github.com/Vages/svelte-snake-workshop">Svelte
-        Snake Workshop</a>
+      Made with
+      <a href="https://svelte.dev/">
+        <img alt="Svelte logo" src="/svelte.png" />
+        Svelte
+      </a>
+      in the
+      <a href="https://github.com/Vages/svelte-snake-workshop">
+        Svelte Snake Workshop
+      </a>
     </p>
   </div>
 </div>

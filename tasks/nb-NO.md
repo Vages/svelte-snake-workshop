@@ -491,6 +491,8 @@ Når denne delen er over skal vi ha en animert hodeskalle, eple og slange.
 
 - [If-blokker](https://svelte.dev/tutorial/if-blocks)
 - [Else-blokker](https://svelte.dev/tutorial/else-blocks)
+- [Key-blokker](https://svelte.dev/docs#key) (dessverre bare dokumentasjon;
+  tutorial kommer)
 
 ### Opplæring: Hvordan overganger fungerer
 
@@ -500,23 +502,20 @@ Når denne delen er over skal vi ha en animert hodeskalle, eple og slange.
 
 ### Oppgave 4.1: Animer eplet
 
-Nå skal du animere animere når nye epler dukker opp.
+For å lede spillerens oppmerksomhet bort til nye epler, skal du få eplet til å
+«poppe» opp på den nye posisjonen når det blir spist.
 
-Du skal legge på overgangen `scale` ved å importere denne fra
-`svelte/transition`. Denne overgangen skal _bare_ vises når eplet dukker opp. Du
-kan forresten prøve ut
-[flere overganger](https://svelte.dev/docs#svelte_transition), men `scale` er
-altså fasit.
+For å få til dette skal du importere overgangen `scale` fra `svelte/transition`.
+For å begrense animasjonen til når eplet popper opp, bruker du `in:` i stedet
+for `transition:`. (Du kan forresten prøve ut
+[flere overganger](https://svelte.dev/docs#svelte_transition), selv om vi som
+laget kurset foretrekker `scale`.)
 
-Fordi overganger bare fungerer når et element forsvinner eller dukker opp, er du
-nødt til å trikse slik at et nytt eple tar over for det gamle hver gang. Trikset
-er ikke spesielt vanskelig, men det kan kreve en aha-opplevelse. Spoiler
-nedenfor.
-
-#### SPOILER ALERT: Hint om hvordan du skal bytte ut eplet
-
-Du kan bruke score modulo to, altså `score % 2`, i en if-else-blokk (der if og
-else-tilfellene har lik output) for å veksle mellom to epler.
+Normalt sett pleier Svelte bare å animere elementer dersom de forsvinner inn
+eller ut av dokumentet. Du kan fortelle Svelte at elementet skal animeres på
+nytt når det bytter plass ved å bruke en key-blokk:
+`{#key <verdi>}<innhold>{/key}`. Da vil Svelte animere `innhold` på nytt når
+`verdi` endrer seg.
 
 ### Oppgave 4.2: Legg på en hodeskalle når slangen dør
 
