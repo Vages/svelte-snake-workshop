@@ -2028,7 +2028,7 @@ svelte-css-vars@^0.0.1:
   resolved "https://registry.yarnpkg.com/svelte-css-vars/-/svelte-css-vars-0.0.1.tgz#f0775a02952476a47e99ea866e64ba8d2353b9e0"
   integrity sha512-SXsLuHvpC40H14iCRH8zp/NnY/tKGhQhmHSx31PhUNvo+Hyw7IovTnx4ICsYlg4tS7kFsYtOh5sNSdvGsY6AQA==
 
-svelte@^3.25.1:
+svelte@^3.28.0:
   version "3.38.2"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.38.2.tgz#55e5c681f793ae349b5cc2fe58e5782af4275ef5"
   integrity sha512-q5Dq0/QHh4BLJyEVWGe7Cej5NWs040LWjMbicBGZ+3qpFWJ1YObRmUDZKbbovddLC9WW7THTj3kYbTOFmU9fbg==
