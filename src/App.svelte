@@ -42,6 +42,7 @@
     "cell-size": `${CELL_SIZE}px`,
     "tick-time": `${TICK_TIME}ms`,
   };
+
 </script>
 
 <style>
@@ -140,6 +141,7 @@
       var(--cell-size) calc(-1 * var(--cell-size)),
       calc(-1 * var(--cell-size)) 0;
   }
+
 </style>
 
 <svelte:body on:keydown={handleKeydown} />
@@ -159,10 +161,15 @@
 
   <div class="signature">
     <p>
-      Made with <a href="https://svelte.dev/">
-        <img alt="Svelte logo" src="/svelte.png" /> Svelte
-      </a> in the <a href="https://github.com/Vages/svelte-snake-workshop">Svelte
-        Snake Workshop</a>
+      Made with
+      <a href="https://svelte.dev/">
+        <img alt="Svelte logo" src="/svelte.png" />
+        Svelte
+      </a>
+      in the
+      <a href="https://github.com/Vages/svelte-snake-workshop">
+        Svelte Snake Workshop
+      </a>
     </p>
   </div>
 </div>
