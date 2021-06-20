@@ -7,16 +7,14 @@ Welcome to the Svelte Snake Workshop!
 Install the dependencies …
 
 ```bash
-yarn install
+npm install
 ```
 
 … then start [Rollup](https://rollupjs.org):
 
 ```bash
-yarn run dev
+npm run dev # Note that the script is `dev`, not `start`.
 ```
-
-**Important**: it's `yarn run dev`, _not_ `yarn run start`.
 
 Navigate to [localhost:5000](http://localhost:5000). You should see your app
 running. Edit a component file in `src`, save it, and reload the page to see
@@ -30,10 +28,10 @@ Once this is running, you'll be ready to try out
 To create an optimised version of the app:
 
 ```bash
-yarn run build
+npm run build
 ```
 
-You can run the newly built app with `yarn run start`. This uses
+You can run the newly built app with `npm run start`. This uses
 [sirv](https://github.com/lukeed/sirv), which is included in your package.json's
 `dependencies` so that the app will work when you deploy to platforms like
 [Heroku](https://heroku.com).
@@ -45,7 +43,7 @@ You can run the newly built app with `yarn run start`. This uses
 Install `now` if you haven't already:
 
 ```bash
-yarn add -g now
+npm install -g now
 ```
 
 Then, from within your project folder:
@@ -63,12 +61,12 @@ simply drag the unzipped project folder to the taskbar icon.
 Install `surge` if you haven't already:
 
 ```bash
-yarn add -g surge
+npm install -g surge
 ```
 
 Then, from within your project folder:
 
 ```bash
-yarn run build
+npm run build
 surge public my-project.surge.sh
 ```
