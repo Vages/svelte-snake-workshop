@@ -14,12 +14,6 @@
   onMount(fetchScores);
 </script>
 
-<style>
-  section {
-    margin: 2rem 0;
-  }
-</style>
-
 <NesContainer>
   <h2 class="title">Game over</h2>
   <div>You got {score} points.</div>
@@ -49,3 +43,9 @@
     {/await}
   </section>
 </NesContainer>
+
+<style>
+  section {
+    margin: 2rem 0;
+  }
+</style>
