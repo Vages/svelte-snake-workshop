@@ -1,4 +1,1 @@
-module.exports = {
-  proseWrap: "always",
-  svelteSortOrder: "options-scripts-styles-markup",
-};
+module.exports = { proseWrap: "always" };
