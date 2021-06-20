@@ -2,12 +2,6 @@
   import NesContainer from "./NesContainer.svelte";
 </script>
 
-<style>
-  div {
-    margin: 3rem 0;
-  }
-</style>
-
 <NesContainer>
   <h1>Snake</h1>
   <div>
@@ -20,3 +14,9 @@
   </div>
   <p><strong>Any key to start</strong></p>
 </NesContainer>
+
+<style>
+  div {
+    margin: 3rem 0;
+  }
+</style>

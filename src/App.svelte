@@ -82,6 +82,67 @@
   };
 </script>
 
+<svelte:body on:keydown={handleKeydown} />
+
+<div use:cssVars={styleVars} class="main-content min-width">
+  <div class="score">{score}</div>
+
+  <div
+    class="board"
+    style="width: {BOARD_DIMENSIONS.x *
+      CELL_SIZE}px; height: {BOARD_DIMENSIONS.y * CELL_SIZE}px"
+  >
+    {#each snake.slice(1) as bodyPart}
+      <div class="body-part" style={calculatePositionAsStyle(bodyPart)} />
+    {/each}
+    <div class="body-part head" style={calculatePositionAsStyle(snake[0])} />
+    <div
+      class="body-part tail"
+      style={calculatePositionAsStyle(snake[snake.length - 1])}
+    />
+    <!-- This extra tail is added to compensate for tail flickering in Chrome and Safari -->
+    <div
+      class="body-part tail"
+      style={calculatePositionAsStyle(snake[snake.length - 2])}
+    />
+
+    {#key score}
+      <div in:scale style={calculatePositionAsStyle(apple)} class="apple" />
+    {/key}
+
+    {#if gameOver}
+      <div
+        in:scale={{ delay: 300 }}
+        style={calculatePositionAsStyle(snake[0])}
+        class="skull"
+      />
+    {/if}
+  </div>
+
+  <div class="signature">
+    <p>
+      Made with
+      <a href="https://svelte.dev/">
+        <img alt="Svelte logo" src="/svelte.png" />
+        Svelte
+      </a>
+      in the
+      <a href="https://github.com/Vages/svelte-snake-workshop">
+        Svelte Snake Workshop
+      </a>
+    </p>
+  </div>
+</div>
+
+{#if gameOver}
+  <div class="modal-container" in:fly={{ delay: 1300, y: -100 }}>
+    <!-- This div, together with the class modal-container is required to center the content -->
+    <div style="position: relative; left: -50%;">
+      <!-- TODO: Mount game over modal here -->
+    </div>
+  </div>
+{/if}
+
 <style>
   .modal-container {
     position: absolute;
@@ -179,64 +240,3 @@
       calc(-1 * var(--cell-size)) 0;
   }
 </style>
-
-<svelte:body on:keydown={handleKeydown} />
-
-<div use:cssVars={styleVars} class="main-content min-width">
-  <div class="score">{score}</div>
-
-  <div
-    class="board"
-    style="width: {BOARD_DIMENSIONS.x *
-      CELL_SIZE}px; height: {BOARD_DIMENSIONS.y * CELL_SIZE}px"
-  >
-    {#each snake.slice(1) as bodyPart}
-      <div class="body-part" style={calculatePositionAsStyle(bodyPart)} />
-    {/each}
-    <div class="body-part head" style={calculatePositionAsStyle(snake[0])} />
-    <div
-      class="body-part tail"
-      style={calculatePositionAsStyle(snake[snake.length - 1])}
-    />
-    <!-- This extra tail is added to compensate for tail flickering in Chrome and Safari -->
-    <div
-      class="body-part tail"
-      style={calculatePositionAsStyle(snake[snake.length - 2])}
-    />
-
-    {#key score}
-      <div in:scale style={calculatePositionAsStyle(apple)} class="apple" />
-    {/key}
-
-    {#if gameOver}
-      <div
-        in:scale={{ delay: 300 }}
-        style={calculatePositionAsStyle(snake[0])}
-        class="skull"
-      />
-    {/if}
-  </div>
-
-  <div class="signature">
-    <p>
-      Made with
-      <a href="https://svelte.dev/">
-        <img alt="Svelte logo" src="/svelte.png" />
-        Svelte
-      </a>
-      in the
-      <a href="https://github.com/Vages/svelte-snake-workshop">
-        Svelte Snake Workshop
-      </a>
-    </p>
-  </div>
-</div>
-
-{#if gameOver}
-  <div class="modal-container" in:fly={{ delay: 1300, y: -100 }}>
-    <!-- This div, together with the class modal-container is required to center the content -->
-    <div style="position: relative; left: -50%;">
-      <!-- TODO: Mount game over modal here -->
-    </div>
-  </div>
-{/if}
