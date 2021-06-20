@@ -89,7 +89,6 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
 
 ### Du må ha følgende på datamaskinen din
 
-- [yarn](https://classic.yarnpkg.com/en/docs/install/)
 - [node](https://nodejs.org/en/)
 - Noe å skrive kode i.
   - Vi anbefaler

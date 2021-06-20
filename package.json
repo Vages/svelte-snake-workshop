@@ -4,7 +4,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "dist": "yarn build && surge public svelte-snake.surge.sh",
+    "dist": "npm run build && surge public svelte-snake.surge.sh",
     "start": "sirv public"
   },
   "lint-staged": {
