@@ -96,6 +96,8 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
     [en editor hvor du kan installere støtte for Svelte](https://github.com/sveltejs/integrations#editor-extensions).
 - En klone av
   [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop)
+- For mer hjelp med installasjon, se
+  [denne guiden](https://github.com/Vages/svelte-snake-workshop/blob/master/SETUP.md).
 
 ### Slik blir workshoppen
 
@@ -109,8 +111,11 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
   - De siste delene er bonuser.
 - Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint.
   - Du kan la være å lese hintene om du trenger en ekstra utfordring.
-- Bytt til `task-X-begin` før du løser hver nye oppgave `X`.
+- Bytt til `task-X-begin` før du løser hver nye oppgave `X`. Eksempelvis
+  `git checkout task-1.2-begin`.
   - `task-X-end` er oppgavens fasit.
+  - For å fjerne koden du har lagt til og gå videre til ny oppgave kan du skrive
+    `git stash` og deretter `git checkout task-X-begin`.
 - Du kan be om hjelp så å si når som helst.
 - Vi kommer ikke til å stoppe deg hvis du trykker på noen andres tastatur, men
   [er det så lurt, 'a](https://www.youtube.com/watch?v=IJNR2EpS0jw)?
@@ -161,6 +166,8 @@ Løs
 før du går videre.
 
 ### Oppgave 1.1: Plasser eplet
+
+Åpne filen `src/App.svelte`.
 
 På brettet har vi en `<div class="apple" />`. Plasser dette eplet på det
 koordinatet på brettet som ligger i variabelen `apple`. Størrelsen på hvert
@@ -215,10 +222,19 @@ elementet er hodet.
 
 Hvert koordinat i kroppen skal tegnes som en `<div class="body-part" />`.
 
+Slik skal slangen være plassert på brettet:
+![Eple og slange plassert på brettet](assets/task_1.2_end.png)
+
 ### Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon
 
-Flytte utregningen du inn i en funksjon `calculatePositionAsStyle(coordinate)`.
-Den skal returnere en streng med verdier for top og left.
+Utregningen for å plassere noe på brettet (`x*CELLSIZE`) er gjentatt flere
+ganger i koden. Slike gjentakelser gjør at man må gjøre samme endring flere
+steder dersom man vil endre logikken.
+
+For å slippe å måtte gjøre samme endring flere steder i fremtiden, flytt den
+dupliserte utregningen over i en funksjon,
+`calculatePositionAsStyle(coordinate)`. Den skal returnere en streng med verdier
+for top og left.
 
 ## Del 2: Spillkontroller
 
@@ -267,8 +283,8 @@ Nå skal vi oversette tastetrykkene til bevegelse. Hver gang man trykker på en
 piltast, skal slangen bevege seg ett steg i den retningen som tasten peker.
 
 For å gjøre det litt enklere, har vi laget en funksjon
-`getNewDirectionFromEventKey ` i `utils.js`, som oversetter fra tastetrykk til
-en bevegelsesvektor.
+`getNewDirectionFromEventKey` i `utils.js`, som oversetter fra tastetrykk til en
+bevegelsesvektor.
 
 Tilleggsopplysninger:
 
@@ -475,6 +491,8 @@ Når denne delen er over skal vi ha en animert hodeskalle, eple og slange.
 
 - [If-blokker](https://svelte.dev/tutorial/if-blocks)
 - [Else-blokker](https://svelte.dev/tutorial/else-blocks)
+- [Key-blokker](https://svelte.dev/docs#key) (dessverre bare dokumentasjon;
+  tutorial kommer)
 
 ### Opplæring: Hvordan overganger fungerer
 
@@ -484,23 +502,20 @@ Når denne delen er over skal vi ha en animert hodeskalle, eple og slange.
 
 ### Oppgave 4.1: Animer eplet
 
-Nå skal du animere animere når nye epler dukker opp.
+For å lede spillerens oppmerksomhet bort til nye epler, skal du få eplet til å
+«poppe» opp på den nye posisjonen når det blir spist.
 
-Du skal legge på overgangen `scale` ved å importere denne fra
-`svelte/transition`. Denne overgangen skal _bare_ vises når eplet dukker opp. Du
-kan forresten prøve ut
-[flere overganger](https://svelte.dev/docs#svelte_transition), men `scale` er
-altså fasit.
+For å få til dette skal du importere overgangen `scale` fra `svelte/transition`.
+For å begrense animasjonen til når eplet popper opp, bruker du `in:` i stedet
+for `transition:`. (Du kan forresten prøve ut
+[flere overganger](https://svelte.dev/docs#svelte_transition), selv om vi som
+laget kurset foretrekker `scale`.)
 
-Fordi overganger bare fungerer når et element forsvinner eller dukker opp, er du
-nødt til å trikse slik at et nytt eple tar over for det gamle hver gang. Trikset
-er ikke spesielt vanskelig, men det kan kreve en aha-opplevelse. Spoiler
-nedenfor.
-
-#### SPOILER ALERT: Hint om hvordan du skal bytte ut eplet
-
-Du kan bruke score modulo to, altså `score % 2`, i en if-else-blokk (der if og
-else-tilfellene har lik output) for å veksle mellom to epler.
+Normalt sett pleier Svelte bare å animere elementer dersom de forsvinner inn
+eller ut av dokumentet. Du kan fortelle Svelte at elementet skal animeres på
+nytt når det bytter plass ved å bruke en key-blokk:
+`{#key <verdi>}<innhold>{/key}`. Da vil Svelte animere `innhold` på nytt når
+`verdi` endrer seg.
 
 ### Oppgave 4.2: Legg på en hodeskalle når slangen dør
 
