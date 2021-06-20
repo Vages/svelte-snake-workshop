@@ -39,7 +39,8 @@
     {:then highScores}
       <div
         class="nes-table-responsive"
-        style="width: max-content; margin-left: auto; margin-right: auto;">
+        style="width: max-content; margin-left: auto; margin-right: auto;"
+      >
         <table class="nes-table is-bordered is-centered">
           <tbody>
             {#each highScores as entry}
@@ -62,7 +63,13 @@
       <form on:submit={postScore}>
         <div>
           <label class="nes-field">
-            Name <input minlength="3" required type="text" class="nes-input" bind:value={name} />
+            Name <input
+              minlength="3"
+              required
+              type="text"
+              class="nes-input"
+              bind:value={name}
+            />
           </label>
         </div>
         <button type="submit" class="nes-btn is-primary">Submit</button>
@@ -78,7 +85,7 @@
       {/await}
     {/if}
   </section>
-  <button on:click={() => dispatch('close_modal')} class="nes-btn">
+  <button on:click={() => dispatch("close_modal")} class="nes-btn">
     Close
   </button>
 </NesContainer>
