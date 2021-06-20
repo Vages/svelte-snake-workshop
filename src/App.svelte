@@ -2,7 +2,6 @@
   const TICK_TIME = 100;
   const BOARD_DIMENSIONS = { x: 20, y: 20 };
 
-  // eslint-disable-next-line no-unused-vars
   let snake = [
     { x: 4, y: 4 },
     { x: 4, y: 3 },
