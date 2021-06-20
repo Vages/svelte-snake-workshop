@@ -1,6 +1,4 @@
 <script>
-  import cssVars from "svelte-css-vars";
-
   import { getNewApplePosition } from "./utils";
 
   const TICK_TIME = 100;
@@ -21,16 +19,11 @@
       coordinate.y * CELL_SIZE
     }px`;
   }
-
-  $: styleVars = {
-    "cell-size": `${CELL_SIZE}px`,
-    "tick-time": `${TICK_TIME}ms`,
-  };
 </script>
 
 <svelte:body on:keydown={console.log} />
 
-<div use:cssVars={styleVars} class="main-content min-width">
+<div class="main-content min-width">
   <div class="score">{score}</div>
 
   <div
@@ -61,6 +54,11 @@
 </div>
 
 <style>
+  :root {
+    --cell-size: 25px;
+    --tick-time: 100ms;
+  }
+
   .modal-container {
     position: absolute;
     left: 50%;
