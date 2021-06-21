@@ -222,6 +222,7 @@ elementet er hodet.
 Hvert koordinat i kroppen skal tegnes som en `<div class="body-part" />`.
 
 Slik skal slangen være plassert på brettet:
+
 ![Eple og slange plassert på brettet](assets/task_1.2_end.png)
 
 ### Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon
