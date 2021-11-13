@@ -1,8 +1,8 @@
 /* eslint-disable global-require */
-import svelte from "rollup-plugin-svelte";
-import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
 import livereload from "rollup-plugin-livereload";
+import svelte from "rollup-plugin-svelte";
 import { terser } from "rollup-plugin-terser";
 
 const production = !process.env.ROLLUP_WATCH;

@@ -3,6 +3,8 @@
   import { fly, scale } from "svelte/transition";
 
   import GameOverModal from "./GameOverModal.svelte";
+  import NesContainer from "./NesContainer.svelte";
+  import StartModal from "./StartModal.svelte";
   import {
     DIRECTION_VECTORS,
     DIRECTION_NAMES,
@@ -15,8 +17,6 @@
     isInsideBoard,
     isSnakeEatingItself,
   } from "./utils";
-  import NesContainer from "./NesContainer.svelte";
-  import StartModal from "./StartModal.svelte";
 
   const TICK_TIME = 100;
   const BOARD_DIMENSIONS = { x: 20, y: 20 };

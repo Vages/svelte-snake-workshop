@@ -1,4 +1,4 @@
-import { Server, Model } from "miragejs";
+import { Model, Server } from "miragejs";
 import { addCaos } from "miragejs-caos";
 
 const ServerWithCaos = addCaos(Server, { level: "medium" });
