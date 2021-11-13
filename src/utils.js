@@ -1,8 +1,20 @@
+export const DIRECTION_NAMES = Object.freeze({
+  NORTH: "NORTH",
+  EAST: "EAST",
+  SOUTH: "SOUTH",
+  WEST: "WEST",
+});
+
+const OPPOSITE_DIRECTIONS = [
+  [DIRECTION_NAMES.NORTH, DIRECTION_NAMES.SOUTH],
+  [DIRECTION_NAMES.EAST, DIRECTION_NAMES.WEST],
+];
+
 export const DIRECTION_VECTORS = Object.freeze({
-  NORTH: { x: 0, y: -1 },
-  SOUTH: { x: 0, y: 1 },
-  EAST: { x: 1, y: 0 },
-  WEST: { x: -1, y: 0 },
+  [DIRECTION_NAMES.NORTH]: { x: 0, y: -1 },
+  [DIRECTION_NAMES.SOUTH]: { x: 0, y: 1 },
+  [DIRECTION_NAMES.EAST]: { x: 1, y: 0 },
+  [DIRECTION_NAMES.WEST]: { x: -1, y: 0 },
 });
 
 export function add(coordinateA, coordinateB) {
@@ -48,14 +60,12 @@ export function isSnakeEatingItself(snake) {
   return snake.slice(1).some((snakeSpace) => isEqual(snakeSpace, headPosition));
 }
 
-export function is180Turn(snake, newDirectionFromEventKey) {
-  const head = snake[0];
-  const neck = snake[1];
-  const headWouldEatNeck = isEqual(
-    add(head, DIRECTION_VECTORS[newDirectionFromEventKey]),
-    neck
+export function isStraightOr180Turn(currentDirection, nextDirection) {
+  return OPPOSITE_DIRECTIONS.some(
+    (directionAndOpposite) =>
+      directionAndOpposite.includes(currentDirection) &&
+      directionAndOpposite.includes(nextDirection)
   );
-  return headWouldEatNeck;
 }
 
 export function getNewDirectionFromEventKey(key) {
@@ -64,19 +74,32 @@ export function getNewDirectionFromEventKey(key) {
     case "ArrowUp":
     case "w":
     case ",":
-      return "NORTH";
+      return DIRECTION_NAMES.NORTH;
     case "ArrowDown":
     case "s":
     case "o":
-      return "SOUTH";
+      return DIRECTION_NAMES.SOUTH;
     case "ArrowLeft":
     case "a":
-      return "WEST";
+      return DIRECTION_NAMES.WEST;
     case "ArrowRight":
     case "d":
     case "e":
-      return "EAST";
+      return DIRECTION_NAMES.EAST;
     default:
       return null;
+  }
+}
+
+export function getNextHeadDirectionAndQueue(queue, currentDirection) {
+  const foundIndex = queue.findIndex(
+    (direction) => !isStraightOr180Turn(currentDirection, direction)
+  );
+
+  const noNextDirectionFound = foundIndex === -1;
+  if (noNextDirectionFound) {
+    return [[], currentDirection];
+  } else {
+    return [queue.slice(foundIndex + 1), queue[foundIndex]];
   }
 }

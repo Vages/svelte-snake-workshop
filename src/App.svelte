@@ -5,10 +5,12 @@
   import GameOverModal from "./GameOverModal.svelte";
   import {
     DIRECTION_VECTORS,
+    DIRECTION_NAMES,
     getNewApplePosition,
     getNewDirectionFromEventKey,
     getNextSnake,
-    is180Turn,
+    isStraightOr180Turn,
+    getNextHeadDirectionAndQueue,
     isEqual,
     isInsideBoard,
     isSnakeEatingItself,
@@ -34,6 +36,7 @@
   let score;
   let snake;
   let willGrow;
+  let headDirectionQueue;
 
   function resetGame() {
     const initialSnake = [
@@ -43,16 +46,23 @@
     ];
     apple = getNewApplePosition(BOARD_DIMENSIONS, initialSnake);
     gameState = GAME_STATES.START_SCREEN;
-    headDirection = "SOUTH";
+    headDirection = DIRECTION_NAMES.SOUTH;
     score = 0;
     snake = initialSnake;
     willGrow = false;
+    headDirectionQueue = [];
   }
 
   resetGame();
 
   // Snake logic
   function moveSnake() {
+    const [nextQueue, nextDirection] = getNextHeadDirectionAndQueue(
+      headDirectionQueue,
+      headDirection
+    );
+    headDirectionQueue = nextQueue;
+    headDirection = nextDirection;
     snake = getNextSnake(snake, DIRECTION_VECTORS[headDirection], willGrow);
     willGrow = false;
   }
@@ -95,10 +105,7 @@
       if (!keyDirection) {
         return;
       }
-
-      if (!is180Turn(snake, keyDirection)) {
-        headDirection = keyDirection;
-      }
+      headDirectionQueue = [...headDirectionQueue, keyDirection];
     }
   }
 
