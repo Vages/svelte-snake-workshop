@@ -6,7 +6,7 @@ workshop, it's not very relevant, but feel free to look.
 ## Merging all changes
 
 ```bash
-git checkout task-5.3-end && git merge master --no-edit && \
+git checkout task-5.3-end && git merge main --no-edit && \
 git checkout task-5.3-begin && git merge task-5.3-end --no-edit && \
 git checkout task-5.2-end && git merge task-5.3-begin --no-edit && \
 git checkout task-5.2-begin && git merge task-5.2-end --no-edit && \

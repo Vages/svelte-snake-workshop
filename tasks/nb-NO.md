@@ -96,7 +96,7 @@ Ulempen med Svelte er at ikke så mange bruker det (ennå).
 - En klone av
   [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop)
 - For mer hjelp med installasjon, se
-  [denne guiden](https://github.com/Vages/svelte-snake-workshop/blob/master/SETUP.md).
+  [denne guiden](https://github.com/Vages/svelte-snake-workshop/blob/main/SETUP.md).
 
 ### Slik blir workshoppen
 
@@ -650,7 +650,7 @@ Del 6 er en sandkasse der du kan gjøre omtrent hva du vil.
 
 Det finnes fortsatt noen mulige forbedringer av spillet:
 
-#### Oppgaver du ikke finner løsningen på i master
+#### Oppgaver du ikke finner løsningen på i main
 
 Følgende funksjoner har vi ikke selv prøvd å implementere (ennå), men vi tror de
 er både løsbare – og gøyale:
@@ -664,11 +664,11 @@ er både løsbare – og gøyale:
   poeng hvis man spiser dem innen en viss tid.
 
 Hvis du ikke føler deg helt klar for å jobbe uten fasit ennå, anbefaler vi at du
-prøver deg på en oppgave du finner løsningen på i master-branchen.
+prøver deg på en oppgave du finner løsningen på i main-branchen.
 
-#### Oppgaver som du finner løsninger på i master-branchen
+#### Oppgaver som du finner løsninger på i main-branchen
 
-Versjonen som ligger i master-branchen, har et par funksjoner som det ikke er
+Versjonen som ligger i main-branchen, har et par funksjoner som det ikke er
 laget oppgaver for:
 
 - Pause
