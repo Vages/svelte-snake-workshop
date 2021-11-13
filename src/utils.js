@@ -60,12 +60,13 @@ export function isSnakeEatingItself(snake) {
   return snake.slice(1).some((snakeSpace) => isEqual(snakeSpace, headPosition));
 }
 
-export function isStraightOr180Turn(currentDirection, nextDirection) {
-  return OPPOSITE_DIRECTIONS.some(
-    (directionAndOpposite) =>
-      directionAndOpposite.includes(currentDirection) &&
-      directionAndOpposite.includes(nextDirection)
+function arePerpendicular(directionA, directionB) {
+  const directionsAreSameOrOpposite = OPPOSITE_DIRECTIONS.some(
+    (pairOfOpposites) =>
+      pairOfOpposites.includes(directionA) &&
+      pairOfOpposites.includes(directionB)
   );
+  return !directionsAreSameOrOpposite;
 }
 
 export function getNewDirectionFromEventKey(key) {
@@ -92,8 +93,8 @@ export function getNewDirectionFromEventKey(key) {
 }
 
 export function getNextHeadDirectionAndQueue(queue, currentDirection) {
-  const foundIndex = queue.findIndex(
-    (direction) => !isStraightOr180Turn(currentDirection, direction)
+  const foundIndex = queue.findIndex((direction) =>
+    arePerpendicular(currentDirection, direction)
   );
 
   const noNextDirectionFound = foundIndex === -1;

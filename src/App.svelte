@@ -6,13 +6,12 @@
   import NesContainer from "./NesContainer.svelte";
   import StartModal from "./StartModal.svelte";
   import {
-    DIRECTION_VECTORS,
     DIRECTION_NAMES,
+    DIRECTION_VECTORS,
     getNewApplePosition,
     getNewDirectionFromEventKey,
-    getNextSnake,
-    isStraightOr180Turn,
     getNextHeadDirectionAndQueue,
+    getNextSnake,
     isEqual,
     isInsideBoard,
     isSnakeEatingItself,
