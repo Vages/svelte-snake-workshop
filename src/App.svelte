@@ -34,6 +34,7 @@
   let score;
   let snake;
   let willGrow;
+
   function resetGame() {
     const initialSnake = [
       { x: 4, y: 4 },
@@ -47,6 +48,7 @@
     snake = initialSnake;
     willGrow = false;
   }
+
   resetGame();
 
   // Snake logic
@@ -141,14 +143,13 @@
 
 <svelte:body on:keydown={handleKeydown} />
 
-<div class="main-content min-width">
+<div
+  class="main-content min-width"
+  style="--cell-size: {CELL_SIZE}px; --tick-time: {TICK_TIME}ms; --board-size-x: {BOARD_DIMENSIONS.x}; --board-size-y: {BOARD_DIMENSIONS.y}"
+>
   <div class="score">{score}</div>
 
-  <div
-    class="board"
-    style="width: {BOARD_DIMENSIONS.x *
-      CELL_SIZE}px; height: {BOARD_DIMENSIONS.y * CELL_SIZE}px"
-  >
+  <div class="board">
     {#each snake.slice(1) as bodyPart}
       <div class="body-part" style={calculatePositionAsStyle(bodyPart)} />
     {/each}
@@ -228,8 +229,7 @@
 
 <style>
   :root {
-    --cell-size: 25px;
-    --tick-time: 100ms;
+    --checker-color: #f0f0f0;
   }
 
   .modal-container {
@@ -254,6 +254,7 @@
   .score {
     justify-self: right;
   }
+
   .signature {
     font-size: 0.5rem;
   }
@@ -262,10 +263,6 @@
     height: 2em;
     margin-right: -0.5em;
     margin-top: -0.25em;
-  }
-
-  :root {
-    --checker-color: #f0f0f0;
   }
 
   .body-part,
@@ -309,6 +306,8 @@
 
   .board {
     --border-width: var(--cell-size);
+    width: calc(var(--board-size-x) * var(--cell-size));
+    height: calc(var(--board-size-y) * var(--cell-size));
 
     position: relative;
     margin: var(--border-width);
