@@ -1,7 +1,6 @@
 # Maintaining
 
-This document is for the people who maintain this workshop. If you're taking the
-workshop, it's not very relevant, but feel free to look.
+This document is for the people who maintain this workshop. If you're taking the workshop, it's not very relevant, but feel free to look.
 
 ## Merging all changes
 

@@ -1,1 +1,1 @@
-module.exports = { proseWrap: "always" };
+module.exports = { proseWrap: "never" };
