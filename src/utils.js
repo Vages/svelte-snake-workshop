@@ -55,14 +55,16 @@ export function getNextSnake(snake, direction, shouldGrow = false) {
     : withAddedHead.slice(0, withAddedHead.length - 1);
 }
 
-// TODO 2021-11-29 (Eirik V.): Rename to drawRandomOpenSpace
 /** Draws a random space from the available spaces */
-export function getNewApplePosition(boardDimensions, snake) {
-  const boardSpaces = [...Array(boardDimensions.x).keys()].flatMap((x) =>
+export function drawRandomOpenSpace(boardDimensions, occupiedSpaces = []) {
+  const allBoardSpaces = [...Array(boardDimensions.x).keys()].flatMap((x) =>
     [...Array(boardDimensions.y).keys()].map((y) => ({ x, y }))
   );
-  const openSpaces = boardSpaces.filter(
-    (boardSpace) => !snake.some((snakeSpace) => isEqual(snakeSpace, boardSpace))
+  const openSpaces = allBoardSpaces.filter(
+    (boardSpace) =>
+      !occupiedSpaces.some((occupiedSpace) =>
+        isEqual(occupiedSpace, boardSpace)
+      )
   );
 
   return openSpaces[Math.floor(Math.random() * openSpaces.length)];

@@ -8,7 +8,7 @@
   import {
     DIRECTION_NAMES,
     DIRECTION_VECTORS,
-    getNewApplePosition,
+    drawRandomOpenSpace,
     getNewDirectionFromEventKey,
     getNextHeadDirectionAndQueue,
     getNextSnake,
@@ -43,7 +43,7 @@
       { x: 4, y: 3 },
       { x: 4, y: 2 },
     ];
-    apple = getNewApplePosition(BOARD_DIMENSIONS, initialSnake);
+    apple = drawRandomOpenSpace(BOARD_DIMENSIONS, initialSnake);
     gameState = GAME_STATES.START_SCREEN;
     headDirection = DIRECTION_NAMES.SOUTH;
     score = 0;
@@ -81,7 +81,7 @@
   function eatApple() {
     score += 1;
     willGrow = true;
-    apple = getNewApplePosition(BOARD_DIMENSIONS, snake);
+    apple = drawRandomOpenSpace(BOARD_DIMENSIONS, snake);
   }
 
   // User interaction
