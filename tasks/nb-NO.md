@@ -254,7 +254,7 @@ Tilleggsopplysninger:
 
 #### Hint: Hjelpemidler i `utils.js`
 
-I utils.js finner du:
+I `utils.js` finner du:
 
 - `add(coordinateA, coordinateB)`, som kan legge sammen to vektorer/koordinater (forfatterne vet forskjellen, men dette er ikke et mattekurs).
 - `DIRECTION_TO_VECTOR`, som man kan bruke for å gå fra kompassretning til retningsvektor.
@@ -343,11 +343,11 @@ Løs [oppgaven om reaktive utsagn fra Svelte-tutorialen](https://svelte.dev/tuto
 - Du skal skrive en betingelsessetning som sier at når slangehodet er på samme koordinat som eplet, øker antallet poeng med 1.
 - Gi eplet en ny plassering på brettet
 
-Merk: Dette er kanskje den oppgaven der man sparer _mest_ knot ved bare å bruke hjelpefunksjoner fra utils.js.
+Merk: Dette er kanskje den oppgaven der man sparer _mest_ knot ved bare å bruke hjelpefunksjoner fra `utils.js`.
 
 #### Hint: Hjelp i utils.js
 
-I utils.js finner du funksjonen `isEqual` som sier deg om to koordinater er like, og funksjonen `getNewApplePosition`, som henter en passelig posisjon for det nye eplet.
+I `utils.js` finner du funksjonen `isEqual` som sier deg om to koordinater er like, og funksjonen `getNewApplePosition`, som henter en passelig posisjon for det nye eplet.
 
 ### Oppgave 3.2: Få slangen til å vokse når den spiser eplet
 
@@ -376,7 +376,7 @@ Og en liten nøtt: Dette skal _ikke_ gjøres som en del av `moveSnake`-funksjone
 
 #### Hint: Hjelpefunksjoner
 
-I utils.js finner du `isInsideBoard` og `isSnakeEatingItself`. Disse vil være til stor hjelp.
+I `utils.js` finner du `isInsideBoard` og `isSnakeEatingItself`. Disse vil være til stor hjelp.
 
 #### Hint: Reaktivitet
 
