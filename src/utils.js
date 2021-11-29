@@ -85,9 +85,17 @@ function arePerpendicular(directionA, directionB) {
   return !directionsAreSameOrOpposite;
 }
 
-/** Turn key name into a direction */
+/**
+ * Turn key name into a direction
+ *
+ * Handles the following input types:
+ * <ul>
+ *   <li>Arrow keys</li>
+ *   <li>WASD</li>
+ *   <li>,AOE (Dvorak)</li>
+ * </ul>
+ */
 export function convertKeyboardKeyToDirection(key) {
-  // Also contains a secret Dvorak mode
   switch (key) {
     case "ArrowUp":
     case "w":
