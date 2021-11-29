@@ -28,7 +28,8 @@ En workshop av [Eirik Vågeskar](https://github.com/vages), [Knowit Objectnet Os
   * [Opplæring: Svelte-komponenters livssyklus, pluss setInterval](#opplaering-svelte-komponenters-livssyklus-pluss-setinterval)
   * [Oppgave 3.3: Få spillet til å «tikke»](#oppgave-33-fa-spillet-til-a-%C2%ABtikke%C2%BB)
   * [Oppgave 3.4 Stopp tikking når slangen dør](#oppgave-34-stopp-tikking-nar-slangen-dor)
-  * [Oppgave 3.5: Forhindre at slangen spiser seg selv](#oppgave-35-forhindre-at-slangen-spiser-seg-selv)
+  * [Oppgave 3.5: Bare reager på tastetrykk som er vinkelrette](#oppgave-35-bare-reager-pa-tastetrykk-som-er-vinkelrette)
+  * [Oppgave 3.6: Bruk en kø til å holde styr på fremtidige bevegelser](#oppgave-36-bruk-en-ko-til-a-holde-styr-pa-fremtidige-bevegelser)
 - [Del 4: Animasjon](#del-4-animasjon)
   * [Opplæring: If og else-blokker](#opplaering-if-og-else-blokker)
   * [Opplæring: Hvordan overganger fungerer](#opplaering-hvordan-overganger-fungerer)
@@ -387,11 +388,21 @@ Hvis jeg skulle formulert reglene for game over muntlig, hadde jeg sagt noe slik
 - «Hvis slangen ikke er innenfor brettet eller slangen spiser seg selv, er det game over»
 - «Hvis det er game over, stopper tikkingen»
 
-### Oppgave 3.5: Forhindre at slangen spiser seg selv
+### Oppgave 3.5: Bare reager på tastetrykk som er vinkelrette
 
-Idet du har fått game over til å funke, kommer du fort til å oppdage et problem: Slangen dør ved å «spise seg selv» hvis du prøver å ta en U-sving og trykker begge taster innenfor samme «tikk». Dårlig brukeropplevelse &rarr; sinte spillere. Gjør det umulig å snu 180 grader rett inn i seg selv.
+Idet du har fått game over til å funke, kommer du fort til å oppdage et problem: Slangen dør ved å «spise seg selv» hvis den siste tasten man trykker før slangen beveger seg er den som går i stikk motsatt retning av den som slangen for øyeblikket beveger seg i. Dette kan skje fordi man taster feil, men som regel fordi man er litt rask når man prøver å ta en U-sving. Vi skal forbedre dette i to trinn.
 
-Du kan få hjelp av en funksjon i utils, `is180Turn(snake, newDirection)`, til å unngå dette problemet. Eller løs problemet selv, om du trenger en utfordring.
+I oppgaven skal du overse alle tastetrykk som ikke er vinkelrette på slangens nåværende retning. (Som med mange andre oppgaver, finnes det kanskje en funksjon som kan hjelpe deg i `utils.js`.)
+
+### Oppgave 3.6: Bruk en kø til å holde styr på fremtidige bevegelser
+
+**Denne oppgaven er en utfordringsoppgave som har mer å gjøre med programmering enn Svelte i seg selv. Du kan hoppe til neste oppgave hvis du ønsker.**
+
+Vi kan gjøre spillet mer behagelig for spilleren ved ikke bare å ta vare på fremtidige tastetrykk i en kø. Da kan spilleren for eksempel trykke begge tastene i en planlagt U-sving innenfor samme «tikk», og så vil slangen snu seg først til én side og så helt rundt.
+
+Hvis slangen beveger seg nordover og spilleren trykker ⬅️ og deretter ⬇️ før slangen har rukket å reagere på at man trykket ⬅️, skal slangen snu seg vestover etter første tikk og sørover etter andre tikk. (Slik koden ser ut i `task-3.5-end`, ville spillet ignorert trykket på ⬇️, og nøyd seg med å snu seg mot vest.)
+
+Vi har laget variabelen `headDirectionQueue`, et array som holder styr på hvilke retninger brukeren har planlagt at slangen skal bevege seg i. I stedet for å legge den nye retningen fra et tastetrykk rett i `headDirection`, skal du legge retningen til i køen. Når tiden for at slangen skal bevege seg er inne, skal programmet bruke den første retningen i køen som står vinkelrett på nåværende `headDirection` som ny verdi for `headDirection` (og la påfølgende bevegelser være i køen). Gjør de endringene som trengs i `moveSnake` og `handleKeydown`.
 
 ## Del 4: Animasjon
 
@@ -517,7 +528,7 @@ Det finnes fortsatt noen mulige forbedringer av spillet:
 
 #### Oppgaver du ikke finner løsningen på i main
 
-Følgende funksjoner har vi ikke selv prøvd å implementere (ennå), men vi tror de er både løsbare – og gøyale:
+Følgende funksjoner har vi ikke selv prøvd å lage (ennå), men vi tror de er både løsbare – og gøyale:
 
 - **«Hull» i kantene**: Hull i kantene på brettet som gjør at man kan komme ut på den andre siden, Pacman-style.
 - **Hindringer på brettet**: Visse områder midt på brettet er umulige å gå gjennom – kall dem vegger eller øyer eller hva. De er som kanten av brettet, bare midt i, og slangen kræsjer når den treffer kanten av et slikt område.
@@ -533,11 +544,11 @@ Versjonen som ligger i main-branchen, har et par funksjoner som det ikke er lage
 - Startskjerm
 - Omstart-knapp på game-over-skjermen
 
-Start med repoets tilstand slik det er etter fasiten på oppgave 5.3 og prøv å implementere disse funksjonene uten å kikke på fasit.
+Start med repoets tilstand slik det er etter fasiten på oppgave 5.3 og prøv å lage disse funksjonene uten å kikke på fasit.
 
 ### Oppgave 6.2: Alternative spill
 
-Kanskje du kan implementere et av følgende spill:
+Kanskje du kan lage et av følgende spill:
 
 - [Whac-a-Mole](https://en.wikipedia.org/wiki/Whac-A-Mole) – [vi har allerede gjort et forsøk](https://mos.knowit.no/)
 - [Breakout](<https://en.wikipedia.org/wiki/Breakout_(video_game)>)
