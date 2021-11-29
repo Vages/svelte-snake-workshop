@@ -8,8 +8,8 @@
   import {
     DIRECTION_NAMES,
     DIRECTION_VECTORS,
+    convertKeyboardKeyToDirection,
     drawRandomOpenSpace,
-    getNewDirectionFromEventKey,
     getNextHeadDirectionAndQueue,
     getNextSnake,
     isEqual,
@@ -100,7 +100,7 @@
       if (event.key === " ") {
         gameState = GAME_STATES.PAUSED;
       }
-      const keyDirection = getNewDirectionFromEventKey(event.key);
+      const keyDirection = convertKeyboardKeyToDirection(event.key);
       if (!keyDirection) {
         return;
       }

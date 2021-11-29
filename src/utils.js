@@ -86,9 +86,8 @@ function arePerpendicular(directionA, directionB) {
   return !directionsAreSameOrOpposite;
 }
 
-// TODO 2021-11-29 (Eirik V.): Rename to convertEventKeyToDirection
 /** Turns key names into directions */
-export function getNewDirectionFromEventKey(key) {
+export function convertKeyboardKeyToDirection(key) {
   // Also contains a secret Dvorak mode
   switch (key) {
     case "ArrowUp":
