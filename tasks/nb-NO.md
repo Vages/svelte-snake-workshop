@@ -197,7 +197,7 @@ Slik skal slangen være plassert på brettet:
 
 ### Oppgave 1.3: Trekk ut koordinat-utregningen i en funksjon
 
-Utregningen for å plassere noe på brettet (`x*CELLSIZE`) er gjentatt flere ganger i koden. Slike gjentakelser gjør at man må gjøre samme endring flere steder dersom man vil endre logikken.
+Utregningen for å plassere noe på brettet (`x * CELL_SIZE`) er gjentatt flere ganger i koden. Slike gjentakelser gjør at man må gjøre samme endring flere steder dersom man vil endre logikken.
 
 For å slippe å måtte gjøre samme endring flere steder i fremtiden, flytt den dupliserte utregningen over i en funksjon, `calculatePositionAsStyle(coordinate)`. Den skal returnere en streng med verdier for top og left.
 
@@ -257,9 +257,9 @@ Tilleggsopplysninger:
 I utils.js finner du:
 
 - `add(coordinateA, coordinateB)`, som kan legge sammen to vektorer/koordinater (forfatterne vet forskjellen, men dette er ikke et mattekurs).
-- `DIRECTION_VECTORS`, som man kan bruke for å gå fra kompassretning til retningsvektor.
+- `DIRECTION_TO_VECTOR`, som man kan bruke for å gå fra kompassretning til retningsvektor.
 
-Legg til linjen `import { add, DIRECTION_VECTORS } from './utils'` øverst i `<script>` for å bruke dem.
+Legg til linjen `import { add, DIRECTION_TO_VECTOR } from './utils'` øverst i `<script>` for å bruke dem.
 
 ## Del 3: Logikk
 
@@ -285,7 +285,11 @@ I Svelte kan man få variabler til å oppdatere seg automatisk ved å sette et d
 </script>
 
 <div>
-  <!-- Uten `$: …` hadde a hatt verdien 6, men den får automatisk verdien 12 etter at man har gitt b en ny verdi. -->
+  <!-- 
+    Uten `$: …` hadde a hatt verdien 6, 
+    men den får automatisk verdien 12 etter 
+    at man har gitt b en ny verdi. 
+  -->
   Trekantens grunnlinje er {b}, og høyden er {c}. Arealet er {a}.
 </div>
 ```
