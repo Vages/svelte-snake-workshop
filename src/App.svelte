@@ -32,10 +32,10 @@
   let apple;
   let gameState;
   let headDirection;
+  let headDirectionQueue;
   let score;
   let snake;
   let willGrow;
-  let headDirectionQueue;
 
   function resetGame() {
     const initialSnake = [
@@ -46,10 +46,10 @@
     apple = drawRandomOpenSpace(BOARD_DIMENSIONS, initialSnake);
     gameState = GAME_STATES.START_SCREEN;
     headDirection = DIRECTION.SOUTH;
+    headDirectionQueue = [];
     score = 0;
     snake = initialSnake;
     willGrow = false;
-    headDirectionQueue = [];
   }
 
   resetGame();
