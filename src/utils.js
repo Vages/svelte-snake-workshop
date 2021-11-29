@@ -1,9 +1,8 @@
-// TODO 2021-11-29 (Eirik V.): Rename DIRECTION
 /**
  * An enumeration used to describe the different directions on the board.
  * The directions are as on a most maps, with north pointing up and east to the right.
  */
-export const DIRECTION_NAMES = Object.freeze({
+export const DIRECTION = Object.freeze({
   NORTH: "NORTH",
   EAST: "EAST",
   SOUTH: "SOUTH",
@@ -12,16 +11,16 @@ export const DIRECTION_NAMES = Object.freeze({
 
 /** An array containing tuples of opposite directions */
 const OPPOSITE_DIRECTIONS = [
-  [DIRECTION_NAMES.NORTH, DIRECTION_NAMES.SOUTH],
-  [DIRECTION_NAMES.EAST, DIRECTION_NAMES.WEST],
+  [DIRECTION.NORTH, DIRECTION.SOUTH],
+  [DIRECTION.EAST, DIRECTION.WEST],
 ];
 
 /** A map converting each DIRECTION to a coordinate */
-export const DIRECTION_VECTORS = Object.freeze({
-  [DIRECTION_NAMES.NORTH]: { x: 0, y: -1 },
-  [DIRECTION_NAMES.SOUTH]: { x: 0, y: 1 },
-  [DIRECTION_NAMES.EAST]: { x: 1, y: 0 },
-  [DIRECTION_NAMES.WEST]: { x: -1, y: 0 },
+export const DIRECTION_TO_VECTOR = Object.freeze({
+  [DIRECTION.NORTH]: { x: 0, y: -1 },
+  [DIRECTION.SOUTH]: { x: 0, y: 1 },
+  [DIRECTION.EAST]: { x: 1, y: 0 },
+  [DIRECTION.WEST]: { x: -1, y: 0 },
 });
 
 /** Adds the two coordinates' x and y values together */
@@ -93,18 +92,18 @@ export function convertKeyboardKeyToDirection(key) {
     case "ArrowUp":
     case "w":
     case ",":
-      return DIRECTION_NAMES.NORTH;
+      return DIRECTION.NORTH;
     case "ArrowDown":
     case "s":
     case "o":
-      return DIRECTION_NAMES.SOUTH;
+      return DIRECTION.SOUTH;
     case "ArrowLeft":
     case "a":
-      return DIRECTION_NAMES.WEST;
+      return DIRECTION.WEST;
     case "ArrowRight":
     case "d":
     case "e":
-      return DIRECTION_NAMES.EAST;
+      return DIRECTION.EAST;
     default:
       return null;
   }

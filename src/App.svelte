@@ -6,8 +6,8 @@
   import NesContainer from "./NesContainer.svelte";
   import StartModal from "./StartModal.svelte";
   import {
-    DIRECTION_NAMES,
-    DIRECTION_VECTORS,
+    DIRECTION,
+    DIRECTION_TO_VECTOR,
     convertKeyboardKeyToDirection,
     drawRandomOpenSpace,
     getNextHeadDirectionAndQueue,
@@ -45,7 +45,7 @@
     ];
     apple = drawRandomOpenSpace(BOARD_DIMENSIONS, initialSnake);
     gameState = GAME_STATES.START_SCREEN;
-    headDirection = DIRECTION_NAMES.SOUTH;
+    headDirection = DIRECTION.SOUTH;
     score = 0;
     snake = initialSnake;
     willGrow = false;
@@ -62,7 +62,7 @@
     );
     headDirectionQueue = nextQueue;
     headDirection = nextDirection;
-    snake = getNextSnake(snake, DIRECTION_VECTORS[headDirection], willGrow);
+    snake = getNextSnake(snake, DIRECTION_TO_VECTOR[headDirection], willGrow);
     willGrow = false;
   }
 
