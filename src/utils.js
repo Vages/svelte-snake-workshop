@@ -109,21 +109,19 @@ export function convertKeyboardKeyToDirection(key) {
   }
 }
 
-// TODO 2021-11-29 (Eirik V.): Rename to shiftQueueUntilNextPerpendicularMove or something like it
 /**
- * Finds the first perpendicular direction in queue
- * (i.e. ignores any u-turn and continue-forward key presses)
- * and returns that direction as well as the remaining queue.
+ * Shifts the queue left until a perpendicular direction is found.
+ * In other words, deletes all U-turn and continue-forward key presses from the front of the queue.
  */
-export function getNextHeadDirectionAndQueue(queue, currentDirection) {
-  const foundIndex = queue.findIndex((direction) =>
+export function shiftNonPerpendicularMovesOffQueue(queue, currentDirection) {
+  const nextPerpendicularIndex = queue.findIndex((direction) =>
     arePerpendicular(currentDirection, direction)
   );
 
-  const noNextDirectionFound = foundIndex === -1;
-  if (noNextDirectionFound) {
-    return [[], currentDirection];
+  const noPerpendicularMoves = nextPerpendicularIndex === -1;
+  if (noPerpendicularMoves) {
+    return [];
   } else {
-    return [queue.slice(foundIndex + 1), queue[foundIndex]];
+    return queue.slice(nextPerpendicularIndex);
   }
 }

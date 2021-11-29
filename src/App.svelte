@@ -10,11 +10,11 @@
     DIRECTION_TO_VECTOR,
     convertKeyboardKeyToDirection,
     drawRandomOpenSpace,
-    getNextHeadDirectionAndQueue,
     getNextSnake,
     isEqual,
     isInsideBoard,
     isSnakeEatingItself,
+    shiftNonPerpendicularMovesOffQueue,
   } from "./utils";
 
   const TICK_TIME = 100;
@@ -56,10 +56,13 @@
 
   // Snake logic
   function moveSnake() {
-    const [nextQueue, nextDirection] = getNextHeadDirectionAndQueue(
+    const shiftedQueue = shiftNonPerpendicularMovesOffQueue(
       headDirectionQueue,
       headDirection
     );
+    // If the queue is empty, use the current direction
+    const nextDirection = shiftedQueue[0] ?? headDirection;
+    const nextQueue = shiftedQueue.slice(1);
     headDirectionQueue = nextQueue;
     headDirection = nextDirection;
     snake = getNextSnake(snake, DIRECTION_TO_VECTOR[headDirection], willGrow);
