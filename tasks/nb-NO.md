@@ -109,23 +109,23 @@ Svelte er en forbedret versjon av HTML, CSS og Javascript. Om du kan disse fra f
 
 I Svelte kan man skrive Javascript, CSS og HTML i én og samme fil. Delene kalles for «script», «styling» og «template».
 
-```html
+```svelte
 <script>
   let answer = 42;
 </script>
+
+<div>Hello world, the answer is {answer}</div>
 
 <style>
   div {
     font-weight: bold;
   }
 </style>
-
-<div>Hello world, the answer is {answer}</div>
 ```
 
 Som vi akkurat hintet til, bruker man krøllparenteser inni HTML-delen av filen for å sette inn variabler, utregninger og funksjonskall.
 
-```html
+```svelte
 <script>
   let answer = 42;
 </script>
@@ -167,7 +167,7 @@ I CSS bruker man `top` og `left` for å forskyve elementer i henholdsvis `y`- og
 
 For å få til det med eplet, må du altså gjøre noe à la følgende:
 
-```html
+```svelte
 <div class="apple" style="left: {regnestykke1}px; top: {regnestykke2}px;" />
 ```
 
@@ -271,18 +271,19 @@ I Excel kan man skrive formler i cellene, for eksempel `=A1*B3`. Da blir cellens
 
 I Svelte kan man få variabler til å oppdatere seg automatisk ved å sette et dollartegn foran utregningen av den.
 
-```js
-let b = 3;
-let c = 4;
+```svelte
+<script>
+  let b = 3;
+  let c = 4;
 
-$: a = (b * c) / 2; // a === 6
-b = 6;
+  $: a = (b * c) / 2; // a === 6
+  b = 6;
+</script>
 
-// I vanlig programmering ville a fortsatt vært 6,
-// men i Svelte: a === 12
-
-c = 8;
-// … og nå: a === 24
+<div>
+  <!-- Uten `$: …` hadde a hatt verdien 6, men den får automatisk verdien 12 etter at man har gitt b en ny verdi. -->
+  Trekantens grunnlinje er {b}, og høyden er {c}. Arealet er {a}.
+</div>
 ```
 
 Dette kalles _reaktivitet_, fordi kodesnutten «reagerer» på noe annet.
@@ -293,21 +294,31 @@ Løs [oppgaven om reaktive utsagn fra Svelte-tutorialen](https://svelte.dev/tuto
 
 Nesten være hva som helst som står etter dollartegnet. Man kan også skrive funksjonskall og if-setninger:
 
-```js
-let lastUserInput = "";
-$: if (lastUserInput === "hello") {
-  console.log("hello to you too"); // Svarer når brukeren skriver inn strengen hello
-}
+```svelte
+<script>
+  let lastUserInput = "";
+  $: if (lastUserInput === "hello") {
+    console.log("hello to you too"); // Svarer når brukeren skriver inn strengen hello
+  }
+</script>
+
+<label>Skriv noe: <input bind:value={lastUserInput} /></label>
 ```
 
-```js
-function parrot(something) {
-  console.log(something);
-  console.log("sqawk!");
-}
+```svelte
+<script>
+  let lastUserInput = "";
+  $: parrotOutput = parrot(lastUserInput); // Gjentar alt brukeren sier, fulgt av papegøyelyd
 
-let lastUserInput = "";
-$: parrot(lastUserInput); // Gjentar alt brukeren sier, fulgt av papegøyelyd
+  function parrot(something) {
+    return something + ", sqawk!";
+  }
+</script>
+
+<label>Si noe: <input bind:value={lastUserInput} /></label>
+<div>
+  Papegøyen sier: {parrotOutput}
+</div>
 ```
 
 Det som står bak dollartegnene blir kjørt når – og _bare når_ – verdien av det som den avhenger av endrer seg. Med litt eksperimentering vil du skjønne hva som er en avhengighet og ikke.
