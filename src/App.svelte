@@ -9,11 +9,11 @@
     DIRECTION,
     DIRECTION_TO_VECTOR,
     convertKeyboardKeyToDirection,
-    drawRandomOpenSpace,
     getNextSnake,
     isEqual,
     isInsideBoard,
     isSnakeEatingItself,
+    pickRandomOpenSpace,
     shiftNonPerpendicularMovesOffQueue,
   } from "./utils";
 
@@ -43,7 +43,7 @@
       { x: 4, y: 3 },
       { x: 4, y: 2 },
     ];
-    apple = drawRandomOpenSpace(BOARD_DIMENSIONS, initialSnake);
+    apple = pickRandomOpenSpace(BOARD_DIMENSIONS, initialSnake);
     gameState = GAME_STATES.START_SCREEN;
     headDirection = DIRECTION.SOUTH;
     headDirectionQueue = [];
@@ -84,7 +84,7 @@
   function eatApple() {
     score += 1;
     willGrow = true;
-    apple = drawRandomOpenSpace(BOARD_DIMENSIONS, snake);
+    apple = pickRandomOpenSpace(BOARD_DIMENSIONS, snake);
   }
 
   // User interaction
