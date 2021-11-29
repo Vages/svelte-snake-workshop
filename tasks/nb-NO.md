@@ -155,13 +155,17 @@ Det det skal altså se ut som følger.
 
 For å overstyre og legge til stil på elementer i HTML, kan man bruke attributtet `style`. Inni style skriver man CSS.
 
-`<div style="font-weight: bold;">Fet skrift</div>`
+```svelte
+<div style="font-weight: bold;">Fet skrift</div>
+```
 
 #### Hint: top og left i css
 
 I CSS bruker man `top` og `left` for å forskyve elementer i henholdsvis `y`- og `x`-retning i CSS
 
-`<div style="top: 20px; left: 10px;">Forskjøvet</div>`
+```svelte
+<div style="top: 20px; left: 10px;">Forskjøvet</div>
+```
 
 #### Hint: For å avsløre nesten alt
 
