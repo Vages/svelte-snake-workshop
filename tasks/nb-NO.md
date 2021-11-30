@@ -31,7 +31,7 @@ En workshop av [Eirik Vågeskar](https://github.com/vages), [Knowit Objectnet Os
   * [Oppgave 3.5: Bare reager på tastetrykk som er vinkelrette](#oppgave-35-bare-reager-pa-tastetrykk-som-er-vinkelrette)
   * [Oppgave 3.6: Bruk en kø til å holde styr på fremtidige bevegelser](#oppgave-36-bruk-en-ko-til-a-holde-styr-pa-fremtidige-bevegelser)
 - [Del 4: Animasjon](#del-4-animasjon)
-  * [Opplæring: If og else-blokker](#opplaering-if-og-else-blokker)
+  * [Opplæring: Kontroll-blokker](#opplaering-kontroll-blokker)
   * [Opplæring: Hvordan overganger fungerer](#opplaering-hvordan-overganger-fungerer)
   * [Oppgave 4.1: Animer eplet](#oppgave-41-animer-eplet)
   * [Oppgave 4.2: Legg på en hodeskalle når slangen dør](#oppgave-42-legg-pa-en-hodeskalle-nar-slangen-dor)
@@ -412,11 +412,11 @@ I Svelte følger pakken `svelte/transition` med. Den gjør at man kan animere et
 
 Når denne delen er over skal vi ha en animert hodeskalle, eple og slange.
 
-### Opplæring: If og else-blokker
+### Opplæring: Kontroll-blokker
 
-- [If-blokker](https://svelte.dev/tutorial/if-blocks)
-- [Else-blokker](https://svelte.dev/tutorial/else-blocks)
-- [Key-blokker](https://svelte.dev/tutorial/key-blocks)
+- [#if-blokker](https://svelte.dev/tutorial/if-blocks)
+- [#else-blokker](https://svelte.dev/tutorial/else-blocks)
+- [#key-blokker](https://svelte.dev/tutorial/key-blocks)
 
 ### Opplæring: Hvordan overganger fungerer
 
