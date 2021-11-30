@@ -4,7 +4,7 @@ Guide for installasjon av kodeverktøy, pakkebehandler og git.
 
 ## Kodeverktøy
 
-Når det gjelder kodeverktøy står dere fritt til å velge selv, men for eksempel er Visual Studio Code mye brukt blant frontendutviklere, og du kan installere støtte for Svelte i det.
+Når det gjelder kodeverktøy, står du fritt til å velge selv, men for eksempel er Visual Studio Code mye brukt blant frontendutviklere, og du kan installere støtte for Svelte i det.
 
 Følg instruksjonene her for å installere Visual Studio Code: <https://code.visualstudio.com/download>
 
