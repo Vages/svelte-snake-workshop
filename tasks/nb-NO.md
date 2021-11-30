@@ -58,7 +58,7 @@ En workshop av [Eirik Vågeskar](https://github.com/vages)
 
 ## Intro: Vi skal lage spillet Snake i Svelte
 
-![En grønn slange på et kvadratisk rutenettformet brett. På brettet er også et eple. Overfor brettet ser man at scoren er 0.](assets/gameplay.png)
+![En grønn slange på et kvadratisk rutenettformet brett. På brettet er også et eple. Overfor brettet ser man at poengsummen er 0.](assets/gameplay.png)
 
 ### Svelte
 
@@ -90,7 +90,7 @@ Hvis du trenger hjelp til installasjon, kan du sjekke [SETUP.md](../SETUP.md).
 
 Repoet [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop) inneholder alt du trenger. Du kan bestemme tempo selv. Det skal være mulig å fullføre kurset helt på egen hånd.
 
-Kurset er delt opp i 6 deler. Det grunnleggende spillet er ferdig etter del 3, og de påfølgende delene er bonuser. Hver del inneholder to eller flere oppgaver. Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint. Du kan la være å lese hintene om du trenger en ekstra utfordring. Bytt til `task-X-begin` før du løser hver nye oppgave `X` (eksempelvis `git checkout task-1.2-begin`). `task-X-end` er oppgavens fasit. For å fjerne koden du har lagt til og gå videre til ny oppgave, kan du skrive `git stash` og deretter `git checkout task-X-begin`.
+Kurset er delt opp i 6 deler. Hver del inneholder to eller flere oppgaver. Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint. Du kan la være å lese hintene om du trenger en ekstra utfordring. Bytt til `task-X-begin` før du løser hver nye oppgave (eksempelvis `git checkout task-1.2-begin`). `task-X-end` er oppgavens fasit. For å fjerne koden du har lagt til og gå videre til ny oppgave, kan du skrive `git stash` og deretter `git checkout task-X-begin`.
 
 Når vi holder kurset fysisk eller digitalt, pleier vi å gå gjennom oppgaver og spørsmål i fellesskap med ujevne mellomrom. Du kan be om hjelp fra kursholderne når som helst.
 
@@ -144,9 +144,9 @@ Løs [oppgaven fra Svelte-opplæringen om å sette inn data](https://svelte.dev/
 
 Åpne filen `src/routes/_game/App.svelte`.
 
-På brettet har vi en `<div class="apple" />`. Plasser dette eplet på det koordinatet på brettet som ligger i variabelen `apple`. Sidelengden på hvert koordinat i rutenettet er lagret i konstanten `CELL_SIZE`.
+På brettet har vi en `<div class="apple" />`. I variabelen `apple` ligger en koordinat. Plasser eplet på den ruten på brettet som angis av koordinaten.
 
-Vi sier at X-aksen går mot høyre, og Y-aksen peker ned.
+X-aksen på brettet går mot høyre, og Y-aksen peker ned. Sidelengden på hver rute i rutenettet er lagret i konstanten `CELL_SIZE`.
 
 ![X-akse som peker mot høyre, Y-akse som peker ned.](assets/axes.png)
 
@@ -156,7 +156,7 @@ Det skal altså se ut som følger.
 
 #### Hint: Style-attributtet
 
-For å overstyre og legge til stil på elementer i HTML, kan man bruke attributtet `style`. Inni style skriver man CSS-utsagn.
+For å overstyre og legge til stil på elementer i HTML (ikke bare Svelte), kan man bruke attributtet `style`. Inni style skriver man CSS-utsagn.
 
 ```svelte
 <div style="font-weight: bold;">Fet skrift</div>
@@ -172,13 +172,13 @@ I CSS bruker man `left` og `top` for å forskyve elementer i henholdsvis `x`- og
 
 #### Hint: For å avsløre nesten alt
 
-For å plassere eplet, må du gjøre noe à la det følgende:
+For å plassere eplet, må du gjøre omtrent som følger:
 
 ```svelte
 <div class="apple" style="left: {regnestykke1}px; top: {regnestykke2}px;" />
 ```
 
-Til rådighet har du objektet som er lagret i `apple`. Du må benytte deg av `apple.x` og `apple.y` samt `CELL_SIZE` for å få til disse regnestykkene.
+Du må benytte deg av `apple.x` og `apple.y` samt `CELL_SIZE` for å få til disse regnestykkene.
 
 ### Opplæring: each-blokker
 
@@ -188,11 +188,9 @@ Løs denne oppgaven fra Svelte-opplæringen for å lære hvordan [en each-blokk 
 
 ### Oppgave 1.2: Tegn slangekroppen på skjermen
 
-Nå skal du tegne slangen på brettet.
+I denne oppgaven skal du tegne slangen på brettet.
 
-Slangen er en samling koordinater og ligger i variabelen `snake`. Det første elementet er hodet.
-
-Hvert koordinat i kroppen skal tegnes som en `<div class="body-part" />`.
+Slangen er en samling koordinater og ligger i variabelen `snake`. Det første elementet er hodet. Hver koordinat i kroppen skal tegnes som en `<div class="body-part" />`.
 
 Slik skal slangen være plassert på brettet når du har gjort alt riktig:
 
@@ -202,11 +200,11 @@ Slik skal slangen være plassert på brettet når du har gjort alt riktig:
 
 Utregningen for å plassere noe på brettet (`x * CELL_SIZE`) er gjentatt flere ganger i koden. Slike gjentakelser gjør at man må gjøre samme endring flere steder dersom man vil endre logikken.
 
-For å slippe å måtte gjøre samme endring flere steder i fremtiden, flytt den dupliserte utregningen over i en funksjon, `calculatePositionAsStyle(coordinate)`. Den skal returnere en streng med verdier for top og left.
+Flytt den dupliserte utregningen over i en funksjon, `calculatePositionAsStyle(coordinate)`. Den skal returnere en streng med verdier for top og left.
 
 ## Del 2: Spillkontroller
 
-Når du er ferdig med del 2, skal det gå an å styre slangen med piltastene slik at den beveger seg over skjermen.
+Når du er ferdig med del 2, skal det gå an å styre slangen med piltastene.
 
 ### Opplæring: Å lytte etter input
 
@@ -217,9 +215,9 @@ Løs følgende oppgaver fra Svelte-opplæringen før du går videre:
 
 ### Oppgave 2.1: Lytt til trykk på tastaturet
 
-I denne oppgaven skal du lytte etter trykk på tastaturet og sende dem videre til funksjonen `console.log`. Applikasjonen skal kunne «høre» tastetrykk uansett hvilken del av nettsiden som har fokus, altså skal ikke brukeren behøve å ha fokus på et spesifikt element på siden for at spillet skal registrere tastetrykkene.
+I denne oppgaven skal du lytte etter trykk på tastaturet og sende dem videre til funksjonen `console.log`. Applikasjonen skal kunne «høre» tastetrykk uansett hvilken del av nettsiden som har fokus, altså skal ikke brukeren måtte ha trykket på et spesifikt element på siden for at spillet skal registrere tastetrykkene.
 
-Vi vil helst bare lytte på bare nettsiden, altså `document.body`, og ikke vinduet (`svelte:window` viser til vinduet i sin helhet).
+Unngå å lytte på tastetrykk fra hele vinduet (`svelte:window` viser til vinduet i sin helhet). Legg heller til en lytter på det Svelte-spesifikke elementet som viser til `document.body`.
 
 #### Hint: Tastetrykk-hendelsen
 
@@ -227,7 +225,7 @@ Tastetrykk-hendelsen heter `keydown`. I Svelte lytter man etter den med `on:keyd
 
 #### Hint: svelte:body
 
-For å kunne registrere tastetrykk, må vi lytte på `document.body`. Dette får vi til ved å bruke elementet `<svelte:body />`. Du kan lytte etter hendelser på `svelte:body` akkurat slik du ville gjort med et hvilket som helst HTML-element.
+Vi lytter til `document.body` ved å bruke elementet `<svelte:body />`. Du kan lytte etter hendelser på `svelte:body` akkurat slik du ville gjort med et hvilket som helst HTML-element.
 
 ### Opplæring: Å endre variabelverdier
 
@@ -238,15 +236,15 @@ Du kommer til å måtte vite hvordan du endrer variabler i den kommende seksjone
 
 ### Oppgave 2.2: Beveg slangen ett steg i den retningen brukeren trykker
 
-Nå skal vi oversette tastetrykk til bevegelse. Slangen skal bevege seg ett steg i oppgitt retning hver gang man trykker på en piltast. Unngå at slangen beveger seg når man trykker på andre taster enn piltastene, WASD og lignende.
+Nå skal vi oversette tastetrykk til bevegelse. Slangen skal bevege seg ett steg i oppgitt retning hver gang man trykker på en piltast. Unngå at slangen beveger seg når man trykker på andre taster.
 
-For å gjøre det enklere, har vi laget en funksjon `convertKeyboardKeyToDirection` i `utils.js`, som oversetter fra tastetrykk til en retning. I kodebasen har vi valgt å bruke himmelretningene for å vise til retningene på brettet: Vest er venstre, nord er opp.
+For å gjøre dette lettere, har vi laget en funksjon `convertKeyboardKeyToDirection` i `utils.js`, som oversetter fra tastetrykk til en retning. I kodebasen har vi valgt å bruke himmelretningene for å vise til retningene på brettet: Vest er venstre, nord er opp.
 
 Inntil videre skal slangen bevege seg også om den går inni seg selv eller utenfor brettet. Game over kommer i en senere oppgave.
 
 #### Hint: Viktige Array-funksjoner
 
-- Den enkleste måten å legge til elementer i starten eller slutten i et array på, er å bruke spredning (_spreading_): `[a, ...b]`. (Svelte reagerer ikke hvis du bruker push og pop; dette kommer vi tilbake til senere.)
+- Den enkleste måten å legge til elementer i starten eller slutten i et array, er å bruke spredning (_spreading_): `[a, ...b]`. (Svelte reagerer ikke hvis du bruker push og pop; dette kommer vi tilbake til senere.)
 - Funksjonen [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) er nyttig når man vil fjerne elementer fra starten og slutten av et array.
 
 #### Hint: Hjelpemidler i `utils.js`
@@ -264,11 +262,11 @@ Når du er ferdig med denne delen, skal man få poeng når slangen spiser eplet.
 
 ### Opplæring: Dollartegnet i Svelte – reaktive utsagn.
 
-#### Reaktive utsagn
+I regneark, som Microsoft Excel, kan man skrive formler i cellene, for eksempel `=A1*B3`. Da havner resultatet av regnestykket i cellen, og resultatet oppdaterer seg automatisk når man endrer innholdet i cellene som regnestykket avhenger av. Slik er det vanligvis ikke i programmering: Man kan ikke si `a = 2; b = a * 2; a = 8` og regne med at `b` nå er 16 i stedet for 4 fordi det dobbelte av 8 er 16. Men i Svelte er det mulig.
 
-I regneark, som Microsoft Excel, kan man skrive formler i cellene, for eksempel `=A1*B3`. Da havner resultatet av regnestykket i cellen, og resultatet oppdaterer seg automatisk når man endrer innholdet i cellene som regnestykket avhenger av. Slik er det vanligvis ikke i programmering: Man kan ikke si `a = 2; b = a * 2; a = 8` og regne med at `b` nå er 16 i stedet for 4 fordi det dobbelte av 8 er 16. I Svelte kan vi derimot få dette til.
+I Svelte kan vi få datamaskinen til å kjøre et _kodeutsagn_ (statement) på nytt som reaksjon på endringer. Dette gjør vi ved å sette et dollartegn foran det. Utsagn som starter med et slikt dollartegn kalles for et _reaktivt utsagn_, fordi utsagnet kjøres som en reaksjon på noe annet.
 
-I Svelte kan vi få datamaskinen til å kjøre et _kodeutsagn_ (statement) på nytt som reaksjon på endringer ved å sette et dollartegn foran det. Hvis utsagnet inneholder en tilegning til en variabel, kan Svelte holde verdien oppdatert for oss. Utsagn som starter med et slikt dollartegn kalles for et _reaktivt utsagn_, fordi utsagnet kjøres som en reaksjon på noe annet.
+Hvis utsagnet inneholder en tilegning til en variabel, kan Svelte holde verdien oppdatert for oss.
 
 ```svelte
 <script>
@@ -320,21 +318,21 @@ Nesten hva som helst kan stå etter dollartegnet, ikke bare utregninger. Man kan
 </div>
 ```
 
-Et reaktivt utsagn kjøres én gang når appen lastes inn. Deretter kjøres utsagnet på nytt som en reaksjon på at en variabel inni utsagnet får en ny verdi et annet sted i appen – som skjer når variabelen står på venstre side av tilegningsoperatoren, `=` (for eksempel `foo = "bar"`). Derfor merker ikke Svelte metodekall som `.push` og `.pop`, se [opplæringsoppgaven om reaktivitet med objekter og arrays](https://svelte.dev/tutorial/updating-arrays-and-objects).
+Et reaktivt utsagn kjøres én gang når appen lastes inn. Deretter kjøres utsagnet på nytt som en reaksjon på at en verdi som brukes inni utsagnet gis en ny verdi et annet sted i appen. Svelte merker bare endringer som kommer som en følge av man bruker tilegnelsesoperatoren, `=` (for eksempel `foo.bar = "baz"`), og ikke som følge av metodekall (som `.push` og `.pop`). Se [opplæringsoppgaven om reaktivitet med objekter og arrays](https://svelte.dev/tutorial/updating-arrays-and-objects) for en dypere forklaring.
 
-Svelte finner automatisk ut hvilke avhengigheter et reaktivt utsagn har. (Du trenger ikke oppgi avhengighetene selv, slik som med for eksempel `React.useEffect`.)
+Svelte finner automatisk ut hvilke verdier som brukes inni et utsagn. Du trenger ikke oppgi avhengighetene selv, slik som med for eksempel `React.useEffect`.
 
-Når du skriver spill-logikk, kan du ofte oversette regler nesten direkte til kode: «Hvis `x === foo`, så gjør a, b og c» blir til `$: if (x === foo) { a(); b(); c(); }`.
+Når du skriver spill-logikk, kan du ofte oversette regler nesten direkte til reaktive utsagn: «Hvis `x === foo`, så gjør a, b og c» blir til `$: if (x === foo) { a(); b(); c(); }`.
 
 ### Oppgave 3.1: Gi poeng når slangen spiser eplet
 
 Lag en variabel `score`. Dette er antallet epler slangen har spist.
 
-Du skal skrive en betingelsessetning som sier at når slangehodet er på samme koordinat som eplet, øker antallet poeng med 1.
+I denne oppgaven skal du skrive et reaktivt utsagn med en if-setning slik at når slangehodet er på samme koordinat som eplet, øker antallet poeng med 1.
 
-Gi eplet en ny plassering på brettet når slangen har spist det.
+Når du har poeng-økningen til å virke, kan du sørge for at eplet får en ny, tilfeldig plassering på brettet idet slangen spiser det.
 
-Merk: Dette er kanskje den oppgaven der man sparer _mest_ knot ved bare å bruke hjelpefunksjoner fra `utils.js`.
+Merk: Her sparer du mye arbeid ved å bruke hjelpefunksjoner fra `utils.js`.
 
 #### Hint: Hjelp i utils.js
 
@@ -342,7 +340,7 @@ I `utils.js` finner du funksjonen `isEqual` som sier deg om to koordinater er li
 
 ### Oppgave 3.2: Få slangen til å vokse når den spiser eplet
 
-Når slangen treffer eplet, skal den vokse neste gang den beveger seg.
+Nå skal du få slangen til å vokse etter at den har spist et eple.
 
 For å gjøre det lettere for deg, har vi trukket ut logikken for å regne ut neste slange i funksjonen `getNextSnake(snake, direction, ?shouldGrow)`. `shouldGrow` er et valgfritt tredje argument, og er en boolsk.
 
@@ -355,13 +353,15 @@ For å løse den kommende oppgaven, kommer du til å måtte kunne det du lærer 
 
 ### Oppgave 3.3: Få spillet til å «tikke»
 
-I stedet for at slangen beveger seg når man trykker på piltastene, skal den bevege seg ved faste tidsintervaller. I demoversjonen av spillet er tidsintervallet 100 ms, men du kan endre dette om du vil.
+I denne oppgaven skal du få slangen til bevege seg ved faste tidsintervaller i stedet for idet man trykker på piltaster. Når tiden for å bevege seg er inne, skal slangen bevege seg i den retningen som spilleren sist oppga. I demoversjonen av spillet er tidsintervallet 100 ms, men du kan endre dette om du vil.
 
 ### Oppgave 3.4 Stopp tikking når slangen dør
 
-Det finnes to måter slangen kan dø på: Ved at den er utenfor brettet eller ved at den spiser seg selv. Sørg for å stoppe tikkingen dersom enten av disse inntreffer. For å stoppe tikkingen, har vi trukket ut en funksjon `stopTicking` som du kan bruke.
+Når slangehodet går utenfor brettet eller treffer en annen del av slangekroppen, er spillet slutt – _game over_.
 
-Dette skal skje som en _reaksjon_ på at slangen har beveget seg, ikke som en del av `moveSnake`.
+I denne oppgaven skal du innføre _game over_ ved å stoppe tikkingen dersom en av de nevnte tilstandene inntreffer. Stoppet skal skje som en _reaksjon_ på at slangen har beveget seg, og ikke som en del av `moveSnake`.
+
+For å stoppe tikkingen, har vi trukket ut en funksjon `stopTicking` som du kan bruke.
 
 #### Hint: Hjelpefunksjoner
 
@@ -378,15 +378,15 @@ Hvis vi skulle formulert reglene for game over muntlig, hadde vi sagt noe slikt 
 
 ### Oppgave 3.5: Bare reager på tastetrykk som er vinkelrette
 
-Idet du har fått game over til å virke, kommer du kanskje til å oppdage et problem: Slangen dør når man trykker tasten som går i stikk motsatt retning av slangens bevegelsesretning fordi den spiser halsen sin. Dette kan også skje når man er litt rask idet man prøver å ta en U-sving. I denne og den neste deloppgaven skal vi forbedre dette.
+Idet du har fått game over til å virke, kommer du kanskje til å oppdage et problem: Slangen dør når man trykker tasten som går i stikk motsatt retning av slangens bevegelsesretning fordi den spiser halsen sin. Dette kan også skje når man er litt rask idet man prøver å ta en U-sving. I denne og den neste deloppgaven skal vi unngå at spillere opplever dette.
 
-I denne oppgaven skal du overse alle tastetrykk som ikke er vinkelrette på slangens nåværende retning. Hvis slangen går nordover, skal du altså bare registrere tastetrykk på venstre og høyre piltast. Som med mange andre oppgaver, finnes det en funksjon som kan hjelpe deg i `utils.js`.
+I denne oppgaven skal du sørge for at slangen kun reagerer på tastetrykk som er vinkelrette på slangens nåværende retning. Hvis slangen går nordover, skal du altså bare registrere tastetrykk på venstre og høyre piltast. Som med mange andre oppgaver, finnes det en funksjon som kan hjelpe deg i `utils.js`.
 
 ### Oppgave 3.6: Bruk en kø til å holde styr på fremtidige bevegelser
 
 **Denne oppgaven er en utfordringsoppgave som har mer å gjøre med programmering enn Svelte i seg selv. Du kan hoppe til neste oppgave hvis du ønsker.**
 
-I løsningen på oppgave 3.5 som man finner i `task-3.5-end`, kan man fortsatt fremprovosere at slangen spiser seg selv hvis man er rask: Hvis slangen for eksempel beveger seg nordover og spilleren raskt trykker ⬅️ fulgt av ⬇️, ender spillet opp med å registrere ⬇️ som neste bevegelse. Spillere flest vil oppfatte dette som dårlig spillkontroll.
+I løsningen på oppgave 3.5 som man finner i `task-3.5-end`, kan man fortsatt fremprovosere at slangen spiser seg selv hvis man er rask: Hvis slangen for eksempel beveger seg nordover og spilleren raskt trykker ⬅️ fulgt av ⬇️, ender spillet opp med å registrere ⬇️ som neste bevegelse.
 
 Vi kan unngå problemet ved å bruke en _kø_ til å ta vare på retningene som slangen skal bevege seg i. Når slangen skal bevege seg, henter vi neste planlagte retning og beveger slangen i den. Da kan spilleren trykke inn avanserte bevegelser raskt uten å tenke på timing.
 
@@ -418,17 +418,15 @@ Når denne delen er over, skal vi ha en animert hodeskalle, eple og slange.
 
 For å lede spillerens oppmerksomhet i retning av nye epler, skal du få det nye eplet til å sprette opp på plassen sin når slangen spiser det forrige eplet.
 
-For å få til dette skal du importere overgangen `scale` fra `svelte/transition` og legge den på riktig element. For å begrense animasjonen til når eplet dukker opp, bruker du `in:` i stedet for `transition:`. (Du kan også prøve [flere overganger](https://svelte.dev/docs#svelte_transition), selv om vi som laget kurset foretrekker `scale`.)
+For å få til dette skal du importere overgangen `scale` fra `svelte/transition` og legge den på riktig element. For å begrense animasjonen til når eplet dukker opp, bruker du `in:` i stedet for `transition:`. (Du kan også prøve [andre overganger](https://svelte.dev/docs#svelte_transition).)
 
 ### Hint: Bruk en egnet blokk
 
-Normalt sett pleier Svelte bare å animere elementer dersom de forsvinner inn eller ut av dokumentet. Du kan fortelle Svelte at elementet skal animeres på nytt når det bytter plass ved å bruke en key-blokk: `{#key <verdi>}<innhold>{/key}`. Da vil Svelte animere `innhold` på nytt når `verdi` endrer seg.
+Normalt sett pleier Svelte bare å animere elementer dersom de forsvinner inn eller ut av dokumentet. Du kan fortelle Svelte at elementet skal animeres på nytt når en verdi endrer seg ved å bruke en key-blokk: `{#key <verdi>}<innhold>{/key}`. Da vil Svelte animere `innhold` på nytt når `verdi` endrer seg.
 
 ### Oppgave 4.2: Legg på en hodeskalle når slangen dør
 
-I stylingen finnes det en klasse `skull`.
-
-Når slangen dør, skal en `<div/>` med klassen `skull` dukke opp, og den skal ha samme koordinat som slangehodet.
+I stylingen finnes det en klasse `skull`. I denne oppgaven skal du få en `<div/>` med klassen `skull` til å dukke opp når slangen dør, og den skal ha samme koordinat som slangehodet.
 
 For å animere hodeskallen, legg på en `transition:scale` med en forsinkelse på 300 ms.
 
@@ -463,7 +461,7 @@ Gjør følgende oppgaver fra Svelte-opplæringen:
 
 ### Oppgave 5.1: Lag en komponent som dukker opp ved spillslutt
 
-Filen `GameOver.svelte` ligger klar i samme mappe som `App.svelte`. Du skal sørge for at komponenten vises på skjermen og at den viser scoren som spilleren fikk.
+Filen `GameOver.svelte` ligger klar i samme mappe som `App.svelte`. I denne oppgaven skal du sørge for at komponenten vises på skjermen når spillet er over og at den viser poengsummen som spilleren fikk.
 
 PS: Fordi det er litt knotete å få komponenten til å vises på skjermen på en elegant måte, har vi lagt inn noen div-er nederst der du kan montere `<GameOver>`-komponenten.
 
@@ -495,9 +493,9 @@ Løs [oppgaven om tekst-input og binding](https://svelte.dev/tutorial/text-input
 
 ### Oppgave 5.3: Legg til et felt der folk kan fylle inn navnet sitt
 
-Lag et felt der folk kan fylle inn navnet sitt. Lag også en knapp som folk kan trykke på for å sende inn navn og score på formatet `{ name: string, score: number }`. Du kan bruke funksjonen `postScore` fra `api.js` til dette.
+Lag et felt der folk kan fylle inn navnet sitt. Lag også en knapp som folk kan trykke på for å sende inn navn og poengsum på formatet `{ name: string, score: number }`. Du kan bruke funksjonen `postScore` fra `api.js` til dette.
 
-Når scoren er sendt inn, skal komponenten hente den oppdaterte topplisten.
+Når poengsummen er sendt inn, skal komponenten hente den oppdaterte topplisten.
 
 Merk: Fordi databasen ikke lagres til noe permanent minne, vil alt man har lagt til i den forsvinne når man starter utviklingstjeneren på nytt. Hvis du ødelegger databasen ved å sende inn feilformatert data, kan du avslutte utviklingstjeneren og starte den på nytt for å starte med blanke ark.
 
