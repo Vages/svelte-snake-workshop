@@ -19,7 +19,9 @@ git checkout task-4.2-end && git merge task-4.3-begin --no-edit && \
 git checkout task-4.2-begin && git merge task-4.2-end --no-edit && \
 git checkout task-4.1-end && git merge task-4.2-begin --no-edit && \
 git checkout task-4.1-begin && git merge task-4.1-end --no-edit && \
-git checkout task-3.5-end && git merge task-4.1-begin --no-edit && \
+git checkout task-3.6-end && git merge task-4.1-begin --no-edit && \
+git checkout task-3.6-begin && git merge task-3.6-end --no-edit && \
+git checkout task-3.5-end && git merge task-3.6-begin --no-edit && \
 git checkout task-3.5-begin && git merge task-3.5-end --no-edit && \
 git checkout task-3.4-end && git merge task-3.5-begin --no-edit && \
 git checkout task-3.4-begin && git merge task-3.4-end --no-edit && \
