@@ -416,7 +416,7 @@ Når denne delen er over skal vi ha en animert hodeskalle, eple og slange.
 
 - [If-blokker](https://svelte.dev/tutorial/if-blocks)
 - [Else-blokker](https://svelte.dev/tutorial/else-blocks)
-- [Key-blokker](https://svelte.dev/docs#key) (dessverre bare dokumentasjon; tutorial kommer)
+- [Key-blokker](https://svelte.dev/tutorial/key-blocks)
 
 ### Opplæring: Hvordan overganger fungerer
 
