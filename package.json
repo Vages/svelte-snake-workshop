@@ -30,8 +30,6 @@
     "eslint-plugin-svelte3": "^3.2.1",
     "husky": "^4.3.0",
     "lint-staged": "^12.1.2",
-    "miragejs": "^0.1.35",
-    "miragejs-caos": "^0.0.4",
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
     "svelte": "^3.44.0"
