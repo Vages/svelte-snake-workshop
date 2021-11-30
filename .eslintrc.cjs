@@ -1,19 +1,11 @@
 module.exports = {
-  env: {
-    browser: true,
-  },
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: "module",
-  },
+  root: true,
+  extends: ["eslint:recommended", "prettier"],
   plugins: ["svelte3"],
   overrides: [
     {
       files: ["*.svelte"],
       processor: "svelte3/svelte3",
-      rules: {
-        "prefer-const": "off",
-      },
       settings: {
         "svelte3/ignore-warnings": (output) => {
           if (output.code === "css-unused-selector") {
@@ -24,5 +16,13 @@ module.exports = {
       },
     },
   ],
-  rules: { "no-use-before-define": ["error", "nofunc"] },
+  parserOptions: {
+    sourceType: "module",
+    ecmaVersion: 2020,
+  },
+  env: {
+    browser: true,
+    es2017: true,
+    node: true,
+  },
 };
