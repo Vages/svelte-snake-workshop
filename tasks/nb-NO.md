@@ -398,11 +398,11 @@ I oppgaven skal du overse alle tastetrykk som ikke er vinkelrette på slangens n
 
 **Denne oppgaven er en utfordringsoppgave som har mer å gjøre med programmering enn Svelte i seg selv. Du kan hoppe til neste oppgave hvis du ønsker.**
 
-Vi kan gjøre spillet mer behagelig for spilleren ved ikke bare å ta vare på fremtidige tastetrykk i en kø. Da kan spilleren for eksempel trykke begge tastene i en planlagt U-sving innenfor samme «tikk», og så vil slangen snu seg først til én side og så helt rundt.
+I den løsningen på oppgave 3.5 som man finner i `task-3.5-end`, kan man fremprovosere en bug der slangen spiser seg selv. Hvis slangen for eksempel beveger seg nordover og spilleren raskt trykker ⬅️ fulgt av ⬇️, ender slangen opp med å registrere ⬇️ som neste bevegelse og spise sin egen hals. Spillere flest vil nok ikke synes at det er særlig gøy å måtte time U-svinger ned til riktig tiendedelssekund.
 
-Hvis slangen beveger seg nordover og spilleren trykker ⬅️ og deretter ⬇️ før slangen har rukket å reagere på at man trykket ⬅️, skal slangen snu seg vestover etter første tikk og sørover etter andre tikk. (Slik koden ser ut i `task-3.5-end`, ville spillet ignorert trykket på ⬇️, og nøyd seg med å snu seg mot vest.)
+Vi kan unngå dette problemet ved å bruke en kø til å ta vare på de retningene som slangen skal bevege seg i. Når slangen skal bevege seg, henter vi neste planlagte retning og beveger seg i den. Da kan spilleren trykke inn avanserte bevegelser raskt uten å tenke på timing.
 
-Vi har laget variabelen `headDirectionQueue`, et array som holder styr på hvilke retninger brukeren har planlagt at slangen skal bevege seg i. I stedet for å legge den nye retningen fra et tastetrykk rett i `headDirection`, skal du legge retningen til i køen. Når tiden for at slangen skal bevege seg er inne, skal programmet bruke den første retningen i køen som står vinkelrett på nåværende `headDirection` som ny verdi for `headDirection` (og la påfølgende bevegelser være i køen). Gjør de endringene som trengs i `moveSnake` og `handleKeydown`.
+Vi har laget variabelen `headDirectionQueue`, et array som holder styr på hvilke retninger brukeren har planlagt at slangen skal bevege seg i. I stedet for å legge den nye retningen fra et tastetrykk rett i `headDirection`, skal du legge retningen til i køen. Når tiden for at slangen skal bevege seg er inne, skal programmet bruke den første vinkelrette retningen i køen som ny verdi for `headDirection`. Med andre ord, dropp alle ikke-vinkelrette bevegelser fra starten av køen frem til du finner en vinkelrett bevegelse. (påfølgende bevegelser skal bli liggende i køen som de er). Gjør de endringene som trengs i `moveSnake` og `handleKeydown`.
 
 ## Del 4: Animasjon
 
