@@ -198,7 +198,7 @@ Slik skal slangen være plassert på brettet når du har gjort alt riktig:
 
 Vi bruker utregningen (`left: {foo.x * CELL_SIZE}px; top: {foo.y * CELL_SIZE}px`) flere ganger i koden. Koden blir lettere å vedlikeholde dersom vi legger denne utregningen ett sted.
 
-I denne oppgaven skal du flytte den nevnte utregningen over i en funksjon, `calculatePositionAsStyle(coordinate)`, og erstatte alle tilfeller der man bruker utregningen med et kall til denne funksjonen. Funksjonen skal ta inn en koordinat og gi tilbake en streng med verdier for top og left.
+I denne oppgaven skal du flytte den nevnte utregningen over i en funksjon, `calculatePositionAsStyle(coordinate)`, og erstatte alle tilfeller der vi bruker utregningen med et kall til denne funksjonen. Funksjonen skal ta inn en koordinat og gi tilbake en streng med verdier for top og left.
 
 ## Del 2: Spillkontroller
 
@@ -223,7 +223,7 @@ Tastetrykk-hendelsen heter `keydown`. I Svelte lytter man etter den med `on:keyd
 
 #### Hint: svelte:body
 
-Vi lytter til `document.body` ved å bruke elementet `<svelte:body />`. Du kan lytte etter hendelser på `svelte:body` akkurat slik du ville gjort med et hvilket som helst HTML-element.
+Man lytter til `document.body` ved å bruke elementet `<svelte:body />`. Man kan lytte etter hendelser på `svelte:body` akkurat slik man ville gjort med et hvilket som helst HTML-element.
 
 ### Opplæring: Å endre variabelverdier
 
@@ -242,12 +242,12 @@ Inntil videre skal slangen bevege seg også om den går inni seg selv eller uten
 
 #### Hint: Viktige Array-funksjoner
 
-- Den enkleste måten å legge til elementer i starten eller slutten i et array, er å bruke spredning (_spreading_): `[a, ...b]`. (Svelte reagerer ikke hvis du bruker push og pop; dette kommer vi tilbake til senere.)
+- Den enkleste måten å legge til elementer i starten eller slutten i et array, er å bruke spredning (_spreading_): `[a, ...b]`. (Svelte reagerer ikke hvis man bruker push og pop; dette kommer vi tilbake til senere.)
 - Funksjonen [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) er nyttig når man vil fjerne elementer fra starten og slutten av et array.
 
 #### Hint: Hjelpemidler i `utils.js`
 
-I `utils.js` finner du:
+I `utils.js` finner man:
 
 - `add(coordinateA, coordinateB)`, som kan legge sammen to vektorer/koordinater.
 - `DIRECTION_TO_VECTOR`, som man kan bruke for å gå fra himmelretning til retningsvektor.
@@ -318,9 +318,9 @@ Nesten hva som helst kan stå etter dollartegnet, ikke bare utregninger. Man kan
 
 Et reaktivt utsagn kjøres én gang når appen lastes inn. Deretter kjøres utsagnet på nytt som en reaksjon på at en verdi som brukes inni utsagnet gis en ny verdi et annet sted i appen. Svelte merker bare endringer som kommer som en følge av man bruker tilegnelsesoperatoren, `=` (for eksempel `foo.bar = "baz"`), og ikke som følge av metodekall (som `.push` og `.pop`). Se [opplæringsoppgaven om reaktivitet med objekter og arrays](https://svelte.dev/tutorial/updating-arrays-and-objects) for en dypere forklaring.
 
-Svelte finner automatisk ut hvilke verdier som brukes inni et utsagn. Du trenger ikke oppgi avhengighetene selv, slik som med for eksempel `React.useEffect`.
+Svelte finner automatisk ut hvilke verdier som brukes inni et utsagn. Man trenger ikke oppgi avhengighetene selv, slik som med for eksempel `React.useEffect`.
 
-Når du skriver spill-logikk, kan du ofte oversette regler nesten direkte til reaktive utsagn: «Hvis `x === foo`, så gjør a, b og c» blir til `$: if (x === foo) { a(); b(); c(); }`.
+Når man skriver spill-logikk, kan man ofte oversette regler nesten direkte til reaktive utsagn: «Hvis `x === foo`, så gjør a, b og c» blir til `$: if (x === foo) { a(); b(); c(); }`.
 
 ### Oppgave 3.1: Gi poeng når slangen spiser eplet
 
@@ -334,7 +334,7 @@ Merk: Her sparer du mye arbeid ved å bruke hjelpefunksjoner fra `utils.js`.
 
 #### Hint: Hjelp i utils.js
 
-I `utils.js` finner du funksjonen `isEqual` som sier deg om to koordinater er like, og funksjonen `pickRandomOpenSpace`, som trekker en passelig plassering for det nye eplet.
+I `utils.js` finner man funksjonen `isEqual` som sier om to koordinater er like, og funksjonen `pickRandomOpenSpace`, som trekker en passelig plassering for det nye eplet.
 
 ### Oppgave 3.2: Få slangen til å vokse når den spiser eplet
 
@@ -363,7 +363,7 @@ For å stoppe tikkingen, har vi trukket ut en funksjon `stopTicking` som du kan 
 
 #### Hint: Hjelpefunksjoner
 
-I `utils.js` finner du `isInsideBoard` og `isSnakeEatingItself`. Disse vil være til stor hjelp.
+I `utils.js` finner man `isInsideBoard` og `isSnakeEatingItself`. Disse er til stor hjelp.
 
 #### Hint: Reaktivitet
 
@@ -418,7 +418,7 @@ For å få til dette skal du importere overgangen `scale` fra `svelte/transition
 
 ### Hint: Bruk en egnet blokk
 
-Normalt sett pleier Svelte bare å animere elementer dersom de forsvinner inn eller ut av dokumentet. Du kan fortelle Svelte at elementet skal animeres på nytt når en verdi endrer seg ved å bruke en key-blokk: `{#key <verdi>}<innhold>{/key}`. Da vil Svelte animere `innhold` på nytt når `verdi` endrer seg.
+Normalt sett pleier Svelte bare å animere elementer dersom de forsvinner inn eller ut av dokumentet. Man kan fortelle Svelte at elementet skal animeres på nytt når en verdi endrer seg ved å bruke en key-blokk: `{#key <verdi>}<innhold>{/key}`. Da vil Svelte animere `innhold` på nytt når `verdi` endrer seg.
 
 ### Oppgave 4.2: Legg på en hodeskalle når slangen dør
 
@@ -434,15 +434,11 @@ Du kommer ikke til å trenge å bruke noe `transition:…` her. Stylingen tar se
 
 ### Oppgave 4.4: Animer slangehalen
 
-I denne oppgaven skal du animere halen. Det finnes en klasse, `tail`, som man kan legge på et element for å få den samme gli-animasjonen som for hodet, men uten forstørrelse av kroppsdelen.
+I denne oppgaven skal du animere halen. Det finnes en klasse, `tail`, som man kan legge på et element for å få den samme gli-animasjonen som for hodet, men uten å forstørre kroppsdelen.
 
 Legg til en animert hale på slangen.
 
-Advarsel:
-
-- **Det er en rendering-bug i Safari og Chrome** som blir bedre av en workaround i fasiten som vi ikke kan fortelle hvordan virker, fordi det ville avslørt løsningen.
-  - Om du bruker Safari eller Chrome, kan du regne oppgaven som løst når du har en animert, litt blinkete hale.
-  - Dersom du bruker Firefox, vil du sannsynligvis ikke merke noe.
+**Advarsel**: Halen kommer til å blinke litt i alle nettlesere utenom Firefox (deriblant Chrome og Safari) på grunn av en bug. Du kan regne oppgaven som ferdig når du har en animert hale som blinker av og til. Fasiten inneholder et triks som fjerner blinkingen. Vi kan dessverre ikke fortelle hva trikset er, fordi det ville avslørt løsningen på hovedoppgaven.
 
 ## Del 5: Komponenter og nettverk
 
@@ -459,7 +455,7 @@ Gjør følgende oppgaver fra Svelte-opplæringen:
 
 Filen `GameOver.svelte` ligger klar i samme mappe som `App.svelte`. I denne oppgaven skal du sørge for at komponenten vises på skjermen når spillet er over og at den viser poengsummen som spilleren fikk.
 
-PS: Fordi det er litt knotete å få komponenten til å vises på skjermen på en elegant måte, har vi lagt inn noen div-er nederst der du kan montere `<GameOver>`-komponenten.
+Fordi det er litt knotete å få komponenten til å vises på skjermen på en elegant måte, har vi lagt inn noen div-er nederst i template der man kan montere `<GameOver>`-komponenten.
 
 ### Advarsel: Resten av del 5 er vanskelig
 
@@ -507,7 +503,7 @@ Del 6 er en sandkasse der du kan gjøre omtrent hva du vil.
 
 Det finnes fortsatt noen mulige forbedringer av spillet:
 
-#### Oppgaver du ikke finner løsningen på i main
+#### Oppgaver med løsning i main-branchen
 
 Følgende funksjoner har vi ikke selv prøvd å lage (ennå), men vi tror de er både løsbare – og gøyale:
 
@@ -518,7 +514,7 @@ Følgende funksjoner har vi ikke selv prøvd å lage (ennå), men vi tror de er 
 
 Hvis du ikke føler deg helt klar for å jobbe uten fasit ennå kan du prøve deg på en oppgave du finner løsningen på i main-branchen.
 
-#### Oppgaver som du finner løsninger på i main-branchen
+#### Oppgaver uten løsning i main-branchen
 
 Spillet som ligger i main-branchen har et par funksjoner som det ikke er laget oppgaver for:
 
@@ -537,7 +533,7 @@ Kanskje du kan lage et av følgende spill:
 
 ### Oppgave 6.3: Etter dette kurset
 
-Om du synes Svelte er gøy og vil lære mer, har vi følgende anbefalinger:
+Om man synes Svelte er gøy og vil lære mer, har vi følgende anbefalinger:
 
 - Gjør [hele Svelte-opplæringen](https://svelte.dev/tutorial/)
   - Sjekk ut [dokumentasjonen](https://svelte.dev/docs) etterpå. Man kan nesten alt som står der etter opplæringen.
@@ -546,4 +542,4 @@ Om du synes Svelte er gøy og vil lære mer, har vi følgende anbefalinger:
 
 ### Avsluttende ord
 
-Da gjenstår det kun å si at vi håper du har kost deg med kurset vår. Game over!
+Da gjenstår det kun å si at vi håper du har kost deg med kurset vårt. Game over!
