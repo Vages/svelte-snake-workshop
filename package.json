@@ -6,16 +6,10 @@
     "dev": "svelte-kit dev",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
+    "generate-translations": "md2po2md README.md -l nob -o \"locale/{lang}\" && md2po2md TASKS.md -l nob -o \"locale/{lang}\" && md2po2md SETUP.md -l nob -o \"locale/{lang}\"",
+    "postgenerate-translations": "npm run format",
     "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
-  },
-  "lint-staged": {
-    "*.{svelte,js}": [
-      "npx eslint --fix",
-      "npx prettier --write"
-    ],
-    "tasks/*.md": "npx markdown-toc -i --maxdepth 3",
-    "*.{json,md,html,css}": "npx prettier --write"
   },
   "husky": {
     "hooks": {

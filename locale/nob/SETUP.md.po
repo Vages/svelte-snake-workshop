@@ -1,0 +1,162 @@
+#
+msgid ""
+msgstr ""
+
+#: SETUP.md:block 1 (header)
+msgid "Workshop installation guide"
+msgstr "Installasjonsguide for kurset"
+
+#: SETUP.md:block 2 (paragraph)
+msgid "Guide to installing a code editor, package manager and git."
+msgstr "Guide for installasjon av kodeverktøy, pakkebehandler og git."
+
+#: SETUP.md:block 3 (header)
+msgid "Code editor"
+msgstr "Kodeverktøy"
+
+#: SETUP.md:block 4 (paragraph)
+msgid ""
+"When it comes to editors, you are free to choose for yourself. Visual Studio"
+" Code is widely used among frontend developers, and you can add Svelte "
+"support to it."
+msgstr ""
+"Når det gjelder kodeverktøy, står du fritt til å velge selv, men for "
+"eksempel er Visual Studio Code mye brukt blant frontendutviklere, og du kan "
+"installere støtte for Svelte i det."
+
+#: SETUP.md:block 5 (paragraph)
+msgid ""
+"Follow the instructions on the following page to install Visual Studio Code:"
+" <https://code.visualstudio.com/download>"
+msgstr ""
+"Følg instruksjonene her for å installere Visual Studio Code: "
+"<https://code.visualstudio.com/download>"
+
+#: SETUP.md:block 6 (header)
+msgid "Git, runtime environment and package manager"
+msgstr "Git, kjøremiljøet og pakkebehandler"
+
+#: SETUP.md:block 7 (paragraph)
+msgid ""
+"You must have Git installed on your machine to download the project. You "
+"need Node to build and run the project on your machine."
+msgstr ""
+"Du må ha Git for å laste ned prosjektet og kjøremiljøet Node på maskinen for"
+" å bygge og kjøre prosjektet lokalt."
+
+#: SETUP.md:block 8 (header)
+msgid "Mac"
+msgstr "Mac"
+
+#: SETUP.md:block 9 (ordered list)
+msgid "Install Homebrew as described at <https://brew.sh/>"
+msgstr "Installer Homebrew som beskrevet på <https://brew.sh/>"
+
+#: SETUP.md:block 9 (ordered list)
+msgid "Install everything using `brew install git node`"
+msgstr "Installer alt med `brew install git node`"
+
+#: SETUP.md:block 10 (header)
+msgid "Windows"
+msgstr "Windows"
+
+#: SETUP.md:block 11 (paragraph)
+msgid ""
+"There are multiple ways to install these on Windows. Below are two options:"
+msgstr ""
+"På Windows er det flere måter å gjøre dette på. Under har vi listet opp to:"
+
+#: SETUP.md:block 12 (header)
+msgid "With Chocolatey"
+msgstr "Med Chocolatey"
+
+#: SETUP.md:block 13 (ordered list)
+msgid "Install Chocolatey as described at <https://chocolatey.org/install>"
+msgstr ""
+"Installer Chocolatey som beskrevet på <https://chocolatey.org/install>"
+
+#: SETUP.md:block 13 (ordered list)
+msgid "Install the packages using `choco install nodejs git`"
+msgstr "Installer pakkene med `choco install nodejs git`"
+
+#: SETUP.md:block 14 (header)
+msgid "With git bash and exe files"
+msgstr "Med git bash og exe-filer"
+
+#: SETUP.md:block 15 (paragraph)
+msgid ""
+"Download and install Node from the official page: "
+"<https://nodejs.org/en/download/>"
+msgstr "Installer Node herfra: <https://nodejs.org/en/download/>"
+
+#: SETUP.md:block 16 (header)
+msgid "Linux"
+msgstr "Linux"
+
+#: SETUP.md:block 17 (paragraph)
+msgid ""
+"On Linux, the installation process varies from distro to distro, and we have"
+" only met Linux users who know how to install things :D"
+msgstr ""
+"På Linux varierer fremgangsmåten fra distro til distro, og vi har hittil "
+"bare opplevd at Linux-brukere vet bedre enn oss hvordan ting skal "
+"installeres :D"
+
+#: SETUP.md:block 18 (header)
+msgid "Git"
+msgstr "Git"
+
+#: SETUP.md:block 19 (paragraph)
+msgid ""
+"Git is code version control, and you need it to fetch the workshop. It comes"
+" pre-installed with all Macs, but you must install it on Windows and Linux "
+"machines."
+msgstr ""
+"Git er versjonskontroll for kode, og det du trenger for å hente koden vår. "
+"Mac har det installert, men på Windows og Linux må du installere det "
+"manuelt."
+
+#: SETUP.md:block 20 (header)
+msgid "Install Git for Windows"
+msgstr "Installer Git for Windows"
+
+#: SETUP.md:block 21 (paragraph)
+msgid "Download Git for Windows here: https://gitforwindows.org/"
+msgstr "Last ned Git for Windows her: https://gitforwindows.org/"
+
+#: SETUP.md:block 22 (header)
+msgid "Clone repo, install and run the app"
+msgstr "Klone repo og installere og kjøre appen"
+
+#: SETUP.md:block 23 (ordered list)
+msgid ""
+"When you have installed an editor, Git and Node, clone the repo in the "
+"command line/terminal: `git clone https://github.com/Vages/svelte-snake-"
+"workshop.git`"
+msgstr ""
+"Når du har installert disse, kloner du repoet i kommandolinjen/terminalen: "
+"`git clone https://github.com/Vages/svelte-snake-workshop.git`"
+
+#: SETUP.md:block 23 (ordered list)
+msgid ""
+"Go to the `svelte-snake-workshop` directory and run `npm install` to install"
+" the dependencies. If you run `npm run dev`, the app should startin "
+"development mode. If it works, you're ready for the workshop!"
+msgstr ""
+"Bytt til mappen `svelte-snake-workshop` og skriv `npm install` for å "
+"installere avhengighetene. Hvis du skriver `npm run dev` skal den starte "
+"appen i utviklingsmodus. Hvis dette fungerer, er du klar for workshoppen!"
+
+#: SETUP.md:block 4 (quote)
+msgid "Read in the language that you prefer:"
+msgstr "Les på det språket du foretrekker:"
+
+#: SETUP.md:block 28 (ordered list)
+#, fuzzy
+msgid "[setup-eng]: ."
+msgstr "[setup-eng]: ../../SETUP.md"
+
+#: SETUP.md:block 28 (ordered list)
+#, fuzzy
+msgid "[setup-nob]: ./locale/nob/SETUP.md"
+msgstr "[setup-nob]: ."

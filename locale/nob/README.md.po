@@ -1,0 +1,44 @@
+#
+msgid ""
+msgstr ""
+
+#: README.md:block 1 (header)
+msgid "Svelte Snake Workshop"
+msgstr "Svelte-Snake-kurset"
+
+#: README.md:block 7 (paragraph)
+msgid "Welcome to the Svelte Snake Workshop!"
+msgstr "Velkommen til Svelte-Snake-kurset!"
+
+#: README.md:block 8 (header)
+msgid "Get started"
+msgstr "Kom i gang"
+
+#: README.md:block 9 (paragraph)
+msgid "Install the dependencies …"
+msgstr "Installer avhengighetene …"
+
+#: README.md:block 14 (paragraph)
+#, fuzzy
+msgid "[readme-nob]: ./locale/nob/README.md"
+msgstr "[readme-nob]: ./locale/nob/README.md"
+
+#: README.md:block 14 (paragraph)
+#, fuzzy
+msgid "[readme-eng]: ."
+msgstr "[readme-eng]: ."
+
+#: README.md:block 13 (paragraph)
+msgid "You are now ready to start the [tasks](./TASKS.md)."
+msgstr "Nå er du klar til å begynne med [oppgavene](./TASKS.md)."
+
+#: README.md:block 4 (quote)
+msgid "Read in the language that you prefer:"
+msgstr "Les på det språket du foretrekker:"
+
+#: README.md:block 11 (paragraph)
+msgid ""
+"… then start the [SvelteKit development server](https://kit.svelte.dev/):"
+msgstr ""
+"… og start deretter [utviklingstjeneren til "
+"SvelteKit](https://kit.svelte.dev/):"

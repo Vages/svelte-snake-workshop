@@ -1,48 +1,64 @@
-# Installasjonsguide for kurset
+# Workshop installation guide
 
-Guide for installasjon av kodeverktøy, pakkebehandler og git.
+<!-- mdpo-disable -->
+<!-- prettier-ignore-start -->
 
-## Kodeverktøy
+<!-- mdpo-enable-next-line -->
+> Read in the language that you prefer:
+>
+> - [🇬🇧 English][setup-eng]
+> - [🇳🇴 Norsk bokmål][setup-nob]
 
-Når det gjelder kodeverktøy, står du fritt til å velge selv, men for eksempel er Visual Studio Code mye brukt blant frontendutviklere, og du kan installere støtte for Svelte i det.
+<!-- prettier-ignore-end -->
 
-Følg instruksjonene her for å installere Visual Studio Code: <https://code.visualstudio.com/download>
+<!-- mdpo-enable -->
 
-## Git, kjøremiljøet og pakkebehandler
+Guide to installing a code editor, package manager and git.
 
-Du må ha Git for å laste ned prosjektet og kjøremiljøet Node på maskinen for å bygge og kjøre prosjektet lokalt.
+## Code editor
+
+When it comes to editors, you are free to choose for yourself. Visual Studio Code is widely used among frontend developers, and you can add Svelte support to it.
+
+Follow the instructions on the following page to install Visual Studio Code: <https://code.visualstudio.com/download>
+
+## Git, runtime environment and package manager
+
+You must have Git installed on your machine to download the project. You need Node to build and run the project on your machine.
 
 ### Mac
 
-1. Installer Homebrew som beskrevet på https://brew.sh/
-2. Installer alt med `brew install git node`
+1. Install Homebrew as described at <https://brew.sh/>
+1. Install everything using `brew install git node`
 
 ### Windows
 
-På Windows er det flere måter å gjøre dette på. Under har vi listet opp to:
+There are multiple ways to install these on Windows. Below are two options:
 
-#### Med Chocolatey
+#### With Chocolatey
 
-1. Installer Chocolatey som beskrevet på <https://chocolatey.org/install>
-2. Installer pakkene med `choco install nodejs git`
+1. Install Chocolatey as described at <https://chocolatey.org/install>
+1. Install the packages using `choco install nodejs git`
 
-#### Med git bash og exe-filer
+#### With git bash and exe files
 
-Installer Node herfra: <https://nodejs.org/en/download/>
+Download and install Node from the official page: <https://nodejs.org/en/download/>
 
 ### Linux
 
-På Linux varierer fremgangsmåten fra distro til distro, og vi har hittil bare opplevd at Linux-brukere vet bedre enn oss hvordan ting skal installeres :D
+On Linux, the installation process varies from distro to distro, and we have only met Linux users who know how to install things :D
 
 ## Git
 
-Git er versjonskontroll for kode, og det du trenger for å hente koden vår. Mac har det installert, men på Windows og Linux må du installere det manuelt.
+Git is code version control, and you need it to fetch the workshop. It comes pre-installed with all Macs, but you must install it on Windows and Linux machines.
 
-### Installer Git for Windows
+### Install Git for Windows
 
-Last ned Git for Windows her: https://gitforwindows.org/
+Download Git for Windows here: https://gitforwindows.org/
 
-## Klone repo og installere og kjøre appen
+## Clone repo, install and run the app
 
-1. Når du har installert disse, kloner du repoet i kommandolinjen/terminalen: `git clone https://github.com/Vages/svelte-snake-workshop.git`
-2. Bytt til mappen `svelte-snake-workshop` og skriv `npm install` for å installere avhengighetene. Hvis du skriver `npm run dev` skal den starte appen i utviklingsmodus. Hvis dette fungerer, er du klar for workshoppen!
+1. When you have installed an editor, Git and Node, clone the repo in the command line/terminal: `git clone https://github.com/Vages/svelte-snake-workshop.git`
+1. Go to the `svelte-snake-workshop` directory and run `npm install` to install the dependencies. If you run `npm run dev`, the app should startin development mode. If it works, you're ready for the workshop!
+
+[setup-eng]: .
+[setup-nob]: ./locale/nob/SETUP.md
