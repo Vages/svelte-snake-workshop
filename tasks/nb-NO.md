@@ -88,9 +88,9 @@ Hvis du trenger hjelp til installasjon, kan du sjekke [SETUP.md](../SETUP.md).
 
 ### Slik pleier kurset å være
 
-Repoet [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop) inneholder alt du trenger. Du kan bestemme tempo selv. Det skal være mulig å fullføre kurset helt på egen hånd.
+Repoet [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop) inneholder alt du trenger. Du kan bestemme tempo selv. Det er mulig å fullføre kurset helt på egen hånd.
 
-Kurset er delt opp i 6 deler. Hver del inneholder to eller flere oppgaver. Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint. Du kan la være å lese hintene om du trenger en ekstra utfordring. Bytt til `task-X-begin` før du løser hver nye oppgave (eksempelvis `git checkout task-1.2-begin`). `task-X-end` er oppgavens fasit. For å fjerne koden du har lagt til og gå videre til ny oppgave, kan du skrive `git stash` og deretter `git checkout task-X-begin`.
+Kurset er delt opp i 6 deler. Hver del inneholder to eller flere oppgaver. Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint. Du kan la være å lese hintene dersom du trenger en ekstra utfordring. Bytt til `task-X-begin` før du løser hver nye oppgave (eksempelvis `git checkout task-1.2-begin`). `task-X-end` er oppgavens fasit. For å fjerne koden du har lagt til og gå videre til ny oppgave, kan du skrive `git stash` og deretter `git checkout task-X-begin`.
 
 Når vi holder kurset fysisk eller digitalt, pleier vi å gå gjennom oppgaver og spørsmål i fellesskap med ujevne mellomrom. Du kan be om hjelp fra kursholderne når som helst.
 
@@ -98,13 +98,11 @@ Vi har laget så å si all styling på forhånd, slik at man kan bruke mest muli
 
 ## Del 1: Enkel grafikk
 
-Når denne delen er ferdig, skal vi ha et brett med en slange og et eple.
+Når du er ferdig med denne delen, skal spillet klare å vise hvor slangen og eplet er på brettet.
 
 ### Opplæring: Slik ser en Svelte-fil ut
 
-Svelte er en sammensmeltning av HTML, CSS og Javascript. Om du kan disse fra før, kan du bruke mye av det i Svelte.
-
-I Svelte kan man skrive Javascript, CSS og HTML i én og samme fil. Delene kalles for «script», «template» og «styling».
+Svelte er en sammensmeltning av HTML, CSS og Javascript med noen forbedringer. I Svelte kan man skrive disse tre språkene i én og samme fil. Delene kalles for «script», «template» og «styling».
 
 ```svelte
 <!-- script -->
@@ -126,7 +124,7 @@ I Svelte kan man skrive Javascript, CSS og HTML i én og samme fil. Delene kalle
 </style>
 ```
 
-Som vi akkurat hintet til, bruker man krøllparenteser inni _template_ for å sette inn variabler, utregninger og funksjonskall.
+Man bruker krøllparenteser inni _template_ for å sette inn variabler, utregninger og funksjonskall.
 
 ```svelte
 <script>
@@ -144,7 +142,7 @@ Løs [oppgaven fra Svelte-opplæringen om å sette inn data](https://svelte.dev/
 
 Åpne filen `src/routes/_game/App.svelte`.
 
-På brettet har vi en `<div class="apple" />`. I variabelen `apple` ligger en koordinat. Plasser eplet på den ruten på brettet som angis av koordinaten.
+På brettet har vi en `<div class="apple" />`. I variabelen `apple` ligger en koordinat. I denne oppgaven skal du plassere eplet på den ruten på brettet som angis av koordinaten.
 
 X-aksen på brettet går mot høyre, og Y-aksen peker ned. Sidelengden på hver rute i rutenettet er lagret i konstanten `CELL_SIZE`.
 
@@ -198,13 +196,13 @@ Slik skal slangen være plassert på brettet når du har gjort alt riktig:
 
 ### Oppgave 1.3: Trekk koordinat-utregningen ut i en funksjon
 
-Utregningen for å plassere noe på brettet (`x * CELL_SIZE`) er gjentatt flere ganger i koden. Slike gjentakelser gjør at man må gjøre samme endring flere steder dersom man vil endre logikken.
+Vi bruker utregningen (`left: {foo.x * CELL_SIZE}px; top: {foo.y * CELL_SIZE}px`) flere ganger i koden. Koden blir lettere å vedlikeholde dersom vi legger denne utregningen ett sted.
 
-Flytt den dupliserte utregningen over i en funksjon, `calculatePositionAsStyle(coordinate)`. Den skal returnere en streng med verdier for top og left.
+I denne oppgaven skal du flytte den nevnte utregningen over i en funksjon, `calculatePositionAsStyle(coordinate)`, og erstatte alle tilfeller der man bruker utregningen med et kall til denne funksjonen. Funksjonen skal ta inn en koordinat og gi tilbake en streng med verdier for top og left.
 
 ## Del 2: Spillkontroller
 
-Når du er ferdig med del 2, skal det gå an å styre slangen med piltastene.
+Når du er ferdig med denne delen, skal det gå an å styre slangen med piltastene.
 
 ### Opplæring: Å lytte etter input
 
@@ -236,7 +234,7 @@ Du kommer til å måtte vite hvordan du endrer variabler i den kommende seksjone
 
 ### Oppgave 2.2: Beveg slangen ett steg i den retningen brukeren trykker
 
-Nå skal vi oversette tastetrykk til bevegelse. Slangen skal bevege seg ett steg i oppgitt retning hver gang man trykker på en piltast. Unngå at slangen beveger seg når man trykker på andre taster.
+I denne oppgaven skal du oversette tastetrykk til bevegelse. Slangen skal bevege seg ett steg i oppgitt retning hver gang man trykker på en piltast. Unngå at slangen beveger seg når man trykker på andre taster.
 
 For å gjøre dette lettere, har vi laget en funksjon `convertKeyboardKeyToDirection` i `utils.js`, som oversetter fra tastetrykk til en retning. I kodebasen har vi valgt å bruke himmelretningene for å vise til retningene på brettet: Vest er venstre, nord er opp.
 
@@ -326,9 +324,9 @@ Når du skriver spill-logikk, kan du ofte oversette regler nesten direkte til re
 
 ### Oppgave 3.1: Gi poeng når slangen spiser eplet
 
-Lag en variabel `score`. Dette er antallet epler slangen har spist.
-
 I denne oppgaven skal du skrive et reaktivt utsagn med en if-setning slik at når slangehodet er på samme koordinat som eplet, øker antallet poeng med 1.
+
+Lag en variabel `score`. Dette er antallet epler slangen har spist.
 
 Når du har poeng-økningen til å virke, kan du sørge for at eplet får en ny, tilfeldig plassering på brettet idet slangen spiser det.
 
@@ -340,7 +338,7 @@ I `utils.js` finner du funksjonen `isEqual` som sier deg om to koordinater er li
 
 ### Oppgave 3.2: Få slangen til å vokse når den spiser eplet
 
-Nå skal du få slangen til å vokse etter at den har spist et eple.
+I denne oppgaven skal du få slangen til å vokse etter at den har spist et eple.
 
 For å gjøre det lettere for deg, har vi trukket ut logikken for å regne ut neste slange i funksjonen `getNextSnake(snake, direction, ?shouldGrow)`. `shouldGrow` er et valgfritt tredje argument, og er en boolsk.
 
@@ -396,11 +394,7 @@ Gjør de endringene som trengs i `moveSnake` og `handleKeydown`.
 
 ## Del 4: Animasjon
 
-Det grunnleggende spillet er ferdig. Neste steg er animasjon.
-
-I Svelte følger modulen `svelte/transition` med. Den gjør at man kan animere et element som dukker opp eller forsvinner fra dokumentet.
-
-Når denne delen er over, skal vi ha en animert hodeskalle, eple og slange.
+Når du er ferdig med denne delen, skal spillet ha en animert hodeskalle, eple og slange.
 
 ### Opplæring: Kontroll-blokker
 
@@ -410,13 +404,15 @@ Når denne delen er over, skal vi ha en animert hodeskalle, eple og slange.
 
 ### Opplæring: Hvordan overganger fungerer
 
+I Svelte følger modulen `svelte/transition` med. Den gjør at man kan animere et element som dukker opp eller forsvinner fra dokumentet.
+
 - [transition-attributtet](https://svelte.dev/tutorial/transition)
 - [Hvordan man kan legge parametere på overganger](https://svelte.dev/tutorial/adding-parameters-to-transitions)
 - [Forskjellig animasjon på inn og ut](https://svelte.dev/tutorial/in-and-out)
 
 ### Oppgave 4.1: Animer eplet
 
-For å lede spillerens oppmerksomhet i retning av nye epler, skal du få det nye eplet til å sprette opp på plassen sin når slangen spiser det forrige eplet.
+I denne oppgaven skal du få det nye eplet til å sprette opp på plassen sin når slangen spiser det forrige eplet.
 
 For å få til dette skal du importere overgangen `scale` fra `svelte/transition` og legge den på riktig element. For å begrense animasjonen til når eplet dukker opp, bruker du `in:` i stedet for `transition:`. (Du kan også prøve [andre overganger](https://svelte.dev/docs#svelte_transition).)
 
@@ -432,13 +428,13 @@ For å animere hodeskallen, legg på en `transition:scale` med en forsinkelse p�
 
 ### Oppgave 4.3: Animer slangehodet
 
-I style-blokken finnes det en klasse `head`. Denne sørger for styling og animasjon av slangehodet så lenge man setter den på et element med klassen `body-part` . Legg inn et animert slangehode ved hjelp av denne klassen.
+I style-blokken finnes det en klasse `head`. Denne sørger for styling og animasjon av slangehodet så lenge man setter den på et element med klassen `body-part` . I denne oppgaven skal du legge inn et animert slangehode ved hjelp av denne klassen.
 
 Du kommer ikke til å trenge å bruke noe `transition:…` her. Stylingen tar seg av animasjonen så lenge du legger riktig klasse på rett sted.
 
 ### Oppgave 4.4: Animer slangehalen
 
-Nå skal vi animere halen. Det finnes en klasse, `tail`, som man kan legge på et element for å få den samme gli-animasjonen som for hodet, men uten forstørrelse av kroppsdelen.
+I denne oppgaven skal du animere halen. Det finnes en klasse, `tail`, som man kan legge på et element for å få den samme gli-animasjonen som for hodet, men uten forstørrelse av kroppsdelen.
 
 Legg til en animert hale på slangen.
 
@@ -450,7 +446,7 @@ Advarsel:
 
 ## Del 5: Komponenter og nettverk
 
-I denne delen skal vi lage en game-over-skjerm. Denne skal hente en high-score-liste fra en tjener. På skjermen skal man også kunne registrere navnet sitt og sende siste poengsum til tjeneren.
+Når du er ferdig med denne delen, skal spillet ha en game-over-skjerm. Denne skal hente en high-score-liste fra en tjener. På skjermen skal man også kunne registrere navnet sitt og sende siste poengsum til tjeneren.
 
 ### Opplæring: Komponenter
 
@@ -479,7 +475,7 @@ Løs [oppgaven om await-blokker fra Svelte-opplæringen](https://svelte.dev/tuto
 
 Svelte-kit-prosessen som kjøres under utvikling inneholder en liten i-minne-database med en high-score-liste som man kan hente ut tidligere poengsummer fra og poste sin siste poengsum til.
 
-Funksjonen `fetchScores` fra `api.js` henter topplista. Importer denne funksjonen og vis topplista i «Game Over» komponenten du har laget.
+Funksjonen `fetchScores` fra `api.js` henter topplista. I denne oppgaven skal du importere denne funksjonen og vise topplista i «Game Over»-komponenten du har laget.
 
 [comment]: <> (Serveren kan bruke tid på å svare, så pass på å gi visuell tilbakemelding til brukeren på at forespørselen er underveis. Serveren er satt til å feile på 40 % av alle kall, så pass også på å bruke catch-blokken for å vise brukeren at noe gikk feil. Lag en knapp som prøver på nytt dersom forespørselen feilet.)
 
@@ -493,7 +489,7 @@ Løs [oppgaven om tekst-input og binding](https://svelte.dev/tutorial/text-input
 
 ### Oppgave 5.3: Legg til et felt der folk kan fylle inn navnet sitt
 
-Lag et felt der folk kan fylle inn navnet sitt. Lag også en knapp som folk kan trykke på for å sende inn navn og poengsum på formatet `{ name: string, score: number }`. Du kan bruke funksjonen `postScore` fra `api.js` til dette.
+I denne oppgaven skal du lage et felt der folk kan fylle inn navnet sitt. Lag også en knapp som folk kan trykke på for å sende inn navn og poengsum på formatet `{ name: string, score: number }`. Du kan bruke funksjonen `postScore` fra `api.js` til dette.
 
 Når poengsummen er sendt inn, skal komponenten hente den oppdaterte topplisten.
 
