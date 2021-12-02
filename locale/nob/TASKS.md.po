@@ -54,22 +54,6 @@ msgstr ""
 "versjon 3](https://svelte.dev/blog/svelte-3-rethinking-reactivity) for å "
 "lære mer."
 
-#: TASKS.md:block 8 (header)
-msgid "Svelte's advantages"
-msgstr "Fordelene med Svelte"
-
-#: TASKS.md:block 9 (paragraph)
-msgid ""
-"The applications you write in Svelte are usually [smaller and faster than an"
-" equivalent application is in React or "
-"Vue](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-"
-"frameworks-with-benchmarks-2019-update-4be0d3c78075/)."
-msgstr ""
-"Applikasjonene man skriver i Svelte blir som regel [mindre og raskere enn en"
-" tilsvarende applikasjon er i React eller "
-"Vue](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-"
-"frameworks-with-benchmarks-2019-update-4be0d3c78075/)."
-
 #: TASKS.md:block 12 (header)
 msgid "You need the following on your computer"
 msgstr "Du må ha følgende på datamaskinen din"
@@ -1758,3 +1742,49 @@ msgstr ""
 "en](https://svelte.dev/repl). Du kan lagre dem og dele dem med hvem som "
 "helst ved hjelp av en URL, slik som her: "
 "<https://svelte.dev/repl/8376ae2d58464f76bb13f9d511f6f81f>"
+
+#: TASKS.md:block 14 (paragraph)
+msgid ""
+"According to multiple benchmarks, an application written in Svelte usually "
+"become smaller and faster than an equivalent application in React or Vue. "
+"The following quotes and pictures are from [A RealWorld Comparison of Front-"
+"End Frameworks with Benchmarks (2019 "
+"update)](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-"
+"end-frameworks-with-benchmarks-2019-update-4be0d3c78075/):"
+msgstr ""
+"Ifølge flere sammenlignende tester blir en applikasjon mindre om man skriver"
+" den i Svelte enn i React eller Vue. De følgende sitatene og bildene er fra "
+"[A RealWorld Comparison of Front-End Frameworks with Benchmarks (2019 "
+"update)](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-"
+"end-frameworks-with-benchmarks-2019-update-4be0d3c78075/):"
+
+#: TASKS.md:block 15 (quote)
+msgid "Metric #2: Size"
+msgstr ""
+
+#: TASKS.md:block 15 (quote)
+msgid "… The smaller the file, the faster the download, and less to parse."
+msgstr ""
+
+#: TASKS.md:block 15 (quote)
+msgid ""
+"… Svelte — The magical disappearing UI framework — really holds true to its "
+"punch line."
+msgstr ""
+
+#: TASKS.md:block 16 (quote)
+msgid "Metric #3: Lines of Code"
+msgstr ""
+
+#: TASKS.md:block 16 (quote)
+msgid ""
+"… This shows how succinct given library/framework/language is. How many "
+"lines of code do you need to implement almost the same app (some of them "
+"have a bit more belts and whistles) accordingly to the specification."
+msgstr ""
+
+#: TASKS.md:block 16 (quote)
+msgid ""
+"… If you care about you LoC you should check out ClojureScript, AppRun, and "
+"Svelte."
+msgstr ""

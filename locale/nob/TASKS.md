@@ -22,19 +22,29 @@ Overfor brettet ser man at poengsummen er 0.][gameplay-png]
 >
 > Vi er stolte over at Svelte nylig ble stemt frem som det [best likte rammeverket](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-web-frameworks) med [de mest fornøyde utviklerne](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/) i to store undersøkelser blant programvareutviklere. Vi tror du også vil like det svært godt. Les [bloggposten som introduserte Svelte versjon 3](https://svelte.dev/blog/svelte-3-rethinking-reactivity) for å lære mer.
 
-#### Fordelene med Svelte
+Ifølge flere sammenlignende tester blir en applikasjon mindre om man skriver den i Svelte enn i React eller Vue. De følgende sitatene og bildene er fra [A RealWorld Comparison of Front-End Frameworks with Benchmarks (2019 update)](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/):
 
-Applikasjonene man skriver i Svelte blir som regel [mindre og raskere enn en tilsvarende applikasjon er i React eller Vue](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/).
-
-![Faksimile fra
+> ##### Metric #2: Size
+>
+> … The smaller the file, the faster the download, and less to parse.
+>
+> ![Faksimile fra
 https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/
 som sammenligner overføringsstørrelse for Svelte og flere andre
 rammeverk][transfer-size-png]
+>
+> … Svelte — The magical disappearing UI framework — really holds true to its punch line.
 
-![Faksimile fra
+> ##### Metric #3: Lines of Code
+>
+> … This shows how succinct given library/framework/language is. How many lines of code do you need to implement almost the same app (some of them have a bit more belts and whistles) accordingly to the specification.
+>
+> ![Faksimile fra
 https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/
 som sammenligner kildekodelinjer for Svelte og flere andre
 rammeverk][source-code-size-png]
+>
+> … If you care about you LoC you should check out ClojureScript, AppRun, and Svelte.
 
 ### Du må ha følgende på datamaskinen din
 
