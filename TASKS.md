@@ -13,7 +13,7 @@
 
 <!-- mdpo-enable -->
 
-A workshop by [Eirik Vågeskar](https://github.com/vages)
+A workshop by [Eirik Vågeskar](https://github.com/vages), with the help of [Johannes Moskvil](https://github.com/johannbm), [Brede Kristensen](https://github.com/BredeYabo/), [Marcus Goplen](https://github.com/Goplen/), [Arve Seljebu](https://github.com/arve0/) and more colleagues at [Knowit Objectnet](https://www.knowit.no/kontakt/selskap/knowit-objectnet-as/).
 
 ## Intro: We are going to make the game Snake in Svelte
 

@@ -6,10 +6,6 @@ msgstr ""
 msgid "Learn Svelte making Snake"
 msgstr "Lær Svelte ved å lage Snake"
 
-#: TASKS.md:block 2 (paragraph)
-msgid "A workshop by [Eirik Vågeskar](https://github.com/vages)"
-msgstr "Et kurs av [Eirik Vågeskar](https://github.com/vages)"
-
 #: TASKS.md:block 3 (header)
 msgid "Intro: We are going to make the game Snake in Svelte"
 msgstr "Intro: Vi skal lage spillet Snake i Svelte"
@@ -1571,3 +1567,19 @@ msgstr ""
 #: TASKS.md:block 116 (paragraph)
 msgid "When the snake hits itself or a wall, it's *game over*."
 msgstr "Når slangen treffer seg selv eller en vegg, er det *game over*."
+
+#: TASKS.md:block 7 (paragraph)
+msgid ""
+"A workshop by [Eirik Vågeskar](https://github.com/vages), with the help of "
+"[Johannes Moskvil](https://github.com/johannbm), [Brede "
+"Kristensen](https://github.com/BredeYabo/), [Marcus "
+"Goplen](https://github.com/Goplen/), [Arve "
+"Seljebu](https://github.com/arve0/) and more colleagues at [Knowit "
+"Objectnet](https://www.knowit.no/kontakt/selskap/knowit-objectnet-as/)."
+msgstr ""
+"Et kurs av [Eirik Vågeskar](https://github.com/vages), med hjelp fra "
+"[Johannes Moskvil](https://github.com/johannbm), [Brede "
+"Kristensen](https://github.com/BredeYabo/), [Marcus "
+"Goplen](https://github.com/Goplen/), [Arve "
+"Seljebu](https://github.com/arve0/) og flere kolleger i [Knowit "
+"Objectnet](https://www.knowit.no/kontakt/selskap/knowit-objectnet-as/)."

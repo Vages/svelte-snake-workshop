@@ -5,7 +5,7 @@
 > - [🇬🇧 English][tasks-eng]
 > - [🇳🇴 Norsk bokmål][tasks-nob]
 
-Et kurs av [Eirik Vågeskar](https://github.com/vages)
+Et kurs av [Eirik Vågeskar](https://github.com/vages), med hjelp fra [Johannes Moskvil](https://github.com/johannbm), [Brede Kristensen](https://github.com/BredeYabo/), [Marcus Goplen](https://github.com/Goplen/), [Arve Seljebu](https://github.com/arve0/) og flere kolleger i [Knowit Objectnet](https://www.knowit.no/kontakt/selskap/knowit-objectnet-as/).
 
 ## Intro: Vi skal lage spillet Snake i Svelte
 
