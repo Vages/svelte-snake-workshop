@@ -1,5 +1,7 @@
 # Learn Svelte making Snake
 
+<!-- mdpo-include-codeblocks -->
+
 <!-- mdpo-disable -->
 <!-- prettier-ignore-start -->
 
@@ -83,6 +85,8 @@ Svelte is a fusion of HTML, CSS and Javascript with some improvements. In Svelte
 </style>
 ```
 
+Note: You can run the previous example and most examples in this document by pasting the source code into the [Svelte REPL](https://svelte.dev/repl). You can save them for later and share them with anyone using a URL, like this: <https://svelte.dev/repl/268a89ee9c4c444ebc04025925f37c38>
+
 You use curly brackets inside _template_ to insert variables, calculations and function calls.
 
 ```svelte
@@ -90,9 +94,9 @@ You use curly brackets inside _template_ to insert variables, calculations and f
   let answer = 42;
 </script>
 
-<div>Meningen med livet er {a}.</div>
-<div>Kvadratet av meningen er {a * a}</div>
-<div>Meningen med livet har {Math.sign(a)} som fortegn</div>
+<div>The meaning of life is {a}.</div>
+<div>The square of the meaning is {a * a}</div>
+<div>The meaning of life has the sign {Math.sign(a)}</div>
 ```
 
 Solve [the task from the Svelte tutorial about adding data](https://svelte.dev/tutorial/adding-data) before you continue.
@@ -116,7 +120,7 @@ When you are finished, things should like this:
 To override and add styling to elements in HTML (not just Svelte), use the attribute `style`. The attribute takes CSS statements.
 
 ```svelte
-<div style="font-weight: bold;">Fet skrift</div>
+<div style="font-weight: bold;">Bold text</div>
 ```
 
 #### Hint: left and top in CSS
@@ -124,7 +128,7 @@ To override and add styling to elements in HTML (not just Svelte), use the attri
 Use the `left` and `top` CSS properties to move an HTML element along the `x` and `y` axes respectively.
 
 ```svelte
-<div style="top: 20px; left: 10px;">Forskjøvet</div>
+<div style="top: 20px; left: 10px;">Moved</div>
 ```
 
 #### Hint: To reveal almost everything
@@ -132,7 +136,7 @@ Use the `left` and `top` CSS properties to move an HTML element along the `x` an
 To place the apple, you need to do something like this:
 
 ```svelte
-<div class="apple" style="left: {regnestykke1}px; top: {regnestykke2}px;" />
+<div class="apple" style="left: {calculation1}px; top: {calculation2}px;" />
 ```
 
 You need to use `apple.x` and `apple.y` and `CELL_SIZE` to get these calculations to work.
@@ -236,11 +240,11 @@ If the statement contains a variable assignment, Svelte can keep the value updat
 
 <div>
   <!-- 
-    Uten `$: …` hadde a hatt verdien 6, 
-    men den får automatisk verdien 12 etter 
-    at man har gitt b en ny verdi. 
+    Without `$: …`, a would have the value 6, 
+    but is automatically given the value 12 after 
+    b is given a new value. 
   -->
-  Trekantens grunnlinje er {b}, og høyden er {c}. Arealet er {a}.
+  The triangle's base is {b}, its height is {c} and its area is {a}.
 </div>
 ```
 
@@ -252,26 +256,28 @@ Almost any statement can come after the dollar sign, not just assignments. You c
 <script>
   let lastUserInput = "";
   $: if (lastUserInput === "hello") {
-    console.log("hello to you too"); // Svarer når brukeren skriver inn strengen hello
+    // Open the console to see this message
+    console.log("hello to you too");
   }
 </script>
 
-<label>Skriv noe: <input bind:value={lastUserInput} /></label>
+<label>Write something: <input bind:value={lastUserInput} /></label>
 ```
 
 ```svelte
 <script>
   let lastUserInput = "";
-  $: parrotOutput = parrot(lastUserInput); // Gjentar alt brukeren sier, fulgt av papegøyelyd
+  // What the user said, as repeated by a parrot
+  $: parrotOutput = parrot(lastUserInput);
 
   function parrot(something) {
     return something + ", sqawk!";
   }
 </script>
 
-<label>Si noe: <input bind:value={lastUserInput} /></label>
+<label>Say something: <input bind:value={lastUserInput} /></label>
 <div>
-  Papegøyen sier: {parrotOutput}
+  The parrot says: {parrotOutput}
 </div>
 ```
 

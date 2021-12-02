@@ -71,7 +71,7 @@ Svelte er en sammensmeltning av HTML, CSS og Javascript med noen forbedringer. I
 
 <!-- template -->
 <div style="color: {color}">
-  Hello world, the answer is {answer}
+  Hello world, svaret er {answer}
 </div>
 
 <!-- styling -->
@@ -82,6 +82,8 @@ Svelte er en sammensmeltning av HTML, CSS og Javascript med noen forbedringer. I
 </style>
 ```
 
+Merk: Du kan kjøre det foregående eksempelet og de fleste eksemplene i dette dokumentet ved å lime inn kildekoden i [Svelte REPL-en](https://svelte.dev/repl). Du kan lagre dem og dele dem med hvem som helst ved hjelp av en URL, slik som her: <https://svelte.dev/repl/8376ae2d58464f76bb13f9d511f6f81f>
+
 Man bruker krøllparenteser inni _template_ for å sette inn variabler, utregninger og funksjonskall.
 
 ```svelte
@@ -91,7 +93,7 @@ Man bruker krøllparenteser inni _template_ for å sette inn variabler, utregnin
 
 <div>Meningen med livet er {a}.</div>
 <div>Kvadratet av meningen er {a * a}</div>
-<div>Meningen med livet har {Math.sign(a)} som fortegn</div>
+<div>Meninngen med livet har fortegnet {Math.sign(a)}</div>
 ```
 
 Løs [oppgaven fra Svelte-opplæringen om å sette inn data](https://svelte.dev/tutorial/adding-data) før du går videre.
@@ -123,7 +125,7 @@ For å overstyre og legge til stil på elementer i HTML (ikke bare Svelte), kan 
 Bruk CSS-egenskapene `left` og `top` for å forskyve elementer langs henholdsvis `x`- og `y`-aksene.
 
 ```svelte
-<div style="top: 20px; left: 10px;">Forskjøvet</div>
+<div style="top: 20px; left: 10px;">Flyttet</div>
 ```
 
 #### Hint: For å avsløre nesten alt
@@ -235,11 +237,11 @@ Hvis utsagnet inneholder en tilegning til en variabel, kan Svelte holde verdien 
 
 <div>
   <!-- 
-    Uten `$: …` hadde a hatt verdien 6, 
-    men den får automatisk verdien 12 etter 
-    at man har gitt b en ny verdi. 
+    Uten `$: …`, ville a hatt verdien 6, 
+    men den får automatisk verdien 12 idet 
+    b får en ny verdi. 
   -->
-  Trekantens grunnlinje er {b}, og høyden er {c}. Arealet er {a}.
+  Trekantens grunnlinje er {b}, dens høyde er {c}, og arealet dens er {a}.
 </div>
 ```
 
@@ -251,7 +253,8 @@ Nesten et hvilket som helst utsagn kan stå etter dollartegnet, ikke bare utregn
 <script>
   let lastUserInput = "";
   $: if (lastUserInput === "hello") {
-    console.log("hello to you too"); // Svarer når brukeren skriver inn strengen hello
+    // Åpne konsollen for å se denne beskjeden
+    console.log("hello to you too");
   }
 </script>
 
@@ -261,7 +264,8 @@ Nesten et hvilket som helst utsagn kan stå etter dollartegnet, ikke bare utregn
 ```svelte
 <script>
   let lastUserInput = "";
-  $: parrotOutput = parrot(lastUserInput); // Gjentar alt brukeren sier, fulgt av papegøyelyd
+  // Det brukeren sa, som om en papegøye gjentok det
+  $: parrotOutput = parrot(lastUserInput);
 
   function parrot(something) {
     return something + ", sqawk!";
