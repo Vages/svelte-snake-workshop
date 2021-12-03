@@ -23,5 +23,5 @@ npm run dev -- --open
 
 Nå er du klar til å begynne med [oppgavene](./TASKS.md).
 
-[readme-eng]: .
-[readme-nob]: ./locale/nob/README.md
+[readme-eng]: ../../README.md
+[readme-nob]: ./README.md

@@ -153,10 +153,10 @@ msgstr "Les på det språket du foretrekker:"
 
 #: SETUP.md:block 28 (ordered list)
 #, fuzzy
-msgid "[setup-eng]: ."
-msgstr "[setup-eng]: ../../SETUP.md"
+msgid "[setup-nob]: ./locale/nob/SETUP.md"
+msgstr "[setup-nob]: ./SETUP.md"
 
 #: SETUP.md:block 28 (ordered list)
 #, fuzzy
-msgid "[setup-nob]: ./locale/nob/SETUP.md"
-msgstr "[setup-nob]: ."
+msgid "[setup-eng]: ./SETUP.md"
+msgstr "[setup-eng]: ../../SETUP.md"

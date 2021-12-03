@@ -1420,11 +1420,6 @@ msgstr "Les på det språket du foretrekker:"
 
 #: TASKS.md:block 201 (paragraph)
 #, fuzzy
-msgid "[tasks-eng]: ."
-msgstr "[tasks-eng]: ../../TASKS.md"
-
-#: TASKS.md:block 201 (paragraph)
-#, fuzzy
 msgid "[tasks-nob]: ./locale/nob/TASKS.md"
 msgstr "[tasks-nob]: ."
 
@@ -1788,3 +1783,8 @@ msgid ""
 "… If you care about you LoC you should check out ClojureScript, AppRun, and "
 "Svelte."
 msgstr ""
+
+#: TASKS.md:block 202 (paragraph)
+#, fuzzy
+msgid "[tasks-eng]: ./TASKS.md"
+msgstr "[tasks-eng]: ../../TASKS.md"

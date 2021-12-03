@@ -60,5 +60,5 @@ Download Git for Windows here: https://gitforwindows.org/
 1. When you have installed an editor, Git and Node, clone the repo in the command line/terminal: `git clone https://github.com/Vages/svelte-snake-workshop.git`
 1. Go to the `svelte-snake-workshop` directory and run `npm install` to install the dependencies. If you run `npm run dev`, the app should startin development mode. If it works, you're ready for the workshop!
 
-[setup-eng]: .
+[setup-eng]: ./SETUP.md
 [setup-nob]: ./locale/nob/SETUP.md

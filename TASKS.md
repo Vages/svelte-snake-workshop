@@ -523,6 +523,6 @@ All that remains to say is that we hope you have enjoyed our workshop. Game over
 [solitaire-win-png]: ./assets/solitaire_win.png
 [source-code-size-png]: ./assets/source_code_size.png
 [task-1-2-end-png]: ./assets/task_1.2_end.png
-[tasks-eng]: .
+[tasks-eng]: ./TASKS.md
 [tasks-nob]: ./locale/nob/TASKS.md
 [transfer-size-png]: ./assets/transfer_size.png

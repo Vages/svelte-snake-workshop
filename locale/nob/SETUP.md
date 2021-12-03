@@ -53,4 +53,4 @@ Last ned Git for Windows her: https://gitforwindows.org/
 1. Bytt til mappen `svelte-snake-workshop` og skriv `npm install` for å installere avhengighetene. Hvis du skriver `npm run dev` skal den starte appen i utviklingsmodus. Hvis dette fungerer, er du klar for workshoppen!
 
 [setup-eng]: ../../SETUP.md
-[setup-nob]: .
+[setup-nob]: ./SETUP.md
