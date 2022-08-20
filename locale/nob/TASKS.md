@@ -58,11 +58,30 @@ Hvis du trenger hjelp til å installere ting, kan du sjekke [SETUP.md](./SETUP.m
 
 Repoet [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop) inneholder alt du trenger. Du kan bestemme tempo selv. Det er mulig å fullføre kurset helt på egen hånd.
 
-Vi har delt kurset i 6 deler. Hver del inneholder to eller flere oppgaver. Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint. Du kan la være å lese hintene dersom du trenger en ekstra utfordring. Bytt til `task-X-begin` før du løser hver nye oppgave (eksempelvis `git checkout task-1.2-begin`). `task-X-end` er oppgavens fasit. For å fjerne koden du har lagt til og gå videre til ny oppgave, kan du skrive `git stash` og deretter `git checkout task-X-begin`.
-
 Når vi holder kurset fysisk eller digitalt, pleier kursholderne å gå gjennom oppgaver og spørsmål i fellesskap med ujevne mellomrom. Du kan be om hjelp fra kursholderne når som helst.
 
 Vi har laget så å si all styling på forhånd, slik at man kan bruke mest mulig tid på kode.
+
+#### Hver oppgave har sin egen undermappe
+
+Vi har delt kurset i 6 deler, hver bestående av flere oppgaver. Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint. Du kan la være å lese hintene dersom du trenger en ekstra utfordring
+
+Hver oppgave har en tilhørende mappe: `src/routes/task-X.Y` der `X` angir kursdelen og `Y` angir oppgaven innad i delen. For eksempel inneholder mappen `src/routes/task-2.1` første oppgave i del to.
+
+Hver oppgavemappe inneholder to undermapper: `0-working-area` og `1-solution`. Mappen `working-area` inneholder den uferdige koden. Mappen `solution` inneholder løsningen på oppgaven. Tall-prefiksene i mappenavnene er der for å unngå alfabetisk sortering og få mappen `working-area` til å dukke opp før mappen `solution`. (Hvis du har et navneforslag for `working-area` som kommer før `solution` i alfabetet, gi oss beskjed på [GitHub-saken om navneleting](https://github.com/Vages/svelte-snake-workshop/issues/13).)
+
+##### Resultatet av en fil finnes på en URL ut fra filens plassering i `src/routes`
+
+Du finner resultatet av en gitt fil på en URL som samsvarer med filens plassering innad i `src/routes`. Noen eksempler:
+
+| Filplassering                            | Resultat-URL              |
+| ---------------------------------------- | ------------------------- |
+| `src/routes/finished-game/index.svelte`  | `<server>/finished-game`  |
+| `src/routes/task-1.1/begin/index.svelte` | `<server>/task-1.1/begin` |
+
+Erstatt `<server>` med stedet der tjeneren din kjører. Under utvikling finner du vanligvis tjeneren på `localhost:3000`. Dette betyr at du kan du kan finne det ferdige spillet ved å gå til `http://localhost:3000/finished-game` i en nettleser.
+
+Hvis du vil vite mer om hvordan filnavn konverteres til ruter, sjekk [Svelte kit-dokumentasjonen for ruting](https://kit.svelte.dev/docs/routing).
 
 ## Del 1: Enkel grafikk
 

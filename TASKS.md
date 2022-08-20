@@ -61,11 +61,30 @@ If you need help installing, check out [SETUP.md](./SETUP.md).
 
 The repo [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop) contains everything you need. You can set the pace yourself. It is possible to complete the workshop on your own.
 
-We have divided the workshop into 6 parts. Each part contains two or more tasks. Each task starts with a task text, sometimes followed by hints. You can avoid or delay reading the hints if you want to challenge yourself. Switch to `task-X-begin` before solving each new task (for example `git checkout task-1.2-begin`). `task-X-end` contains the task solution. To remove the code you've added and continue to the next task, open your command line or terminal and input `git stash` and then `git checkout task-X-begin`.
-
 When we hold the workshop physically or digitally, the instructors go through tasks and questions at irregular intervals. You can ask for help from the instructors whenever you want.
 
 We have made nearly all styling beforehand, so that you can spend the maximum amount of time coding.
+
+#### Every task has its own sub-folder
+
+We have divided the workshop into 6 parts, each containing several tasks. Every task starts with a task text, sometimes followed by hints. You can avoid or delay reading the hints if you want to challenge yourself.
+
+Every task has a corresponding folder: `src/routes/task-X.Y`, `X` being the current part and `Y` the current task within that part. For example, the folder `src/routes/task-2.1` contains the first task of part two.
+
+Each task folder contains two sub-folders: `0-working-area` and `1-solution`. The `working-area` folder contains the unfinished code. The `solution` folder contains the task solution. The number prefixes are there to avoid alphabetical sorting and have the `working-area` folder appear before the `solution` folder. (If you have an alternative name for `working-area` that comes before `solution` in the alphabet, please let us know on [the related GitHub issue](https://github.com/Vages/svelte-snake-workshop/issues/13).)
+
+##### File output URLs correspond to their placement within `src/routes`
+
+You will find the output of a given file at a URL corresponding to its placement within `src/routes`. Some examples:
+
+| File location                            | Output URL                |
+| ---------------------------------------- | ------------------------- |
+| `src/routes/finished-game/index.svelte`  | `<server>/finished-game`  |
+| `src/routes/task-1.1/begin/index.svelte` | `<server>/task-1.1/begin` |
+
+Replace `<server>` with the location where your server is running. During the development, the server is usually located at `localhost:3000`. This means that you should find the finished game by navigating to `http://localhost:3000/finished-game` in your web browser of choice.
+
+If you want to know more about how filenames are converted to routes, check out [the Svelte kit documentation on routing](https://kit.svelte.dev/docs/routing).
 
 ## Part 1: Simple graphics
 

@@ -1,0 +1,33 @@
+# Welcome to the Svelte workshop!
+
+Open the file TASKS.md to get going.
+
+| Task | Working area | Suggested solution |
+| --- | --- | --- |
+| 1.1 | [Working area](/task-1.1/0-working-area) | [Suggested solution](/task-1.1/1-solution) |
+| 1.2 | [Working area](/task-1.2/0-working-area) | [Suggested solution](/task-1.2/1-solution) |
+| 1.3 | [Working area](/task-1.3/0-working-area) | [Suggested solution](/task-1.3/1-solution) |
+| 2.1 | [Working area](/task-2.1/0-working-area) | [Suggested solution](/task-2.1/1-solution) |
+| 2.2 | [Working area](/task-2.2/0-working-area) | [Suggested solution](/task-2.2/1-solution) |
+| 3.1 | [Working area](/task-3.1/0-working-area) | [Suggested solution](/task-3.1/1-solution) |
+| 3.2 | [Working area](/task-3.2/0-working-area) | [Suggested solution](/task-3.2/1-solution) |
+| 3.3 | [Working area](/task-3.3/0-working-area) | [Suggested solution](/task-3.3/1-solution) |
+| 3.4 | [Working area](/task-3.4/0-working-area) | [Suggested solution](/task-3.4/1-solution) |
+| 3.5 | [Working area](/task-3.5/0-working-area) | [Suggested solution](/task-3.5/1-solution) |
+| 3.6 | [Working area](/task-3.6/0-working-area) | [Suggested solution](/task-3.6/1-solution) |
+| 4.1 | [Working area](/task-4.1/0-working-area) | [Suggested solution](/task-4.1/1-solution) |
+| 4.2 | [Working area](/task-4.2/0-working-area) | [Suggested solution](/task-4.2/1-solution) |
+| 4.3 | [Working area](/task-4.3/0-working-area) | [Suggested solution](/task-4.3/1-solution) |
+| 4.4 | [Working area](/task-4.4/0-working-area) | [Suggested solution](/task-4.4/1-solution) |
+| 5.1 | [Working area](/task-5.1/0-working-area) | [Suggested solution](/task-5.1/1-solution) |
+| 5.2 | [Working area](/task-5.2/0-working-area) | [Suggested solution](/task-5.2/1-solution) |
+| 5.3 | [Working area](/task-5.3/0-working-area) | [Suggested solution](/task-5.3/1-solution) |
+
+<style>
+    table { border: 2px solid black }
+    
+    td, th { 
+        border: 2px solid black;
+        padding: 0.75rem;
+    }
+</style>

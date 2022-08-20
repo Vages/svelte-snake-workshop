@@ -1,1 +1,11 @@
-{ "proseWrap": "never" }
+{
+  "proseWrap": "never",
+  "overrides": [
+    {
+      "files": ["*.svx"],
+      "options": {
+        "parser": "markdown"
+      }
+    }
+  ]
+}

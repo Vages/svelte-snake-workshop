@@ -98,25 +98,6 @@ msgstr ""
 "workshop) inneholder alt du trenger. Du kan bestemme tempo selv. Det er "
 "mulig å fullføre kurset helt på egen hånd."
 
-#: TASKS.md:block 17 (paragraph)
-msgid ""
-"We have divided the workshop into 6 parts. Each part contains two or more "
-"tasks. Each task starts with a task text, sometimes followed by hints. You "
-"can avoid or delay reading the hints if you want to challenge yourself. "
-"Switch to `task-X-begin` before solving each new task (for example `git "
-"checkout task-1.2-begin`). `task-X-end` contains the task solution. To "
-"remove the code you've added and continue to the next task, open your "
-"command line or terminal and input `git stash` and then `git checkout task-"
-"X-begin`."
-msgstr ""
-"Vi har delt kurset i 6 deler. Hver del inneholder to eller flere oppgaver. "
-"Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint. Du "
-"kan la være å lese hintene dersom du trenger en ekstra utfordring. Bytt til "
-"`task-X-begin` før du løser hver nye oppgave (eksempelvis `git checkout "
-"task-1.2-begin`). `task-X-end` er oppgavens fasit. For å fjerne koden du har"
-" lagt til og gå videre til ny oppgave, kan du skrive `git stash` og deretter"
-" `git checkout task-X-begin`."
-
 #: TASKS.md:block 18 (paragraph)
 msgid ""
 "When we hold the workshop physically or digitally, the instructors go "
@@ -1788,3 +1769,112 @@ msgstr ""
 #, fuzzy
 msgid "[tasks-eng]: ./TASKS.md"
 msgstr "[tasks-eng]: ../../TASKS.md"
+
+#: TASKS.md:block 24 (header)
+msgid "Every task has its own sub-folder"
+msgstr "Hver oppgave har sin egen undermappe"
+
+#: TASKS.md:block 25 (paragraph)
+msgid ""
+"We have divided the workshop into 6 parts, each containing several tasks. "
+"Every task starts with a task text, sometimes followed by hints. You can "
+"avoid or delay reading the hints if you want to challenge yourself."
+msgstr ""
+"Vi har delt kurset i 6 deler, hver bestående av flere oppgaver. Hver oppgave"
+" starter med oppgavetekst, som av og til blir fulgt av hint. Du kan la være "
+"å lese hintene dersom du trenger en ekstra utfordring"
+
+#: TASKS.md:block 29 (paragraph)
+msgid ""
+"You will find the output of a given file at a URL corresponding to its "
+"placement within `src/routes`. Some examples:"
+msgstr ""
+"Du finner resultatet av en gitt fil på en URL som samsvarer med filens "
+"plassering innad i `src/routes`. Noen eksempler:"
+
+#: TASKS.md:block 30 (table)
+msgid "File location"
+msgstr "Filplassering"
+
+#: TASKS.md:block 30 (table)
+msgid "Output URL"
+msgstr "Resultat-URL"
+
+#: TASKS.md:block 30 (table)
+msgid "`src/routes/finished-game/index.svelte`"
+msgstr ""
+
+#: TASKS.md:block 30 (table)
+msgid "`<server>/finished-game`"
+msgstr ""
+
+#: TASKS.md:block 30 (table)
+msgid "`<server>/task-1.1/begin`"
+msgstr ""
+
+#: TASKS.md:block 31 (paragraph)
+msgid ""
+"Replace `<server>` with the location where your server is running. During "
+"the development, the server is usually located at `localhost:3000`. This "
+"means that you should find the finished game by navigating to "
+"`http://localhost:3000/finished-game` in your web browser of choice."
+msgstr ""
+"Erstatt `<server>` med stedet der tjeneren din kjører. Under utvikling "
+"finner du vanligvis tjeneren på `localhost:3000`. Dette betyr at du kan du "
+"kan finne det ferdige spillet ved å gå til `http://localhost:3000/finished-"
+"game` i en nettleser."
+
+#: TASKS.md:block 32 (paragraph)
+msgid ""
+"If you want to know more about how filenames are converted to routes, check "
+"out [the Svelte kit documentation on "
+"routing](https://kit.svelte.dev/docs/routing)."
+msgstr ""
+"Hvis du vil vite mer om hvordan filnavn konverteres til ruter, sjekk [Svelte"
+" kit-dokumentasjonen for ruting](https://kit.svelte.dev/docs/routing)."
+
+#: TASKS.md:block 28 (header)
+msgid "File output URLs correspond to their placement within `src/routes`"
+msgstr ""
+"Resultatet av en fil finnes på en URL ut fra filens plassering i "
+"`src/routes`"
+
+#: TASKS.md:block 26 (paragraph)
+msgid ""
+"Every task has a corresponding folder: `src/routes/task-X.Y`, `X` being the "
+"current part and `Y` the current task within that part. For example, the "
+"folder `src/routes/task-2.1` contains the first task of part two."
+msgstr ""
+"Hver oppgave har en tilhørende mappe: `src/routes/task-X.Y` der `X` angir "
+"kursdelen og `Y` angir oppgaven innad i delen. For eksempel inneholder "
+"mappen `src/routes/task-2.1` første oppgave i del to."
+
+#: TASKS.md:block 27 (paragraph)
+msgid ""
+"Each task folder contains two sub-folders: `0-working-area` and "
+"`1-solution`. The `working-area` folder contains the unfinished code. The "
+"`solution` folder contains the task solution. The number prefixes are there "
+"to avoid alphabetical sorting and have the `working-area` folder appear "
+"before the `solution` folder. (If you have an alternative name for `working-"
+"area` that comes before `solution` in the alphabet, please let us know on "
+"[the related GitHub issue](https://github.com/Vages/svelte-snake-"
+"workshop/issues/13).)"
+msgstr ""
+"Hver oppgavemappe inneholder to undermapper: `0-working-area` og "
+"`1-solution`. Mappen `working-area` inneholder den uferdige koden. Mappen "
+"`solution` inneholder løsningen på oppgaven. Tall-prefiksene i mappenavnene "
+"er der for å unngå alfabetisk sortering og få mappen `working-area` til å "
+"dukke opp før mappen `solution`. (Hvis du har et navneforslag for `working-"
+"area` som kommer før `solution` i alfabetet, gi oss beskjed på [GitHub-saken"
+" om navneleting](https://github.com/Vages/svelte-snake-workshop/issues/13).)"
+
+#: TASKS.md:block 30 (table)
+msgid "`src/routes/task-1.1/begin/index.svelte`"
+msgstr ""
+
+#~ msgid ""
+#~ "You will find the output of a given file at a URL corresponding to its "
+#~ "placement within `src/routes`"
+#~ msgstr ""
+#~ "Du finner resultatet av en gitt fil på en URL som samsvarer med filens "
+#~ "plassering innad i `src/routes`"
