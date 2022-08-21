@@ -94,20 +94,20 @@ Svelte er en sammensmeltning av HTML, CSS og Javascript med noen forbedringer. I
 ```svelte
 <!-- script -->
 <script>
-  let answer = 42;
-  let color = "red";
+	let answer = 42;
+	let color = "red";
 </script>
 
 <!-- template -->
 <div style="color: {color}">
-  Hello world, svaret er {answer}
+	Hello world, svaret er {answer}
 </div>
 
 <!-- styling -->
 <style>
-  div {
-    font-weight: bold;
-  }
+	div {
+		font-weight: bold;
+	}
 </style>
 ```
 
@@ -117,7 +117,7 @@ Man bruker krøllparenteser inni _template_ for å sette inn variabler, utregnin
 
 ```svelte
 <script>
-  let answer = 42;
+	let answer = 42;
 </script>
 
 <div>Meningen med livet er {a}.</div>
@@ -257,20 +257,20 @@ Hvis utsagnet inneholder en tilegning til en variabel, kan Svelte holde verdien 
 
 ```svelte
 <script>
-  let b = 3;
-  let c = 4;
+	let b = 3;
+	let c = 4;
 
-  $: a = (b * c) / 2; // a === 6
-  b = 6;
+	$: a = (b * c) / 2; // a === 6
+	b = 6;
 </script>
 
 <div>
-  <!-- 
-    Uten `$: …`, ville a hatt verdien 6, 
-    men den får automatisk verdien 12 idet 
-    b får en ny verdi. 
-  -->
-  Trekantens grunnlinje er {b}, dens høyde er {c}, og arealet dens er {a}.
+	<!-- 
+		Uten `$: …`, ville a hatt verdien 6, 
+		men den får automatisk verdien 12 idet 
+		b får en ny verdi. 
+	-->
+	Trekantens grunnlinje er {b}, dens høyde er {c}, og arealet dens er {a}.
 </div>
 ```
 
@@ -280,11 +280,11 @@ Nesten et hvilket som helst utsagn kan stå etter dollartegnet, ikke bare utregn
 
 ```svelte
 <script>
-  let lastUserInput = "";
-  $: if (lastUserInput === "hello") {
-    // Åpne konsollen for å se denne beskjeden
-    console.log("hello to you too");
-  }
+	let lastUserInput = "";
+	$: if (lastUserInput === "hello") {
+		// Åpne konsollen for å se denne beskjeden
+		console.log("hello to you too");
+	}
 </script>
 
 <label>Skriv noe: <input bind:value={lastUserInput} /></label>
@@ -292,18 +292,18 @@ Nesten et hvilket som helst utsagn kan stå etter dollartegnet, ikke bare utregn
 
 ```svelte
 <script>
-  let lastUserInput = "";
-  // Det brukeren sa, som om en papegøye gjentok det
-  $: parrotOutput = parrot(lastUserInput);
+	let lastUserInput = "";
+	// Det brukeren sa, som om en papegøye gjentok det
+	$: parrotOutput = parrot(lastUserInput);
 
-  function parrot(something) {
-    return something + ", sqawk!";
-  }
+	function parrot(something) {
+		return something + ", sqawk!";
+	}
 </script>
 
 <label>Si noe: <input bind:value={lastUserInput} /></label>
 <div>
-  Papegøyen sier: {parrotOutput}
+	Papegøyen sier: {parrotOutput}
 </div>
 ```
 

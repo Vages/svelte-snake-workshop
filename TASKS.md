@@ -97,20 +97,20 @@ Svelte is a fusion of HTML, CSS and Javascript with some improvements. In Svelte
 ```svelte
 <!-- script -->
 <script>
-  let answer = 42;
-  let color = "red";
+	let answer = 42;
+	let color = "red";
 </script>
 
 <!-- template -->
 <div style="color: {color}">
-  Hello world, the answer is {answer}
+	Hello world, the answer is {answer}
 </div>
 
 <!-- styling -->
 <style>
-  div {
-    font-weight: bold;
-  }
+	div {
+		font-weight: bold;
+	}
 </style>
 ```
 
@@ -120,7 +120,7 @@ You use curly brackets inside _template_ to insert variables, calculations and f
 
 ```svelte
 <script>
-  let answer = 42;
+	let answer = 42;
 </script>
 
 <div>The meaning of life is {a}.</div>
@@ -260,20 +260,20 @@ If the statement contains a variable assignment, Svelte can keep the value updat
 
 ```svelte
 <script>
-  let b = 3;
-  let c = 4;
+	let b = 3;
+	let c = 4;
 
-  $: a = (b * c) / 2; // a === 6
-  b = 6;
+	$: a = (b * c) / 2; // a === 6
+	b = 6;
 </script>
 
 <div>
-  <!-- 
-    Without `$: …`, a would have the value 6, 
-    but is automatically given the value 12 after 
-    b is given a new value. 
-  -->
-  The triangle's base is {b}, its height is {c} and its area is {a}.
+	<!-- 
+		Without `$: …`, a would have the value 6, 
+		but is automatically given the value 12 after 
+		b is given a new value. 
+	-->
+	The triangle's base is {b}, its height is {c} and its area is {a}.
 </div>
 ```
 
@@ -283,11 +283,11 @@ Almost any statement can come after the dollar sign, not just assignments. You c
 
 ```svelte
 <script>
-  let lastUserInput = "";
-  $: if (lastUserInput === "hello") {
-    // Open the console to see this message
-    console.log("hello to you too");
-  }
+	let lastUserInput = "";
+	$: if (lastUserInput === "hello") {
+		// Open the console to see this message
+		console.log("hello to you too");
+	}
 </script>
 
 <label>Write something: <input bind:value={lastUserInput} /></label>
@@ -295,18 +295,18 @@ Almost any statement can come after the dollar sign, not just assignments. You c
 
 ```svelte
 <script>
-  let lastUserInput = "";
-  // What the user said, as repeated by a parrot
-  $: parrotOutput = parrot(lastUserInput);
+	let lastUserInput = "";
+	// What the user said, as repeated by a parrot
+	$: parrotOutput = parrot(lastUserInput);
 
-  function parrot(something) {
-    return something + ", sqawk!";
-  }
+	function parrot(something) {
+		return something + ", sqawk!";
+	}
 </script>
 
 <label>Say something: <input bind:value={lastUserInput} /></label>
 <div>
-  The parrot says: {parrotOutput}
+	The parrot says: {parrotOutput}
 </div>
 ```
 

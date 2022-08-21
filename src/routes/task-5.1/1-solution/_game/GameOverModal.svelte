@@ -1,16 +1,16 @@
 <script>
-  import NesContainer from "./NesContainer.svelte";
+	import NesContainer from "./NesContainer.svelte";
 
-  export let score;
+	export let score;
 </script>
 
 <NesContainer>
-  <h2 class="title">Game over</h2>
-  <div>You got {score} points.</div>
+	<h2 class="title">Game over</h2>
+	<div>You got {score} points.</div>
 </NesContainer>
 
 <style>
-  section {
-    margin: 2rem 0;
-  }
+	section {
+		margin: 2rem 0;
+	}
 </style>

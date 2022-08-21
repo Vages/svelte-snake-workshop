@@ -1,10 +1,10 @@
 <div class="modal nes-container with-title is-centered is-rounded">
-  <slot />
+	<slot />
 </div>
 
 <style>
-  .modal {
-    background-color: white;
-    padding: 3rem;
-  }
+	.modal {
+		background-color: white;
+		padding: 3rem;
+	}
 </style>

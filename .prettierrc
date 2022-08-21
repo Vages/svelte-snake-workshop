@@ -1,11 +1,12 @@
 {
-  "proseWrap": "never",
-  "overrides": [
-    {
-      "files": ["*.svx"],
-      "options": {
-        "parser": "markdown"
-      }
-    }
-  ]
+	"proseWrap": "never",
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": ["*.svx"],
+			"options": {
+				"parser": "markdown"
+			}
+		}
+	]
 }

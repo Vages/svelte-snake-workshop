@@ -4,16 +4,16 @@ import sveltePreprocess from "svelte-preprocess";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  kit: {
-    adapter: adapter(),
+	kit: {
+		adapter: adapter(),
 
-    // hydrate the <div id="svelte"> element in src/app.html
-    target: "#svelte",
-  },
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: "#svelte",
+	},
 
-  // Add support for mdsvex
-  extensions: [".svelte", ".svx", ".md"],
-  preprocess: [mdsvex(), sveltePreprocess()],
+	// Add support for mdsvex
+	extensions: [".svelte", ".svx", ".md"],
+	preprocess: [mdsvex(), sveltePreprocess()],
 };
 
 export default config;
