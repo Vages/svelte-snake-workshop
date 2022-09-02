@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="" />
-		<link rel="icon" href="/favicon.png" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link
 			href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
@@ -13,9 +13,9 @@
 			href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"
 			rel="stylesheet"
 		/>
-		%svelte.head%
+		%sveltekit.head%
 	</head>
 	<body>
-		<div id="svelte">%svelte.body%</div>
+		<div>%sveltekit.body%</div>
 	</body>
 </html>
