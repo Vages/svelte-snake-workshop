@@ -76,8 +76,8 @@ Du finner resultatet av en gitt fil på en URL som samsvarer med filens plasseri
 
 | Filplassering                            | Resultat-URL              |
 | ---------------------------------------- | ------------------------- |
-| `src/routes/finished-game/index.svelte`  | `<server>/finished-game`  |
-| `src/routes/task-1.1/begin/index.svelte` | `<server>/task-1.1/begin` |
+| `src/routes/finished-game/+page.svelte`  | `<server>/finished-game`  |
+| `src/routes/task-1.1/begin/+page.svelte` | `<server>/task-1.1/begin` |
 
 Erstatt `<server>` med stedet der tjeneren din kjører. Under utvikling finner du vanligvis tjeneren på `localhost:3000`. Dette betyr at du kan du kan finne det ferdige spillet ved å gå til `http://localhost:3000/finished-game` i en nettleser.
 

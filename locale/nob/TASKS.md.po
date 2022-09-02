@@ -1801,7 +1801,7 @@ msgid "Output URL"
 msgstr "Resultat-URL"
 
 #: TASKS.md:block 30 (table)
-msgid "`src/routes/finished-game/index.svelte`"
+msgid "`src/routes/finished-game/+page.svelte`"
 msgstr ""
 
 #: TASKS.md:block 30 (table)
@@ -1869,7 +1869,7 @@ msgstr ""
 " om navneleting](https://github.com/Vages/svelte-snake-workshop/issues/13).)"
 
 #: TASKS.md:block 30 (table)
-msgid "`src/routes/task-1.1/begin/index.svelte`"
+msgid "`src/routes/task-1.1/begin/+page.svelte`"
 msgstr ""
 
 #~ msgid ""

@@ -79,8 +79,8 @@ You will find the output of a given file at a URL corresponding to its placement
 
 | File location                            | Output URL                |
 | ---------------------------------------- | ------------------------- |
-| `src/routes/finished-game/index.svelte`  | `<server>/finished-game`  |
-| `src/routes/task-1.1/begin/index.svelte` | `<server>/task-1.1/begin` |
+| `src/routes/finished-game/+page.svelte`  | `<server>/finished-game`  |
+| `src/routes/task-1.1/begin/+page.svelte` | `<server>/task-1.1/begin` |
 
 Replace `<server>` with the location where your server is running. During the development, the server is usually located at `localhost:3000`. This means that you should find the finished game by navigating to `http://localhost:3000/finished-game` in your web browser of choice.
 
