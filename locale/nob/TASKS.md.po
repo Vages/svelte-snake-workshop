@@ -65,10 +65,10 @@ msgstr "[node](https://nodejs.org/en/)"
 #: TASKS.md:block 13 (unordered list)
 msgid ""
 "A text editor, preferably [one where you can add Svelte "
-"support](https://github.com/sveltejs/integrations#editor-extensions)."
+"support](https://sveltesociety.dev/tools#editor-support)."
 msgstr ""
 "En tekstbehandler, fortrinnsvis [en der man kan installere støtte for "
-"Svelte](https://github.com/sveltejs/integrations#editor-extensions)."
+"Svelte](https://sveltesociety.dev/tools#editor-support)."
 
 #: TASKS.md:block 13 (unordered list)
 msgid ""

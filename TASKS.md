@@ -52,7 +52,7 @@ According to multiple benchmarks, an application written in Svelte usually becom
 ### You need the following on your computer
 
 - [node](https://nodejs.org/en/)
-- A text editor, preferably [one where you can add Svelte support](https://github.com/sveltejs/integrations#editor-extensions).
+- A text editor, preferably [one where you can add Svelte support](https://sveltesociety.dev/tools#editor-support).
 - A clone of [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop)
 
 If you need help installing, check out [SETUP.md](./SETUP.md).

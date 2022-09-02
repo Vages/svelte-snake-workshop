@@ -49,7 +49,7 @@ rammeverk][source-code-size-png]
 ### Du må ha følgende på datamaskinen din
 
 - [node](https://nodejs.org/en/)
-- En tekstbehandler, fortrinnsvis [en der man kan installere støtte for Svelte](https://github.com/sveltejs/integrations#editor-extensions).
+- En tekstbehandler, fortrinnsvis [en der man kan installere støtte for Svelte](https://sveltesociety.dev/tools#editor-support).
 - En klone av [Vages/svelte-snake-workshop](https://github.com/Vages/svelte-snake-workshop)
 
 Hvis du trenger hjelp til å installere ting, kan du sjekke [SETUP.md](./SETUP.md).
