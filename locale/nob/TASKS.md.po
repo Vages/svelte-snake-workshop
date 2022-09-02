@@ -163,8 +163,8 @@ msgid "Task 1.1: Place the apple"
 msgstr "Oppgave 1.1: Plasser eplet"
 
 #: TASKS.md:block 29 (paragraph)
-msgid "Open the file `src/routes/task-1.1/problem/App.svelte`."
-msgstr "Åpne filen `src/routes/task-1.1/problem/App.svelte`."
+msgid "Open the file `src/routes/task-1.1/problem/+page.svelte`."
+msgstr "Åpne filen `src/routes/task-1.1/problem/+page.svelte`."
 
 #: TASKS.md:block 30 (paragraph)
 msgid ""
@@ -1040,23 +1040,23 @@ msgstr "Oppgave 5.1: Lag en komponent som dukker opp ved spillslutt"
 
 #: TASKS.md:block 157 (paragraph)
 msgid ""
-"The `GameOver.svelte` file is located in the same directory as `App.svelte`."
-" Your task is to make the component appear on screen when the game is over "
-"and make it show the player's score."
+"The `GameOver.svelte` file is located in the same directory as "
+"`+page.svelte`. Your task is to make the component appear on screen when the"
+" game is over and make it show the player's score."
 msgstr ""
-"Filen `GameOver.svelte` ligger klar i samme mappe som `App.svelte`. Oppgaven"
-" din er å sørge for at komponenten vises på skjermen når spillet er over og "
-"at den viser poengsummen som spilleren fikk."
+"Filen `GameOver.svelte` ligger klar i samme mappe som `+page.svelte`. "
+"Oppgaven din er å sørge for at komponenten vises på skjermen når spillet er "
+"over og at den viser poengsummen som spilleren fikk."
 
 #: TASKS.md:block 158 (paragraph)
 msgid ""
 "It's a bit tricky to get the component to appear on screen in an elegant "
-"way. We have therefore added some divs to the bottom of `App.svelte`'s "
+"way. We have therefore added some divs to the bottom of `+page.svelte`'s "
 "template section where you can mount the `<GameOver>` component."
 msgstr ""
 "Det er litt knotete å få komponenten til å vises på skjermen på en elegant "
 "måte. Derfor har vi lagt inn noen div-er nederst i template-delen av "
-"`App.svelte` der man kan montere `<GameOver>`-komponenten."
+"`+page.svelte` der man kan montere `<GameOver>`-komponenten."
 
 #: TASKS.md:block 159 (header)
 msgid "Warning: The rest of part 5 is hard"

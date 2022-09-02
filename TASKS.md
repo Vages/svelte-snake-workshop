@@ -132,7 +132,7 @@ Solve [the task from the Svelte tutorial about adding data](https://svelte.dev/t
 
 ### Task 1.1: Place the apple
 
-Open the file `src/routes/task-1.1/problem/App.svelte`.
+Open the file `src/routes/task-1.1/problem/+page.svelte`.
 
 The board contains a `<div class="apple" />`. The variable `apple` contains a coordinate. Your task is to place the apple on the square given by the coordinate.
 
@@ -447,9 +447,9 @@ Do the following tasks from Svelte tutorial:
 
 ### Task 5.1: Create a component that appears when the game ends
 
-The `GameOver.svelte` file is located in the same directory as `App.svelte`. Your task is to make the component appear on screen when the game is over and make it show the player's score.
+The `GameOver.svelte` file is located in the same directory as `+page.svelte`. Your task is to make the component appear on screen when the game is over and make it show the player's score.
 
-It's a bit tricky to get the component to appear on screen in an elegant way. We have therefore added some divs to the bottom of `App.svelte`'s template section where you can mount the `<GameOver>` component.
+It's a bit tricky to get the component to appear on screen in an elegant way. We have therefore added some divs to the bottom of `+page.svelte`'s template section where you can mount the `<GameOver>` component.
 
 ### Warning: The rest of part 5 is hard
 

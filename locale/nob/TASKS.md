@@ -129,7 +129,7 @@ Løs [oppgaven fra Svelte-opplæringen om å sette inn data](https://svelte.dev/
 
 ### Oppgave 1.1: Plasser eplet
 
-Åpne filen `src/routes/task-1.1/problem/App.svelte`.
+Åpne filen `src/routes/task-1.1/problem/+page.svelte`.
 
 Brettet inneholder en `<div class="apple" />`. Variabelen `apple` inneholder en koordinat. Oppgaven din er å plassere eplet på den ruten på brettet som koordinaten angir.
 
@@ -444,9 +444,9 @@ Gjør følgende oppgaver fra Svelte-opplæringen:
 
 ### Oppgave 5.1: Lag en komponent som dukker opp ved spillslutt
 
-Filen `GameOver.svelte` ligger klar i samme mappe som `App.svelte`. Oppgaven din er å sørge for at komponenten vises på skjermen når spillet er over og at den viser poengsummen som spilleren fikk.
+Filen `GameOver.svelte` ligger klar i samme mappe som `+page.svelte`. Oppgaven din er å sørge for at komponenten vises på skjermen når spillet er over og at den viser poengsummen som spilleren fikk.
 
-Det er litt knotete å få komponenten til å vises på skjermen på en elegant måte. Derfor har vi lagt inn noen div-er nederst i template-delen av `App.svelte` der man kan montere `<GameOver>`-komponenten.
+Det er litt knotete å få komponenten til å vises på skjermen på en elegant måte. Derfor har vi lagt inn noen div-er nederst i template-delen av `+page.svelte` der man kan montere `<GameOver>`-komponenten.
 
 ### Advarsel: Resten av del 5 er vanskelig
 
