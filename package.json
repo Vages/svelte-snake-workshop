@@ -8,7 +8,7 @@
 		"generate-translations": "echo \"README.md\nTASKS.md\nSETUP.md\" | xargs -L 1 md2po2md -l nob -o \"locale/{lang}\"",
 		"postgenerate-translations": "npm run format",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write . **.svx"
+		"format": "prettier --write ."
 	},
 	"husky": {
 		"hooks": {
@@ -23,11 +23,9 @@
 		"eslint-plugin-svelte3": "^4.0.0",
 		"husky": "^4.3.0",
 		"lint-staged": "^12.1.2",
-		"mdsvex": "^0.10.6",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
 		"svelte": "^3.44.0",
-		"svelte-preprocess": "^4.10.7",
 		"vite": "^3.1.0-beta.1"
 	},
 	"type": "module"
