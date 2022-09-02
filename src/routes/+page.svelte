@@ -23,6 +23,11 @@
 
 <h1>Welcome to the Svelte workshop!</h1>
 
+<p>
+	If you're lucky, you'll end up with a <a href="finished-game">finished game</a
+	> at the end.
+</p>
+
 <p>Open the file TASKS.md to get going.</p>
 
 <table>
