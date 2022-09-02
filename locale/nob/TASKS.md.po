@@ -163,8 +163,8 @@ msgid "Task 1.1: Place the apple"
 msgstr "Oppgave 1.1: Plasser eplet"
 
 #: TASKS.md:block 29 (paragraph)
-msgid "Open the file `src/routes/_game/App.svelte`."
-msgstr "Åpne filen `src/routes/_game/App.svelte`."
+msgid "Open the file `src/routes/game/App.svelte`."
+msgstr "Åpne filen `src/routes/game/App.svelte`."
 
 #: TASKS.md:block 30 (paragraph)
 msgid ""

@@ -129,7 +129,7 @@ Løs [oppgaven fra Svelte-opplæringen om å sette inn data](https://svelte.dev/
 
 ### Oppgave 1.1: Plasser eplet
 
-Åpne filen `src/routes/_game/App.svelte`.
+Åpne filen `src/routes/game/App.svelte`.
 
 Brettet inneholder en `<div class="apple" />`. Variabelen `apple` inneholder en koordinat. Oppgaven din er å plassere eplet på den ruten på brettet som koordinaten angir.
 
