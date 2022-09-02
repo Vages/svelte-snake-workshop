@@ -132,7 +132,7 @@ Solve [the task from the Svelte tutorial about adding data](https://svelte.dev/t
 
 ### Task 1.1: Place the apple
 
-Open the file `src/routes/game/App.svelte`.
+Open the file `src/routes/task-1.1/0-working-area/game/App.svelte`.
 
 The board contains a `<div class="apple" />`. The variable `apple` contains a coordinate. Your task is to place the apple on the square given by the coordinate.
 
