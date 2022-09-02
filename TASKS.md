@@ -82,7 +82,7 @@ You will find the output of a given file at a URL corresponding to its placement
 | `src/routes/finished-game/+page.svelte`  | `<server>/finished-game`  |
 | `src/routes/task-1.1/begin/+page.svelte` | `<server>/task-1.1/begin` |
 
-Replace `<server>` with the location where your server is running. During the development, the server is usually located at `localhost:3000`. This means that you should find the finished game by navigating to `http://localhost:3000/finished-game` in your web browser of choice.
+Replace `<server>` with the location where your server is running. During the development, the server is usually located at `localhost:5173`. This means that you should find the finished game by navigating to `http://localhost:5173/finished-game` in your web browser of choice.
 
 If you want to know more about how filenames are converted to routes, check out [the Svelte kit documentation on routing](https://kit.svelte.dev/docs/routing).
 

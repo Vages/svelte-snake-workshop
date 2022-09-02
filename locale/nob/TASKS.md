@@ -79,7 +79,7 @@ Du finner resultatet av en gitt fil på en URL som samsvarer med filens plasseri
 | `src/routes/finished-game/+page.svelte`  | `<server>/finished-game`  |
 | `src/routes/task-1.1/begin/+page.svelte` | `<server>/task-1.1/begin` |
 
-Erstatt `<server>` med stedet der tjeneren din kjører. Under utvikling finner du vanligvis tjeneren på `localhost:3000`. Dette betyr at du kan du kan finne det ferdige spillet ved å gå til `http://localhost:3000/finished-game` i en nettleser.
+Erstatt `<server>` med stedet der tjeneren din kjører. Under utvikling finner du vanligvis tjeneren på `localhost:5173`. Dette betyr at du kan du kan finne det ferdige spillet ved å gå til `http://localhost:5173/finished-game` i en nettleser.
 
 Hvis du vil vite mer om hvordan filnavn konverteres til ruter, sjekk [Svelte kit-dokumentasjonen for ruting](https://kit.svelte.dev/docs/routing).
 
