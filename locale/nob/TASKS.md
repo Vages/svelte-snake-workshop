@@ -68,7 +68,7 @@ Vi har delt kurset i 6 deler, hver bestående av flere oppgaver. Hver oppgave st
 
 Hver oppgave har en tilhørende mappe: `src/routes/task-X.Y` der `X` angir kursdelen og `Y` angir oppgaven innad i delen. For eksempel inneholder mappen `src/routes/task-2.1` første oppgave i del to.
 
-Hver oppgavemappe inneholder to undermapper: `0-working-area` og `1-solution`. Mappen `working-area` inneholder den uferdige koden. Mappen `solution` inneholder løsningen på oppgaven. Tall-prefiksene i mappenavnene er der for å unngå alfabetisk sortering og få mappen `working-area` til å dukke opp før mappen `solution`. (Hvis du har et navneforslag for `working-area` som kommer før `solution` i alfabetet, gi oss beskjed på [GitHub-saken om navneleting](https://github.com/Vages/svelte-snake-workshop/issues/13).)
+Hver oppgavemappe inneholder to undermapper: `problem` og `solution`. Mappen `problem` inneholder den uferdige koden. Mappen `solution` inneholder løsningen på oppgaven.
 
 ##### Resultatet av en fil finnes på en URL ut fra filens plassering i `src/routes`
 
@@ -129,7 +129,7 @@ Løs [oppgaven fra Svelte-opplæringen om å sette inn data](https://svelte.dev/
 
 ### Oppgave 1.1: Plasser eplet
 
-Åpne filen `src/routes/task-1.1/0-working-area/game/App.svelte`.
+Åpne filen `src/routes/task-1.1/problem/game/App.svelte`.
 
 Brettet inneholder en `<div class="apple" />`. Variabelen `apple` inneholder en koordinat. Oppgaven din er å plassere eplet på den ruten på brettet som koordinaten angir.
 

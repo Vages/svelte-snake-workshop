@@ -163,8 +163,8 @@ msgid "Task 1.1: Place the apple"
 msgstr "Oppgave 1.1: Plasser eplet"
 
 #: TASKS.md:block 29 (paragraph)
-msgid "Open the file `src/routes/task-1.1/0-working-area/game/App.svelte`."
-msgstr "Åpne filen `src/routes/task-1.1/0-working-area/game/App.svelte`."
+msgid "Open the file `src/routes/task-1.1/problem/game/App.svelte`."
+msgstr "Åpne filen `src/routes/task-1.1/problem/game/App.svelte`."
 
 #: TASKS.md:block 30 (paragraph)
 msgid ""
@@ -1851,22 +1851,13 @@ msgstr ""
 
 #: TASKS.md:block 27 (paragraph)
 msgid ""
-"Each task folder contains two sub-folders: `0-working-area` and "
-"`1-solution`. The `working-area` folder contains the unfinished code. The "
-"`solution` folder contains the task solution. The number prefixes are there "
-"to avoid alphabetical sorting and have the `working-area` folder appear "
-"before the `solution` folder. (If you have an alternative name for `working-"
-"area` that comes before `solution` in the alphabet, please let us know on "
-"[the related GitHub issue](https://github.com/Vages/svelte-snake-"
-"workshop/issues/13).)"
+"Each task folder contains two sub-folders: `problem` and `solution`. The "
+"`problem` folder contains the unfinished code. The `solution` folder "
+"contains the task solution."
 msgstr ""
-"Hver oppgavemappe inneholder to undermapper: `0-working-area` og "
-"`1-solution`. Mappen `working-area` inneholder den uferdige koden. Mappen "
-"`solution` inneholder løsningen på oppgaven. Tall-prefiksene i mappenavnene "
-"er der for å unngå alfabetisk sortering og få mappen `working-area` til å "
-"dukke opp før mappen `solution`. (Hvis du har et navneforslag for `working-"
-"area` som kommer før `solution` i alfabetet, gi oss beskjed på [GitHub-saken"
-" om navneleting](https://github.com/Vages/svelte-snake-workshop/issues/13).)"
+"Hver oppgavemappe inneholder to undermapper: `problem` og `solution`. Mappen"
+" `problem` inneholder den uferdige koden. Mappen `solution` inneholder "
+"løsningen på oppgaven."
 
 #: TASKS.md:block 30 (table)
 msgid "`src/routes/task-1.1/begin/+page.svelte`"

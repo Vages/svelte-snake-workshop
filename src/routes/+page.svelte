@@ -29,16 +29,16 @@
 	<thead>
 		<tr>
 			<th>Task</th>
-			<th>Working area</th>
-			<th>Suggested solution</th>
+			<th>Problem</th>
+			<th>Solution</th>
 		</tr>
 	</thead>
 	<tbody>
 		{#each tasks as task}
 			<tr>
 				<td>{task}</td>
-				<td><a href="/task-{task}/0-working-area">Working area</a></td>
-				<td><a href="/task-{task}/1-solution">Suggested solution</a></td>
+				<td><a href="/task-{task}/problem">Problem</a></td>
+				<td><a href="/task-{task}/solution">Solution</a></td>
 			</tr>
 		{/each}
 	</tbody>

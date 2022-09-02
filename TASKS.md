@@ -71,7 +71,7 @@ We have divided the workshop into 6 parts, each containing several tasks. Every 
 
 Every task has a corresponding folder: `src/routes/task-X.Y`, `X` being the current part and `Y` the current task within that part. For example, the folder `src/routes/task-2.1` contains the first task of part two.
 
-Each task folder contains two sub-folders: `0-working-area` and `1-solution`. The `working-area` folder contains the unfinished code. The `solution` folder contains the task solution. The number prefixes are there to avoid alphabetical sorting and have the `working-area` folder appear before the `solution` folder. (If you have an alternative name for `working-area` that comes before `solution` in the alphabet, please let us know on [the related GitHub issue](https://github.com/Vages/svelte-snake-workshop/issues/13).)
+Each task folder contains two sub-folders: `problem` and `solution`. The `problem` folder contains the unfinished code. The `solution` folder contains the task solution.
 
 ##### File output URLs correspond to their placement within `src/routes`
 
@@ -132,7 +132,7 @@ Solve [the task from the Svelte tutorial about adding data](https://svelte.dev/t
 
 ### Task 1.1: Place the apple
 
-Open the file `src/routes/task-1.1/0-working-area/game/App.svelte`.
+Open the file `src/routes/task-1.1/problem/game/App.svelte`.
 
 The board contains a `<div class="apple" />`. The variable `apple` contains a coordinate. Your task is to place the apple on the square given by the coordinate.
 
