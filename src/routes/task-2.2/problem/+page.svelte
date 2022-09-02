@@ -1,5 +1,5 @@
 <script>
-	import App from "./game/App.svelte";
+	import App from "./App.svelte";
 </script>
 
 <App />
