@@ -28,7 +28,12 @@
 	> at the end.
 </p>
 
-<p>Open the file TASKS.md to get going.</p>
+<p>
+	Open the file <a
+		href="https://github.com/Vages/svelte-snake-workshop/blob/main/TASKS.md"
+		>TASKS.md</a
+	> to get going.
+</p>
 
 <table>
 	<thead>
