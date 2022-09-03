@@ -1,7 +1,7 @@
 <script>
 	import { createEventDispatcher, onMount } from "svelte";
 
-	import * as api from "./api";
+	import * as api from "$lib/api";
 	import NesContainer from "$lib/NesContainer.svelte";
 
 	export let score;
