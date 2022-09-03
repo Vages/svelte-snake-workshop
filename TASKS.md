@@ -35,7 +35,7 @@ Its home page presents it as follows:
 > We think you'll love it too.
 > Read [the introductory blog post](https://svelte.dev/blog/svelte-3-rethinking-reactivity) to learn more.
 
-According to multiple benchmarks, an application written in Svelte usually become smaller and faster than an equivalent application in React or Vue.
+According to multiple benchmarks, an application written in Svelte usually becomes smaller and faster than an equivalent application in React or Vue.
 The following quotes and pictures are from [A RealWorld Comparison of Front-End Frameworks with Benchmarks (2019 update)](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/):
 
 > ##### Metric #2: Size

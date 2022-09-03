@@ -1724,7 +1724,7 @@ msgstr ""
 #: TASKS.md:block 14 (paragraph)
 msgid ""
 "According to multiple benchmarks, an application written in Svelte usually "
-"become smaller and faster than an equivalent application in React or Vue. "
+"becomes smaller and faster than an equivalent application in React or Vue. "
 "The following quotes and pictures are from [A RealWorld Comparison of Front-"
 "End Frameworks with Benchmarks (2019 "
 "update)](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-"
