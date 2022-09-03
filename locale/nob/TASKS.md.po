@@ -1201,8 +1201,8 @@ msgstr ""
 "begynte!** Eller kanskje du faktisk har gjort alle oppgavene? "
 "Wooooaaahh!!!!!1"
 
-#: TASKS.md:block 178 (paragraph)
-msgid "Task 6 is a sandbox where you can do almost anything you want to."
+#: TASKS.md:block 216 (paragraph)
+msgid "Part 6 is a sandbox where you can do almost anything you want to."
 msgstr "Del 6 er en sandkasse der du kan gjøre omtrent hva du vil."
 
 #: TASKS.md:block 179 (header)

@@ -668,7 +668,7 @@ Congratulations! **You were very smart to read through the tasks before starting
 
 ![A screenshot of the Solitaire game over screen][solitaire-win-png]
 
-Task 6 is a sandbox where you can do almost anything you want to.
+Part 6 is a sandbox where you can do almost anything you want to.
 
 ### Task 6.1: Improve the game
 
