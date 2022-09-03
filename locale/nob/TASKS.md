@@ -283,9 +283,9 @@ import Qux from "$lib/Qux.svelte";
 
 Oppgaven din er å oversette tastetrykk til bevegelse. Slangen skal bevege seg ett steg i oppgitt retning hver gang man trykker på en piltast. Unngå at slangen beveger seg når man trykker på andre taster.
 
-For å gjøre dette lettere, har vi laget en funksjon `convertKeyboardKeyToDirection` i `src/lib/utils.js`, som oversetter fra tastetrykk til en retning. Vi bruker himmelretningene for å vise til retningene på brettet: Vest er venstre, nord er opp.
+For å gjøre dette lettere, har vi laget en funksjon `convertKeyboardKeyToDirection` i `src/lib/game-helpers.js`, som oversetter fra tastetrykk til en retning. Vi bruker himmelretningene for å vise til retningene på brettet: Vest er venstre, nord er opp.
 
-`+page.svelte` importerer allerede en funksjon fra `$lib/utils.js`. For å bruke `convertKeyboardKeyToDirection`, legger du til funksjonen blant de som er opplistet i det eksisterende `import { … } from "$lib/utils.js"`-utsagnet. Mange av funksjonene i `utils.js` er nyttige i denne såvel som senere oppgaver. Du kommer til å spare tid dersom du bruker et øyeblikk på å gjøre deg kjent med filens innhold.
+`+page.svelte` importerer allerede en funksjon fra `$lib/game-helpers.js`. For å bruke `convertKeyboardKeyToDirection`, legger du til funksjonen blant de som er opplistet i det eksisterende `import { … } from "$lib/game-helpers.js"`-utsagnet. Mange av funksjonene i `game-helpers.js` er nyttige i denne såvel som senere oppgaver. Du kommer til å spare tid dersom du bruker et øyeblikk på å gjøre deg kjent med filens innhold.
 
 Inntil videre skal slangen bevege seg også om den treffer seg selv eller en vegg. Game over kommer i en senere oppgave.
 
@@ -294,14 +294,14 @@ Inntil videre skal slangen bevege seg også om den treffer seg selv eller en veg
 - Den enkleste måten å legge til elementer i starten eller slutten i et array, er å bruke spredning (_spreading_): `[a, ...b]`. (Svelte reagerer ikke på push og pop; dette kommer vi tilbake til senere.)
 - Funksjonen [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) er nyttig når man vil fjerne elementer fra starten og slutten av et array.
 
-#### Hint: Hjelpemidler i `$lib/utils.js`
+#### Hint: Hjelpemidler i `$lib/game-helpers.js`
 
-I `$lib/utils.js` finner man:
+I `$lib/game-helpers.js` finner man:
 
 - `add(coordinateA, coordinateB)`, for å legge sammen to vektorer/koordinater.
 - `DIRECTION_TO_VECTOR`, for å gå fra himmelretning til retningsvektor.
 
-Legg elementene `DIRECTION_TO_VECTOR, add, ` til de importerte elementene i utsagnet `import { … } from "$lib/utils.js"` på toppen av `<script>`-blokken for å bruke dem.
+Legg elementene `DIRECTION_TO_VECTOR, add, ` til de importerte elementene i utsagnet `import { … } from "$lib/game-helpers.js"` på toppen av `<script>`-blokken for å bruke dem.
 
 ## Del 3: Logikk
 
@@ -381,11 +381,11 @@ Lag en variabel `score`. Dette er antallet epler slangen har spist.
 
 Når du har poeng-økningen til å virke, kan du sørge for at eplet får en ny, tilfeldig plassering på brettet idet slangen spiser det.
 
-Merk: I denne oppgaven sparer du mye arbeid ved å bruke hjelpefunksjoner fra `utils.js`.
+Merk: I denne oppgaven sparer du mye arbeid ved å bruke hjelpefunksjoner fra `game-helpers.js`.
 
-#### Hint: Hjelp i utils.js
+#### Hint: Hjelp i game-helpers.js
 
-I `utils.js` finner man funksjonen `isEqual` som sier om to koordinater er like, og funksjonen `pickRandomOpenSpace`, som trekker en passelig plassering for det nye eplet.
+I `game-helpers.js` finner man funksjonen `isEqual` som sier om to koordinater er like, og funksjonen `pickRandomOpenSpace`, som trekker en passelig plassering for det nye eplet.
 
 ### Oppgave 3.2: Få slangen til å vokse når den spiser eplet
 
@@ -414,7 +414,7 @@ For å stoppe tikkingen, har vi trukket ut en funksjon `stopTicking` som du kan 
 
 #### Hint: Hjelpefunksjoner
 
-I `utils.js` finner man de nyttige funksjonene `isInsideBoard` og `isSnakeEatingItself`.
+I `game-helpers.js` finner man de nyttige funksjonene `isInsideBoard` og `isSnakeEatingItself`.
 
 #### Hint: Reaktivitet
 
@@ -429,7 +429,7 @@ Hvis vi skulle formulert reglene for game over muntlig, hadde vi sagt noe slikt 
 
 Idet du har fått game over til å virke, kommer du kanskje til å oppdage et problem: Slangen dør når man trykker tasten som går i motsatt retning av der slangen beveger seg for øyeblikket, fordi den spiser sin egen hals. Dette kan også skje når man er litt rask idet man prøver å ta en U-sving. I denne og den neste oppgaven skal vi prøve å unngå dette.
 
-Oppgaven din er å sørge for at slangen kun reagerer på tastetrykk som er vinkelrette på slangens nåværende retning. Hvis slangen går nordover, skal spillet bare registrere tastetrykk på venstre og høyre piltast. Som med mange andre oppgaver, finnes det en funksjon som kan hjelpe deg i `utils.js`.
+Oppgaven din er å sørge for at slangen kun reagerer på tastetrykk som er vinkelrette på slangens nåværende retning. Hvis slangen går nordover, skal spillet bare registrere tastetrykk på venstre og høyre piltast. Som med mange andre oppgaver, finnes det en funksjon som kan hjelpe deg i `game-helpers.js`.
 
 ### Oppgave 3.6: Bruk en kø til å holde styr på fremtidige bevegelser
 

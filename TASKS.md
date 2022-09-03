@@ -346,12 +346,12 @@ Your task is to translate key presses to movement.
 The snake should move one step in the given direction every time the user presses an arrow key.
 Avoid moving the snake when the user presses keys other than the arrow keys.
 
-To make this simpler, we have made a function `convertKeyboardKeyToDirection`, found in `src/lib/utils.js`, which translates key names to directions.
+To make this simpler, we have made a function `convertKeyboardKeyToDirection`, found in `src/lib/game-helpers.js`, which translates key names to directions.
 We use the cardinal directions to describe the directions on the board: West is left, north is up.
 
-`+page.svelte` already imports a function from `$lib/utils.js`.
-To use `convertKeyboardKeyToDirection`, add the function to the functions listed in the existing `import { … } from "$lib/utils.js"` statement.
-Many of the functions in `utils.js` are useful to this as well later tasks.
+`+page.svelte` already imports a function from `$lib/game-helpers.js`.
+To use `convertKeyboardKeyToDirection`, add the function to the functions listed in the existing `import { … } from "$lib/game-helpers.js"` statement.
+Many of the functions in `game-helpers.js` are useful to this as well later tasks.
 You will save time if you take a moment to make yourself familiar with the file's contents.
 
 For now, the snake should also move if it hits itself or a wall.
@@ -363,14 +363,14 @@ We will implement game over in a later task.
   (Svelte does not react to push and pop; we will come back to this later.)
 - The function [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) is useful when you want to remove elements from the start and end of an array.
 
-#### Hint: Helpful utilities in `$lib/utils.js`
+#### Hint: Helpful utilities in `$lib/game-helpers.js`
 
-In `$lib/utils.js` you will find:
+In `$lib/game-helpers.js` you will find:
 
 - `add(coordinateA, coordinateB)`, to add two vectors/coordinates.
 - `DIRECTION_TO_VECTOR`, to go from cardinal direction to direction vector.
 
-Add the items `DIRECTION_TO_VECTOR, add, ` to the imported items in the `import { … } from "$lib/utils.js"` statement at the top of `<script>` block to use them.
+Add the items `DIRECTION_TO_VECTOR, add, ` to the imported items in the `import { … } from "$lib/game-helpers.js"` statement at the top of `<script>` block to use them.
 
 ## Part 3: Logic
 
@@ -464,11 +464,11 @@ This is the number of apples the snake has eaten.
 
 When you have the score increase working, make sure that the apple is given a new random position on the board as soon as the snake eats it.
 
-Note: You will save a lot of work in this task by using helper functions from `utils.js`.
+Note: You will save a lot of work in this task by using helper functions from `game-helpers.js`.
 
-#### Hint: Help in utils.js
+#### Hint: Help in game-helpers.js
 
-In `utils.js` you will find the function `isEqual` which says whether two coordinates are the same, and the function `pickRandomOpenSpace`, which draws a suitable location for the new apple.
+In `game-helpers.js` you will find the function `isEqual` which says whether two coordinates are the same, and the function `pickRandomOpenSpace`, which draws a suitable location for the new apple.
 
 ### Task 3.2: Make the snake grow when it eats an apple
 
@@ -501,7 +501,7 @@ To stop the ticking, we have extracted a function `stopTicking` that you might u
 
 #### Hint: Helper functions
 
-You will find the helpful functions `isInsideBoard` and `isSnakeEatingItself` in `utils.js`.
+You will find the helpful functions `isInsideBoard` and `isSnakeEatingItself` in `game-helpers.js`.
 
 #### Hint: Reactivity
 
@@ -520,7 +520,7 @@ In this and the next task, we will try to avoid this.
 
 Your task is to make the snake react only to key presses that are perpendicular to the snake's current direction.
 If the snake is going north, the game should only register key presses from the left and right arrow keys.
-As with many other tasks, there is a function in `utils.js` that can help you.
+As with many other tasks, there is a function in `game-helpers.js` that can help you.
 
 ### Task 3.6: Use a queue to keep track of future movements
 

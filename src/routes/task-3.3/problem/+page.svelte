@@ -6,7 +6,7 @@
 		getNextSnake,
 		isEqual,
 		pickRandomOpenSpace,
-	} from "$lib/utils.js";
+	} from "$lib/game-helpers.js";
 
 	const TICK_TIME = 100;
 	const BOARD_DIMENSIONS = { x: 20, y: 20 };
