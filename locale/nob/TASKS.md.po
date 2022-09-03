@@ -1811,7 +1811,7 @@ msgid "`<server>/finished-game`"
 msgstr ""
 
 #: TASKS.md:block 30 (table)
-msgid "`<server>/task-1.1/begin`"
+msgid "`<server>/task-1.1/problem`"
 msgstr ""
 
 #: TASKS.md:block 31 (paragraph)
@@ -1862,7 +1862,7 @@ msgstr ""
 "løsningen på oppgaven."
 
 #: TASKS.md:block 30 (table)
-msgid "`src/routes/task-1.1/begin/+page.svelte`"
+msgid "`src/routes/task-1.1/problem/+page.svelte`"
 msgstr ""
 
 #: TASKS.md:block 85 (header)

@@ -74,10 +74,10 @@ Hver oppgavemappe inneholder to undermapper: `problem` og `solution`. Mappen `pr
 
 Du finner resultatet av en gitt fil på en URL som samsvarer med filens plassering innad i `src/routes`. Noen eksempler:
 
-| Filplassering                            | Resultat-URL              |
-| ---------------------------------------- | ------------------------- |
-| `src/routes/finished-game/+page.svelte`  | `<server>/finished-game`  |
-| `src/routes/task-1.1/begin/+page.svelte` | `<server>/task-1.1/begin` |
+| Filplassering                              | Resultat-URL                |
+| ------------------------------------------ | --------------------------- |
+| `src/routes/finished-game/+page.svelte`    | `<server>/finished-game`    |
+| `src/routes/task-1.1/problem/+page.svelte` | `<server>/task-1.1/problem` |
 
 Erstatt `<server>` med stedet der tjeneren din kjører. Under utvikling finner du vanligvis tjeneren på `localhost:5173`. Dette betyr at du kan du kan finne det ferdige spillet ved å gå til `http://localhost:5173/finished-game` i en nettleser.
 

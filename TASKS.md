@@ -92,10 +92,10 @@ The `solution` folder contains the task solution.
 You will find the output of a given file at a URL corresponding to its placement within `src/routes`.
 Some examples:
 
-| File location                            | Output URL                |
-| ---------------------------------------- | ------------------------- |
-| `src/routes/finished-game/+page.svelte`  | `<server>/finished-game`  |
-| `src/routes/task-1.1/begin/+page.svelte` | `<server>/task-1.1/begin` |
+| File location                              | Output URL                  |
+| ------------------------------------------ | --------------------------- |
+| `src/routes/finished-game/+page.svelte`    | `<server>/finished-game`    |
+| `src/routes/task-1.1/problem/+page.svelte` | `<server>/task-1.1/problem` |
 
 Replace `<server>` with the location where your server is running.
 During the development, the server is usually located at `localhost:5173`.
