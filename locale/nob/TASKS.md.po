@@ -418,17 +418,17 @@ msgstr ""
 "seg ett steg i oppgitt retning hver gang man trykker på en piltast. Unngå at"
 " slangen beveger seg når man trykker på andre taster."
 
-#: TASKS.md:block 73 (paragraph)
+#: TASKS.md:block 92 (paragraph)
 msgid ""
 "To make this simpler, we have made a function "
-"`convertKeyboardKeyToDirection`, found in `utils.js`, which translates key "
-"names to directions. We use the cardinal directions to describe the "
-"directions on the board: West is left, north is up."
+"`convertKeyboardKeyToDirection`, found in `src/lib/utils.js`, which "
+"translates key names to directions. We use the cardinal directions to "
+"describe the directions on the board: West is left, north is up."
 msgstr ""
 "For å gjøre dette lettere, har vi laget en funksjon "
-"`convertKeyboardKeyToDirection` i `utils.js`, som oversetter fra tastetrykk "
-"til en retning. Vi bruker himmelretningene for å vise til retningene på "
-"brettet: Vest er venstre, nord er opp."
+"`convertKeyboardKeyToDirection` i `src/lib/utils.js`, som oversetter fra "
+"tastetrykk til en retning. Vi bruker himmelretningene for å vise til "
+"retningene på brettet: Vest er venstre, nord er opp."
 
 #: TASKS.md:block 74 (paragraph)
 msgid ""
@@ -462,13 +462,13 @@ msgstr ""
 "US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) er nyttig når "
 "man vil fjerne elementer fra starten og slutten av et array."
 
-#: TASKS.md:block 77 (header)
-msgid "Hint: Helpful utilities in `utils.js`"
-msgstr "Hint: Hjelpemidler i `utils.js`"
+#: TASKS.md:block 97 (header)
+msgid "Hint: Helpful utilities in `$lib/utils.js`"
+msgstr "Hint: Hjelpemidler i `$lib/utils.js`"
 
-#: TASKS.md:block 78 (paragraph)
-msgid "In `utils.js` you will find:"
-msgstr "I `utils.js` finner man:"
+#: TASKS.md:block 98 (paragraph)
+msgid "In `$lib/utils.js` you will find:"
+msgstr "I `$lib/utils.js` finner man:"
 
 #: TASKS.md:block 79 (unordered list)
 msgid "`add(coordinateA, coordinateB)`, to add two vectors/coordinates."
@@ -1862,6 +1862,67 @@ msgstr ""
 #: TASKS.md:block 30 (table)
 msgid "`src/routes/task-1.1/begin/+page.svelte`"
 msgstr ""
+
+#: TASKS.md:block 85 (header)
+msgid "Tutorial: Importing from files in `src/lib` using `$lib`"
+msgstr "Opplæring: Importere fra filer i `src/lib` ved å bruke `$lib`"
+
+#: TASKS.md:block 86 (paragraph)
+msgid ""
+"In the next task, you will be asked to import from a file located in "
+"`src/lib` using `$lib`. To quote [the SvelteKit documentation on "
+"`$lib`](https://kit.svelte.dev/docs/modules#$lib):"
+msgstr ""
+"I den neste oppgaven blir du bedt om å importere fra en fil som befinner seg"
+" i `src/lib` ved å bruke `$lib`. For å sitere [SvelteKit-dokumentasjonen om "
+"`$lib`](https://kit.svelte.dev/docs/modules#$lib):"
+
+#: TASKS.md:block 87 (quote)
+msgid "$lib"
+msgstr ""
+
+#: TASKS.md:block 87 (quote)
+msgid ""
+"This is a simple alias to `src/lib`, or whatever directory is specified as "
+"`config.kit.files.lib`. It allows you to access common components and "
+"utility modules without `../../../../` nonsense."
+msgstr ""
+"Dette er et enkelt alias til `src/lib`, eller hva enn slags mappe som er "
+"oppgitt som verdi for `config.kit.files.lib`. Det lar deg bruke "
+"felleskomponenter og -moduler uten `../../../../`-sludder."
+
+#: TASKS.md:block 88 (paragraph)
+msgid ""
+"You can import from files found in `src/lib` using the alias, like this:"
+msgstr "Slik importerer du fra filer som finnes i `src/lib` med aliaset:"
+
+#: TASKS.md:block 89 (code)
+msgid ""
+"// Importing a Javascript function from the file src/lib/bar.js\n"
+"import { foo } from \"$lib/bar.js\";\n"
+"// Importing a Svelte component from the file src/lib/Baz.svelte\n"
+"import Qux from \"$lib/Qux.svelte\";\n"
+msgstr ""
+"// Importere en Javascript-funksjon fra filen src/lib/bar.js\n"
+"import { foo } from \"$lib/bar.js\";\n"
+"// Importere en Svelte-komponent fra filen src/lib/Baz.svelte\n"
+"import Qux from \"$lib/Qux.svelte\";\n"
+
+#: TASKS.md:block 93 (paragraph)
+msgid ""
+"`+page.svelte` already imports a function from `$lib/utils.js`. To use "
+"`convertKeyboardKeyToDirection`, add the function to the functions listed in"
+" the existing `import { … } from \"$lib/utils.js\"` statement. Many of the "
+"functions in `utils.js` are useful to this as well later tasks. You will "
+"save time if you take a moment to make yourself familiar with the file's "
+"contents."
+msgstr ""
+"`+page.svelte` importerer allerede en funksjon fra `$lib/utils.js`. For å "
+"bruke `convertKeyboardKeyToDirection`, legger du til funksjonen blant de som"
+" er opplistet i det eksisterende `import { … } from "
+"\"$lib/utils.js\"`-utsagnet. Mange av funksjonene i `utils.js` er nyttige i "
+"denne såvel som senere oppgaver. Du kommer til å spare tid dersom du bruker "
+"et øyeblikk på å gjøre deg kjent med filens innhold."
 
 #~ msgid ""
 #~ "You will find the output of a given file at a URL corresponding to its "

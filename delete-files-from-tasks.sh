@@ -1,4 +1,4 @@
-for file in src/routes/**/**/api.js
+for file in src/routes/**/**/utils.js
 do
 	rm $file
 done

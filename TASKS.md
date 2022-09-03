@@ -224,11 +224,36 @@ You will have to know how to change variable values in the next section. Solve t
 - [Updating regular variables](https://svelte.dev/tutorial/reactive-assignments)
 - [Updating arrays and objects](https://svelte.dev/tutorial/updating-arrays-and-objects)
 
+### Tutorial: Importing from files in `src/lib` using `$lib`
+
+In the next task, you will be asked to import from a file located in `src/lib` using `$lib`.
+To quote [the SvelteKit documentation on `$lib`](https://kit.svelte.dev/docs/modules#$lib):
+
+> ##### $lib
+>
+> This is a simple alias to `src/lib`, or whatever directory is specified as `config.kit.files.lib`.
+> It allows you to access common components and utility modules without `../../../../` nonsense.
+
+You can import from files found in `src/lib` using the alias, like this:
+
+```javascript
+// Importing a Javascript function from the file src/lib/bar.js
+import { foo } from "$lib/bar.js";
+// Importing a Svelte component from the file src/lib/Baz.svelte
+import Qux from "$lib/Qux.svelte";
+```
+
 ### Task 2.2: Move the snake one step in the direction of a key press
 
 Your task is to translate key presses to movement. The snake should move one step in the given direction every time the user presses an arrow key. Avoid moving the snake when the user presses keys other than the arrow keys.
 
-To make this simpler, we have made a function `convertKeyboardKeyToDirection`, found in `utils.js`, which translates key names to directions. We use the cardinal directions to describe the directions on the board: West is left, north is up.
+To make this simpler, we have made a function `convertKeyboardKeyToDirection`, found in `src/lib/utils.js`, which translates key names to directions.
+We use the cardinal directions to describe the directions on the board: West is left, north is up.
+
+`+page.svelte` already imports a function from `$lib/utils.js`.
+To use `convertKeyboardKeyToDirection`, add the function to the functions listed in the existing `import { … } from "$lib/utils.js"` statement.
+Many of the functions in `utils.js` are useful to this as well later tasks.
+You will save time if you take a moment to make yourself familiar with the file's contents.
 
 For now, the snake should also move if it hits itself or a wall. We will implement game over in a later task.
 
@@ -237,9 +262,9 @@ For now, the snake should also move if it hits itself or a wall. We will impleme
 - The simplest way to add elements to the start or end of an array is to use _spreading_: `[a, ...b]`. (Svelte does not react to push and pop; we will come back to this later.)
 - The function [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) is useful when you want to remove elements from the start and end of an array.
 
-#### Hint: Helpful utilities in `utils.js`
+#### Hint: Helpful utilities in `$lib/utils.js`
 
-In `utils.js` you will find:
+In `$lib/utils.js` you will find:
 
 - `add(coordinateA, coordinateB)`, to add two vectors/coordinates.
 - `DIRECTION_TO_VECTOR`, to go from cardinal direction to direction vector.

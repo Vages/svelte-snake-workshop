@@ -1,4 +1,7 @@
 {
-	"proseWrap": "never",
-	"useTabs": true
+	"proseWrap": "preserve",
+	"useTabs": true,
+	"overrides": [
+		{ "files": ["locale/**/*.md"], "options": { "proseWrap": "never" } }
+	]
 }

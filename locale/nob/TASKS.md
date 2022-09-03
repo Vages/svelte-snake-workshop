@@ -221,11 +221,30 @@ Du kommer til å måtte vite hvordan du endrer variabler i den kommende seksjone
 - [Oppdatere vanlige variabler](https://svelte.dev/tutorial/reactive-assignments)
 - [Oppdatere arrays og objekter](https://svelte.dev/tutorial/updating-arrays-and-objects)
 
+### Opplæring: Importere fra filer i `src/lib` ved å bruke `$lib`
+
+I den neste oppgaven blir du bedt om å importere fra en fil som befinner seg i `src/lib` ved å bruke `$lib`. For å sitere [SvelteKit-dokumentasjonen om `$lib`](https://kit.svelte.dev/docs/modules#$lib):
+
+> ##### $lib
+>
+> Dette er et enkelt alias til `src/lib`, eller hva enn slags mappe som er oppgitt som verdi for `config.kit.files.lib`. Det lar deg bruke felleskomponenter og -moduler uten `../../../../`-sludder.
+
+Slik importerer du fra filer som finnes i `src/lib` med aliaset:
+
+```javascript
+// Importere en Javascript-funksjon fra filen src/lib/bar.js
+import { foo } from "$lib/bar.js";
+// Importere en Svelte-komponent fra filen src/lib/Baz.svelte
+import Qux from "$lib/Qux.svelte";
+```
+
 ### Oppgave 2.2: Beveg slangen ett steg i samme retning som et tastetrykk
 
 Oppgaven din er å oversette tastetrykk til bevegelse. Slangen skal bevege seg ett steg i oppgitt retning hver gang man trykker på en piltast. Unngå at slangen beveger seg når man trykker på andre taster.
 
-For å gjøre dette lettere, har vi laget en funksjon `convertKeyboardKeyToDirection` i `utils.js`, som oversetter fra tastetrykk til en retning. Vi bruker himmelretningene for å vise til retningene på brettet: Vest er venstre, nord er opp.
+For å gjøre dette lettere, har vi laget en funksjon `convertKeyboardKeyToDirection` i `src/lib/utils.js`, som oversetter fra tastetrykk til en retning. Vi bruker himmelretningene for å vise til retningene på brettet: Vest er venstre, nord er opp.
+
+`+page.svelte` importerer allerede en funksjon fra `$lib/utils.js`. For å bruke `convertKeyboardKeyToDirection`, legger du til funksjonen blant de som er opplistet i det eksisterende `import { … } from "$lib/utils.js"`-utsagnet. Mange av funksjonene i `utils.js` er nyttige i denne såvel som senere oppgaver. Du kommer til å spare tid dersom du bruker et øyeblikk på å gjøre deg kjent med filens innhold.
 
 Inntil videre skal slangen bevege seg også om den treffer seg selv eller en vegg. Game over kommer i en senere oppgave.
 
@@ -234,9 +253,9 @@ Inntil videre skal slangen bevege seg også om den treffer seg selv eller en veg
 - Den enkleste måten å legge til elementer i starten eller slutten i et array, er å bruke spredning (_spreading_): `[a, ...b]`. (Svelte reagerer ikke på push og pop; dette kommer vi tilbake til senere.)
 - Funksjonen [Array.prototype.slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) er nyttig når man vil fjerne elementer fra starten og slutten av et array.
 
-#### Hint: Hjelpemidler i `utils.js`
+#### Hint: Hjelpemidler i `$lib/utils.js`
 
-I `utils.js` finner man:
+I `$lib/utils.js` finner man:
 
 - `add(coordinateA, coordinateB)`, for å legge sammen to vektorer/koordinater.
 - `DIRECTION_TO_VECTOR`, for å gå fra himmelretning til retningsvektor.
