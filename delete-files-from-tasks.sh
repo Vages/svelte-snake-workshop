@@ -1,4 +1,4 @@
-for file in src/routes/**/**/NesContainer.svelte
+for file in src/routes/**/**/StartModal.svelte
 do
 	rm $file
 done

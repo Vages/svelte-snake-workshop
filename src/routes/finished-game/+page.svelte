@@ -4,7 +4,7 @@
 
 	import GameOverModal from "./GameOverModal.svelte";
 	import NesContainer from "$lib/NesContainer.svelte";
-	import StartModal from "./StartModal.svelte";
+	import StartModal from "$lib/StartModal.svelte";
 	import {
 		DIRECTION,
 		DIRECTION_TO_VECTOR,
