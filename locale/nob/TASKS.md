@@ -394,7 +394,7 @@ Oppgaven din er å sørge for at slangen kun reagerer på tastetrykk som er vink
 
 **Dette er en utfordringsoppgave som har mer å gjøre med programmering enn Svelte i seg selv. Du kan hoppe til neste oppgave hvis du ønsker.**
 
-I løsningen på oppgave 3.5 som man finner i `task-3.5-end`, kan man fortsatt fremprovosere at slangen spiser seg selv hvis man er rask: Hvis slangen for eksempel beveger seg nordover og spilleren raskt trykker ⬅️ fulgt av ⬇️, ender spillet opp med å registrere ⬇️ som neste bevegelse.
+I løsningen på oppgave 3.5 som man finner i `task-3.5-end`, kan man fortsatt fremprovosere at slangen spiser seg selv hvis man er rask. Hvis slangen for eksempel beveger seg nordover og spilleren raskt trykker ⬅️ fulgt av ⬇️, ender spillet opp med å registrere ⬇️ som neste bevegelse.
 
 Vi kan unngå problemet ved å bruke en _kø_ til å ta vare på retningene som slangen skal bevege seg i. Når slangen skal bevege seg, henter vi neste planlagte retning og beveger slangen i den. Dette gjør det mulig å trykke inn avanserte bevegelser raskt uten å tenke på timing.
 

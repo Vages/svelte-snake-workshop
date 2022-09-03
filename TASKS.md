@@ -403,7 +403,8 @@ Your task is to make the snake react only to key presses that are perpendicular 
 
 **This is a challenge task that has more to do with programming than Svelte itself. You can skip to the next task if you want.**
 
-In the solution to task 3.5 that you find in `task-3.5-end`, you can still make the snake eat itself if you are quick: If the snake for example moves north and the player quickly presses ⬅️ followed by ⬇️, the game ends up registering ⬇️ as the next direction.
+In the solution to task 3.5 that you find in `task-3.5-end`, you can still make the snake eat itself if you are quick.
+If the snake for example moves north and the player quickly presses ⬅️ followed by ⬇️, the game ends up registering ⬇️ as the next direction.
 
 We can avoid the problem by using a _queue_ to keep track of the directions that the snake is going to move in. When the snake is going to move, we dequeue a direction and move the snake in that direction. This makes it possible to input advanced movements quickly without worrying about timing.
 
