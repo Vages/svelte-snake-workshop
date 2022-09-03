@@ -480,13 +480,15 @@ msgid ""
 "`DIRECTION_TO_VECTOR`, to go from cardinal direction to direction vector."
 msgstr "`DIRECTION_TO_VECTOR`, for å gå fra himmelretning til retningsvektor."
 
-#: TASKS.md:block 80 (paragraph)
+#: TASKS.md:block 100 (paragraph)
 msgid ""
-"Add the line `import { DIRECTION_TO_VECTOR, add } from './utils'` to the top"
-" of `<script>` to use them."
+"Add the items `DIRECTION_TO_VECTOR, add, ` to the imported items in the "
+"`import { … } from \"$lib/utils.js\"` statement at the top of `<script>` "
+"block to use them."
 msgstr ""
-"Legg til linjen `import { DIRECTION_TO_VECTOR, add } from './utils'` øverst "
-"i `<script>` for å bruke dem."
+"Legg elementene `DIRECTION_TO_VECTOR, add, ` til de importerte elementene i "
+"utsagnet `import { … } from \"$lib/utils.js\"` på toppen av "
+"`<script>`-blokken for å bruke dem."
 
 #: TASKS.md:block 81 (header)
 msgid "Part 3: Logic"

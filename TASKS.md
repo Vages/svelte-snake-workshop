@@ -269,7 +269,7 @@ In `$lib/utils.js` you will find:
 - `add(coordinateA, coordinateB)`, to add two vectors/coordinates.
 - `DIRECTION_TO_VECTOR`, to go from cardinal direction to direction vector.
 
-Add the line `import { DIRECTION_TO_VECTOR, add } from './utils'` to the top of `<script>` to use them.
+Add the items `DIRECTION_TO_VECTOR, add, ` to the imported items in the `import { … } from "$lib/utils.js"` statement at the top of `<script>` block to use them.
 
 ## Part 3: Logic
 

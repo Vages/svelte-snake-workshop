@@ -260,7 +260,7 @@ I `$lib/utils.js` finner man:
 - `add(coordinateA, coordinateB)`, for å legge sammen to vektorer/koordinater.
 - `DIRECTION_TO_VECTOR`, for å gå fra himmelretning til retningsvektor.
 
-Legg til linjen `import { DIRECTION_TO_VECTOR, add } from './utils'` øverst i `<script>` for å bruke dem.
+Legg elementene `DIRECTION_TO_VECTOR, add, ` til de importerte elementene i utsagnet `import { … } from "$lib/utils.js"` på toppen av `<script>`-blokken for å bruke dem.
 
 ## Del 3: Logikk
 
