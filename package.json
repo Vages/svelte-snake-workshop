@@ -2,7 +2,7 @@
 	"name": "svelte-snake-workshop",
 	"version": "2.0.0",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --open",
 		"build": "vite build",
 		"preview": "vite preview",
 		"generate-translations": "echo \"README.md\nTASKS.md\nSETUP.md\" | xargs -L 1 md2po2md -l nob -o \"locale/{lang}\"",
