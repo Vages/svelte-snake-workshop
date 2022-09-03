@@ -510,6 +510,36 @@ Filen `GameOver.svelte` ligger klar i samme mappe som `+page.svelte`. Oppgaven d
 
 Det er litt knotete å få komponenten til å vises på skjermen på en elegant måte. Derfor har vi lagt inn noen div-er nederst i template-delen av `+page.svelte` der man kan montere `<GameOver>`-komponenten.
 
+### Oppgave 5.2: Trekk ut brettet som en komponent
+
+`+page.svelte` er blitt litt overveldende. Den tar seg av to ting på én gang: å holde styr på spillet _og_ vise det frem. Vi kan gjøre filen lettere å lese ved å la en annen komponent ta seg av å vise frem spillet.
+
+Oppgaven din er å lage en fil kalt `Board.svelte` inni `src/routes/task-5.2/problem`. Trekk ut koden som har ansvar for å vise frem brettet, eplet og slangen i `+page.svelte` (fra både script-, styling- og template-delene). Bestem hvilke data som skal kopieres og hvilke som skal sendes som egenskaper (properties).
+
+Importer og monter den nye komponenten i `+page.svelte`, slik at den erstatter koden som tidligere pleide å vise frem spillet. Slett de ubrukte delene i style og script-blokkene
+
+#### Hvis du tuller til `+page.svelte`, bruk `git restore`
+
+Du kan bruke kommandoen `git restore` for å stille `src/routes/task-5.2/problem/+page.svelte` tilbake til sin opprinnelige tilstand.
+
+Åpne terminalen din og naviger til rotmappen i prosjektet. Lim inn kommandoen `git restore src/routes/task-5.2/problem/+page.svelte` og trykk enter. Filen skal nå være slik den var da du begynte på oppgaven.
+
+#### Hint: Gå opp og ut
+
+Denne oppgaven blir unødvendig vanskelig hvis du starter for dypt nedi HTML-elementene. Start så høyt oppe og så langt ute som det lar seg gjøre.
+
+#### Hint: Hvordan vi løste dette
+
+**Dette hintet vil avsløre nesten alt. Les det kun hvis du står fullstendig fast.**
+
+Begynn med å kopiere `<div class="board" … >` og innholdet den omslutter. Lim dem inn i `Board.svelte`. Kopier hele `<style>`-blokken fra `+page.svelte`.
+
+Tekstbehandleren din skal umiddelbart klage over hvilke data og funksjoner fra `<script>` som mangler i `Board.svelte`. Dataen eller funksjonene som fortsatt brukes i `+page.svelte` må sendes inn som til `Board`s egenskaper. Data og funksjoner som er ubrukt i `+page.svelte` kan klippes ut og limes inn i `<script>`-delen av `Board`.
+
+Importer `Board` til `+page.svelte` med `import Board from "./Board.svelte". Monter komponenten der `<div class="board" … >` pleide å være. Send data til alle egenskapene du bestemte deg for.
+
+Når du ser at ting virker, se på utdataen i terminalen der du startet `npm run dev`. Denne utdataen sier deg hvilke deler av style som er ubrukt og i hvilke filer. Slett de delene som utdataen forteller deg at er ubrukt i filene som du har endret.
+
 ## Del 6: Nettverk
 
 Advarsel: Oppgavene i denne delen er for folk som har erfaring med nettverkskall, løfter (_promises_) og lignende i Javascript. Om du synes oppgavene blir for vanskelige å løse, kan du hoppe til del 7.

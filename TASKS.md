@@ -626,6 +626,54 @@ Your task is to make the component appear on screen when the game is over and ma
 It's a bit tricky to get the component to appear on screen in an elegant way.
 We have therefore added some divs to the bottom of `+page.svelte`'s template section where you can mount the `<GameOver>` component.
 
+### Task 5.2: Extract the board as a component
+
+`+page.svelte` has become a bit overwhelming.
+It handles two things at once: keeping track of the game _and_ displaying it.
+We can make the file easier to read by letting another component display the game.
+
+Your task is to create a file named `Board.svelte` within `src/routes/task-5.2/problem`.
+Extract the code that is responsible for displaying the board, apple and snake in `+page.svelte` (from both the script, styling and template parts).
+Decide on what data to copy and what to pass as properties.
+
+Import and mount the new component in `+page.svelte`, replacing the code that was previously used to display the game.
+Delete the unused parts of the style and script blocks.
+
+#### If you mess up `+page.svelte`, use `git restore`
+
+You can use the command `git restore` to reset `src/routes/task-5.2/problem/+page.svelte` to its original state.
+
+Open your terminal and navigate to the project's root folder.
+Paste the command `git restore src/routes/task-5.2/problem/+page.svelte` and press enter.
+The file should now be as it was when you started the task.
+
+#### Hint: Go up and out
+
+This task will be unnecessarily hard if you start too deep into the HTML elements.
+Start as high up and as far out as you possibly can.
+
+#### Hint: How we solved this
+
+**This hint will spoil almost everything.
+Read it only if you are completely stuck.**
+
+Start by copying `<div class="board" … >` and its enclosed contents.
+Paste them into `Board.svelte`.
+Copy the entire `<style>` block to `Board.svelte`.
+Delete the `<div class="board" … >` from `+page.svelte`.
+
+Your editor should immediately complain about what data and functions from `<script>` that is missing in `Board.svelte`.
+The data or functions are is still used in `+page.svelte` will have to be passed to properties of `Board`.
+Data and functions that are unused in `+page.svelte`, can be cut and paste it into the `<script>` part of `Board`.
+
+Import `Board` to `+page.svelte` using `import Board from "./Board.svelte"`.
+Mount the component where the `<div class="board" … >` was located.
+Pass data to all the properties that you decided on.
+
+Once you see that things work, look at the output from the terminal where you started `npm run dev`.
+This output should tell you which parts of style are unused and in what file.
+Delete the parts that the output tells you are unused within the files you have changed.
+
 ## Part 6: Network
 
 Warning: This part is for people who have experience with network calls, promises and the like in Javascript.
