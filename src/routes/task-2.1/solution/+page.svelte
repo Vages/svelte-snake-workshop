@@ -23,13 +23,13 @@
 
 <svelte:body on:keydown={console.log} />
 
-<div
-	class="main-content min-width"
-	style="--cell-size: {CELL_SIZE}px; --tick-time: {TICK_TIME}ms; --board-size-x: {BOARD_DIMENSIONS.x}; --board-size-y: {BOARD_DIMENSIONS.y}"
->
+<div class="main-content min-width">
 	<div class="score">{score}</div>
 
-	<div class="board">
+	<div
+		class="board"
+		style="--cell-size: {CELL_SIZE}px; --tick-time: {TICK_TIME}ms; --board-size-x: {BOARD_DIMENSIONS.x}; --board-size-y: {BOARD_DIMENSIONS.y}"
+	>
 		{#each snake as bodyPart}
 			<div class="body-part" style={calculatePositionAsStyle(bodyPart)} />
 		{/each}
