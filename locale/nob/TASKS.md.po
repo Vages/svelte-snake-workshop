@@ -2073,6 +2073,107 @@ msgstr ""
 "fra slike filer dersom en `+page.svelte`-fil ber om det, men gjør dem "
 "<em>ikke</em> om til nettsider."
 
+#: TASKS.md:block 24 (header)
+msgid "Tools like SvelteKit make both users and developers happy"
+msgstr "Verktøy som SvelteKit gjør både brukere og utviklere glade"
+
+#: TASKS.md:block 25 (paragraph)
+msgid ""
+"If you are new to web development, you may wonder why tools like SvelteKit "
+"and the other mentioned technologies are needed. The short answer is <em>to "
+"keep costs down</em>."
+msgstr ""
+"Hvis webutvikling er nytt for deg, lurer du kanskje på hvorfor verktøy som "
+"SvelteKit og de andre vi har nevnt trengs. Det korte svaret er <em>for å "
+"holde konstnadene nede</em>."
+
+#: TASKS.md:block 28 (unordered list)
+msgid "whether the user has logged in"
+msgstr "hvorvidt brukeren har logget seg inn"
+
+#: TASKS.md:block 28 (unordered list)
+msgid ""
+"the high scores that other users have submitted (yes, that *was* "
+"foreshadowing)"
+msgstr ""
+"toppskårene som andre brukere har sendt inn til en toppliste (ja, det *var* "
+"et frempek)"
+
+#: TASKS.md:block 29 (paragraph)
+msgid ""
+"Writing a *web application* is harder than writing a *website*: Pages can "
+"not be saved as static files; they have to be created on the fly. Viewing a "
+"page requires the server and user's device to perform additional work to "
+"generate the changed page."
+msgstr ""
+"Å lage en *webapplikasjon* er vanskeligere enn å lage et *nettområde*: Sider"
+" kan ikke lagres som statiske filer; de må lages fortløpende. Å se på en "
+"side krever at tjeneren og maskinen som brukeren ser på siden med utfører "
+"ekstraarbeid for å tegne opp den endrede siden."
+
+#: TASKS.md:block 30 (paragraph)
+msgid ""
+"Generating the page and downloading it has <em>literal</em> costs attached "
+"to it:"
+msgstr ""
+"Å lage en ny side og laste den ned har <em>bokstavelig talt</em> sin pris:"
+
+#: TASKS.md:block 31 (unordered list)
+msgid ""
+"The server and the user's device and spend electrical power calculating the "
+"new page. **Power is money.**"
+msgstr ""
+"Tjeneren og brukerens maskin bruker strøm på å regne seg frem til den nye "
+"nettsiden. **Strøm er penger.**"
+
+#: TASKS.md:block 31 (unordered list)
+msgid ""
+"The server owners pays for the data it sends out. Most people use a phone to"
+" browse the web, often with a limited mobile data plan. **Data is money.**"
+msgstr ""
+"De som eier tjeneren betaler for dataen den sender ut. De fleste bruker en "
+"telefon til å surfe på nettet, ofte med en begrenset mobildataplan. **Data "
+"er penger.**"
+
+#: TASKS.md:block 31 (unordered list)
+msgid ""
+"The user spends his or her time waiting for the page. Users have a tendency "
+"to leave slow applications, generating less income for the web application's"
+" creator. **Money is money.**"
+msgstr ""
+"Brukeren bruker tiden sin på å vente på siden. Brukere pleier å forlate "
+"trege applikasjoner, som gjør at de som lager webapplikasjonen tjener mindre"
+" penger. **Penger er penger.**"
+
+#: TASKS.md:block 32 (paragraph)
+msgid ""
+"Web developers can take actions to reduce these costs. Doing so takes a lot "
+"of time, though. **Time is money.**"
+msgstr ""
+"Webutviklere kan ta grep for å få ned disse kostnadene. Dessverre krever "
+"dette tid. **Tid er penger.**"
+
+#: TASKS.md:block 28 (unordered list)
+msgid "what the user has done on previous pages"
+msgstr "hva en bruker har foretatt seg på tidligere sider"
+
+#: TASKS.md:block 26 (paragraph)
+msgid ""
+"Writing a classic static *website* can be as simple as creating an HTML-file"
+" for each page and uploading them to a server. A *web app* (short for web "
+"*application*) is a collection of *interactive* (as opposed to static) web "
+"pages. In a web *application*, the pages may look different depending on "
+"what data is stored on the server and the actions that the user has taken at"
+" that point in time. For example, a page may look different based on:"
+msgstr ""
+"Å skrive et tradisjonelt, statisk *nettområde* kan være så enkelt som å lage"
+" en HTML-fil for hver enkelt side og laste dem opp på en tjener. En *webapp*"
+" (eller webapplikasjon, om du vil) er en samling *interaktive* nettsider (i "
+"motsetning til statiske). I en *webapplikasjon* kan sidene se annerledes ut "
+"avhengig av hva slags data som er lagret på tjeneren og de handlingene som "
+"brukeren har foretatt seg på det daværende tidspunktet. For eksempel kan en "
+"side se annerledes ut basert på:"
+
 #~ msgid ""
 #~ "You will find the output of a given file at a URL corresponding to its "
 #~ "placement within `src/routes`"

@@ -60,6 +60,26 @@ Denne workshoppen veklegger å lære bort Svelte. Du vil også få med deg grunn
 
 Vår erfaring er at både Svelte og SvelteKit har en hang til å forsvinne i bakgrunnen så snart du blir vant med dem. Kanskje vil du si deg enig med oss i at å bruke Svelte og SvelteKit føles mer som å fjerne hindre fra eksisterende webteknologier heller enn å legge til noe.
 
+##### Verktøy som SvelteKit gjør både brukere og utviklere glade
+
+Hvis webutvikling er nytt for deg, lurer du kanskje på hvorfor verktøy som SvelteKit og de andre vi har nevnt trengs. Det korte svaret er <em>for å holde konstnadene nede</em>.
+
+Å skrive et tradisjonelt, statisk _nettområde_ kan være så enkelt som å lage en HTML-fil for hver enkelt side og laste dem opp på en tjener. En _webapp_ (eller webapplikasjon, om du vil) er en samling _interaktive_ nettsider (i motsetning til statiske). I en _webapplikasjon_ kan sidene se annerledes ut avhengig av hva slags data som er lagret på tjeneren og de handlingene som brukeren har foretatt seg på det daværende tidspunktet. For eksempel kan en side se annerledes ut basert på:
+
+- hva en bruker har foretatt seg på tidligere sider
+- hvorvidt brukeren har logget seg inn
+- toppskårene som andre brukere har sendt inn til en toppliste (ja, det _var_ et frempek)
+
+Å lage en _webapplikasjon_ er vanskeligere enn å lage et _nettområde_: Sider kan ikke lagres som statiske filer; de må lages fortløpende. Å se på en side krever at tjeneren og maskinen som brukeren ser på siden med utfører ekstraarbeid for å tegne opp den endrede siden.
+
+Å lage en ny side og laste den ned har <em>bokstavelig talt</em> sin pris:
+
+- Tjeneren og brukerens maskin bruker strøm på å regne seg frem til den nye nettsiden. **Strøm er penger.**
+- De som eier tjeneren betaler for dataen den sender ut. De fleste bruker en telefon til å surfe på nettet, ofte med en begrenset mobildataplan. **Data er penger.**
+- Brukeren bruker tiden sin på å vente på siden. Brukere pleier å forlate trege applikasjoner, som gjør at de som lager webapplikasjonen tjener mindre penger. **Penger er penger.**
+
+Webutviklere kan ta grep for å få ned disse kostnadene. Dessverre krever dette tid. **Tid er penger.**
+
 ### Du må ha følgende på datamaskinen din
 
 - [node](https://nodejs.org/en/)

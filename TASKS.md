@@ -76,6 +76,38 @@ You will also pick up the basics of SvelteKit along the way.
 In our experience, both Svelte and SvelteKit have a tendency of getting out of the way once you get the hang of them.
 Perhaps you'll agree with us that using Svelte and SvelteKit feels more removing obstacles from existing web technologies rather than adding to them.
 
+##### Tools like SvelteKit make both users and developers happy
+
+If you are new to web development, you may wonder why tools like SvelteKit and the other mentioned technologies are needed.
+The short answer is <em>to keep costs down</em>.
+
+Writing a classic static _website_ can be as simple as creating an HTML-file for each page and uploading them to a server.
+A _web app_ (short for web _application_) is a collection of _interactive_ (as opposed to static) web pages. In a web _application_, the pages may look different depending on what data is stored on the server and the actions that the user has taken at that point in time.
+For example, a page may look different based on:
+
+- what the user has done on previous pages
+- whether the user has logged in
+- the high scores that other users have submitted (yes, that _was_ foreshadowing)
+
+Writing a _web application_ is harder than writing a _website_:
+Pages can not be saved as static files; they have to be created on the fly.
+Viewing a page requires the server and user's device to perform additional work to generate the changed page.
+
+Generating the page and downloading it has <em>literal</em> costs attached to it:
+
+- The server and the user's device and spend electrical power calculating the new page.
+  **Power is money.**
+- The server owners pays for the data it sends out.
+  Most people use a phone to browse the web, often with a limited mobile data plan.
+  **Data is money.**
+- The user spends his or her time waiting for the page.
+  Users have a tendency to leave slow applications, generating less income for the web application's creator.
+  **Money is money.**
+
+Web developers can take actions to reduce these costs.
+Doing so takes a lot of time, though.
+**Time is money.**
+
 ### You need the following on your computer
 
 - [node](https://nodejs.org/en/)
