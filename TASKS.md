@@ -459,7 +459,7 @@ Add an animated tail to the snake.
 
 **Warning**: The tail may blink a little in all browsers except Firefox (including Chrome and Safari) due to a layout engine bug. You can count the task as done when you have an animated tail that sometimes blinks. The task solution contains a workaround for the blinking. Unfortunately, we can not reveal what the workaround is, because that would reveal the solution to the main task.
 
-## Task 5: Components and network
+## Part 5: Components and network
 
 When you have finished this part, the game should have a game over screen with a high score list fetched from a server. On the screen, you should be able to register your name and submit it to the server along with your latest score.
 
@@ -509,7 +509,7 @@ When the score has been submitted, the component should fetch the updated high s
 
 Note: Because the database is not in permanent memory, any data you add to it will be lost when you restart the development server. If you cause the database to break by submitting invalid data, you can restart the development server to get a blank slate.
 
-## Task 6: Game Over?
+## Part 6: Game Over?
 
 Congratulations! **You were very smart to read through the tasks before starting!** Or maybe you actually did all the tasks? Wooooaaahh!!!!!1
 

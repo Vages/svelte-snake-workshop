@@ -1005,8 +1005,8 @@ msgstr ""
 "ikke fortelle hva trikset er, fordi det ville avslørt løsningen på "
 "hovedoppgaven."
 
-#: TASKS.md:block 151 (header)
-msgid "Task 5: Components and network"
+#: TASKS.md:block 171 (header)
+msgid "Part 5: Components and network"
 msgstr "Del 5: Komponenter og nettverk"
 
 #: TASKS.md:block 152 (paragraph)
@@ -1188,8 +1188,8 @@ msgstr ""
 " ødelegger databasen ved å sende inn feilformatert data, kan du starte "
 "utviklingstjeneren på nytt for å starte med blanke ark."
 
-#: TASKS.md:block 175 (header)
-msgid "Task 6: Game Over?"
+#: TASKS.md:block 195 (header)
+msgid "Part 6: Game Over?"
 msgstr "Del 6: Game Over?"
 
 #: TASKS.md:block 176 (paragraph)
