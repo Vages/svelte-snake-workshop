@@ -603,7 +603,7 @@ You can count the task as done when you have an animated tail that sometimes bli
 The task solution contains a workaround for the blinking.
 Unfortunately, we can not reveal what the workaround is, because that would reveal the solution to the main task.
 
-## Part 5: Components and network
+## Part 5: Components
 
 When you have finished this part, the game should have a game over screen with a high score list fetched from a server.
 On the screen, you should be able to register your name and submit it to the server along with your latest score.
@@ -623,10 +623,10 @@ Your task is to make the component appear on screen when the game is over and ma
 It's a bit tricky to get the component to appear on screen in an elegant way.
 We have therefore added some divs to the bottom of `+page.svelte`'s template section where you can mount the `<GameOver>` component.
 
-### Warning: The rest of part 5 is hard
+## Part 6: Network
 
-The rest of the tasks in part 5 are for people who have experience with network calls, promises and the like in Javascript.
-If you think the tasks are too hard, you can skip to part 6.
+Warning: This part is for people who have experience with network calls, promises and the like in Javascript.
+If you think the tasks are too hard, you can skip to part 7.
 
 ### Tutorial: Await blocks
 
@@ -635,7 +635,7 @@ Svelte has a special block to handle promises, called the await-block.
 
 Solve [the task about await blocks from Svelte tutorial](https://svelte.dev/tutorial/await-blocks) before you proceed.
 
-### Task 5.2: Fetch the high score list from the API
+### Task 6.1: Fetch the high score list from the API
 
 The SvelteKit process which runs during development contains a small in-memory database keeping track of a high score list that you can fetch and post your last score to.
 
@@ -651,7 +651,7 @@ To avoid bugs, use arrow functions instead (`const foo = () => {…}`).
 
 Solve [the task about text inputs and binding](https://svelte.dev/tutorial/text-inputs) before you proceed.
 
-### Task 5.3: Add name input field
+### Task 6.2: Add name input field
 
 Your task is to create a field where people can fill in their name and score.
 Also create a button that people can click on to submit their name and score in the format `{ name: string, score: number }`.

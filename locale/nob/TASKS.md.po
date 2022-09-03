@@ -1005,9 +1005,9 @@ msgstr ""
 "ikke fortelle hva trikset er, fordi det ville avslørt løsningen på "
 "hovedoppgaven."
 
-#: TASKS.md:block 171 (header)
-msgid "Part 5: Components and network"
-msgstr "Del 5: Komponenter og nettverk"
+#: TASKS.md:block 189 (header)
+msgid "Part 5: Components"
+msgstr "Del 5: Komponenter"
 
 #: TASKS.md:block 152 (paragraph)
 msgid ""
@@ -1060,19 +1060,15 @@ msgstr ""
 "måte. Derfor har vi lagt inn noen div-er nederst i template-delen av "
 "`+page.svelte` der man kan montere `<GameOver>`-komponenten."
 
-#: TASKS.md:block 159 (header)
-msgid "Warning: The rest of part 5 is hard"
-msgstr "Advarsel: Resten av del 5 er vanskelig"
-
-#: TASKS.md:block 160 (paragraph)
+#: TASKS.md:block 198 (paragraph)
 msgid ""
-"The rest of the tasks in part 5 are for people who have experience with "
-"network calls, promises and the like in Javascript. If you think the tasks "
-"are too hard, you can skip to part 6."
+"Warning: This part is for people who have experience with network calls, "
+"promises and the like in Javascript. If you think the tasks are too hard, "
+"you can skip to part 7."
 msgstr ""
-"Resten av oppgavene i del 5 er for folk som har erfaring med nettverkskall, "
-"løfter (*promises*) og lignende i Javascript. Om du synes oppgavene blir for"
-" vanskelige å løse, kan du hoppe til del 6."
+"Advarsel: Oppgavene i denne delen er for folk som har erfaring med "
+"nettverkskall, løfter (*promises*) og lignende i Javascript. Om du synes "
+"oppgavene blir for vanskelige å løse, kan du hoppe til del 7."
 
 #: TASKS.md:block 161 (header)
 msgid "Tutorial: Await blocks"
@@ -1096,9 +1092,9 @@ msgstr ""
 "Løs [oppgaven om await-blokker fra Svelte-"
 "opplæringen](https://svelte.dev/tutorial/await-blocks) før du går videre."
 
-#: TASKS.md:block 164 (header)
-msgid "Task 5.2: Fetch the high score list from the API"
-msgstr "Oppgave 5.2: Hent topplista fra API-et"
+#: TASKS.md:block 202 (header)
+msgid "Task 6.1: Fetch the high score list from the API"
+msgstr "Oppgave 6.1: Hent topplista fra API-et"
 
 #: TASKS.md:block 165 (paragraph)
 msgid ""
@@ -1152,9 +1148,9 @@ msgstr ""
 "Løs [oppgaven om tekst-input og binding](https://svelte.dev/tutorial/text-"
 "inputs) før du går videre."
 
-#: TASKS.md:block 171 (header)
-msgid "Task 5.3: Add name input field"
-msgstr "Oppgave 5.3: Legg til et felt der folk kan fylle inn navnet sitt"
+#: TASKS.md:block 209 (header)
+msgid "Task 6.2: Add name input field"
+msgstr "Oppgave 6.2: Legg til et felt der folk kan fylle inn navnet sitt"
 
 #: TASKS.md:block 172 (paragraph)
 msgid ""
@@ -2174,3 +2170,7 @@ msgid ""
 msgstr ""
 "Spillet som ligger i mappen `src/routes/finished-game` har noen funksjoner "
 "som det ikke er laget oppgaver for:"
+
+#: TASKS.md:block 197 (header)
+msgid "Part 6: Network"
+msgstr "Del 6: Nettverk"

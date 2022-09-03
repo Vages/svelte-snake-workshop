@@ -491,7 +491,7 @@ Legg til en animert hale på slangen.
 
 **Advarsel**: Halen kommer til å blinke litt i alle nettlesere utenom Firefox (deriblant Chrome og Safari) på grunn av en bug i layout-motoren. Du kan regne oppgaven som ferdig når du har en animert hale som blinker av og til. Fasiten inneholder et triks som fjerner blinkingen. Vi kan dessverre ikke fortelle hva trikset er, fordi det ville avslørt løsningen på hovedoppgaven.
 
-## Del 5: Komponenter og nettverk
+## Del 5: Komponenter
 
 Når du er ferdig med denne delen, skal spillet ha en game-over-skjerm med toppliste hentet fra en tjener. På skjermen skal man også kunne registrere navnet sitt og sende det til tjeneren sammen med siste poengsum.
 
@@ -508,9 +508,9 @@ Filen `GameOver.svelte` ligger klar i samme mappe som `+page.svelte`. Oppgaven d
 
 Det er litt knotete å få komponenten til å vises på skjermen på en elegant måte. Derfor har vi lagt inn noen div-er nederst i template-delen av `+page.svelte` der man kan montere `<GameOver>`-komponenten.
 
-### Advarsel: Resten av del 5 er vanskelig
+## Del 6: Nettverk
 
-Resten av oppgavene i del 5 er for folk som har erfaring med nettverkskall, løfter (_promises_) og lignende i Javascript. Om du synes oppgavene blir for vanskelige å løse, kan du hoppe til del 6.
+Advarsel: Oppgavene i denne delen er for folk som har erfaring med nettverkskall, løfter (_promises_) og lignende i Javascript. Om du synes oppgavene blir for vanskelige å løse, kan du hoppe til del 7.
 
 ### Opplæring: Await-blokker
 
@@ -518,7 +518,7 @@ Man bruker Javascript-løfter (_promises_ på engelsk) til handlinger som kan ta
 
 Løs [oppgaven om await-blokker fra Svelte-opplæringen](https://svelte.dev/tutorial/await-blocks) før du går videre.
 
-### Oppgave 5.2: Hent topplista fra API-et
+### Oppgave 6.1: Hent topplista fra API-et
 
 SvelteKit-prosessen som kjøres under utvikling inneholder en liten i-minne-database som holder styr på en toppliste som man kan hente ut tidligere poengsummer fra og poste sin siste poengsum til.
 
@@ -532,7 +532,7 @@ Advarsel: Akkurat når man jobber med løfter, kan navngitte funksjoner (de som 
 
 Løs [oppgaven om tekst-input og binding](https://svelte.dev/tutorial/text-inputs) før du går videre.
 
-### Oppgave 5.3: Legg til et felt der folk kan fylle inn navnet sitt
+### Oppgave 6.2: Legg til et felt der folk kan fylle inn navnet sitt
 
 Oppgaven din er å lage et felt der folk kan fylle inn navnet sitt. Lag også en knapp som folk kan trykke på for å sende inn navn og poengsum på formatet `{ name: string, score: number }`. Du kan bruke funksjonen `postScore` fra `api-helpers.js` til dette.
 
@@ -540,15 +540,15 @@ Når poengsummen er sendt inn, skal komponenten hente den oppdaterte topplisten.
 
 Merk: Fordi databasen ikke lagres til noe permanent minne, vil alt man har lagt til i den forsvinne når man starter utviklingstjeneren på nytt. Hvis du ødelegger databasen ved å sende inn feilformatert data, kan du starte utviklingstjeneren på nytt for å starte med blanke ark.
 
-## Part 7: Game Over?
+## Del 7: Game Over?
 
 Gratulerer! **Du var veldig flink som leste gjennom oppgavesettet før du begynte!** Eller kanskje du faktisk har gjort alle oppgavene? Wooooaaahh!!!!!1
 
 ![Et bilde av game over-skjermen i kabal][solitaire-win-png]
 
-Part 7 is a sandbox where you can do almost anything you want to.
+Del 7 er en sandkasse der du kan gjøre omtrent hva du vil.
 
-### Task 7.1: Improve the game
+### Oppgave 7.1: Forbedre spillet
 
 Det finnes fortsatt noen mulige forbedringer av spillet:
 
@@ -573,14 +573,14 @@ Spillet som ligger i mappen `src/routes/finished-game` har noen funksjoner som d
 
 Start med repoets tilstand slik det er etter del 6 og prøv å lage disse funksjonene uten å kikke på fasit.
 
-### Task 7.2: Other games
+### Oppgave 7.2: Alternative spill
 
 Kanskje du kan lage et av følgende spill:
 
 - [Whac-a-Mole](https://en.wikipedia.org/wiki/Whac-A-Mole) – [vi har allerede gjort et forsøk](https://mos.knowit.no/)
 - [Breakout](<https://en.wikipedia.org/wiki/Breakout_(video_game)>)
 
-### Task 7.3: After this course
+### Oppgave 7.3: Etter dette kurset
 
 Om man synes Svelte er gøy og vil lære mer, har vi følgende anbefalinger:
 
