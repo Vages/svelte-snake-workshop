@@ -1,5 +1,5 @@
 <script>
-	import { pickRandomOpenSpace } from "$lib/utils";
+	import { pickRandomOpenSpace } from "$lib/utils.js";
 
 	const TICK_TIME = 100;
 	const BOARD_DIMENSIONS = { x: 20, y: 20 };

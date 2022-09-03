@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from "svelte";
 
-	import * as api from "$lib/api-helpers";
+	import * as api from "$lib/api-helpers.js";
 	import NesContainer from "$lib/NesContainer.svelte";
 
 	export let score;
