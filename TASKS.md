@@ -465,7 +465,7 @@ Solve [the task about await blocks from Svelte tutorial](https://svelte.dev/tuto
 
 The SvelteKit process which runs during development contains a small in-memory database keeping track of a high score list that you can fetch and post your last score to.
 
-The `fetchScores` function from `api.js` fetches the high score list. Your task is to import this function and display the high score list in the `<GameOver>` component you made.
+The `fetchScores` function from `api-helpers.js` fetches the high score list. Your task is to import this function and display the high score list in the `<GameOver>` component you made.
 
 If you want to stick to the same visual theme as in the rest of the game, you can check the [documentation for the Nes.CSS theme](https://nostalgic-css.github.io/NES.css/) (or the task solution).
 
@@ -477,7 +477,7 @@ Solve [the task about text inputs and binding](https://svelte.dev/tutorial/text-
 
 ### Task 5.3: Add name input field
 
-Your task is to create a field where people can fill in their name and score. Also create a button that people can click on to submit their name and score in the format `{ name: string, score: number }`. You can use the `postScore` function from `api.js` to do this.
+Your task is to create a field where people can fill in their name and score. Also create a button that people can click on to submit their name and score in the format `{ name: string, score: number }`. You can use the `postScore` function from `api-helpers.js` to do this.
 
 When the score has been submitted, the component should fetch the updated high score list.
 

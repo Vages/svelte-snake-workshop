@@ -462,7 +462,7 @@ Løs [oppgaven om await-blokker fra Svelte-opplæringen](https://svelte.dev/tuto
 
 SvelteKit-prosessen som kjøres under utvikling inneholder en liten i-minne-database som holder styr på en toppliste som man kan hente ut tidligere poengsummer fra og poste sin siste poengsum til.
 
-Funksjonen `fetchScores` fra `api.js` henter topplista. Oppgaven din er å importere denne funksjonen og vise topplista i «Game Over»-komponenten du har laget.
+Funksjonen `fetchScores` fra `api-helpers.js` henter topplista. Oppgaven din er å importere denne funksjonen og vise topplista i «Game Over»-komponenten du har laget.
 
 Dersom du ønsker å holde deg til samme visuelle tema som i resten av spillet, kan du sjekke [dokumentasjonen for stilarket Nes.css](https://nostalgic-css.github.io/NES.css/) (eller fasiten).
 
@@ -474,7 +474,7 @@ Løs [oppgaven om tekst-input og binding](https://svelte.dev/tutorial/text-input
 
 ### Oppgave 5.3: Legg til et felt der folk kan fylle inn navnet sitt
 
-Oppgaven din er å lage et felt der folk kan fylle inn navnet sitt. Lag også en knapp som folk kan trykke på for å sende inn navn og poengsum på formatet `{ name: string, score: number }`. Du kan bruke funksjonen `postScore` fra `api.js` til dette.
+Oppgaven din er å lage et felt der folk kan fylle inn navnet sitt. Lag også en knapp som folk kan trykke på for å sende inn navn og poengsum på formatet `{ name: string, score: number }`. Du kan bruke funksjonen `postScore` fra `api-helpers.js` til dette.
 
 Når poengsummen er sendt inn, skal komponenten hente den oppdaterte topplisten.
 
