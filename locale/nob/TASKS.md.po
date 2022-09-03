@@ -1213,10 +1213,6 @@ msgstr "Oppgave 6.1: Forbedre spillet"
 msgid "There are still some possible improvements to the game:"
 msgstr "Det finnes fortsatt noen mulige forbedringer av spillet:"
 
-#: TASKS.md:block 181 (header)
-msgid "Tasks with solutions in the main branch"
-msgstr "Oppgaver med løsning i main-branchen"
-
 #: TASKS.md:block 182 (paragraph)
 msgid ""
 "We have not tried making the following things ourselves (yet), but we think "
@@ -1262,26 +1258,6 @@ msgstr ""
 "**Lydeffekter**: Legg på lyder når slangen spiser eplet, når den dør og "
 "lignende. Husk å bruke hodetelefoner dersom du deler arbeidslokale med "
 "andre."
-
-#: TASKS.md:block 184 (paragraph)
-msgid ""
-"If you feel like you are not ready to work without a solution yet, you can "
-"try a task for which a solution exists in the main branch."
-msgstr ""
-"Hvis du ikke føler deg klar for å jobbe uten fasit ennå, kan du prøve deg på"
-" en oppgave du finner løsningen på i main-branchen."
-
-#: TASKS.md:block 185 (header)
-msgid "Tasks without solutions in the main branch"
-msgstr "Oppgaver uten løsning i main-branchen"
-
-#: TASKS.md:block 186 (paragraph)
-msgid ""
-"The game in the main branch has some functions that have not been turned "
-"into explicit tasks:"
-msgstr ""
-"Spillet som ligger i main-branchen har noen funksjoner som det ikke er laget"
-" oppgaver for:"
 
 #: TASKS.md:block 187 (unordered list)
 msgid "Pause"
@@ -2173,6 +2149,31 @@ msgstr ""
 "avhengig av hva slags data som er lagret på tjeneren og de handlingene som "
 "brukeren har foretatt seg på det daværende tidspunktet. For eksempel kan en "
 "side se annerledes ut basert på:"
+
+#: TASKS.md:block 219 (header)
+msgid "Tasks without solutions in the `finished-game` folder"
+msgstr "Oppgaver uten løsning i mappen `finished-game`"
+
+#: TASKS.md:block 222 (paragraph)
+msgid ""
+"If you feel like you are not ready to work without a solution yet, you can "
+"try a task for which a solution exists in the folder `src/routes/finished-"
+"game`."
+msgstr ""
+"Hvis du ikke føler deg klar for å jobbe uten fasit ennå, kan du prøve deg på"
+" en oppgave du finner løsningen på i mappen `src/routes/finished-game`."
+
+#: TASKS.md:block 223 (header)
+msgid "Tasks with solutions in the `finished-game` folder"
+msgstr "Oppgaver med løsning i mappen `finished-game`"
+
+#: TASKS.md:block 224 (paragraph)
+msgid ""
+"The game in the folder `src/routes/finished-game` has some functions that "
+"have not been turned into explicit tasks:"
+msgstr ""
+"Spillet som ligger i mappen `src/routes/finished-game` har noen funksjoner "
+"som det ikke er laget oppgaver for:"
 
 #~ msgid ""
 #~ "You will find the output of a given file at a URL corresponding to its "

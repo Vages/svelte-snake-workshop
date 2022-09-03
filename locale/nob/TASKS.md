@@ -552,7 +552,7 @@ Del 6 er en sandkasse der du kan gjøre omtrent hva du vil.
 
 Det finnes fortsatt noen mulige forbedringer av spillet:
 
-#### Oppgaver uten løsning i main-branchen
+#### Oppgaver uten løsning i mappen `finished-game`
 
 Følgende funksjoner har vi ikke selv prøvd å lage (ennå), men vi tror de er både løsbare – og gøyale:
 
@@ -561,11 +561,11 @@ Følgende funksjoner har vi ikke selv prøvd å lage (ennå), men vi tror de er 
 - **Gullepler**: Få gullepler til å dukke opp i ny og ne i tillegg til det vanlige eplet. Disse gir 5 ekstra poeng hvis man spiser dem innen en viss tid.
 - **Lydeffekter**: Legg på lyder når slangen spiser eplet, når den dør og lignende. Husk å bruke hodetelefoner dersom du deler arbeidslokale med andre.
 
-Hvis du ikke føler deg klar for å jobbe uten fasit ennå, kan du prøve deg på en oppgave du finner løsningen på i main-branchen.
+Hvis du ikke føler deg klar for å jobbe uten fasit ennå, kan du prøve deg på en oppgave du finner løsningen på i mappen `src/routes/finished-game`.
 
-#### Oppgaver med løsning i main-branchen
+#### Oppgaver med løsning i mappen `finished-game`
 
-Spillet som ligger i main-branchen har noen funksjoner som det ikke er laget oppgaver for:
+Spillet som ligger i mappen `src/routes/finished-game` har noen funksjoner som det ikke er laget oppgaver for:
 
 - Pause
 - Startskjerm

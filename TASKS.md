@@ -674,7 +674,7 @@ Task 6 is a sandbox where you can do almost anything you want to.
 
 There are still some possible improvements to the game:
 
-#### Tasks without solutions in the main branch
+#### Tasks without solutions in the `finished-game` folder
 
 We have not tried making the following things ourselves (yet), but we think they are both solvable – and fun:
 
@@ -686,11 +686,11 @@ We have not tried making the following things ourselves (yet), but we think they
 - **Sound effects**: Add sounds when the snake eats the apple, when it dies and such.
   Remember to use headphones if you share your work area with other people.
 
-If you feel like you are not ready to work without a solution yet, you can try a task for which a solution exists in the main branch.
+If you feel like you are not ready to work without a solution yet, you can try a task for which a solution exists in the folder `src/routes/finished-game`.
 
-#### Tasks with solutions in the main branch
+#### Tasks with solutions in the `finished-game` folder
 
-The game in the main branch has some functions that have not been turned into explicit tasks:
+The game in the folder `src/routes/finished-game` has some functions that have not been turned into explicit tasks:
 
 - Pause
 - Start screen
