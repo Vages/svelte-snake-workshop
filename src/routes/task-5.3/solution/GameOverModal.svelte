@@ -2,7 +2,7 @@
 	import { onMount } from "svelte";
 
 	import * as api from "./api";
-	import NesContainer from "./NesContainer.svelte";
+	import NesContainer from "$lib/NesContainer.svelte";
 
 	export let score;
 

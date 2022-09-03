@@ -3,7 +3,7 @@
 	import { fly, scale } from "svelte/transition";
 
 	import GameOverModal from "./GameOverModal.svelte";
-	import NesContainer from "./NesContainer.svelte";
+	import NesContainer from "$lib/NesContainer.svelte";
 	import StartModal from "./StartModal.svelte";
 	import {
 		DIRECTION,

@@ -1,5 +1,5 @@
 <script>
-	import NesContainer from "./NesContainer.svelte";
+	import NesContainer from "$lib/NesContainer.svelte";
 
 	export let score;
 </script>
