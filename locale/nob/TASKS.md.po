@@ -1267,13 +1267,15 @@ msgstr "Startskjerm"
 msgid "Restart button on the game over screen"
 msgstr "Omstart-knapp på game-over-skjermen"
 
-#: TASKS.md:block 226 (paragraph)
+#: TASKS.md:block 242 (paragraph)
 msgid ""
-"Start with the state of the repository after part 6 and try to make these "
-"functions without looking at the solution."
+"Try to make these functions without looking at the code in "
+"`src/routes/finished-game`. You can use the solution to the last task as a "
+"starting point."
 msgstr ""
-"Start med repoets tilstand slik det er etter del 6 og prøv å lage disse "
-"funksjonene uten å kikke på fasit."
+"Prøv å legge til disse funksjonene uten å se på koden i "
+"`src/routes/finished-game`. Du kan bruke koden på siste oppgave som et "
+"utgangspunkt."
 
 #: TASKS.md:block 227 (header)
 msgid "Task 7.2: Other games"

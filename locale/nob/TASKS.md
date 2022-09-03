@@ -603,7 +603,7 @@ Spillet som ligger i mappen `src/routes/finished-game` har noen funksjoner som d
 - Startskjerm
 - Omstart-knapp på game-over-skjermen
 
-Start med repoets tilstand slik det er etter del 6 og prøv å lage disse funksjonene uten å kikke på fasit.
+Prøv å legge til disse funksjonene uten å se på koden i `src/routes/finished-game`. Du kan bruke koden på siste oppgave som et utgangspunkt.
 
 ### Oppgave 7.2: Alternative spill
 

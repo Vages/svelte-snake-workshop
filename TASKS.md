@@ -747,7 +747,8 @@ The game in the folder `src/routes/finished-game` has some functions that have n
 - Start screen
 - Restart button on the game over screen
 
-Start with the state of the repository after part 6 and try to make these functions without looking at the solution.
+Try to make these functions without looking at the code in `src/routes/finished-game`.
+You can use the solution to the last task as a starting point.
 
 ### Task 7.2: Other games
 
