@@ -21,11 +21,10 @@
 	];
 </script>
 
-<h1>Welcome to the Svelte workshop!</h1>
+<h1>The Svelte Snake Workshop</h1>
 
 <p>
-	If you're lucky, you'll end up with a <a href="finished-game">finished game</a
-	> at the end.
+	This is the <a href="finished-game">finished game</a> you will be trying to make.
 </p>
 
 <p>
@@ -55,8 +54,14 @@
 </table>
 
 <style>
+	h1,
+	p {
+		text-align: center;
+	}
+
 	table {
 		border: 2px solid black;
+		margin: 0 auto;
 	}
 
 	td,
