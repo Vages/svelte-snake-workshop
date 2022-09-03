@@ -122,7 +122,9 @@ Hvis du vil vite mer om hvordan filnavn konverteres til ruter, sjekk [Svelte kit
 
 ###### Sidebemerkning: SvelteKit forskjellsbehandler noen filer som starter med `+`
 
-SvelteKit forskjellsbehandler _noen_ filer dersom navnet deres starter med `+`. [For eksempel gjøres filer som heter `+server.js` til ressurser som du kan samhandle med ved hjelp av HTTP](https://kit.svelte.dev/docs/routing#server) Du finner et eksempel på en slik fil i dette prosjektet: `src/routes/api/scores/+server.js`. Noen senere oppgaver krever at du samhandler med denne ressursen. Dette kurset krever ikke at du skriver slike filer selv.
+SvelteKit forskjellsbehandler _noen_ filer dersom navnet deres starter med `+`. Ett eksempel er filer som heter [`+layout.svelte`](https://kit.svelte.dev/docs/routing#layout-layout-svelte), som påfører en utforming (layout) på `+page.svelte`-filene i mappen den befinner seg i og dennes undermapper. Filen `src/routes/+layout.svelte` legger til en bunntekst på alle sider i dette prosjektet.
+
+Vi bruker én annen `+`-prefikset fil i dette prosjektet, en [`+server.js`-fil](https://kit.svelte.dev/docs/routing#server), som du finner på `src/routes/api/scores/+server.js`. SvelteKit gjør `+server.js`-filer om til ressurser som du kan samhandle med ved hjelp av HTTP. Noen senere oppgaver krever at du samhandler med denne ressursen. Dette kurset krever ikke at du skriver slike filer selv.
 
 ## Del 1: Enkel grafikk
 

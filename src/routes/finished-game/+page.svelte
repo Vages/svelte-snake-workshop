@@ -185,20 +185,6 @@
 			/>
 		{/if}
 	</div>
-
-	<div class="signature">
-		<p>
-			Made with
-			<a href="https://svelte.dev/">
-				<img alt="Svelte logo" src="/svelte.png" />
-				Svelte
-			</a>
-			in the
-			<a href="https://github.com/Vages/svelte-snake-workshop">
-				Svelte Snake Workshop
-			</a>
-		</p>
-	</div>
 </div>
 
 {#if gameState === GAME_STATES.START_SCREEN}
@@ -262,16 +248,6 @@
 
 	.score {
 		justify-self: right;
-	}
-
-	.signature {
-		font-size: 0.5rem;
-	}
-
-	.signature img {
-		height: 2em;
-		margin-right: -0.5em;
-		margin-top: -0.25em;
 	}
 
 	.body-part,

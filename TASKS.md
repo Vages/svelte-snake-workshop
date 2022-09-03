@@ -162,11 +162,14 @@ If you want to know more about how filenames are converted to routes, check out 
 
 ###### Aside: SvelteKit treats some other files that start with `+` differently
 
-SvelteKit treats _some_ other files differently if their names start with a `+`.
-For instance, [files that are named `+server.js` are used to make resources that you can interact with using HTTP](https://kit.svelte.dev/docs/routing#server).
-You will find an example of such a file in this project: `src/routes/api/scores/+server.js`.
+SvelteKit treats _some_ files differently if their names start with a `+`.
+One example is files named [`+layout.svelte`](https://kit.svelte.dev/docs/routing#layout-layout-svelte), which apply a layout to the `+page.svelte` files in its containing folder and its sub-folders.
+The file `src/routes/+layout.svelte` adds a footer to all pages in this project.
+
+We use one other `+` prefixed file in this project, a [`+server.js` file](https://kit.svelte.dev/docs/routing#server), located at `src/routes/api/scores/+server.js`.
+SvelteKit turns `+server.js` files into resources that you can interact with using HTTP.
 Some later tasks require you to interact with this resource.
-This workshop does not require you to write such files yourself.
+This workshop does not require you to write `+server.js` files yourself.
 
 ## Part 1: Simple graphics
 

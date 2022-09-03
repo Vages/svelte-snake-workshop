@@ -90,16 +90,6 @@
 		justify-self: right;
 	}
 
-	.signature {
-		font-size: 0.5rem;
-	}
-
-	.signature img {
-		height: 2em;
-		margin-right: -0.5em;
-		margin-top: -0.25em;
-	}
-
 	.body-part,
 	.skull,
 	.apple {
