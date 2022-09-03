@@ -662,15 +662,15 @@ When the score has been submitted, the component should fetch the updated high s
 Note: Because the database is not in permanent memory, any data you add to it will be lost when you restart the development server.
 If you cause the database to break by submitting invalid data, you can restart the development server to get a blank slate.
 
-## Part 6: Game Over?
+## Part 7: Game Over?
 
 Congratulations! **You were very smart to read through the tasks before starting!** Or maybe you actually did all the tasks? Wooooaaahh!!!!!1
 
 ![A screenshot of the Solitaire game over screen][solitaire-win-png]
 
-Part 6 is a sandbox where you can do almost anything you want to.
+Part 7 is a sandbox where you can do almost anything you want to.
 
-### Task 6.1: Improve the game
+### Task 7.1: Improve the game
 
 There are still some possible improvements to the game:
 
@@ -696,16 +696,16 @@ The game in the folder `src/routes/finished-game` has some functions that have n
 - Start screen
 - Restart button on the game over screen
 
-Start with the state of the repository after task 5.3 and try to make these functions without looking at the solution.
+Start with the state of the repository after part 6 and try to make these functions without looking at the solution.
 
-### Task 6.2: Other games
+### Task 7.2: Other games
 
 Maybe you can make one of the following games:
 
 - [Whac-a-Mole](https://en.wikipedia.org/wiki/Whac-A-Mole) – [we have already tried](https://mos.knowit.no/)
 - [Breakout](<https://en.wikipedia.org/wiki/Breakout_(video_game)>)
 
-### Task 6.3: After this course
+### Task 7.3: After this course
 
 If you think Svelte is fun and want to learn more, we have the following recommendations:
 

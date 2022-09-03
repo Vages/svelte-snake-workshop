@@ -540,15 +540,15 @@ Når poengsummen er sendt inn, skal komponenten hente den oppdaterte topplisten.
 
 Merk: Fordi databasen ikke lagres til noe permanent minne, vil alt man har lagt til i den forsvinne når man starter utviklingstjeneren på nytt. Hvis du ødelegger databasen ved å sende inn feilformatert data, kan du starte utviklingstjeneren på nytt for å starte med blanke ark.
 
-## Del 6: Game Over?
+## Part 7: Game Over?
 
 Gratulerer! **Du var veldig flink som leste gjennom oppgavesettet før du begynte!** Eller kanskje du faktisk har gjort alle oppgavene? Wooooaaahh!!!!!1
 
 ![Et bilde av game over-skjermen i kabal][solitaire-win-png]
 
-Del 6 er en sandkasse der du kan gjøre omtrent hva du vil.
+Part 7 is a sandbox where you can do almost anything you want to.
 
-### Oppgave 6.1: Forbedre spillet
+### Task 7.1: Improve the game
 
 Det finnes fortsatt noen mulige forbedringer av spillet:
 
@@ -571,16 +571,16 @@ Spillet som ligger i mappen `src/routes/finished-game` har noen funksjoner som d
 - Startskjerm
 - Omstart-knapp på game-over-skjermen
 
-Start med repoets tilstand slik det er i fasiten på oppgave 5.3 og prøv å lage disse funksjonene uten å kikke på fasit.
+Start med repoets tilstand slik det er etter del 6 og prøv å lage disse funksjonene uten å kikke på fasit.
 
-### Oppgave 6.2: Alternative spill
+### Task 7.2: Other games
 
 Kanskje du kan lage et av følgende spill:
 
 - [Whac-a-Mole](https://en.wikipedia.org/wiki/Whac-A-Mole) – [vi har allerede gjort et forsøk](https://mos.knowit.no/)
 - [Breakout](<https://en.wikipedia.org/wiki/Breakout_(video_game)>)
 
-### Oppgave 6.3: Etter dette kurset
+### Task 7.3: After this course
 
 Om man synes Svelte er gøy og vil lære mer, har vi følgende anbefalinger:
 

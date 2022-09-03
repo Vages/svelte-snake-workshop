@@ -1188,9 +1188,9 @@ msgstr ""
 " ødelegger databasen ved å sende inn feilformatert data, kan du starte "
 "utviklingstjeneren på nytt for å starte med blanke ark."
 
-#: TASKS.md:block 195 (header)
-msgid "Part 6: Game Over?"
-msgstr "Del 6: Game Over?"
+#: TASKS.md:block 213 (header)
+msgid "Part 7: Game Over?"
+msgstr "Del 7: Game Over?"
 
 #: TASKS.md:block 176 (paragraph)
 msgid ""
@@ -1202,12 +1202,12 @@ msgstr ""
 "Wooooaaahh!!!!!1"
 
 #: TASKS.md:block 216 (paragraph)
-msgid "Part 6 is a sandbox where you can do almost anything you want to."
-msgstr "Del 6 er en sandkasse der du kan gjøre omtrent hva du vil."
+msgid "Part 7 is a sandbox where you can do almost anything you want to."
+msgstr "Del 7 er en sandkasse der du kan gjøre omtrent hva du vil."
 
-#: TASKS.md:block 179 (header)
-msgid "Task 6.1: Improve the game"
-msgstr "Oppgave 6.1: Forbedre spillet"
+#: TASKS.md:block 217 (header)
+msgid "Task 7.1: Improve the game"
+msgstr "Oppgave 7.1: Forbedre spillet"
 
 #: TASKS.md:block 180 (paragraph)
 msgid "There are still some possible improvements to the game:"
@@ -1271,17 +1271,17 @@ msgstr "Startskjerm"
 msgid "Restart button on the game over screen"
 msgstr "Omstart-knapp på game-over-skjermen"
 
-#: TASKS.md:block 188 (paragraph)
+#: TASKS.md:block 226 (paragraph)
 msgid ""
-"Start with the state of the repository after task 5.3 and try to make these "
+"Start with the state of the repository after part 6 and try to make these "
 "functions without looking at the solution."
 msgstr ""
-"Start med repoets tilstand slik det er i fasiten på oppgave 5.3 og prøv å "
-"lage disse funksjonene uten å kikke på fasit."
+"Start med repoets tilstand slik det er etter del 6 og prøv å lage disse "
+"funksjonene uten å kikke på fasit."
 
-#: TASKS.md:block 189 (header)
-msgid "Task 6.2: Other games"
-msgstr "Oppgave 6.2: Alternative spill"
+#: TASKS.md:block 227 (header)
+msgid "Task 7.2: Other games"
+msgstr "Oppgave 7.2: Alternative spill"
 
 #: TASKS.md:block 190 (paragraph)
 msgid "Maybe you can make one of the following games:"
@@ -1299,9 +1299,9 @@ msgstr ""
 msgid "[Breakout](https://en.wikipedia.org/wiki/Breakout_(video_game))"
 msgstr "[Breakout](https://en.wikipedia.org/wiki/Breakout_(video_game))"
 
-#: TASKS.md:block 192 (header)
-msgid "Task 6.3: After this course"
-msgstr "Oppgave 6.3: Etter dette kurset"
+#: TASKS.md:block 230 (header)
+msgid "Task 7.3: After this course"
+msgstr "Oppgave 7.3: Etter dette kurset"
 
 #: TASKS.md:block 193 (paragraph)
 msgid ""
