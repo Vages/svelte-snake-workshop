@@ -1,6 +1,5 @@
 <script>
 	import {
-		DIRECTION,
 		DIRECTION_TO_VECTOR,
 		convertKeyboardKeyToDirection,
 		getNextSnake,
