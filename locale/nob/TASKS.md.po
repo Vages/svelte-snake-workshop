@@ -1491,13 +1491,16 @@ msgstr "![Et bilde av game over-skjermen i kabal][solitaire-win-png]"
 msgid "[solitaire-win-png]: ./assets/solitaire_win.png"
 msgstr "[solitaire-win-png]: ../../assets/solitaire_win.png"
 
-#: TASKS.md:block 11 (paragraph)
+#: TASKS.md:block 12 (paragraph)
 msgid ""
-"[Svelte](https://svelte.dev) is a tiny web framework. Its home page presents"
-" it as follows:"
+"[Svelte](https://svelte.dev) is a language that you use to write single web "
+"pages. You can also use it to write components that you place in existing "
+"web pages (even if the page is written in a different language than Svelte)."
 msgstr ""
-"[Svelte](https://svelte.dev) er et bittelite webrammeverk. Hjemmesiden "
-"presenterer det som følger:"
+"[Svelte](https://svelte.dev) er et språk som brukes til å skrive "
+"enkeltstående nettsider. Man kan også bruke det til å skrive komponenter som"
+" man legger inn på eksisterende nettsider (selv om nettsiden er skrevet på "
+"et annet språk enn Svelte)."
 
 #: TASKS.md:block 97 (paragraph)
 msgid ""
@@ -1786,45 +1789,23 @@ msgstr ""
 " starter med oppgavetekst, som av og til blir fulgt av hint. Du kan la være "
 "å lese hintene dersom du trenger en ekstra utfordring"
 
-#: TASKS.md:block 29 (paragraph)
+#: TASKS.md:block 37 (paragraph)
 msgid ""
-"You will find the output of a given file at a URL corresponding to its "
-"placement within `src/routes`. Some examples:"
+"SvelteKit gives the result of each `+page.svelte` a unique URL. This URL "
+"depends on the names of the sub-folders that follow `src/routes` before "
+"finding the specific `+page.svelte` file. Some examples:"
 msgstr ""
-"Du finner resultatet av en gitt fil på en URL som samsvarer med filens "
-"plassering innad i `src/routes`. Noen eksempler:"
+"SvelteKit gir hver resultatet av `+page.svelte`-fil en unik URL. Denne URL-"
+"en avhenger av navnene på mappene som følger `src/routes` før man finner den"
+" konkrete `+page.svelte`-filen. Noen eksempler:"
 
 #: TASKS.md:block 30 (table)
 msgid "File location"
 msgstr "Filplassering"
 
 #: TASKS.md:block 30 (table)
-msgid "Output URL"
-msgstr "Resultat-URL"
-
-#: TASKS.md:block 30 (table)
 msgid "`src/routes/finished-game/+page.svelte`"
 msgstr ""
-
-#: TASKS.md:block 30 (table)
-msgid "`<server>/finished-game`"
-msgstr ""
-
-#: TASKS.md:block 30 (table)
-msgid "`<server>/task-1.1/problem`"
-msgstr ""
-
-#: TASKS.md:block 31 (paragraph)
-msgid ""
-"Replace `<server>` with the location where your server is running. During "
-"the development, the server is usually located at `localhost:5173`. This "
-"means that you should find the finished game by navigating to "
-"`http://localhost:5173/finished-game` in your web browser of choice."
-msgstr ""
-"Erstatt `<server>` med stedet der tjeneren din kjører. Under utvikling "
-"finner du vanligvis tjeneren på `localhost:5173`. Dette betyr at du kan du "
-"kan finne det ferdige spillet ved å gå til `http://localhost:5173/finished-"
-"game` i en nettleser."
 
 #: TASKS.md:block 32 (paragraph)
 msgid ""
@@ -1835,11 +1816,11 @@ msgstr ""
 "Hvis du vil vite mer om hvordan filnavn konverteres til ruter, sjekk [Svelte"
 " kit-dokumentasjonen for ruting](https://kit.svelte.dev/docs/routing)."
 
-#: TASKS.md:block 28 (header)
-msgid "File output URLs correspond to their placement within `src/routes`"
+#: TASKS.md:block 36 (header)
+msgid ""
+"`+page.svelte` files' URLs correspond to their placement within `src/routes`"
 msgstr ""
-"Resultatet av en fil finnes på en URL ut fra filens plassering i "
-"`src/routes`"
+"`+page.svelte`-filers URL-er avhenger av hvor de ligger i `src/routes`"
 
 #: TASKS.md:block 26 (paragraph)
 msgid ""
@@ -1925,6 +1906,172 @@ msgstr ""
 "\"$lib/utils.js\"`-utsagnet. Mange av funksjonene i `utils.js` er nyttige i "
 "denne såvel som senere oppgaver. Du kommer til å spare tid dersom du bruker "
 "et øyeblikk på å gjøre deg kjent med filens innhold."
+
+#: TASKS.md:block 13 (paragraph)
+msgid "Svelte's home page presents it as follows:"
+msgstr "Sveltes hjemmeside presenterer det på følgende måte"
+
+#: TASKS.md:block 18 (header)
+msgid "SvelteKit"
+msgstr ""
+
+#: TASKS.md:block 19 (paragraph)
+msgid ""
+"SvelteKit turns projects with many files written in Svelte into <q>high-"
+"performance web apps</q>, to quote [the <q>What is SvelteKit?</q> section in"
+" the SvelteKit documentation](https://kit.svelte.dev/docs/introduction#what-"
+"is-sveltekit). If you have some experience with web development (no worries "
+"if you don't) SvelteKit is to Svelte as Next.js is to React and Nuxt.js is "
+"to Vue."
+msgstr ""
+"SvelteKit gjør prosjekter med mange filer skrevet i Svelte om til "
+"<q>webapplikasjoner med høy ytelse</q>, for å sitere [<q>Hva er "
+"SvelteKit?</q>-delen av SvelteKit-"
+"dokumentasjonen](https://kit.svelte.dev/docs/introduction#what-is-"
+"sveltekit). Hvis du har litt erfaring med webutvkling (null stress hvis du "
+"ikke har det) så er SvelteKit for Svelte det Next.js er for React og Nuxt.js"
+" er for Vue."
+
+#: TASKS.md:block 20 (quote)
+msgid ""
+"Building an app with all the modern best practices is fiendishly "
+"complicated. Those practices include [build "
+"optimizations](https://vitejs.dev/guide/features.html#build-optimizations), "
+"so that you load only the minimal required code; [offline "
+"support](https://kit.svelte.dev/docs/service-workers); "
+"[prefetching](https://kit.svelte.dev/docs/link-options#data-sveltekit-"
+"prefetch) pages before the user initiates navigation; and [configurable "
+"rendering](https://kit.svelte.dev/docs/page-options) that allows you to "
+"render your app [on the server](https://kit.svelte.dev/docs/appendix#ssr) or"
+" [in the browser](https://kit.svelte.dev/docs/appendix#csr) at runtime or at"
+" [build-time](https://kit.svelte.dev/docs/page-options#prerender). SvelteKit"
+" does all the boring stuff for you so that you can get on with the creative "
+"part."
+msgstr ""
+"Å bygge en app som følger alle kunstens regler i dag er djevelsk komplisert."
+" Deriblant finner vi "
+"[byggoptimaliseringer](https://vitejs.dev/guide/features.html#build-"
+"optimizations), slik at du kan laste inn så lite kode som mulig; [bruk uten "
+"nettilkobling](https://kit.svelte.dev/docs/service-workers); "
+"[forhåndsinnlasting](https://kit.svelte.dev/docs/link-options#data-"
+"sveltekit-prefetch) av sider før brukeren trykker på siden; og [mulighet for"
+" å konfigurere sideopptegningen](https://kit.svelte.dev/docs/page-options) "
+"slik at du kan bestemme om appen skal tegnes på "
+"[tjeneren](https://kit.svelte.dev/docs/appendix#ssr) eller i "
+"[nettleseren](https://kit.svelte.dev/docs/appendix#csr) idet appen kjører "
+"eller [idet den bygges](https://kit.svelte.dev/docs/page-options#prerender)."
+" SvelteKit gjør alle de kjedelige oppgavene for deg slik at du kan "
+"konsentrere deg om de kreative."
+
+#: TASKS.md:block 20 (quote)
+msgid ""
+"&ndash; [The <q>What is SvelteKit?</q> section in the SvelteKit "
+"documentation](https://kit.svelte.dev/docs/introduction#what-is-sveltekit)"
+msgstr ""
+"&ndash; [<q>Hva er SvelteKit?</q>-delen av SvelteKit-"
+"dokumentasjonen](https://kit.svelte.dev/docs/introduction#what-is-sveltekit)"
+
+#: TASKS.md:block 21 (paragraph)
+msgid ""
+"This workshop emphasizes learning Svelte. You will also pick up the basics "
+"of SvelteKit along the way."
+msgstr ""
+"Denne workshoppen veklegger å lære bort Svelte. Du vil også få med deg "
+"grunnleggende SvelteKit på veien."
+
+#: TASKS.md:block 22 (paragraph)
+msgid ""
+"In our experience, both Svelte and SvelteKit have a tendency of getting out "
+"of the way once you get the hang of them. Perhaps you'll agree with us that "
+"using Svelte and SvelteKit feels more removing obstacles from existing web "
+"technologies rather than adding to them."
+msgstr ""
+"Vår erfaring er at både Svelte og SvelteKit har en hang til å forsvinne i "
+"bakgrunnen så snart du blir vant med dem. Kanskje vil du si deg enig med oss"
+" i at å bruke Svelte og SvelteKit føles mer som å fjerne hindre fra "
+"eksisterende webteknologier heller enn å legge til noe."
+
+#: TASKS.md:block 34 (header)
+msgid "Navigate to a folder's `+page.svelte` file to start a task"
+msgstr "Gå til en mappes `+page.svelte`-fil for å begynne med en oppgave"
+
+#: TASKS.md:block 38 (table)
+msgid "URL in local development"
+msgstr "URL under utvikling"
+
+#: TASKS.md:block 38 (table)
+msgid "URL when deployed"
+msgstr "URL når man har produksjonssatt"
+
+#: TASKS.md:block 38 (table)
+msgid "`src/routes/+page.svelte`"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "http://localhost:5173"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "https://svelte-snake-workshop.vercel.app"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "http://localhost:5173/finished-game"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "https://svelte-snake-workshop.vercel.app/finished-game"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "http://localhost:5173/task-1.1/problem"
+msgstr ""
+
+#: TASKS.md:block 38 (table)
+msgid "https://svelte-snake-workshop.vercel.app/task-1.1/problem"
+msgstr ""
+
+#: TASKS.md:block 40 (header)
+msgid ""
+"Aside: SvelteKit treats some other files that start with `+` differently"
+msgstr ""
+"Sidebemerkning: SvelteKit forskjellsbehandler noen filer som starter med `+`"
+
+#: TASKS.md:block 41 (paragraph)
+msgid ""
+"SvelteKit treats *some* other files differently if their names start with a "
+"`+`. For instance, [files that are named `+server.js` are used to make "
+"resources that you can interact with using "
+"HTTP](https://kit.svelte.dev/docs/routing#server). You will find an example "
+"of such a file in this project: `src/routes/api/scores/+server.js`. Some "
+"later tasks require you to interact with this resource. This workshop does "
+"not require you to write such files yourself."
+msgstr ""
+"SvelteKit forskjellsbehandler *noen* filer dersom navnet deres starter med "
+"`+`. [For eksempel gjøres filer som heter `+server.js` til ressurser som du "
+"kan samhandle med ved hjelp av "
+"HTTP](https://kit.svelte.dev/docs/routing#server) Du finner et eksempel på "
+"en slik fil i dette prosjektet: `src/routes/api/scores/+server.js`. Noen "
+"senere oppgaver krever at du samhandler med denne ressursen. Dette kurset "
+"krever ikke at du skriver slike filer selv."
+
+#: TASKS.md:block 35 (paragraph)
+msgid ""
+"SvelteKit turns a file within `src/routes` and its subfolders into a web "
+"page if and only if that file is named `+page.svelte`. Files that start with"
+" characters *other* than `+` (for example `my-functions.js` and "
+"`MyComponent.svelte`) are used to store reusable functions and components "
+"that we build our web page with. SvelteKit will import things from such "
+"files if a `+page.svelte` file tells it to, but will <em>not</em> turn them "
+"into web pages."
+msgstr ""
+"SvelteKit gjør en fil innenfor mappen `src/routes` og dennes undermapper om "
+"til en nettside dersom, og bare dersom, filen heter `+page.svelte`. Filer "
+"som starter med *andre* tegn enn `+` (for eksempel `mine-funksjoner.js` og "
+"`MinKomponent.svelte`) brukes til å lagre gjenbrukbare funksjoner og "
+"komponenter som vi kan bygge nettsider med. SvelteKit importerer elementer "
+"fra slike filer dersom en `+page.svelte`-fil ber om det, men gjør dem "
+"<em>ikke</em> om til nettsider."
 
 #~ msgid ""
 #~ "You will find the output of a given file at a URL corresponding to its "

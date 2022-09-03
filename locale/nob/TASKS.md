@@ -14,7 +14,9 @@ Overfor brettet ser man at poengsummen er 0.][gameplay-png]
 
 ### Svelte
 
-[Svelte](https://svelte.dev) er et bittelite webrammeverk. Hjemmesiden presenterer det som følger:
+[Svelte](https://svelte.dev) er et språk som brukes til å skrive enkeltstående nettsider. Man kan også bruke det til å skrive komponenter som man legger inn på eksisterende nettsider (selv om nettsiden er skrevet på et annet språk enn Svelte).
+
+Sveltes hjemmeside presenterer det på følgende måte
 
 > Svelte er en radikal ny tilnærming til å lage brukergrensesnitt. Mens tradisjonelle rammeverk som React og Vue gjør storparten av arbeidet sitt i nettleseren, flytter Svelte det til et kompileringssteg som finner sted når man bygger en app.
 >
@@ -46,6 +48,18 @@ rammeverk][source-code-size-png]
 >
 > … If you care about you LoC you should check out ClojureScript, AppRun, and Svelte.
 
+#### SvelteKit
+
+SvelteKit gjør prosjekter med mange filer skrevet i Svelte om til <q>webapplikasjoner med høy ytelse</q>, for å sitere [<q>Hva er SvelteKit?</q>-delen av SvelteKit-dokumentasjonen](https://kit.svelte.dev/docs/introduction#what-is-sveltekit). Hvis du har litt erfaring med webutvkling (null stress hvis du ikke har det) så er SvelteKit for Svelte det Next.js er for React og Nuxt.js er for Vue.
+
+> Å bygge en app som følger alle kunstens regler i dag er djevelsk komplisert. Deriblant finner vi [byggoptimaliseringer](https://vitejs.dev/guide/features.html#build-optimizations), slik at du kan laste inn så lite kode som mulig; [bruk uten nettilkobling](https://kit.svelte.dev/docs/service-workers); [forhåndsinnlasting](https://kit.svelte.dev/docs/link-options#data-sveltekit-prefetch) av sider før brukeren trykker på siden; og [mulighet for å konfigurere sideopptegningen](https://kit.svelte.dev/docs/page-options) slik at du kan bestemme om appen skal tegnes på [tjeneren](https://kit.svelte.dev/docs/appendix#ssr) eller i [nettleseren](https://kit.svelte.dev/docs/appendix#csr) idet appen kjører eller [idet den bygges](https://kit.svelte.dev/docs/page-options#prerender). SvelteKit gjør alle de kjedelige oppgavene for deg slik at du kan konsentrere deg om de kreative.
+>
+> &ndash; [<q>Hva er SvelteKit?</q>-delen av SvelteKit-dokumentasjonen](https://kit.svelte.dev/docs/introduction#what-is-sveltekit)
+
+Denne workshoppen veklegger å lære bort Svelte. Du vil også få med deg grunnleggende SvelteKit på veien.
+
+Vår erfaring er at både Svelte og SvelteKit har en hang til å forsvinne i bakgrunnen så snart du blir vant med dem. Kanskje vil du si deg enig med oss i at å bruke Svelte og SvelteKit føles mer som å fjerne hindre fra eksisterende webteknologier heller enn å legge til noe.
+
 ### Du må ha følgende på datamaskinen din
 
 - [node](https://nodejs.org/en/)
@@ -70,18 +84,25 @@ Hver oppgave har en tilhørende mappe: `src/routes/task-X.Y` der `X` angir kursd
 
 Hver oppgavemappe inneholder to undermapper: `problem` og `solution`. Mappen `problem` inneholder den uferdige koden. Mappen `solution` inneholder løsningen på oppgaven.
 
-##### Resultatet av en fil finnes på en URL ut fra filens plassering i `src/routes`
+##### Gå til en mappes `+page.svelte`-fil for å begynne med en oppgave
 
-Du finner resultatet av en gitt fil på en URL som samsvarer med filens plassering innad i `src/routes`. Noen eksempler:
+SvelteKit gjør en fil innenfor mappen `src/routes` og dennes undermapper om til en nettside dersom, og bare dersom, filen heter `+page.svelte`. Filer som starter med _andre_ tegn enn `+` (for eksempel `mine-funksjoner.js` og `MinKomponent.svelte`) brukes til å lagre gjenbrukbare funksjoner og komponenter som vi kan bygge nettsider med. SvelteKit importerer elementer fra slike filer dersom en `+page.svelte`-fil ber om det, men gjør dem <em>ikke</em> om til nettsider.
 
-| Filplassering                              | Resultat-URL                |
-| ------------------------------------------ | --------------------------- |
-| `src/routes/finished-game/+page.svelte`    | `<server>/finished-game`    |
-| `src/routes/task-1.1/problem/+page.svelte` | `<server>/task-1.1/problem` |
+###### `+page.svelte`-filers URL-er avhenger av hvor de ligger i `src/routes`
 
-Erstatt `<server>` med stedet der tjeneren din kjører. Under utvikling finner du vanligvis tjeneren på `localhost:5173`. Dette betyr at du kan du kan finne det ferdige spillet ved å gå til `http://localhost:5173/finished-game` i en nettleser.
+SvelteKit gir hver resultatet av `+page.svelte`-fil en unik URL. Denne URL-en avhenger av navnene på mappene som følger `src/routes` før man finner den konkrete `+page.svelte`-filen. Noen eksempler:
+
+| Filplassering | URL under utvikling | URL når man har produksjonssatt |
+| --- | --- | --- |
+| `src/routes/+page.svelte` | http://localhost:5173 | https://svelte-snake-workshop.vercel.app |
+| `src/routes/finished-game/+page.svelte` | http://localhost:5173/finished-game | https://svelte-snake-workshop.vercel.app/finished-game |
+| `src/routes/task-1.1/problem/+page.svelte` | http://localhost:5173/task-1.1/problem | https://svelte-snake-workshop.vercel.app/task-1.1/problem |
 
 Hvis du vil vite mer om hvordan filnavn konverteres til ruter, sjekk [Svelte kit-dokumentasjonen for ruting](https://kit.svelte.dev/docs/routing).
+
+###### Sidebemerkning: SvelteKit forskjellsbehandler noen filer som starter med `+`
+
+SvelteKit forskjellsbehandler _noen_ filer dersom navnet deres starter med `+`. [For eksempel gjøres filer som heter `+server.js` til ressurser som du kan samhandle med ved hjelp av HTTP](https://kit.svelte.dev/docs/routing#server) Du finner et eksempel på en slik fil i dette prosjektet: `src/routes/api/scores/+server.js`. Noen senere oppgaver krever at du samhandler med denne ressursen. Dette kurset krever ikke at du skriver slike filer selv.
 
 ## Del 1: Enkel grafikk
 

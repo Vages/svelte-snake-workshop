@@ -1,3 +1,5 @@
+<article lang="en-US">
+
 # Learn Svelte making Snake
 
 <!-- mdpo-include-codeblocks -->
@@ -23,8 +25,10 @@ A workshop by [Eirik Vågeskar](https://github.com/vages), with the help of [Joh
 
 ### Svelte
 
-[Svelte](https://svelte.dev) is a tiny web framework.
-Its home page presents it as follows:
+[Svelte](https://svelte.dev) is a language that you use to write single web pages.
+You can also use it to write components that you place in existing web pages (even if the page is written in a different language than Svelte).
+
+Svelte's home page presents it as follows:
 
 > Svelte is a radical new approach to building user interfaces.
 > Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app.
@@ -54,6 +58,23 @@ The following quotes and pictures are from [A RealWorld Comparison of Front-End 
 > ![Facsimile of https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ comparing lines of source code for Svelte and several other frameworks][source-code-size-png]
 >
 > … If you care about you LoC you should check out ClojureScript, AppRun, and Svelte.
+
+#### SvelteKit
+
+SvelteKit turns projects with many files written in Svelte into <q>high-performance web apps</q>, to quote [the <q>What is SvelteKit?</q> section in the SvelteKit documentation](https://kit.svelte.dev/docs/introduction#what-is-sveltekit).
+If you have some experience with web development (no worries if you don't) SvelteKit is to Svelte as Next.js is to React and Nuxt.js is to Vue.
+
+> Building an app with all the modern best practices is fiendishly complicated.
+> Those practices include [build optimizations](https://vitejs.dev/guide/features.html#build-optimizations), so that you load only the minimal required code; [offline support](https://kit.svelte.dev/docs/service-workers); [prefetching](https://kit.svelte.dev/docs/link-options#data-sveltekit-prefetch) pages before the user initiates navigation; and [configurable rendering](https://kit.svelte.dev/docs/page-options) that allows you to render your app [on the server](https://kit.svelte.dev/docs/appendix#ssr) or [in the browser](https://kit.svelte.dev/docs/appendix#csr) at runtime or at [build-time](https://kit.svelte.dev/docs/page-options#prerender).
+> SvelteKit does all the boring stuff for you so that you can get on with the creative part.
+>
+> &ndash; [The <q>What is SvelteKit?</q> section in the SvelteKit documentation](https://kit.svelte.dev/docs/introduction#what-is-sveltekit)
+
+This workshop emphasizes learning Svelte.
+You will also pick up the basics of SvelteKit along the way.
+
+In our experience, both Svelte and SvelteKit have a tendency of getting out of the way once you get the hang of them.
+Perhaps you'll agree with us that using Svelte and SvelteKit feels more removing obstacles from existing web technologies rather than adding to them.
 
 ### You need the following on your computer
 
@@ -87,21 +108,33 @@ Each task folder contains two sub-folders: `problem` and `solution`.
 The `problem` folder contains the unfinished code.
 The `solution` folder contains the task solution.
 
-##### File output URLs correspond to their placement within `src/routes`
+##### Navigate to a folder's `+page.svelte` file to start a task
 
-You will find the output of a given file at a URL corresponding to its placement within `src/routes`.
+SvelteKit turns a file within `src/routes` and its subfolders into a web page if and only if that file is named `+page.svelte`.
+Files that start with characters _other_ than `+` (for example `my-functions.js` and `MyComponent.svelte`) are used to store reusable functions and components that we build our web page with.
+SvelteKit will import things from such files if a `+page.svelte` file tells it to, but will <em>not</em> turn them into web pages.
+
+###### `+page.svelte` files' URLs correspond to their placement within `src/routes`
+
+SvelteKit gives the result of each `+page.svelte` a unique URL.
+This URL depends on the names of the sub-folders that follow `src/routes` before finding the specific `+page.svelte` file.
 Some examples:
 
-| File location                              | Output URL                  |
-| ------------------------------------------ | --------------------------- |
-| `src/routes/finished-game/+page.svelte`    | `<server>/finished-game`    |
-| `src/routes/task-1.1/problem/+page.svelte` | `<server>/task-1.1/problem` |
-
-Replace `<server>` with the location where your server is running.
-During the development, the server is usually located at `localhost:5173`.
-This means that you should find the finished game by navigating to `http://localhost:5173/finished-game` in your web browser of choice.
+| File location                              | URL in local development               | URL when deployed                                         |
+| ------------------------------------------ | -------------------------------------- | --------------------------------------------------------- |
+| `src/routes/+page.svelte`                  | http://localhost:5173                  | https://svelte-snake-workshop.vercel.app                  |
+| `src/routes/finished-game/+page.svelte`    | http://localhost:5173/finished-game    | https://svelte-snake-workshop.vercel.app/finished-game    |
+| `src/routes/task-1.1/problem/+page.svelte` | http://localhost:5173/task-1.1/problem | https://svelte-snake-workshop.vercel.app/task-1.1/problem |
 
 If you want to know more about how filenames are converted to routes, check out [the Svelte kit documentation on routing](https://kit.svelte.dev/docs/routing).
+
+###### Aside: SvelteKit treats some other files that start with `+` differently
+
+SvelteKit treats _some_ other files differently if their names start with a `+`.
+For instance, [files that are named `+server.js` are used to make resources that you can interact with using HTTP](https://kit.svelte.dev/docs/routing#server).
+You will find an example of such a file in this project: `src/routes/api/scores/+server.js`.
+Some later tasks require you to interact with this resource.
+This workshop does not require you to write such files yourself.
 
 ## Part 1: Simple graphics
 
@@ -665,3 +698,5 @@ Game over!
 [tasks-eng]: ./TASKS.md
 [tasks-nob]: ./locale/nob/TASKS.md
 [transfer-size-png]: ./assets/transfer_size.png
+
+</article>
