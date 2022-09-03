@@ -490,7 +490,8 @@ Solve [the task about await blocks from Svelte tutorial](https://svelte.dev/tuto
 
 The SvelteKit process which runs during development contains a small in-memory database keeping track of a high score list that you can fetch and post your last score to.
 
-The `fetchScores` function from `api-helpers.js` fetches the high score list. Your task is to import this function and display the high score list in the `<GameOver>` component you made.
+The `fetchScores` function from `src/lib/api-helpers.js` fetches the high score list.
+Your task is to import this function and display the high score list in the `<GameOver>` component you made.
 
 If you want to stick to the same visual theme as in the rest of the game, you can check the [documentation for the Nes.CSS theme](https://nostalgic-css.github.io/NES.css/) (or the task solution).
 

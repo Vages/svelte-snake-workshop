@@ -481,7 +481,7 @@ Løs [oppgaven om await-blokker fra Svelte-opplæringen](https://svelte.dev/tuto
 
 SvelteKit-prosessen som kjøres under utvikling inneholder en liten i-minne-database som holder styr på en toppliste som man kan hente ut tidligere poengsummer fra og poste sin siste poengsum til.
 
-Funksjonen `fetchScores` fra `api-helpers.js` henter topplista. Oppgaven din er å importere denne funksjonen og vise topplista i «Game Over»-komponenten du har laget.
+Funksjonen `fetchScores` fra `src/lib/api-helpers.js` henter topplista. Oppgaven din er å importere denne funksjonen og vise topplista i «Game Over»-komponenten du har laget.
 
 Dersom du ønsker å holde deg til samme visuelle tema som i resten av spillet, kan du sjekke [dokumentasjonen for stilarket Nes.css](https://nostalgic-css.github.io/NES.css/) (eller fasiten).
 

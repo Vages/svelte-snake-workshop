@@ -1108,15 +1108,15 @@ msgstr ""
 "database som holder styr på en toppliste som man kan hente ut tidligere "
 "poengsummer fra og poste sin siste poengsum til."
 
-#: TASKS.md:block 166 (paragraph)
+#: TASKS.md:block 186 (paragraph)
 msgid ""
-"The `fetchScores` function from `api-helpers.js` fetches the high score "
-"list. Your task is to import this function and display the high score list "
-"in the `<GameOver>` component you made."
+"The `fetchScores` function from `src/lib/api-helpers.js` fetches the high "
+"score list. Your task is to import this function and display the high score "
+"list in the `<GameOver>` component you made."
 msgstr ""
-"Funksjonen `fetchScores` fra `api-helpers.js` henter topplista. Oppgaven din"
-" er å importere denne funksjonen og vise topplista i «Game Over»-komponenten"
-" du har laget."
+"Funksjonen `fetchScores` fra `src/lib/api-helpers.js` henter topplista. "
+"Oppgaven din er å importere denne funksjonen og vise topplista i «Game "
+"Over»-komponenten du har laget."
 
 #: TASKS.md:block 167 (paragraph)
 msgid ""
