@@ -296,7 +296,7 @@ If the statement contains a variable assignment, Svelte can keep the value updat
 	<!-- 
 		Without `$: …`, a would have the value 6, 
 		but is automatically given the value 12 after 
-		b is given a new value. 
+		b is given a new value.
 	-->
 	The triangle's base is {b}, its height is {c} and its area is {a}.
 </div>
