@@ -25,7 +25,7 @@
 		<p>
 			Made with
 			<a href="https://svelte.dev/">
-				<img alt="Svelte logo" src="/svelte.png" />
+				<img alt="Svelte logo" width="13px" height="16px" src="/svelte.png" />
 				Svelte
 			</a>
 			and
@@ -55,7 +55,6 @@
 	}
 
 	.signature img {
-		height: 2em;
 		margin-right: -0.5em;
 		margin-top: -0.25em;
 	}
