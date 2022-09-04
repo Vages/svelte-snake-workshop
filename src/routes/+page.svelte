@@ -28,8 +28,7 @@
 	<h2>Finished game</h2>
 
 	<p>
-		You will hopefully end up with <a href="finished-game">a finished game</a> at
-		the end
+		Try <a href="/finished-game">our example of a finished game</a>.
 	</p>
 
 	<h2>Tasks</h2>
