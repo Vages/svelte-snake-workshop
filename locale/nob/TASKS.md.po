@@ -2180,11 +2180,11 @@ msgstr ""
 
 #: TASKS.md:block 51 (unordered list)
 msgid ""
-"The file `src/routes/+layout.svelte` adds a footer to all pages in this "
-"project."
+"The file `src/routes/+layout.svelte` adds a footer and document title to all"
+" pages in this project, as well as headers to the task pages."
 msgstr ""
-"Filen `src/routes/+layout.svelte` legger til en bunntekst på alle sider i "
-"dette prosjektet."
+"Filen `src/routes/+layout.svelte` legger til en bunntekst og dokumenttittel "
+"på alle sider i dette prosjektet, så vel som overskrifter på oppgavesidene."
 
 #: TASKS.md:block 51 (unordered list)
 msgid ""

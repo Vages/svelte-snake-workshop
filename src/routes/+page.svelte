@@ -22,8 +22,6 @@
 	];
 </script>
 
-<svelte:head><title>Svelte Snake Workshop</title></svelte:head>
-
 <h1>The Svelte Snake Workshop</h1>
 
 <p>
