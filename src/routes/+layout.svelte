@@ -19,10 +19,6 @@
 </footer>
 
 <style>
-	h1 {
-		text-align: center;
-	}
-
 	footer {
 		margin: 1rem;
 		display: flex;
