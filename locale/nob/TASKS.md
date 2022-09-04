@@ -122,9 +122,16 @@ Hvis du vil vite mer om hvordan filnavn konverteres til ruter, sjekk [Svelte kit
 
 ###### Sidebemerkning: SvelteKit forskjellsbehandler noen filer som starter med `+`
 
-SvelteKit forskjellsbehandler _noen_ filer dersom navnet deres starter med `+`. Ett eksempel er filer som heter [`+layout.svelte`](https://kit.svelte.dev/docs/routing#layout-layout-svelte), som påfører en utforming (layout) på `+page.svelte`-filene i mappen den befinner seg i og dennes undermapper. Filen `src/routes/+layout.svelte` legger til en bunntekst på alle sider i dette prosjektet.
+SvelteKit behandler _noen_ filer annerledes dersom navnet deres starter med `+`, for eksempel:
 
-Vi bruker én annen `+`-prefikset fil i dette prosjektet, en [`+server.js`-fil](https://kit.svelte.dev/docs/routing#server), som du finner på `src/routes/api/scores/+server.js`. SvelteKit gjør `+server.js`-filer om til ressurser som du kan samhandle med ved hjelp av HTTP. Noen senere oppgaver krever at du samhandler med denne ressursen. Dette kurset krever ikke at du skriver slike filer selv.
+- Filer som heter [`+layout.svelte`](https://kit.svelte.dev/docs/routing#layout-layout-svelte) påfører en utforming (_layout_) på `+page.svelte`-filene i mappen den befinner seg i og dennes undermapper.
+  - Filen `src/routes/+layout.svelte` legger til en bunntekst på alle sider i dette prosjektet.
+- Filer som heter [`+server.js` file](https://kit.svelte.dev/docs/routing#server) gjøres om til ressurser som du kan samhandle med ved hjelp av HTTP.
+  - Filen `src/routes/api/scores/+server.js` oppretter en enkel high score database med et API.
+- Filer som heter [`+page.js`](https://kit.svelte.dev/docs/routing#page-page-js) brukes til å gjøre valg for hvordan en `+page.svelte`-fil skal tegnes opp og å hente data for å tegne den opp.
+  - Filen `src/routes/+page.js` ber SvelteKit om å [_forhåndsopptegne_](https://kit.svelte.dev/docs/page-options#prerender) forsiden.
+
+Du trenger ikke å skrive slike filer selv i dette kurset.
 
 ## Del 1: Enkel grafikk
 

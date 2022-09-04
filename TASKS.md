@@ -162,14 +162,16 @@ If you want to know more about how filenames are converted to routes, check out 
 
 ###### Aside: SvelteKit treats some other files that start with `+` differently
 
-SvelteKit treats _some_ files differently if their names start with a `+`.
-One example is files named [`+layout.svelte`](https://kit.svelte.dev/docs/routing#layout-layout-svelte), which apply a layout to the `+page.svelte` files in its containing folder and its sub-folders.
-The file `src/routes/+layout.svelte` adds a footer to all pages in this project.
+SvelteKit treats _some_ files differently if their names start with a `+`, for example:
 
-We use one other `+` prefixed file in this project, a [`+server.js` file](https://kit.svelte.dev/docs/routing#server), located at `src/routes/api/scores/+server.js`.
-SvelteKit turns `+server.js` files into resources that you can interact with using HTTP.
-Some later tasks require you to interact with this resource.
-This workshop does not require you to write `+server.js` files yourself.
+- Files named [`+layout.svelte`](https://kit.svelte.dev/docs/routing#layout-layout-svelte) apply a layout to the `+page.svelte` files in its containing folder and its sub-folders.
+  - The file `src/routes/+layout.svelte` adds a footer to all pages in this project.
+- Files named [`+server.js` file](https://kit.svelte.dev/docs/routing#server) are turned into resources that you can interact with using HTTP.
+  - The file `src/routes/api/scores/+server.js` creates a simple high score database with an API.
+- Files named [`+page.js`](https://kit.svelte.dev/docs/routing#page-page-js) are used to set rendering options for and fetch data to render a `+page.svelte` file.
+  - The file `src/routes/+page.js` tells SvelteKit to [_prerender_](https://kit.svelte.dev/docs/page-options#prerender) the front page.
+
+You do not have to write such files yourself in this workshop.
 
 ## Part 1: Simple graphics
 
