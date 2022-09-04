@@ -22,42 +22,69 @@
 	];
 </script>
 
-<h1>The Svelte Snake Workshop</h1>
+<article>
+	<h1>The Svelte Snake Workshop</h1>
 
-<p>
-	This is the <a href="finished-game">finished game</a> you will be trying to make.
-</p>
+	<h2>Finished game</h2>
 
-<p>
-	Open the file <a
-		href="https://github.com/Vages/svelte-snake-workshop/blob/main/TASKS.md"
-		>TASKS.md</a
-	> to get going.
-</p>
+	<p>
+		You will hopefully end up with <a href="finished-game">a finished game</a> at
+		the end
+	</p>
 
-<table>
-	<thead>
-		<tr>
-			<th>Task</th>
-			<th>Problem</th>
-			<th>Solution</th>
-		</tr>
-	</thead>
-	<tbody>
-		{#each tasks as task}
-			<tr>
-				<td>{task}</td>
-				<td><a href="/task-{task}/problem">Problem</a></td>
-				<td><a href="/task-{task}/solution">Solution</a></td>
-			</tr>
-		{/each}
-	</tbody>
-</table>
+	<h2>Tasks</h2>
+
+	<p>
+		Open the file <a
+			href="https://github.com/Vages/svelte-snake-workshop/blob/main/TASKS.md"
+			>TASKS.md</a
+		> to get going.
+	</p>
+
+	<figure>
+		<figcaption>Links to the output of each task</figcaption>
+		<table>
+			<thead>
+				<tr>
+					<th>Task</th>
+					<th>Problem</th>
+					<th>Solution</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#each tasks as task}
+					<tr>
+						<td>{task}</td>
+						<td><a href="/task-{task}/problem">Problem</a></td>
+						<td><a href="/task-{task}/solution">Solution</a></td>
+					</tr>
+				{/each}
+			</tbody>
+		</table>
+	</figure>
+</article>
 
 <style>
-	h1,
-	p {
+	article {
 		text-align: center;
+		width: 35ch;
+		margin: 0 auto;
+	}
+
+	figcaption {
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+
+	p {
+		text-align: left;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+	h2 {
+		font-size: 1.2rem;
 	}
 
 	table {
