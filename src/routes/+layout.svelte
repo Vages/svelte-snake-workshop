@@ -1,5 +1,5 @@
 <script>
-	import { page } from "$app/stores";
+	import { page } from "$app/stores.js";
 
 	$: pathname = $page.url.pathname;
 	$: regexresults = /\/task-(?<task>\d+\.\d+)\/(?<description>\w+)/.exec(
