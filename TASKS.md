@@ -148,7 +148,7 @@ SvelteKit will import things from such files if a `+page.svelte` file tells it t
 
 ###### `+page.svelte` files' URLs correspond to their placement within `src/routes`
 
-SvelteKit gives the result of each `+page.svelte` a unique URL.
+SvelteKit gives the result of each `+page.svelte` it finds within `src/routes` a unique URL.
 This URL depends on the names of the sub-folders that follow `src/routes` before finding the specific `+page.svelte` file.
 Some examples:
 

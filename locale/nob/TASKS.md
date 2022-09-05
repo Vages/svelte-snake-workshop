@@ -110,9 +110,9 @@ SvelteKit gjør en fil innenfor mappen `src/routes` og dennes undermapper om til
 
 ###### `+page.svelte`-filers URL-er avhenger av hvor de ligger i `src/routes`
 
-SvelteKit gir hver resultatet av `+page.svelte`-fil en unik URL. Denne URL-en avhenger av navnene på mappene som følger `src/routes` før man finner den konkrete `+page.svelte`-filen. Noen eksempler:
+SvelteKit gir resultatet av hver `+page.svelte`-fil den finner innenfor `src/routes` en unik URL. Denne URL-en avhenger av navnene på mappene som følger `src/routes` før man finner den konkrete `+page.svelte`-filen. Noen eksempler:
 
-| Filplassering | URL under utvikling | URL når man har produksjonssatt |
+| Filplassering | URL mens man utvikler | URL når man gir ut appen |
 | --- | --- | --- |
 | `src/routes/+page.svelte` | http://localhost:5173 | https://svelte-snake-workshop.vercel.app |
 | `src/routes/finished-game/+page.svelte` | http://localhost:5173/finished-game | https://svelte-snake-workshop.vercel.app/finished-game |

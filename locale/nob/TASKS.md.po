@@ -1765,13 +1765,15 @@ msgstr ""
 
 #: TASKS.md:block 37 (paragraph)
 msgid ""
-"SvelteKit gives the result of each `+page.svelte` a unique URL. This URL "
-"depends on the names of the sub-folders that follow `src/routes` before "
-"finding the specific `+page.svelte` file. Some examples:"
+"SvelteKit gives the result of each `+page.svelte` it finds within "
+"`src/routes` a unique URL. This URL depends on the names of the sub-folders "
+"that follow `src/routes` before finding the specific `+page.svelte` file. "
+"Some examples:"
 msgstr ""
-"SvelteKit gir hver resultatet av `+page.svelte`-fil en unik URL. Denne URL-"
-"en avhenger av navnene på mappene som følger `src/routes` før man finner den"
-" konkrete `+page.svelte`-filen. Noen eksempler:"
+"SvelteKit gir resultatet av hver `+page.svelte`-fil den finner innenfor "
+"`src/routes` en unik URL. Denne URL-en avhenger av navnene på mappene som "
+"følger `src/routes` før man finner den konkrete `+page.svelte`-filen. Noen "
+"eksempler:"
 
 #: TASKS.md:block 30 (table)
 msgid "File location"
@@ -1971,11 +1973,11 @@ msgstr "Gå til en mappes `+page.svelte`-fil for å begynne med en oppgave"
 
 #: TASKS.md:block 38 (table)
 msgid "URL in local development"
-msgstr "URL under utvikling"
+msgstr "URL mens man utvikler"
 
 #: TASKS.md:block 38 (table)
 msgid "URL when deployed"
-msgstr "URL når man har produksjonssatt"
+msgstr "URL når man gir ut appen"
 
 #: TASKS.md:block 38 (table)
 msgid "`src/routes/+page.svelte`"
