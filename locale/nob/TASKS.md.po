@@ -1763,17 +1763,15 @@ msgstr ""
 " starter med oppgavetekst, som av og til blir fulgt av hint. Du kan la være "
 "å lese hintene dersom du trenger en ekstra utfordring"
 
-#: TASKS.md:block 37 (paragraph)
+#: TASKS.md:block 45 (paragraph)
 msgid ""
-"SvelteKit gives the result of each `+page.svelte` it finds within "
-"`src/routes` a unique URL. This URL depends on the names of the sub-folders "
-"that follow `src/routes` before finding the specific `+page.svelte` file. "
-"Some examples:"
+"What you type into your web browser to see the result of a "
+"`+page.svelte`-file depends on the names of the sub-folders that follow "
+"`src/routes` before finding the file. Some examples:"
 msgstr ""
-"SvelteKit gir resultatet av hver `+page.svelte`-fil den finner innenfor "
-"`src/routes` en unik URL. Denne URL-en avhenger av navnene på mappene som "
-"følger `src/routes` før man finner den konkrete `+page.svelte`-filen. Noen "
-"eksempler:"
+"Hva man skriver inn i nettleseren sin for å se resultatet av en gitt "
+"`+page.svelte`-fil avhenger av navnene på mappene som følger `src/routes` "
+"før man finner filen. Noen eksempler:"
 
 #: TASKS.md:block 30 (table)
 msgid "File location"
@@ -1791,12 +1789,6 @@ msgid ""
 msgstr ""
 "Hvis du vil vite mer om hvordan filnavn konverteres til ruter, sjekk [Svelte"
 " kit-dokumentasjonen for ruting](https://kit.svelte.dev/docs/routing)."
-
-#: TASKS.md:block 36 (header)
-msgid ""
-"`+page.svelte` files' URLs correspond to their placement within `src/routes`"
-msgstr ""
-"`+page.svelte`-filers URL-er avhenger av hvor de ligger i `src/routes`"
 
 #: TASKS.md:block 26 (paragraph)
 msgid ""

@@ -108,9 +108,7 @@ Hver oppgavemappe inneholder to undermapper: `problem` og `solution`. Mappen `pr
 
 SvelteKit gjør en fil innenfor mappen `src/routes` og dennes undermapper om til en nettside dersom, og bare dersom, filen heter `+page.svelte`. Filer som starter med _andre_ tegn enn `+` (for eksempel `mine-funksjoner.js` og `MinKomponent.svelte`) brukes til å lagre gjenbrukbare funksjoner og komponenter som vi kan bygge nettsider med. SvelteKit importerer elementer fra slike filer dersom en `+page.svelte`-fil ber om det, men gjør dem <em>ikke</em> om til nettsider.
 
-###### `+page.svelte`-filers URL-er avhenger av hvor de ligger i `src/routes`
-
-SvelteKit gir resultatet av hver `+page.svelte`-fil den finner innenfor `src/routes` en unik URL. Denne URL-en avhenger av navnene på mappene som følger `src/routes` før man finner den konkrete `+page.svelte`-filen. Noen eksempler:
+Hva man skriver inn i nettleseren sin for å se resultatet av en gitt `+page.svelte`-fil avhenger av navnene på mappene som følger `src/routes` før man finner filen. Noen eksempler:
 
 | Filplassering | URL mens man utvikler | URL når man gir ut appen |
 | --- | --- | --- |

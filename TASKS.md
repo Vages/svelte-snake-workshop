@@ -146,10 +146,7 @@ SvelteKit turns a file within `src/routes` and its subfolders into a web page if
 Files that start with characters _other_ than `+` (for example `my-functions.js` and `MyComponent.svelte`) are used to store reusable functions and components that we build our web page with.
 SvelteKit will import things from such files if a `+page.svelte` file tells it to, but will <em>not</em> turn them into web pages.
 
-###### `+page.svelte` files' URLs correspond to their placement within `src/routes`
-
-SvelteKit gives the result of each `+page.svelte` it finds within `src/routes` a unique URL.
-This URL depends on the names of the sub-folders that follow `src/routes` before finding the specific `+page.svelte` file.
+What you type into your web browser to see the result of a `+page.svelte`-file depends on the names of the sub-folders that follow `src/routes` before finding the file.
 Some examples:
 
 | File location                              | URL in local development               | URL when deployed                                         |
