@@ -24,9 +24,8 @@
 
 <svelte:head><title>Svelte Snake Workshop</title></svelte:head>
 
+<h1>Svelte Snake Workshop</h1>
 <article>
-	<h1>The Svelte Snake Workshop</h1>
-
 	<h2>Finished game</h2>
 
 	<p>
@@ -82,15 +81,35 @@
 	}
 
 	h1 {
-		font-size: 2rem;
+		font-size: 1.5rem;
+		text-align: center;
+		margin-bottom: 2.5rem;
 	}
+
+	h1::before {
+		content: "🍎";
+	}
+	h1::after {
+		content: "🐍";
+	}
+	h1::before,
+	h1::after {
+		margin: 0 1rem;
+		font-size: 4rem;
+	}
+
 	h2 {
 		font-size: 1.2rem;
+		margin-top: 2.5rem;
 	}
 
 	table {
 		border: 2px solid black;
 		margin: 0 auto;
+	}
+
+	figure {
+		margin-top: 2rem;
 	}
 
 	td,
