@@ -133,8 +133,8 @@ We have divided the workshop into 6 parts, each containing several tasks.
 Every task starts with a task text, sometimes followed by hints.
 You can avoid or delay reading the hints if you want to challenge yourself.
 
-Every task has a corresponding folder: `src/routes/task-X.Y`, `X` being the current part and `Y` the current task within that part.
-For example, the folder `src/routes/task-2.1` contains the first task of part two.
+Every task has a corresponding folder: `src/routes/tasks/X.Y`, `X` being the current part and `Y` the current task within that part.
+For example, the folder `src/routes/tasks/2.1` contains the first task of part two.
 
 Each task folder contains two sub-folders: `problem` and `solution`.
 The `problem` folder contains the unfinished code.
@@ -149,11 +149,11 @@ SvelteKit will import things from such files if a `+page.svelte` file tells it t
 What you type into your web browser to see the result of a `+page.svelte`-file depends on the names of the sub-folders that follow `src/routes` before finding the file.
 Some examples:
 
-| File location                              | URL in local development               | URL when deployed                                         |
-| ------------------------------------------ | -------------------------------------- | --------------------------------------------------------- |
-| `src/routes/+page.svelte`                  | http://localhost:5173                  | https://svelte-snake-workshop.vercel.app                  |
-| `src/routes/finished-game/+page.svelte`    | http://localhost:5173/finished-game    | https://svelte-snake-workshop.vercel.app/finished-game    |
-| `src/routes/task-1.1/problem/+page.svelte` | http://localhost:5173/task-1.1/problem | https://svelte-snake-workshop.vercel.app/task-1.1/problem |
+| File location                               | URL in local development                | URL when deployed                                          |
+| ------------------------------------------- | --------------------------------------- | ---------------------------------------------------------- |
+| `src/routes/+page.svelte`                   | http://localhost:5173                   | https://svelte-snake-workshop.vercel.app                   |
+| `src/routes/finished-game/+page.svelte`     | http://localhost:5173/finished-game     | https://svelte-snake-workshop.vercel.app/finished-game     |
+| `src/routes/tasks/1.1/problem/+page.svelte` | http://localhost:5173/tasks/1.1/problem | https://svelte-snake-workshop.vercel.app/tasks/1.1/problem |
 
 If you want to know more about how filenames are converted to routes, check out [the Svelte kit documentation on routing](https://kit.svelte.dev/docs/routing).
 
@@ -219,7 +219,7 @@ Solve [the task from the Svelte tutorial about adding data](https://svelte.dev/t
 
 ### Task 1.1: Place the apple
 
-Open the file `src/routes/task-1.1/problem/+page.svelte`.
+Open the file `src/routes/tasks/1.1/problem/+page.svelte`.
 
 The board contains a `<div class="apple" />`.
 The variable `apple` contains a coordinate.
@@ -529,7 +529,7 @@ As with many other tasks, there is a function in `game-helpers.js` that can help
 **This is a challenge task that has more to do with programming than Svelte itself.
 You can skip to the next task if you want.**
 
-In the solution to task 3.5 that you find in `task-3.5-end`, you can still make the snake eat itself if you are quick.
+In the solution to task 3.5 that you find in `tasks/3.5-end`, you can still make the snake eat itself if you are quick.
 If the snake for example moves north and the player quickly presses ⬅️ followed by ⬇️, the game ends up registering ⬇️ as the next direction.
 
 We can avoid the problem by using a _queue_ to keep track of the directions that the snake is going to move in.
@@ -631,7 +631,7 @@ We have therefore added some divs to the bottom of `+page.svelte`'s template sec
 It handles two things at once: keeping track of the game _and_ displaying it.
 We can make the file easier to read by letting another component display the game.
 
-Your task is to create a file named `Board.svelte` within `src/routes/task-5.2/problem`.
+Your task is to create a file named `Board.svelte` within `src/routes/tasks/5.2/problem`.
 Extract the code that is responsible for displaying the board, apple and snake in `+page.svelte` (from both the script, styling and template parts).
 Decide on what data to copy and what to pass as properties.
 
@@ -640,10 +640,10 @@ Delete the unused parts of the style and script blocks.
 
 #### If you mess up `+page.svelte`, use `git restore`
 
-You can use the command `git restore` to reset `src/routes/task-5.2/problem/+page.svelte` to its original state.
+You can use the command `git restore` to reset `src/routes/tasks/5.2/problem/+page.svelte` to its original state.
 
 Open your terminal and navigate to the project's root folder.
-Paste the command `git restore src/routes/task-5.2/problem/+page.svelte` and press enter.
+Paste the command `git restore src/routes/tasks/5.2/problem/+page.svelte` and press enter.
 The file should now be as it was when you started the task.
 
 #### Hint: Go up and out

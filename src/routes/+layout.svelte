@@ -1,23 +1,3 @@
-<script>
-	import { page } from "$app/stores.js";
-
-	$: pathname = $page.url.pathname;
-	$: regexresults = /\/task-(?<task>\d+\.\d+)\/(?<description>\w+)/.exec(
-		pathname
-	);
-
-	$: task = regexresults?.groups?.task;
-	$: description = regexresults?.groups?.description;
-	$: isTaskPage = task && description;
-	$: title = isTaskPage ? `${task} ${description}` : "Svelte Snake Workshop";
-</script>
-
-<svelte:head><title>{title}</title></svelte:head>
-
-{#if isTaskPage}
-	<h1>{title}</h1>
-{/if}
-
 <slot />
 
 <footer>
@@ -39,11 +19,6 @@
 </footer>
 
 <style>
-	h1 {
-		text-align: center;
-		font-size: 1rem;
-		margin: 0.5rem 0 0 0;
-	}
 	footer {
 		margin: 1rem;
 		display: flex;

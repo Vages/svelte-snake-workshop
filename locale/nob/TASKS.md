@@ -100,7 +100,7 @@ Vi har laget så å si all styling på forhånd, slik at man kan bruke mest muli
 
 Vi har delt kurset i 6 deler, hver bestående av flere oppgaver. Hver oppgave starter med oppgavetekst, som av og til blir fulgt av hint. Du kan la være å lese hintene dersom du trenger en ekstra utfordring
 
-Hver oppgave har en tilhørende mappe: `src/routes/task-X.Y` der `X` angir kursdelen og `Y` angir oppgaven innad i delen. For eksempel inneholder mappen `src/routes/task-2.1` første oppgave i del to.
+Hver oppgave har en tilhørende mappe: `src/routes/tasks/X.Y` der `X` angir kursdelen og `Y` angir oppgaven innad i delen. For eksempel inneholder mappen `src/routes/tasks/2.1` første oppgave i del to.
 
 Hver oppgavemappe inneholder to undermapper: `problem` og `solution`. Mappen `problem` inneholder den uferdige koden. Mappen `solution` inneholder løsningen på oppgaven.
 
@@ -114,7 +114,7 @@ Hva man skriver inn i nettleseren sin for å se resultatet av en gitt `+page.sve
 | --- | --- | --- |
 | `src/routes/+page.svelte` | http://localhost:5173 | https://svelte-snake-workshop.vercel.app |
 | `src/routes/finished-game/+page.svelte` | http://localhost:5173/finished-game | https://svelte-snake-workshop.vercel.app/finished-game |
-| `src/routes/task-1.1/problem/+page.svelte` | http://localhost:5173/task-1.1/problem | https://svelte-snake-workshop.vercel.app/task-1.1/problem |
+| `src/routes/tasks/1.1/problem/+page.svelte` | http://localhost:5173/tasks/1.1/problem | https://svelte-snake-workshop.vercel.app/tasks/1.1/problem |
 
 Hvis du vil vite mer om hvordan filnavn konverteres til ruter, sjekk [Svelte kit-dokumentasjonen for ruting](https://kit.svelte.dev/docs/routing).
 
@@ -177,7 +177,7 @@ Løs [oppgaven fra Svelte-opplæringen om å sette inn data](https://svelte.dev/
 
 ### Oppgave 1.1: Plasser eplet
 
-Åpne filen `src/routes/task-1.1/problem/+page.svelte`.
+Åpne filen `src/routes/tasks/1.1/problem/+page.svelte`.
 
 Brettet inneholder en `<div class="apple" />`. Variabelen `apple` inneholder en koordinat. Oppgaven din er å plassere eplet på den ruten på brettet som koordinaten angir.
 
@@ -442,7 +442,7 @@ Oppgaven din er å sørge for at slangen kun reagerer på tastetrykk som er vink
 
 **Dette er en utfordringsoppgave som har mer å gjøre med programmering enn Svelte i seg selv. Du kan hoppe til neste oppgave hvis du ønsker.**
 
-I løsningen på oppgave 3.5 som man finner i `task-3.5-end`, kan man fortsatt fremprovosere at slangen spiser seg selv hvis man er rask. Hvis slangen for eksempel beveger seg nordover og spilleren raskt trykker ⬅️ fulgt av ⬇️, ender spillet opp med å registrere ⬇️ som neste bevegelse.
+I løsningen på oppgave 3.5 som man finner i `tasks/3.5-end`, kan man fortsatt fremprovosere at slangen spiser seg selv hvis man er rask. Hvis slangen for eksempel beveger seg nordover og spilleren raskt trykker ⬅️ fulgt av ⬇️, ender spillet opp med å registrere ⬇️ som neste bevegelse.
 
 Vi kan unngå problemet ved å bruke en _kø_ til å ta vare på retningene som slangen skal bevege seg i. Når slangen skal bevege seg, henter vi neste planlagte retning og beveger slangen i den. Dette gjør det mulig å trykke inn avanserte bevegelser raskt uten å tenke på timing.
 
@@ -519,15 +519,15 @@ Det er litt knotete å få komponenten til å vises på skjermen på en elegant 
 
 `+page.svelte` er blitt litt overveldende. Den tar seg av to ting på én gang: å holde styr på spillet _og_ vise det frem. Vi kan gjøre filen lettere å lese ved å la en annen komponent ta seg av å vise frem spillet.
 
-Oppgaven din er å lage en fil kalt `Board.svelte` inni `src/routes/task-5.2/problem`. Trekk ut koden som har ansvar for å vise frem brettet, eplet og slangen i `+page.svelte` (fra både script-, styling- og template-delene). Bestem hvilke data som skal kopieres og hvilke som skal sendes som egenskaper (properties).
+Oppgaven din er å lage en fil kalt `Board.svelte` inni `src/routes/tasks/5.2/problem`. Trekk ut koden som har ansvar for å vise frem brettet, eplet og slangen i `+page.svelte` (fra både script-, styling- og template-delene). Bestem hvilke data som skal kopieres og hvilke som skal sendes som egenskaper (properties).
 
 Importer og monter den nye komponenten i `+page.svelte`, slik at den erstatter koden som tidligere pleide å vise frem spillet. Slett de ubrukte delene i style og script-blokkene
 
 #### Hvis du tuller til `+page.svelte`, bruk `git restore`
 
-Du kan bruke kommandoen `git restore` for å stille `src/routes/task-5.2/problem/+page.svelte` tilbake til sin opprinnelige tilstand.
+Du kan bruke kommandoen `git restore` for å stille `src/routes/tasks/5.2/problem/+page.svelte` tilbake til sin opprinnelige tilstand.
 
-Åpne terminalen din og naviger til rotmappen i prosjektet. Lim inn kommandoen `git restore src/routes/task-5.2/problem/+page.svelte` og trykk enter. Filen skal nå være slik den var da du begynte på oppgaven.
+Åpne terminalen din og naviger til rotmappen i prosjektet. Lim inn kommandoen `git restore src/routes/tasks/5.2/problem/+page.svelte` og trykk enter. Filen skal nå være slik den var da du begynte på oppgaven.
 
 #### Hint: Gå opp og ut
 

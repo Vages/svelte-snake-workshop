@@ -22,6 +22,8 @@
 	];
 </script>
 
+<svelte:head><title>Svelte Snake Workshop</title></svelte:head>
+
 <article>
 	<h1>The Svelte Snake Workshop</h1>
 
@@ -54,8 +56,8 @@
 				{#each tasks as task}
 					<tr>
 						<td>{task}</td>
-						<td><a href="/task-{task}/problem">Problem</a></td>
-						<td><a href="/task-{task}/solution">Solution</a></td>
+						<td><a href="/tasks/{task}/problem">Problem</a></td>
+						<td><a href="/tasks/{task}/solution">Solution</a></td>
 					</tr>
 				{/each}
 			</tbody>

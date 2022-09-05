@@ -142,6 +142,8 @@
 	$: gameOver = gameState === GAME_STATES.GAME_OVER;
 </script>
 
+<svelte:head><title>Snake</title></svelte:head>
+
 <svelte:body on:keydown={handleKeydown} />
 
 <div class="main-content min-width">
