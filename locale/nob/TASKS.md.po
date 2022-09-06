@@ -1042,11 +1042,11 @@ msgstr "Oppgave 5.1: Lag en komponent som dukker opp ved spillslutt"
 
 #: TASKS.md:block 157 (paragraph)
 msgid ""
-"The `GameOver.svelte` file is located in the same directory as "
+"The `GameOverModal.svelte` file is located in the same directory as "
 "`+page.svelte`. Your task is to make the component appear on screen when the"
 " game is over and make it show the player's score."
 msgstr ""
-"Filen `GameOver.svelte` ligger klar i samme mappe som `+page.svelte`. "
+"Filen `GameOverModal.svelte` ligger klar i samme mappe som `+page.svelte`. "
 "Oppgaven din er å sørge for at komponenten vises på skjermen når spillet er "
 "over og at den viser poengsummen som spilleren fikk."
 

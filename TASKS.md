@@ -619,7 +619,7 @@ Do the following tasks from Svelte tutorial:
 
 ### Task 5.1: Create a component that appears when the game ends
 
-The `GameOver.svelte` file is located in the same directory as `+page.svelte`.
+The `GameOverModal.svelte` file is located in the same directory as `+page.svelte`.
 Your task is to make the component appear on screen when the game is over and make it show the player's score.
 
 It's a bit tricky to get the component to appear on screen in an elegant way.
