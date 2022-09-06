@@ -585,7 +585,7 @@ Gratulerer! **Du var veldig flink som leste gjennom oppgavesettet før du begynt
 
 Del 7 er en sandkasse der du kan gjøre omtrent hva du vil.
 
-### Oppgave 7.0: Sjøsette spillet på Vercel
+### Oppgave 7.1: Sjøsette spillet på Vercel
 
 Prosjekter som er skrevet i SvelteKit kan sjøsettes til mange webtjenester. Den letteste måten å sjøsette spillet er til nettjenesten Vercel.
 
@@ -603,7 +603,7 @@ Under panseret kompilerer SvelteKit en webapp i to trinn: Den kompilerer først 
 
 [Seksjonen <q>Adapters</q> i SvelteKit-dokumentasjonen](https://kit.svelte.dev/docs/adapters) ramser opp en rekke offisielt støttede adaptere. Hvis du vil ta ansvar for webtjeneren din selv, er adapterene `node` eller `static` sannsynligvis det du skal bruke. Dokumentasjonen peker deg også i retning av adaptere som vedlikeholdes av frivillige hvis ingen av de offisielle adapterene passer behovene dine.
 
-### Oppgave 7.1: Forbedre spillet
+### Oppgave 7.2: Forbedre spillet
 
 Det finnes fortsatt noen mulige forbedringer av spillet:
 
@@ -628,14 +628,14 @@ Spillet som ligger i mappen `src/routes/finished-game` har noen funksjoner som d
 
 Prøv å legge til disse funksjonene uten å se på koden i `src/routes/finished-game`. Du kan bruke koden på siste oppgave som et utgangspunkt.
 
-### Oppgave 7.2: Alternative spill
+### Oppgave 7.3: Alternative spill
 
 Kanskje du kan lage et av følgende spill:
 
 - [Whac-a-Mole](https://en.wikipedia.org/wiki/Whac-A-Mole) – [vi har allerede gjort et forsøk](https://mos.knowit.no/)
 - [Breakout](<https://en.wikipedia.org/wiki/Breakout_(video_game)>)
 
-### Oppgave 7.3: Etter dette kurset
+### Oppgave 7.4: Etter dette kurset
 
 Om man synes Svelte er gøy og vil lære mer, har vi følgende anbefalinger:
 

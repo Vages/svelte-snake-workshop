@@ -1202,8 +1202,8 @@ msgid "Part 7 is a sandbox where you can do almost anything you want to."
 msgstr "Del 7 er en sandkasse der du kan gjøre omtrent hva du vil."
 
 #: TASKS.md:block 217 (header)
-msgid "Task 7.1: Improve the game"
-msgstr "Oppgave 7.1: Forbedre spillet"
+msgid "Task 7.2: Improve the game"
+msgstr "Oppgave 7.2: Forbedre spillet"
 
 #: TASKS.md:block 180 (paragraph)
 msgid "There are still some possible improvements to the game:"
@@ -1278,8 +1278,8 @@ msgstr ""
 "utgangspunkt."
 
 #: TASKS.md:block 227 (header)
-msgid "Task 7.2: Other games"
-msgstr "Oppgave 7.2: Alternative spill"
+msgid "Task 7.3: Other games"
+msgstr "Oppgave 7.3: Alternative spill"
 
 #: TASKS.md:block 190 (paragraph)
 msgid "Maybe you can make one of the following games:"
@@ -1298,8 +1298,8 @@ msgid "[Breakout](https://en.wikipedia.org/wiki/Breakout_(video_game))"
 msgstr "[Breakout](https://en.wikipedia.org/wiki/Breakout_(video_game))"
 
 #: TASKS.md:block 230 (header)
-msgid "Task 7.3: After this course"
-msgstr "Oppgave 7.3: Etter dette kurset"
+msgid "Task 7.4: After this course"
+msgstr "Oppgave 7.4: Etter dette kurset"
 
 #: TASKS.md:block 193 (paragraph)
 msgid ""
@@ -2353,8 +2353,8 @@ msgstr ""
 " sendes som egenskaper (properties)."
 
 #: TASKS.md:block 233 (header)
-msgid "Task 7.0: Deploy your game to Vercel"
-msgstr "Oppgave 7.0: Sjøsette spillet på Vercel"
+msgid "Task 7.1: Deploy your game to Vercel"
+msgstr "Oppgave 7.1: Sjøsette spillet på Vercel"
 
 #: TASKS.md:block 234 (paragraph)
 msgid ""

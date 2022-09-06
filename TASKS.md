@@ -720,7 +720,7 @@ Congratulations! **You were very smart to read through the tasks before starting
 
 Part 7 is a sandbox where you can do almost anything you want to.
 
-### Task 7.0: Deploy your game to Vercel
+### Task 7.1: Deploy your game to Vercel
 
 Projects written in SvelteKit can be deployed to different web services.
 The easiest way to deploy your game is to the online service Vercel.
@@ -748,7 +748,7 @@ You can also deploy the app to a server that you control yourself.
 If you want to run your own server, the `node` or `static` adapters will probably be the way to go.
 The documentation also points you in the direction of community-provided adapters that you can use if none of the officially supported adapters suit your needs.
 
-### Task 7.1: Improve the game
+### Task 7.2: Improve the game
 
 There are still some possible improvements to the game:
 
@@ -777,14 +777,14 @@ The game in the folder `src/routes/finished-game` has some functions that have n
 Try to make these functions without looking at the code in `src/routes/finished-game`.
 You can use the solution to the last task as a starting point.
 
-### Task 7.2: Other games
+### Task 7.3: Other games
 
 Maybe you can make one of the following games:
 
 - [Whac-a-Mole](https://en.wikipedia.org/wiki/Whac-A-Mole) – [we have already tried](https://mos.knowit.no/)
 - [Breakout](<https://en.wikipedia.org/wiki/Breakout_(video_game)>)
 
-### Task 7.3: After this course
+### Task 7.4: After this course
 
 If you think Svelte is fun and want to learn more, we have the following recommendations:
 
