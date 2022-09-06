@@ -511,7 +511,7 @@ Gjør følgende oppgaver fra Svelte-opplæringen:
 
 ### Oppgave 5.1: Lag en komponent som dukker opp ved spillslutt
 
-Filen `GameOver.svelte` ligger klar i samme mappe som `+page.svelte`. Oppgaven din er å sørge for at komponenten vises på skjermen når spillet er over og at den viser poengsummen som spilleren fikk.
+Filen `GameOverModal.svelte` ligger klar i samme mappe som `+page.svelte`. Oppgaven din er å sørge for at komponenten vises på skjermen når spillet er over og at den viser poengsummen som spilleren fikk.
 
 Det er litt knotete å få komponenten til å vises på skjermen på en elegant måte. Derfor har vi lagt inn noen div-er nederst i template-delen av `+page.svelte` der man kan montere `<GameOver>`-komponenten.
 
