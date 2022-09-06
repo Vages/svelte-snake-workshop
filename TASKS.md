@@ -569,7 +569,7 @@ Your task is to make the new apple pop up in its place when the snake eats the o
 
 To make this work, you need to import the transition `scale` from `svelte/transition` and add it to the right element.
 To limit the animation to when the apple pops up, you should use `in:` instead of `transition:`.
-(You can also try [other transitions](https://svelte.dev/docs#svelte_transition).)
+(You can also try [other transitions](https://svelte.dev/docs#run-time-svelte-transition).)
 
 ### Hint: Use a suitable block
 

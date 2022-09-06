@@ -472,7 +472,7 @@ I Svelte følger modulen `svelte/transition` med. Den gjør at man kan animere e
 
 Oppgaven din er å få det nye eplet til å sprette opp på plassen sin når slangen spiser det forrige eplet.
 
-For å få til dette skal du importere overgangen `scale` fra `svelte/transition` og legge den på riktig element. For å begrense animasjonen til når eplet dukker opp, skal du bruke `in:` i stedet for `transition:`. (Du kan også prøve [andre overganger](https://svelte.dev/docs#svelte_transition).)
+For å få til dette skal du importere overgangen `scale` fra `svelte/transition` og legge den på riktig element. For å begrense animasjonen til når eplet dukker opp, skal du bruke `in:` i stedet for `transition:`. (Du kan også prøve [andre overganger](https://svelte.dev/docs#run-time-svelte-transition).)
 
 ### Hint: Bruk en egnet blokk
 
