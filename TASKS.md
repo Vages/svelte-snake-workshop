@@ -741,7 +741,8 @@ If you want to update your app, run `npx vercel` again.
 Under the hood, SvelteKit compiles a web app in two steps:
 It first compiles the app into an intermediary format, found in the folder `.svelte-kit`.
 This output is then run through an adapter which converts this output to the environment that you want to deploy to.
-This may be some other hosting service, like Cloudflage Pages or Netlify. You can also deploy the app to a server that you control yourself.
+This may be some other hosting service, like Cloudflage Pages or Netlify.
+You can also deploy the app to a server that you control yourself.
 
 [The <q>Adapters</q> section in the SvelteKit documentation](https://kit.svelte.dev/docs/adapters) lists a number of officially supported adapters.
 If you want to run your own server, the `node` or `static` adapters will probably be the way to go.
