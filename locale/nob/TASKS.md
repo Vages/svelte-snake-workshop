@@ -585,6 +585,24 @@ Gratulerer! **Du var veldig flink som leste gjennom oppgavesettet før du begynt
 
 Del 7 er en sandkasse der du kan gjøre omtrent hva du vil.
 
+### Oppgave 7.0: Sjøsette spillet på Vercel
+
+Prosjekter som er skrevet i SvelteKit kan sjøsettes til mange webtjenester. Den letteste måten å sjøsette spillet er til nettjenesten Vercel.
+
+#### Sjøsette til Vercel
+
+Å sjøsette en Svelte-app til Vercel er så enkelt som å skrive `npx vercel` i terminalen. Hvis du ikke allerede har registrert deg eller logget inn på Vercel, vil verktøyet hjelpe deg å gjøre det.
+
+Svar med standardsvaret på alle spørsmål. Etter ett minutt eller to vil Vercel ha sjøsatt appen for deg. Det siste den skriver ut skal være URL-en der du finner appen din.
+
+Hvis du vil oppdatere appen, kjør `npx vercel` igjen.
+
+#### Andre tjenester du kan sjøsette til
+
+Under panseret kompilerer SvelteKit en webapp i to trinn: Den kompilerer først appen til et mellomformat, som finnes i mappen `.svelte-kit`. Denne utdataen blir deretter kjørt gjennom et adapter som tilpasser utdataen til miljøet du vil sjøsette til. Dette kan være en annen vertstjeneste, som Cloudflare Pages eller Netlify. Du kan også legge appen på en webtjener du styrer selv.
+
+[Seksjonen <q>Adapters</q> i SvelteKit-dokumentasjonen](https://kit.svelte.dev/docs/adapters) ramser opp en rekke offisielt støttede adaptere. Hvis du vil ta ansvar for webtjeneren din selv, er adapterene `node` eller `static` sannsynligvis det du skal bruke. Dokumentasjonen peker deg også i retning av adaptere som vedlikeholdes av frivillige hvis ingen av de offisielle adapterene passer behovene dine.
+
 ### Oppgave 7.1: Forbedre spillet
 
 Det finnes fortsatt noen mulige forbedringer av spillet:

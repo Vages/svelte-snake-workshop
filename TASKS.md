@@ -720,6 +720,33 @@ Congratulations! **You were very smart to read through the tasks before starting
 
 Part 7 is a sandbox where you can do almost anything you want to.
 
+### Task 7.0: Deploy your game to Vercel
+
+Projects written in SvelteKit can be deployed to different web services.
+The easiest way to deploy your game is to the online service Vercel.
+
+#### Deploying to Vercel
+
+Deploying a Svelte app to Vercel is as simple as typing `npx vercel` into your terminal.
+If you have not already signed up for or logged into Vercel, the tool will help you do that.
+
+Give the default answer to all questions.
+After a minute or two, Vercel will have deployed the app for you.
+Its final output should be the URL where you can find your app.
+
+If you want to update your app, run `npx vercel` again.
+
+#### Other services that you can deploy to
+
+Under the hood, SvelteKit compiles a web app in two steps:
+It first compiles the app into an intermediary format, found in the folder `.svelte-kit`.
+This output is then run through an adapter which converts this output to the environment that you want to deploy to.
+This may be some other hosting service, like Cloudflage Pages or Netlify. You can also deploy the app to a server that you control yourself.
+
+[The <q>Adapters</q> section in the SvelteKit documentation](https://kit.svelte.dev/docs/adapters) lists a number of officially supported adapters.
+If you want to run your own server, the `node` or `static` adapters will probably be the way to go.
+The documentation also points you in the direction of community-provided adapters that you can use if none of the officially supported adapters suit your needs.
+
 ### Task 7.1: Improve the game
 
 There are still some possible improvements to the game:

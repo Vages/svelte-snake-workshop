@@ -2352,6 +2352,83 @@ msgstr ""
 "og template-delene). Bestem hvilke data som skal kopieres og hvilke som skal"
 " sendes som egenskaper (properties)."
 
+#: TASKS.md:block 233 (header)
+msgid "Task 7.0: Deploy your game to Vercel"
+msgstr "Oppgave 7.0: Sjøsette spillet på Vercel"
+
+#: TASKS.md:block 234 (paragraph)
+msgid ""
+"Projects written in SvelteKit can be deployed to different web services. The"
+" easiest way to deploy your game is to the online service Vercel."
+msgstr ""
+"Prosjekter som er skrevet i SvelteKit kan sjøsettes til mange webtjenester. "
+"Den letteste måten å sjøsette spillet er til nettjenesten Vercel."
+
+#: TASKS.md:block 235 (header)
+msgid "Deploying to Vercel"
+msgstr "Sjøsette til Vercel"
+
+#: TASKS.md:block 236 (paragraph)
+msgid ""
+"Deploying a Svelte app to Vercel is as simple as typing `npx vercel` into "
+"your terminal. If you have not already signed up for or logged into Vercel, "
+"the tool will help you do that."
+msgstr ""
+"Å sjøsette en Svelte-app til Vercel er så enkelt som å skrive `npx vercel` i"
+" terminalen. Hvis du ikke allerede har registrert deg eller logget inn på "
+"Vercel, vil verktøyet hjelpe deg å gjøre det."
+
+#: TASKS.md:block 237 (paragraph)
+msgid ""
+"Give the default answer to all questions. After a minute or two, Vercel will"
+" have deployed the app for you. Its final output should be the URL where you"
+" can find your app."
+msgstr ""
+"Svar med standardsvaret på alle spørsmål. Etter ett minutt eller to vil "
+"Vercel ha sjøsatt appen for deg. Det siste den skriver ut skal være URL-en "
+"der du finner appen din."
+
+#: TASKS.md:block 238 (paragraph)
+msgid "If you want to update your app, run `npx vercel` again."
+msgstr "Hvis du vil oppdatere appen, kjør `npx vercel` igjen."
+
+#: TASKS.md:block 239 (header)
+msgid "Other services that you can deploy to"
+msgstr "Andre tjenester du kan sjøsette til"
+
+#: TASKS.md:block 240 (paragraph)
+msgid ""
+"Under the hood, SvelteKit compiles a web app in two steps: It first compiles"
+" the app into an intermediary format, found in the folder `.svelte-kit`. "
+"This output is then run through an adapter which converts this output to the"
+" environment that you want to deploy to. This may be some other hosting "
+"service, like Cloudflage Pages or Netlify. You can also deploy the app to a "
+"server that you control yourself."
+msgstr ""
+"Under panseret kompilerer SvelteKit en webapp i to trinn: Den kompilerer "
+"først appen til et mellomformat, som finnes i mappen `.svelte-kit`. Denne "
+"utdataen blir deretter kjørt gjennom et adapter som tilpasser utdataen til "
+"miljøet du vil sjøsette til. Dette kan være en annen vertstjeneste, som "
+"Cloudflare Pages eller Netlify. Du kan også legge appen på en webtjener du "
+"styrer selv."
+
+#: TASKS.md:block 241 (paragraph)
+msgid ""
+"[The <q>Adapters</q> section in the SvelteKit "
+"documentation](https://kit.svelte.dev/docs/adapters) lists a number of "
+"officially supported adapters. If you want to run your own server, the "
+"`node` or `static` adapters will probably be the way to go. The "
+"documentation also points you in the direction of community-provided "
+"adapters that you can use if none of the officially supported adapters suit "
+"your needs."
+msgstr ""
+"[Seksjonen <q>Adapters</q> i SvelteKit-"
+"dokumentasjonen](https://kit.svelte.dev/docs/adapters) ramser opp en rekke "
+"offisielt støttede adaptere. Hvis du vil ta ansvar for webtjeneren din selv,"
+" er adapterene `node` eller `static` sannsynligvis det du skal bruke. "
+"Dokumentasjonen peker deg også i retning av adaptere som vedlikeholdes av "
+"frivillige hvis ingen av de offisielle adapterene passer behovene dine."
+
 #~ msgid ""
 #~ "SvelteKit treats *some* other files differently if their names start with a "
 #~ "`+`. For instance, [files that are named `+server.js` are used to make "
