@@ -114,6 +114,18 @@
 	const norskTaskLink = (hash) =>
 		"https://github.com/Vages/svelte-snake-workshop/blob/main/locale/nob/TASKS.md#" +
 		hash;
+
+	const nextProblemUrl = (task) => {
+		const tasks = Object.keys(tasksData);
+		const index = tasks.findIndex((task2) => task2 === task);
+
+		const nextTask = tasks[index + 1];
+		if (nextTask === undefined) {
+			return undefined;
+		}
+		return "/tasks/" + nextTask + "/problem";
+	};
+	$: nextProblem = nextProblemUrl(task);
 </script>
 
 <svelte:head><title>{task} {description}</title></svelte:head>
@@ -130,6 +142,12 @@
 			{:else}
 				<li><a href="problem">🛠 Work area</a></li>
 			{/if}
+
+			<li style="">
+				{#if nextProblem !== undefined}
+					<a href={nextProblem}> Next </a>
+				{/if}
+			</li>
 		</ul>
 	</nav>
 </header>
@@ -146,7 +164,7 @@
 
 	<p>
 		<a href={norskTaskLink(tasksData[task].hashNorsk)} target="_blank"
-			>🇳🇴 Norsk oppgave beskrivelse
+			>🇳🇴 Norsk oppgavebeskrivelse
 		</a>
 	</p>
 </div>
@@ -160,7 +178,7 @@
 	header {
 		display: block;
 		margin: 0 auto;
-		width: 18ch;
+		width: 24ch;
 	}
 
 	h1 {
