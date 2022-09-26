@@ -125,29 +125,47 @@
 		}
 		return "/tasks/" + nextTask + "/problem";
 	};
+	const previousProblemUrl = (task) => {
+		const tasks = Object.keys(tasksData);
+		const index = tasks.findIndex((task2) => task2 === task);
+
+		const previousTask = tasks[index - 1];
+		if (previousTask === undefined) {
+			return undefined;
+		}
+		return "/tasks/" + previousTask + "/problem";
+	};
 	$: nextProblem = nextProblemUrl(task);
+	$: previousProblem = previousProblemUrl(task);
 </script>
 
 <svelte:head><title>{task} {description}</title></svelte:head>
 
 <header>
 	<h1>{description.charAt(0).toUpperCase()}{description.slice(1)} {task}</h1>
+	<h2>{tasksData[task].title}</h2>
 	<nav>
-		<ul>
-			<li style="justify-self: right">
+		<ul class="three-column-grid">
+			<li style="grid-column: 2">
 				<a href="/">🏡 Go home</a>
 			</li>
-			{#if description === "problem"}
-				<li><a href="solution">🏁 Solution</a></li>
-			{:else}
-				<li><a href="problem">🛠 Work area</a></li>
-			{/if}
 
-			<li style="">
-				{#if nextProblem !== undefined}
-					<a href={nextProblem}> Next </a>
-				{/if}
+			{#if previousProblem !== undefined}
+				<li style="grid-row: 2; grid-column: 1">
+					⏮ <a href={previousProblem}>Back</a>
+				</li>
+			{/if}
+			<li style="grid-row: 2; grid-column: 2">
+				{#if description === "problem"}
+					<a href="solution">🏁 Show solution</a>
+				{:else}
+					<li><a href="problem">🛠 Show problem</a></li>{/if}
 			</li>
+			{#if nextProblem !== undefined}
+				<li style="grid-row: 2; grid-column: 3">
+					<a href={nextProblem}>Next ⏭</a>
+				</li>
+			{/if}
 		</ul>
 	</nav>
 </header>
@@ -155,7 +173,6 @@
 <slot />
 
 <div class="title">
-	<h2>{tasksData[task].title}</h2>
 	<p>
 		<a href={englishTaskLink(tasksData[task].hash)} target="_blank"
 			>🇬🇧 English task description</a
@@ -171,14 +188,15 @@
 
 <style>
 	.title {
+		text-align: center;
 		display: block;
-		margin: 0 auto;
+		margin: 1rem auto;
 		width: 34ch;
 	}
 	header {
+		text-align: center;
 		display: block;
 		margin: 0 auto;
-		width: 24ch;
 	}
 
 	h1 {
@@ -191,12 +209,19 @@
 		margin: 0.5rem 0 0 0;
 	}
 
+	nav {
+		margin: 0 auto;
+		width: 30ch;
+	}
+
 	ul {
 		font-size: 0.8rem;
 		padding-left: 0;
 
-		display: flex;
-		gap: 1.4rem;
+		display: grid;
+		grid-auto-flow: row;
+		grid-template-columns: repeat(3, 9srem);
+		gap: 0.5rem 0;
 
 		list-style: none;
 	}
