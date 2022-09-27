@@ -16,7 +16,7 @@ Overfor brettet ser man at poengsummen er 0.][gameplay-png]
 
 [Svelte](https://svelte.dev) er et språk som brukes til å skrive enkeltstående nettsider. Man kan også bruke det til å skrive komponenter som man legger inn på eksisterende nettsider (selv om nettsiden er skrevet på et annet språk enn Svelte).
 
-Bloggposten [<q>Introducing Svelte, and Comparing Svelte with React and Vue</q> by Josh Collinsworth](https://joshcollinsworth.com/blog/introducing-svelte-comparing-with-react-vue) presenterer Svelte grundig og måler det opp mot React og Vue (TL;DR: mindre filstørrelse, bedre utvikleropplevelse).
+Bloggposten [<q>Introducing Svelte, and Comparing Svelte with React and Vue</q> av Josh Collinsworth](https://joshcollinsworth.com/blog/introducing-svelte-comparing-with-react-vue) presenterer Svelte grundig og måler det opp mot React og Vue (TL;DR: mindre filstørrelse, bedre utvikleropplevelse).
 
 #### SvelteKit
 

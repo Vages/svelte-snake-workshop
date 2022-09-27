@@ -2315,7 +2315,7 @@ msgid ""
 "experience)."
 msgstr ""
 "Bloggposten [<q>Introducing Svelte, and Comparing Svelte with React and "
-"Vue</q> by Josh Collinsworth](https://joshcollinsworth.com/blog/introducing-"
+"Vue</q> av Josh Collinsworth](https://joshcollinsworth.com/blog/introducing-"
 "svelte-comparing-with-react-vue) presenterer Svelte grundig og måler det opp"
 " mot React og Vue (TL;DR: mindre filstørrelse, bedre utvikleropplevelse)."
 
