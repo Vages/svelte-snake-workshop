@@ -16,37 +16,7 @@ Overfor brettet ser man at poengsummen er 0.][gameplay-png]
 
 [Svelte](https://svelte.dev) er et språk som brukes til å skrive enkeltstående nettsider. Man kan også bruke det til å skrive komponenter som man legger inn på eksisterende nettsider (selv om nettsiden er skrevet på et annet språk enn Svelte).
 
-Sveltes hjemmeside presenterer det på følgende måte
-
-> Svelte er en radikal ny tilnærming til å lage brukergrensesnitt. Mens tradisjonelle rammeverk som React og Vue gjør storparten av arbeidet sitt i nettleseren, flytter Svelte det til et kompileringssteg som finner sted når man bygger en app.
->
-> I stedet for å bruke teknikker som virtuell-dom-sammenligning, skriver Svelte kode som oppdaterer domen med kirurgisk presisjon når tilstanden i appen endrer seg.
->
-> Vi er stolte over at Svelte nylig ble stemt frem som det [best likte rammeverket](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-web-frameworks) med [de mest fornøyde utviklerne](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/) i to store undersøkelser blant programvareutviklere. Vi tror du også vil like det svært godt. Les [bloggposten som introduserte Svelte versjon 3](https://svelte.dev/blog/svelte-3-rethinking-reactivity) for å lære mer.
-
-Ifølge flere sammenlignende tester blir en applikasjon mindre om man skriver den i Svelte enn i React eller Vue. De følgende sitatene og bildene er fra [A RealWorld Comparison of Front-End Frameworks with Benchmarks (2019 update)](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/):
-
-> ##### Metric #2: Size
->
-> … The smaller the file, the faster the download, and less to parse.
->
-> ![Faksimile fra
-https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/
-som sammenligner overføringsstørrelse for Svelte og flere andre
-rammeverk][transfer-size-png]
->
-> … Svelte — The magical disappearing UI framework — really holds true to its punch line.
-
-> ##### Metric #3: Lines of Code
->
-> … This shows how succinct given library/framework/language is. How many lines of code do you need to implement almost the same app (some of them have a bit more belts and whistles) accordingly to the specification.
->
-> ![Faksimile fra
-https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/
-som sammenligner kildekodelinjer for Svelte og flere andre
-rammeverk][source-code-size-png]
->
-> … If you care about you LoC you should check out ClojureScript, AppRun, and Svelte.
+Bloggposten [<q>Introducing Svelte, and Comparing Svelte with React and Vue</q> by Josh Collinsworth](https://joshcollinsworth.com/blog/introducing-svelte-comparing-with-react-vue) presenterer Svelte grundig og måler det opp mot React og Vue (TL;DR: mindre filstørrelse, bedre utvikleropplevelse).
 
 #### SvelteKit
 
@@ -652,8 +622,6 @@ Da gjenstår det kun å si at vi håper du har kost deg med kurset vårt. Game o
 [axes-png]: ../../assets/axes.png
 [gameplay-png]: ../../assets/gameplay.png
 [solitaire-win-png]: ../../assets/solitaire_win.png
-[source-code-size-png]: ../../assets/source_code_size.png
 [task-1-2-end-png]: ../../assets/task_1.2_end.png
 [tasks-eng]: ../../TASKS.md
 [tasks-nob]: .
-[transfer-size-png]: ../../assets/transfer_size.png

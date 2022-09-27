@@ -28,36 +28,7 @@ A workshop by [Eirik Vågeskar](https://github.com/vages), with the help of [Joh
 [Svelte](https://svelte.dev) is a language that you use to write single web pages.
 You can also use it to write components that you place in existing web pages (even if the page is written in a different language than Svelte).
 
-Svelte's home page presents it as follows:
-
-> Svelte is a radical new approach to building user interfaces.
-> Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app.
->
-> Instead of using techniques like virtual DOM diffing, Svelte writes code that surgically updates the DOM when the state of your app changes.
->
-> We're proud that Svelte was recently voted the [most loved framework](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-web-frameworks) with the [most satisfied developers](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/) in a pair of industry surveys.
-> We think you'll love it too.
-> Read [the introductory blog post](https://svelte.dev/blog/svelte-3-rethinking-reactivity) to learn more.
-
-According to multiple benchmarks, an application written in Svelte usually becomes smaller and faster than an equivalent application in React or Vue.
-The following quotes and pictures are from [A RealWorld Comparison of Front-End Frameworks with Benchmarks (2019 update)](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/):
-
-> ##### Metric #2: Size
->
-> … The smaller the file, the faster the download, and less to parse.
->
-> ![Facsimile of https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ comparing transfer size for Svelte and several other frameworks][transfer-size-png]
->
-> … Svelte — The magical disappearing UI framework — really holds true to its punch line.
-
-> ##### Metric #3: Lines of Code
->
-> … This shows how succinct given library/framework/language is.
-> How many lines of code do you need to implement almost the same app (some of them have a bit more belts and whistles) accordingly to the specification.
->
-> ![Facsimile of https://www.freecodecamp.org/news/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ comparing lines of source code for Svelte and several other frameworks][source-code-size-png]
->
-> … If you care about you LoC you should check out ClojureScript, AppRun, and Svelte.
+The blogpost [<q>Introducing Svelte, and Comparing Svelte with React and Vue</q> by Josh Collinsworth](https://joshcollinsworth.com/blog/introducing-svelte-comparing-with-react-vue) gives a thorough introduction to Svelte and how it compares to React and Vue (TL;DR: smaller files, better developer experience).
 
 #### SvelteKit
 
@@ -804,10 +775,8 @@ Game over!
 [axes-png]: ./assets/axes.png
 [gameplay-png]: ./assets/gameplay.png
 [solitaire-win-png]: ./assets/solitaire_win.png
-[source-code-size-png]: ./assets/source_code_size.png
 [task-1-2-end-png]: ./assets/task_1.2_end.png
 [tasks-eng]: ./TASKS.md
 [tasks-nob]: ./locale/nob/TASKS.md
-[transfer-size-png]: ./assets/transfer_size.png
 
 </article>

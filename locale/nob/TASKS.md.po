@@ -14,46 +14,6 @@ msgstr "Intro: Vi skal lage spillet Snake i Svelte"
 msgid "Svelte"
 msgstr "Svelte"
 
-#: TASKS.md:block 7 (quote)
-msgid ""
-"Svelte is a radical new approach to building user interfaces. Whereas "
-"traditional frameworks like React and Vue do the bulk of their work in the "
-"browser, Svelte shifts that work into a compile step that happens when you "
-"build your app."
-msgstr ""
-"Svelte er en radikal ny tilnærming til å lage brukergrensesnitt. Mens "
-"tradisjonelle rammeverk som React og Vue gjør storparten av arbeidet sitt i "
-"nettleseren, flytter Svelte det til et kompileringssteg som finner sted når "
-"man bygger en app."
-
-#: TASKS.md:block 7 (quote)
-msgid ""
-"Instead of using techniques like virtual DOM diffing, Svelte writes code "
-"that surgically updates the DOM when the state of your app changes."
-msgstr ""
-"I stedet for å bruke teknikker som virtuell-dom-sammenligning, skriver "
-"Svelte kode som oppdaterer domen med kirurgisk presisjon når tilstanden i "
-"appen endrer seg."
-
-#: TASKS.md:block 7 (quote)
-msgid ""
-"We're proud that Svelte was recently voted the [most loved "
-"framework](https://insights.stackoverflow.com/survey/2021#section-most-"
-"loved-dreaded-and-wanted-web-frameworks) with the [most satisfied "
-"developers](https://2020.stateofjs.com/en-US/technologies/front-end-"
-"frameworks/) in a pair of industry surveys. We think you'll love it too. "
-"Read [the introductory blog "
-"post](https://svelte.dev/blog/svelte-3-rethinking-reactivity) to learn more."
-msgstr ""
-"Vi er stolte over at Svelte nylig ble stemt frem som det [best likte "
-"rammeverket](https://insights.stackoverflow.com/survey/2021#section-most-"
-"loved-dreaded-and-wanted-web-frameworks) med [de mest fornøyde "
-"utviklerne](https://2020.stateofjs.com/en-US/technologies/front-end-"
-"frameworks/) i to store undersøkelser blant programvareutviklere. Vi tror du"
-" også vil like det svært godt. Les [bloggposten som introduserte Svelte "
-"versjon 3](https://svelte.dev/blog/svelte-3-rethinking-reactivity) for å "
-"lære mer."
-
 #: TASKS.md:block 12 (header)
 msgid "You need the following on your computer"
 msgstr "Du må ha følgende på datamaskinen din"
@@ -1393,39 +1353,6 @@ msgstr ""
 msgid "[gameplay-png]: ./assets/gameplay.png"
 msgstr "[gameplay-png]: ../../assets/gameplay.png"
 
-#: TASKS.md:block 15 (paragraph)
-msgid ""
-"![Facsimile of https://www.freecodecamp.org/news/a-realworld-comparison-of-"
-"front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ comparing "
-"transfer size for Svelte and several other frameworks][transfer-size-png]"
-msgstr ""
-"![Faksimile fra https://www.freecodecamp.org/news/a-realworld-comparison-of-"
-"front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ som "
-"sammenligner overføringsstørrelse for Svelte og flere andre "
-"rammeverk][transfer-size-png]"
-
-#: TASKS.md:block 201 (paragraph)
-#, fuzzy
-msgid "[transfer-size-png]: ./assets/transfer_size.png"
-msgstr "[transfer-size-png]: ../../assets/transfer_size.png"
-
-#: TASKS.md:block 16 (paragraph)
-msgid ""
-"![Facsimile of https://www.freecodecamp.org/news/a-realworld-comparison-of-"
-"front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ comparing "
-"lines of source code for Svelte and several other frameworks][source-code-"
-"size-png]"
-msgstr ""
-"![Faksimile fra https://www.freecodecamp.org/news/a-realworld-comparison-of-"
-"front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075/ som "
-"sammenligner kildekodelinjer for Svelte og flere andre rammeverk][source-"
-"code-size-png]"
-
-#: TASKS.md:block 201 (paragraph)
-#, fuzzy
-msgid "[source-code-size-png]: ./assets/source_code_size.png"
-msgstr "[source-code-size-png]: ../../assets/source_code_size.png"
-
 #: TASKS.md:block 37 (paragraph)
 msgid "![X axis pointing rightwards, Y axis pointing downwards][axes-png]"
 msgstr "![X-akse som peker mot høyre, Y-akse som peker ned.][axes-png]"
@@ -1698,52 +1625,6 @@ msgstr ""
 "helst ved hjelp av en URL, slik som her: "
 "<https://svelte.dev/repl/8376ae2d58464f76bb13f9d511f6f81f>"
 
-#: TASKS.md:block 14 (paragraph)
-msgid ""
-"According to multiple benchmarks, an application written in Svelte usually "
-"becomes smaller and faster than an equivalent application in React or Vue. "
-"The following quotes and pictures are from [A RealWorld Comparison of Front-"
-"End Frameworks with Benchmarks (2019 "
-"update)](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-"
-"end-frameworks-with-benchmarks-2019-update-4be0d3c78075/):"
-msgstr ""
-"Ifølge flere sammenlignende tester blir en applikasjon mindre om man skriver"
-" den i Svelte enn i React eller Vue. De følgende sitatene og bildene er fra "
-"[A RealWorld Comparison of Front-End Frameworks with Benchmarks (2019 "
-"update)](https://www.freecodecamp.org/news/a-realworld-comparison-of-front-"
-"end-frameworks-with-benchmarks-2019-update-4be0d3c78075/):"
-
-#: TASKS.md:block 15 (quote)
-msgid "Metric #2: Size"
-msgstr ""
-
-#: TASKS.md:block 15 (quote)
-msgid "… The smaller the file, the faster the download, and less to parse."
-msgstr ""
-
-#: TASKS.md:block 15 (quote)
-msgid ""
-"… Svelte — The magical disappearing UI framework — really holds true to its "
-"punch line."
-msgstr ""
-
-#: TASKS.md:block 16 (quote)
-msgid "Metric #3: Lines of Code"
-msgstr ""
-
-#: TASKS.md:block 16 (quote)
-msgid ""
-"… This shows how succinct given library/framework/language is. How many "
-"lines of code do you need to implement almost the same app (some of them "
-"have a bit more belts and whistles) accordingly to the specification."
-msgstr ""
-
-#: TASKS.md:block 16 (quote)
-msgid ""
-"… If you care about you LoC you should check out ClojureScript, AppRun, and "
-"Svelte."
-msgstr ""
-
 #: TASKS.md:block 202 (paragraph)
 #, fuzzy
 msgid "[tasks-eng]: ./TASKS.md"
@@ -1874,10 +1755,6 @@ msgstr ""
 "helpers.js\"`-utsagnet. Mange av funksjonene i `game-helpers.js` er nyttige "
 "i denne såvel som senere oppgaver. Du kommer til å spare tid dersom du "
 "bruker et øyeblikk på å gjøre deg kjent med filens innhold."
-
-#: TASKS.md:block 13 (paragraph)
-msgid "Svelte's home page presents it as follows:"
-msgstr "Sveltes hjemmeside presenterer det på følgende måte"
 
 #: TASKS.md:block 18 (header)
 msgid "SvelteKit"
@@ -2429,19 +2306,19 @@ msgstr ""
 "Dokumentasjonen peker deg også i retning av adaptere som vedlikeholdes av "
 "frivillige hvis ingen av de offisielle adapterene passer behovene dine."
 
-#~ msgid ""
-#~ "SvelteKit treats *some* other files differently if their names start with a "
-#~ "`+`. For instance, [files that are named `+server.js` are used to make "
-#~ "resources that you can interact with using "
-#~ "HTTP](https://kit.svelte.dev/docs/routing#server). You will find an example "
-#~ "of such a file in this project: `src/routes/api/scores/+server.js`. Some "
-#~ "later tasks require you to interact with this resource. This workshop does "
-#~ "not require you to write such files yourself."
-#~ msgstr ""
-#~ "SvelteKit forskjellsbehandler *noen* filer dersom navnet deres starter med "
-#~ "`+`. [For eksempel gjøres filer som heter `+server.js` til ressurser som du "
-#~ "kan samhandle med ved hjelp av "
-#~ "HTTP](https://kit.svelte.dev/docs/routing#server) Du finner et eksempel på "
-#~ "en slik fil i dette prosjektet: `src/routes/api/scores/+server.js`. Noen "
-#~ "senere oppgaver krever at du samhandler med denne ressursen. Dette kurset "
-#~ "krever ikke at du skriver slike filer selv."
+#: TASKS.md:block 14 (paragraph)
+msgid ""
+"The blogpost [<q>Introducing Svelte, and Comparing Svelte with React and "
+"Vue</q> by Josh Collinsworth](https://joshcollinsworth.com/blog/introducing-"
+"svelte-comparing-with-react-vue) gives a thorough introduction to Svelte and"
+" how it compares to React and Vue (TL;DR: smaller files, better developer "
+"experience)."
+msgstr ""
+"Bloggposten [<q>Introducing Svelte, and Comparing Svelte with React and "
+"Vue</q> by Josh Collinsworth](https://joshcollinsworth.com/blog/introducing-"
+"svelte-comparing-with-react-vue) presenterer Svelte grundig og måler det opp"
+" mot React og Vue (TL;DR: mindre filstørrelse, bedre utvikleropplevelse)."
+
+#, fuzzy
+#~ msgid "[transfer-size-png]: ./assets/transfer_size.png"
+#~ msgstr "[transfer-size-png]: ../../assets/transfer_size.png"
