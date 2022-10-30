@@ -87,10 +87,10 @@
 	}
 
 	h1::before {
-		content: "🍎";
+		content: var(--food-emoji);
 	}
 	h1::after {
-		content: "🐍";
+		content: var(--snake-emoji);
 	}
 	h1::before,
 	h1::after {
@@ -104,7 +104,7 @@
 	}
 
 	table {
-		border: 2px solid black;
+		border: 2px solid var(--text-color);
 		margin: 0 auto;
 	}
 
@@ -114,7 +114,7 @@
 
 	td,
 	th {
-		border: 2px solid black;
+		border: 2px solid var(--text-color);
 		padding: 0.75rem;
 	}
 </style>

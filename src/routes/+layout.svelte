@@ -1,3 +1,9 @@
+<script>
+	import NesCssDarkMode from "./NesCssDarkMode.svelte";
+</script>
+
+<NesCssDarkMode />
+
 <slot />
 
 <footer>
@@ -19,6 +25,37 @@
 </footer>
 
 <style>
+	:root {
+		--background-color: #fff;
+		--text-color: #212529;
+		--food-emoji: "🍎";
+		--snake-emoji: "🐍";
+		--board-outline-color: var(--text-color);
+		--checker-color: #f0f0f0;
+		--snake-color: green;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--background-color: #212529;
+			--text-color: #fff;
+			--food-emoji: "🎃";
+			--snake-emoji: "🪱";
+			--board-outline-color: #676767;
+			--checker-color: #343434;
+			--snake-color: palevioletred;
+		}
+
+		:global(a) {
+			color: cornflowerblue;
+		}
+	}
+
+	:global(body) {
+		background-color: var(--background-color);
+		color: var(--text-color);
+	}
+
 	footer {
 		margin: 1rem;
 		display: flex;

@@ -4,7 +4,7 @@
 
 <style>
 	.modal {
-		background-color: white;
+		background-color: var(--background-color);
 		padding: 3rem;
 	}
 </style>

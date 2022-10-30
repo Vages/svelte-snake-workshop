@@ -195,10 +195,6 @@
 {/if}
 
 <style>
-	:root {
-		--checker-color: #f0f0f0;
-	}
-
 	.modal-container {
 		position: absolute;
 		left: 50%;

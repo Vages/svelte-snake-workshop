@@ -75,10 +75,6 @@
 </div>
 
 <style>
-	:root {
-		--checker-color: #f0f0f0;
-	}
-
 	.modal-container {
 		position: absolute;
 		left: 50%;
@@ -113,7 +109,7 @@
 	}
 
 	.body-part {
-		background-color: green;
+		background-color: var(--snake-color);
 	}
 
 	.head {
@@ -125,9 +121,13 @@
 		transition: top var(--tick-time) linear, left var(--tick-time) linear;
 	}
 
-	.apple::before {
-		content: "🍎";
+	.apple {
+		transform: scale(1.1);
 		font-size: calc(var(--cell-size) * 0.8);
+	}
+
+	.apple::before {
+		content: var(--food-emoji);
 	}
 
 	.skull::before {
@@ -148,7 +148,7 @@
 
 		position: relative;
 		margin: var(--border-width);
-		outline: var(--border-width) solid black;
+		outline: var(--border-width) solid var(--board-outline-color);
 
 		background-image: linear-gradient(
 				45deg,
