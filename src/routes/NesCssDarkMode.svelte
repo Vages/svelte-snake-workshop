@@ -1,8 +1,6 @@
 <!--
   Nes.css contains a lot of styles that are applied if you add the "is-dark" class to elements.
   This file applies the same styles when you are in dark mode, so that you don't have to add the class.
-
-  The
 -->
 <style>
 	@media (prefers-color-scheme: dark) {
