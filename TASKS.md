@@ -178,7 +178,7 @@ You use curly brackets inside _template_ to insert variables, calculations and f
 
 ```svelte
 <script>
-	let answer = 42;
+	let a = 42;
 </script>
 
 <div>The meaning of life is {a}.</div>

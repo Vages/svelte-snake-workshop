@@ -135,7 +135,7 @@ Man bruker krøllparenteser inni _template_ for å sette inn variabler, utregnin
 
 ```svelte
 <script>
-	let answer = 42;
+	let a = 42;
 </script>
 
 <div>Meningen med livet er {a}.</div>
