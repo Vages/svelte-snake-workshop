@@ -109,12 +109,6 @@
 		},
 	};
 
-	const englishTaskLink = (hash) =>
-		"https://github.com/Vages/svelte-snake-workshop/blob/main/TASKS.md#" + hash;
-	const norskTaskLink = (hash) =>
-		"https://github.com/Vages/svelte-snake-workshop/blob/main/locale/nob/TASKS.md#" +
-		hash;
-
 	const nextProblemUrl = (task) => {
 		const tasks = Object.keys(tasksData);
 		const index = tasks.findIndex((task2) => task2 === task);
@@ -172,27 +166,7 @@
 
 <slot />
 
-<div class="title">
-	<p>
-		<a href={englishTaskLink(tasksData[task].hash)} target="_blank"
-			>🇬🇧 English task description</a
-		>
-	</p>
-
-	<p>
-		<a href={norskTaskLink(tasksData[task].hashNorsk)} target="_blank"
-			>🇳🇴 Norsk oppgavebeskrivelse
-		</a>
-	</p>
-</div>
-
 <style>
-	.title {
-		text-align: center;
-		display: block;
-		margin: 1rem auto;
-		width: 34ch;
-	}
 	header {
 		text-align: center;
 		display: block;
