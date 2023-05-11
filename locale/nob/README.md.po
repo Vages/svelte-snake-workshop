@@ -42,3 +42,16 @@ msgstr ""
 #, fuzzy
 msgid "[readme-eng]: ./README.md"
 msgstr "[readme-eng]: ../../README.md"
+
+#: README.md:block 14 (paragraph)
+#, fuzzy
+msgid "[splash-snake-png]: ./assets/splash-snake.png"
+msgstr "[splash-snake-png]: ../../assets/splash-snake.png"
+
+#: README.md:block 7 (paragraph)
+msgid ""
+"![A snake coiled around an apple, with the text learn Svelte making Snake on"
+" its left][splash-snake-png]"
+msgstr ""
+"![En slange som kveiler seg rundt et eple med teksten \"Learn Svelte making "
+"Snake\" til venstre for seg][splash-snake-png]"

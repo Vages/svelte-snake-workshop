@@ -13,6 +13,8 @@
 
 <!-- mdpo-enable -->
 
+![A snake coiled around an apple, with the text learn Svelte making Snake on its left][splash-snake-png]
+
 Welcome to the Svelte Snake Workshop!
 
 ## Get started
@@ -33,3 +35,4 @@ You are now ready to start the [tasks](./TASKS.md).
 
 [readme-eng]: ./README.md
 [readme-nob]: ./locale/nob/README.md
+[splash-snake-png]: ./assets/splash-snake.png
