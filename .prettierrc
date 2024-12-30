@@ -2,6 +2,18 @@
 	"proseWrap": "preserve",
 	"useTabs": true,
 	"overrides": [
-		{ "files": ["locale/**/*.md"], "options": { "proseWrap": "never" } }
-	]
+		{
+			"files": ["locale/**/*.md"],
+			"options": {
+				"proseWrap": "never"
+			}
+		},
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte"
+			}
+		}
+	],
+	"plugins": ["prettier-plugin-svelte"]
 }

@@ -1,8 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="description" content="" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -12,7 +11,8 @@
 				font-family: "Press Start 2P";
 				font-style: normal;
 				font-weight: 500;
-				src: local(""),
+				src:
+					local(""),
 					/* Modern Browsers */
 						url("/fonts/Press_Start_2P/PressStart2P-Regular.ttf")
 						format("truetype");
@@ -21,7 +21,7 @@
 		</style>
 		%sveltekit.head%
 	</head>
-	<body>
-		<div>%sveltekit.body%</div>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
